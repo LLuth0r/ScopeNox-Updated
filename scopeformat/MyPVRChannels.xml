@@ -256,7 +256,7 @@
 					<top>32</top>
 					<width>821</width>
 					<height>461</height>
-					<texture fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+					<texture fallback="special://skin/backgrounds/cinema.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
 					<include>VisibleFadeAnimation</include>
 					<visible>!Player.HasVideo</visible>
 				</control>
@@ -806,7 +806,7 @@
 							<width>720</width>
 							<height>405</height>
 							<!-- <aspectratio align="center" aligny="top">keep</aspectratio> -->
-							<texture fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+							<texture fallback="special://skin/backgrounds/cinema.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
 							<include>VisibleFadeAnimation</include>
 							<visible>!Player.HasVideo</visible>
 						</control>

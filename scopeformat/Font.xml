@@ -7,14 +7,14 @@
 	<!-- Scope -->
 		<font>
 			<name>font_plot_small</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>19</size>
 			<linespacing>1.2</linespacing>
 		</font>
 		
 		<font>
 			<name>font12_textbox</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>19</size>
 			<linespacing>1.27</linespacing>
 		</font>
@@ -207,7 +207,7 @@
 		<!-- Normal Fonts -->
 		<font>
 			<name>font14_textbox_plot</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>25</size>
 			<linespacing>1.2</linespacing>
 		</font>
@@ -218,214 +218,214 @@
 		</font>
 		<font>
 			<name>font10</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>21</size>
 		</font>
 		<font>
 			<name>font12</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>font14_textbox</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 			<linespacing>1.27</linespacing>
 		</font>
 		<font>
 			<name>font14_textbox2</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>font15_textbox</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>30</size>
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
 			<name>font15_textbox2</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>35</size>
 			<linespacing>1.26</linespacing>
 		</font>
 		<font>
 			<name>font14</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 		</font>
 		<font>
 			<name>font15</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font15_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font16</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font25</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>font30</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>45</size>
 		</font>
 		<font>
 			<name>font48</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font48_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>48</size>
 		</font>
 		<!-- LiveTV Fonts -->
 		<font>
 			<name>font65</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>65</size>
 		</font>
 		<font>
 			<name>font24_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>24</size>
 			<style>bold</style>
 		</font>
 		<font>
 			<name>font28_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>
 			<style>bold</style>
 		</font>
 		<font>
 			<name>font52_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font11</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>font12b</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>font13b</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>32</size>
 		</font>
 		<!-- Title Fonts -->
 		<font>
 			<name>font12_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
-			<style>uppercase</style>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
+			<!-- <style>uppercase</style> -->
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>30</size>
 		</font>
 		<font>
 			<name>font14_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>33</size>
 		</font>
 		<font>
 			<name>font15_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font16_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font16_title_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font24_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>36</size>
 		</font>
 		<font>
 			<name>font30_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>45</size>
 		</font>
 		<font>
 			<name>font30_title_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>40</size>
 		</font>
 		<font>
 			<name>font48_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font35_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>52</size>
 		</font>
 		<font>
 			<name>font35_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font35_title_bold</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>52</size>
 		</font>
 		<font>
 			<name>font45caps_title</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>68</size>
 		</font>
 		<font>
 			<name>font_MainMenu</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>Audiowide-Regular.ttf</filename>
 			<linespacing>0</linespacing>
-			<size>92</size>
+			<size>60</size>
 		</font>
 		<font>
 			<name>BigAssFont</name>
@@ -434,7 +434,7 @@
 		</font>
 		<font>
 			<name>WeatherTemp</name>
-			<filename>RobotoCondensed-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>90</size>
 		</font>
@@ -652,195 +652,195 @@
 		</font>
 		<font>
 			<name>font10</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>21</size>
 		</font>
 		<font>
 			<name>font12</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>font14_textbox</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 			<linespacing>1.27</linespacing>
 		</font>
 		<font>
 			<name>font14_textbox2</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>font15_textbox</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>35</size>
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
 			<name>font14</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>33</size>
 		</font>
 		<font>
 			<name>font15</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font15_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font16</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font30</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>45</size>
 		</font>
 		<font>
 			<name>font48</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font48_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>48</size>
 		</font>
 		<!-- LiveTV Fonts -->
 		<font>
 			<name>font65</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>65</size>
 		</font>
 		<font>
 			<name>font24_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>24</size>
 			<style>bold</style>
 		</font>
 		<font>
 			<name>font28_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>
 			<style>bold</style>
 		</font>
 		<font>
 			<name>font52_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font11</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>font12b</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>font13b</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>32</size>
 		</font>
 		<!-- Title Fonts -->
 		<font>
 			<name>font12_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>30</size>
 		</font>
 		<font>
 			<name>font14_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>33</size>
 		</font>
 		<font>
 			<name>font15_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font16_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font16_title_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>38</size>
 		</font>
 		<font>
 			<name>font24_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>36</size>
 		</font>
 		<font>
 			<name>font30_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>45</size>
 		</font>
 		<font>
 			<name>font30_title_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>45</size>
 		</font>
 		<font>
 			<name>font48_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>48</size>
 		</font>
 		<font>
 			<name>font35_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>52</size>
 		</font>
 		<font>
 			<name>font35_title_bold</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<size>52</size>
 		</font>
 		<font>
 			<name>font45caps_title</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>68</size>
 		</font>
 		<font>
 			<name>font_MainMenu</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
 			<aspect>0.70</aspect>
 			<linespacing>0</linespacing>
@@ -853,7 +853,7 @@
 		</font>
 		<font>
 			<name>WeatherTemp</name>
-			<filename>NotoSans-Regular.ttf</filename>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
 			<size>120</size>
 		</font>

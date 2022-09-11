@@ -21,13 +21,14 @@
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 		</control>
 		<control type="group">
-			<animation effect="slide" end="0,-238" time="240" tween="quadratic" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
-			<animation effect="slide" start="0,-238" end="0,0" time="240" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="0,-238" start="0,0" time="240" tween="quadratic">WindowClose</animation>
-			<top>140</top>
-			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-130" time="700" condition="Skin.HasSetting(osd169) + Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-140" time="700" condition="Skin.HasSetting(osd169) + !Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" end="0,300" time="400" tween="quadratic" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+			<animation effect="slide" start="0,300" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+			<animation effect="slide" end="0,300" start="0,0" time="400" tween="quadratic">WindowClose</animation>
+			<top>910</top>
+			<animation effect="slide" start="0,0" end="0,-100" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-120" time="700" condition="!Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,110" time="700" condition="Skin.HasSetting(osd169) + Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(osd169) + !Skin.HasSetting(scopeFormat235)">Conditional</animation>
 			<control type="image">
 				<width>100%</width>
 				<height>136</height>
@@ -69,7 +70,7 @@
 					<label />
 					<width>100</width>
 					<height>100</height>
-					<font />
+					<font /> 
 					<onclick>ActivateWindow(osdvideosettings)</onclick>
 				</control>
 				<control type="button" id="600">
@@ -194,10 +195,8 @@
 	                <visible>!Skin.HasSetting(scopemask)</visible>
 	                <onclick>Skin.Reset(osd169)</onclick>
 	                <onclick>Skin.SetBool(scopemask)</onclick>
-	            </control>
-	            
-	            
-	            
+	            </control>          
+	            	            
 	            
 				<control type="button" id="710">
 					<texturefocus>osd/buttons/219onfo.png</texturefocus>
