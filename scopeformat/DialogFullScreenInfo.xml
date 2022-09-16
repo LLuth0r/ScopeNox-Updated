@@ -131,7 +131,7 @@
 					<control type="button">
 						<label>$INFO[Player.Title]</label>
 						<width>790</width>
-						<font>font30_title</font>
+						<font>font14_title</font>
 						<height>60</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Player.Title)</visible>
@@ -201,7 +201,7 @@
 					<control type="button">
 						<label>$INFO[Player.Title]</label>
 						<width>760</width>
-						<font>font30_title</font>
+						<font>font14_title</font>
 						<height>60</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Player.Title)</visible>

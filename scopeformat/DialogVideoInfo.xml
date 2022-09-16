@@ -69,7 +69,7 @@
 						<height>60</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>font30_title_bold</font>
+						<font>font15_title</font>
 						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Title]</label>
@@ -195,25 +195,25 @@
 						<visible>![String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(Disable.NextAired)]</visible>
 					</control>
 					<control type="group">
-						<width>160</width>
+						<width>300</width>
 						<visible>![String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(Disable.NextAired)]</visible>
 						<control type="label">
-							<left>40</left>
+							<left>75</left>
 							<top>-5</top>
-							<width>60</width>
+							<width>150</width>
 							<height>60</height>
 							<align>center</align>
 							<label>$VAR[DurationVar]</label>
-							<font>font35_bold</font>
+							<font>font13</font>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
 							<top>40</top>
-							<width>160</width>
+							<width>300</width>
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$LOCALIZE[12391][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
@@ -232,7 +232,7 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Rating]</label>
-							<font>font35_bold</font>
+							<font>font13</font>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
@@ -241,7 +241,7 @@
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[RatingAndVotesVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>font10</font>
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
@@ -1131,10 +1131,10 @@
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.7))</visible>
 					</item>
 					<item>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1)]</label>
+						<label>$INFO[ListItem.Property(SubtitleLanguage.[1])]</label>
 						<label2>$LOCALIZE[21448] 1:</label2>
 						<onclick>noop</onclick>
-						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.[1]))</visible>
 					</item>
 					<item>
 						<label>$INFO[ListItem.Property(SubtitleLanguage.2)]</label>

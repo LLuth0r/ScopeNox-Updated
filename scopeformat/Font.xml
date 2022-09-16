@@ -8,7 +8,7 @@
 		<font>
 			<name>font_plot_small</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<size>19</size>
+			<size>16</size>
 			<linespacing>1.2</linespacing>
 		</font>
 		
@@ -258,12 +258,12 @@
 		<font>
 			<name>font14</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<size>25</size>
+			<size>20</size>
 		</font>
 		<font>
 			<name>font15</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<size>35</size>
+			<size>25</size>
 		</font>
 		<font>
 			<name>font15_bold</name>
@@ -274,7 +274,7 @@
 		<font>
 			<name>font16</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<size>38</size>
+			<size>30</size>
 		</font>
 		<font>
 			<name>font25</name>
@@ -339,7 +339,7 @@
 		<!-- Title Fonts -->
 		<font>
 			<name>font12_title</name>
-			<filename>Orbitron-VariableFont_wght.ttf</filename>
+			<filename>PoiretOne-Regular.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
@@ -352,7 +352,7 @@
 			<name>font14_title</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase</style>
-			<size>33</size>
+			<size>25</size>
 		</font>
 		<font>
 			<name>font15_title</name>
@@ -406,13 +406,13 @@
 			<name>font35_bold</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>bold</style>
-			<size>25</size>
+			<size>15</size>
 		</font>
 		<font>
 			<name>font35_title_bold</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<style>uppercase bold</style>
-			<size>52</size>
+			<size>25</size>
 		</font>
 		<font>
 			<name>font45caps_title</name>
@@ -679,7 +679,7 @@
 		<font>
 			<name>font15_textbox</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<size>35</size>
+			<size>25</size>
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
@@ -875,6 +875,13 @@
 		<font>
 			<name>CloseButton</name>
 			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+	</fontset>
+	<fontset id="30001">
+		<font>
+			<name>Director</name>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>20</size>
 		</font>
 	</fontset>

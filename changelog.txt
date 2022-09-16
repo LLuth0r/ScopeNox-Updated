@@ -1,5 +1,11 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.0.6 - Updated the zoom settings for better scope overlap.
+        Adjusted some of the fonts within the context menus for better readability
+
+1.0.5 - Added onload commands for zooming content based on the reported video aspect.  
+        Added further changes to the fonts for better readability
+
 1.0.4 - Added logic for 2.4 skin setting OSD controls
 
 1.0.3 - Updated fonts and moved main menu bar up

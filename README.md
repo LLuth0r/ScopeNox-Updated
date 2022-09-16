@@ -1,7 +1,5 @@
 # ScopeNox
 
-Feeling grateful? :) If you fancy donating a small amount you can do so <a href="paypal.me/paakman">here!</a>. If not then that is totally fine also :) 
-
 This is a modified version of AeonNox by BigNoid. 
 
 It is made to suit people with CIH (Constant Image Height) setups that have the resolution at 1920x1080 and have the projector zoomed so that scope images fill the screen.
