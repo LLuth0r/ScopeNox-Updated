@@ -1,5 +1,7 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.0.7 - Fixed the subtitles window disappearing
+
 1.0.6 - Updated the zoom settings for better scope overlap.
         Adjusted some of the fonts within the context menus for better readability
 

@@ -140,8 +140,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font />
-					<onclick>Close</onclick>
-					<onclick>ActivateWindow(subtitlesearch)</onclick>
+					<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+					<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
 				</control>
 				<control type="button" id="704">
 					<texturefocus>osd/buttons/OSDDvdFO.png</texturefocus>
