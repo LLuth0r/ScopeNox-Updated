@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	<!-- Animations -->
+	
+	<!-- Window animation -->
+	<include name="WindowFadeAnimation">
+		<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	</include>
+	
+	<!-- Window fulscreen dialog overlay animation -->
+	<include name="WindowFullscreenDialogFadeAnimation">
+		<animation effect="fade" start="100" end="0" time="1" delay="300" reversible="false" condition="Window.IsActive(Custom_Confirm_Reset_Skin_Settings.xml) | Window.IsActive(Custom_Welcome.xml) | Window.IsActive(DialogAddonInfo.xml) | Window.IsActive(DialogAddonSettings.xml) | Window.IsActive(DialogConfirm.xml) | Window.IsActive(DialogGameControllers.xml) | Window.IsActive(DialogKeyboard.xml) | Window.IsActive(DialogMediaSource.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogNumeric.xml) | Window.IsActive(DialogPictureInfo.xml) | Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml) | Window.IsActive(DialogPVRGuideSearch.xml) | Window.IsActive(DialogPVRInfo.xml) | Window.IsActive(DialogSettings.xml) | Window.IsActive(DialogTextViewer.xml) | Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(script-skin_helper_service-ColorPicker.xml) | Window.IsActive(SmartPlaylistEditor.xml) | Window.IsActive(SmartPlaylistRule.xml)">Conditional</animation>
+	</include>
+
+	<!-- Visible animation -->
+	<include name="VisibleFadeAnimation">
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+	</include>
+	
+	<!-- Dialog animation -->
+	<include name="DialogZoomAnimation">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
+			<effect type="fade" start="0" end="100" time="300" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="70" center="auto" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+		</animation>
+	</include>
+
+	<!-- Options animation -->
+	<include name="OptionsAnimation">
+		<animation type="Visible">
+			<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
+			<effect type="fade" start="0" end="100" time="150" delay="150" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" start="100" end="70" center="auto" time="300" />
+			<effect type="fade" start="100" end="0" time="150" delay="150" />
+		</animation>
+	</include>
+
+	<!-- OSD animations -->
+	<include name="OSDOpenCloseAnimation">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="OSDVisibleHiddenAnimation">
+		<animation type="Visible">
+			<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200" />
+			<effect type="fade" start="0" end="100" time="200" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<!-- Nonfocus focused control animation -->
+	<include name="NonFocusWindowFadeAnimation">
+		<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])">Conditional</animation>
+	</include>
+	
+	<include name="NonFocusDialogFadeAnimation">
+		<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+	</include>
+	
+	<include name="NonFocusImageFadeAnimation">
+		<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+	</include>
+	
+	<!-- Backgrounds -->
+
+	<!-- Window background image -->
+	<include name="WindowBackgroundImageMultiView">
+	
+		<!-- List/list info/wall info -->
+		<control type="group">
+			<visible>Control.IsVisible(50) | Control.IsVisible(501) | Control.IsVisible(51) | Control.IsVisible(511) | Control.IsVisible(531) | Control.IsVisible(533) | Control.IsVisible(536) | Control.IsVisible(538)</visible>
+			<include>WindowBackgroundImageVertical</include>
+		</control>
+		
+		<!-- Wide/wide info -->
+		<control type="group">
+			<visible>Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(523) | Control.IsVisible(524)</visible>
+			<include>WindowBackgroundImageHorizontal</include>
+		</control>
+		
+		<!-- Wall/wall low -->
+		<control type="group">
+			<visible>Control.IsVisible(53) | Control.IsVisible(532) | Control.IsVisible(534) | Control.IsVisible(535) | Control.IsVisible(537) | Control.IsVisible(539)</visible>
+			<include>WindowBackgroundImageHorizontalWall</include>
+		</control>
+		
+		<!-- Wide low -->
+		<control type="group">
+			<visible>Control.IsVisible(522) | Control.IsVisible(525)</visible>
+			<include>WindowBackgroundImageHorizontalLow1</include>
+		</control>
+		
+	</include>
+	
+	<include name="WindowBackgroundImage">
+	
+		<!-- Background video -->
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
+			<include>BackgroundDepth</include>
+		</control>
+
+		<!-- Color -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">common/white.png</texture>
+			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),solid)</visible>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Single background image -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(background))</visible>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Multiple background images -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$VAR[OSMCBackgroundImage]</imagepath>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(background))</visible>
+			<aspectratio>scale</aspectratio>
+			<include>CustomBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Single individual background image -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(9000).ListItem.Property(background)]</texture>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<visible>!String.IsEmpty(Container(9000).ListItem.Property(background)) + ![String.EndsWith(Container(9000).ListItem.Property(background),\) | String.EndsWith(Container(9000).ListItem.Property(background),/)] + Window.IsVisible(Home)</visible>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Multiple individual background images -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$INFO[Container(9000).ListItem.Property(background)]</imagepath>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>![Player.HasAudio + [!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) | !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))] + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<visible>!String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.EndsWith(Container(9000).ListItem.Property(background),\) | String.EndsWith(Container(9000).ListItem.Property(background),/)] + Window.IsVisible(Home)</visible>
+			<aspectratio>scale</aspectratio>
+			<include>IndividualBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Artists Slideshow -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
+			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<timeperimage>10000</timeperimage>
+			<fadetime>400</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Fanart -->
+		<control type="image" id="11000">
+			<include>FullscreenDimensions</include>
+			<texture background="true" fallback="transparent.png">$VAR[widgetBackground]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<visible>![Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtworkReady)) + [Skin.HasSetting(EnableArtistFanart) | Window.IsVisible(visualisation)]]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+
+		<!-- Visualisation -->
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + [Skin.HasSetting(BackgroundVisualisation) | Window.IsVisible(visualisation)]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>WindowFadeAnimation</include>
+			<include>BackgroundDepth</include>
+		</control>
+		
+		<!-- Overlay -->
+		<control type="image">
+			<left>$PARAM[left1]</left>
+			<top>$PARAM[top1]</top>
+			<width>$PARAM[width1]</width>
+			<height>$PARAM[height1]</height>
+			<texture background="true">$PARAM[texture1]</texture>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+			<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+			<include>WindowDepth</include>
+		</control>
+		<control type="image">
+			<left>$PARAM[left2]</left>
+			<top>$PARAM[top2]</top>
+			<width>$PARAM[width2]</width>
+			<height>$PARAM[height2]</height>
+			<texture background="true">$PARAM[texture2]</texture>
+			<aspectratio>scale</aspectratio>
+			<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+			<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo + !Skin.HasSetting(MusicOSD) | Skin.HasSetting(MusicOSD)]]</visible>
+			<include>WindowDepth</include>
+		</control>
+		
+	</include>
+	
+	<!-- Dialog fanart -->
+	<include name="DialogBackgroundImage">
+		
+		<!-- Color -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">common/white.png</texture>
+			<colordiffuse>$VAR[SolidBackgroundColor]</colordiffuse>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),no) | String.IsEqual(Skin.String(BackgroundSingleImage),solid)] + ![!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(HideFanart)]</visible>
+			<aspectratio>scale</aspectratio>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		
+		<!-- Single background image -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[OSMCBackgroundImage]</texture>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(9000).ListItem.Property(background)) + ![!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(HideFanart)]</visible>
+			<aspectratio>scale</aspectratio>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		
+		<!-- Multiple background images -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$VAR[OSMCBackgroundImage]</imagepath>
+			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(9000).ListItem.Property(background)) + ![!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(HideFanart)]</visible>
+			<aspectratio>scale</aspectratio>
+			<include>CustomBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		
+		<!-- Fanart -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(fanart)]</texture>
+			<visible>!Skin.HasSetting(HideFanart)</visible>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		
+		<!-- Overlay -->
+		<control type="group">
+			<include>FullscreenDimensions</include>
+			<animation type="WindowOpen">
+				<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
+				<effect type="fade" start="0" end="100" time="100" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" start="100" end="70" center="auto" time="300" />
+				<effect type="fade" start="100" end="0" time="100" delay="200" />
+			</animation>
+			<control type="image">
+				<include>BackgroundOverlayDialog1</include>
+				<texture background="true">$VAR[Background1]</texture>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+			</control>
+			<control type="image">
+				<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog2</include>
+				<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayDialog3</include>
+				<texture background="true">$VAR[BackgroundOverlayStyle]</texture>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+			</control>
+			<control type="image">
+				<include>BackgroundOverlayDialog4</include>
+				<texture background="true">$VAR[Background2]</texture>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
+				<include>DialogBackgroundDepth</include>
+				<visible>Skin.HasSetting(BackgroundOverlayStyle)</visible>
+			</control>
+		</control>
+		
+	</include>
+
+	<!-- Dialog fade background image -->
+	<include name="DialogFadeBackgroundImage">
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="$VAR[DarkenColor]">common/DimOverlay.png</texture>
+			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<include>BackgroundDepth</include>
+		</control>
+	</include>
+	
+	<!-- Multi image individual background duration -->
+	<include name="IndividualBackgroundFolderDuration">
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),5s)">IndividualBackgroundFolderDuration5</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),6s)">IndividualBackgroundFolderDuration6</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),8s)">IndividualBackgroundFolderDuration8</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),10s)">IndividualBackgroundFolderDuration10</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),15s)">IndividualBackgroundFolderDuration15</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),20s)">IndividualBackgroundFolderDuration20</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),30s)">IndividualBackgroundFolderDuration30</include>
+		<include condition="String.IsEqual(Skin.String(IndividualBackgroundFolderDuration),1 min)">IndividualBackgroundFolderDuration60</include>
+    </include>
+	
+	<include name="IndividualBackgroundFolderDuration5">
+		<timeperimage>5000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration6">
+		<timeperimage>6000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration8">
+		<timeperimage>8000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration10">
+		<timeperimage>10000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration15">
+		<timeperimage>15000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration20">
+		<timeperimage>20000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration30">
+		<timeperimage>30000</timeperimage>
+    </include>
+    <include name="IndividualBackgroundFolderDuration60">
+		<timeperimage>60000</timeperimage>
+    </include>
+	
+	<!-- Multi image custom background duration -->
+	<include name="CustomBackgroundFolderDuration">
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),5s)">CustomBackgroundFolderDuration5</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),6s)">CustomBackgroundFolderDuration6</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),8s)">CustomBackgroundFolderDuration8</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),10s)">CustomBackgroundFolderDuration10</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),15s)">CustomBackgroundFolderDuration15</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),20s)">CustomBackgroundFolderDuration20</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),30s)">CustomBackgroundFolderDuration30</include>
+		<include condition="String.IsEqual(Skin.String(CustomBackgroundFolderDuration),1 min)">CustomBackgroundFolderDuration60</include>
+    </include>
+	
+	<include name="CustomBackgroundFolderDuration5">
+		<timeperimage>5000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration6">
+		<timeperimage>6000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration8">
+		<timeperimage>8000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration10">
+		<timeperimage>10000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration15">
+		<timeperimage>15000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration20">
+		<timeperimage>20000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration30">
+		<timeperimage>30000</timeperimage>
+    </include>
+    <include name="CustomBackgroundFolderDuration60">
+		<timeperimage>60000</timeperimage>
+    </include>
+	
+	<!-- 3D depth -->
+	
+	<!-- Background depth -->
+	<include name="BackgroundDepth">
+		<depth>-0.25</depth>
+	</include>
+	
+	<!-- Window depth -->
+	<include name="WindowDepth">
+		<depth>0</depth>
+	</include>
+	
+	<!-- Dialog background -->
+	<include name="DialogBackgroundDepth">
+		<depth>0.1</depth>
+	</include>
+	
+	<!-- Dialog depth -->
+	<include name="DialogDepth">
+		<depth>0.35</depth>
+	</include>
+	
+	<!-- Side/context menu and notification depth depth -->
+	<include name="NotificationDepth">
+		<depth>0.45</depth>
+	</include>
+	
+	<!-- Busy dialog depth depth -->
+	<include name="BusyDepth">
+		<depth>0.55</depth>
+	</include>
+	
+	<!-- Dialog button indicator -->
+	<include name="dialogButtonIndicator">
+		<definition>
+			<control type="group">
+				<visible>$PARAM[visibility]</visible>
+				<include>VisibleFadeAnimation</include>
+				<animation effect="slide" time="200" start="-200,0" end="0,0" delay="300">WindowOpen</animation>
+				<animation effect="slide" time="200" start="0,0" end="-200,0" delay="300">WindowClose</animation>
+				<control type="image">
+					<left>10</left>
+					<centertop>50%</centertop>
+					<width>30</width>
+					<height>30</height>
+					<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>$PARAM[visibility]</visible>
+				<include>VisibleFadeAnimation</include>
+				<animation effect="slide" time="200" start="200,0" end="0,0" delay="300">WindowOpen</animation>
+				<animation effect="slide" time="200" start="0,0" end="200,0" delay="300">WindowClose</animation>
+				<control type="image">
+					<right>10</right>
+					<centertop>50%</centertop>
+					<width>30</width>
+					<height>30</height>
+					<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-right.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<!-- Info dialog button focus -->
+	
+	<!-- Addon info dialog button focus -->
+	<include name="AddonInfoDialogButtonFocus">
+		<include condition="Control.IsEnabled(12)">AddonInfoDialogButtonFocus12</include>
+		<include condition="Control.IsEnabled(15)">AddonInfoDialogButtonFocus15</include>
+		<include condition="Control.IsEnabled(9)">AddonInfoDialogButtonFocus9</include>
+		<include condition="Control.IsEnabled(8)">AddonInfoDialogButtonFocus8</include>
+		<include condition="Control.IsEnabled(14)">AddonInfoDialogButtonFocus14</include>
+		<include condition="Control.IsEnabled(6)">AddonInfoDialogButtonFocus6</include>
+		<include condition="Control.IsEnabled(7)">AddonInfoDialogButtonFocus7</include>
+		<include condition="Control.IsEnabled(10)">AddonInfoDialogButtonFocus10</include>
+		<include condition="Control.IsEnabled(13)">AddonInfoDialogButtonFocus13</include>
+	</include>
+	<include name="AddonInfoDialogButtonFocus12">
+		<defaultcontrol always="true">12</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus15">
+		<defaultcontrol always="true">15</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus9">
+		<defaultcontrol always="true">9</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus8">
+		<defaultcontrol always="true">8</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus14">
+		<defaultcontrol always="true">14</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus6">
+		<defaultcontrol always="true">6</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus7">
+		<defaultcontrol always="true">7</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus10">
+		<defaultcontrol always="true">10</defaultcontrol>
+	</include>
+	<include name="AddonInfoDialogButtonFocus13">
+		<defaultcontrol always="true">13</defaultcontrol>
+	</include>
+	
+	<!-- Music info dialog button focus -->
+	<include name="MusicInfoDialogButtonFocus">
+		<include condition="Control.IsEnabled(14)">MusicInfoDialogButtonFocus14</include>
+		<include condition="Control.IsEnabled(7)">MusicInfoDialogButtonFocus7</include>
+		<include condition="Control.IsEnabled(6)">MusicInfoDialogButtonFocus6</include>
+		<include condition="Control.IsEnabled(10)">MusicInfoDialogButtonFocus10</include>
+		<include condition="Control.IsEnabled(12)">MusicInfoDialogButtonFocus12</include>
+		<include condition="Control.IsEnabled(13)">MusicInfoDialogButtonFocus13</include>
+	</include>
+	<include name="MusicInfoDialogButtonFocus14">
+		<defaultcontrol always="true">14</defaultcontrol>
+	</include>
+	<include name="MusicInfoDialogButtonFocus7">
+		<defaultcontrol always="true">7</defaultcontrol>
+	</include>
+	<include name="MusicInfoDialogButtonFocus6">
+		<defaultcontrol always="true">6</defaultcontrol>
+	</include>
+	<include name="MusicInfoDialogButtonFocus10">
+		<defaultcontrol always="true">10</defaultcontrol>
+	</include>
+	<include name="MusicInfoDialogButtonFocus12">
+		<defaultcontrol always="true">12</defaultcontrol>
+	</include>
+	<include name="MusicInfoDialogButtonFocus13">
+		<defaultcontrol always="true">13</defaultcontrol>
+	</include>
+	
+	<!-- PVR info dialog button focus -->
+	<include name="PVRInfoDialogButtonFocus">
+		<include condition="Control.IsEnabled(5)">PVRInfoDialogButtonFocus5</include>
+		<include condition="Control.IsEnabled(10)">PVRInfoDialogButtonFocus10</include>
+		<include condition="Control.IsEnabled(14)">PVRInfoDialogButtonFocus14</include>
+		<include condition="Control.IsEnabled(4)">PVRInfoDialogButtonFocus4</include>
+		<include condition="Control.IsEnabled(6)">PVRInfoDialogButtonFocus6</include>
+		<include condition="Control.IsEnabled(8)">PVRInfoDialogButtonFocus8</include>
+		<include condition="Control.IsEnabled(9)">PVRInfoDialogButtonFocus9</include>
+		<include condition="Control.IsEnabled(11)">PVRInfoDialogButtonFocus11</include>
+	</include>
+	<include name="PVRInfoDialogButtonFocus5">
+		<defaultcontrol always="true">5</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus10">
+		<defaultcontrol always="true">10</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus14">
+		<defaultcontrol always="true">14</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus4">
+		<defaultcontrol always="true">4</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus6">
+		<defaultcontrol always="true">6</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus8">
+		<defaultcontrol always="true">8</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus9">
+		<defaultcontrol always="true">9</defaultcontrol>
+	</include>
+	<include name="PVRInfoDialogButtonFocus11">
+		<defaultcontrol always="true">11</defaultcontrol>
+	</include>
+	
+	<!-- Video info dialog button focus -->
+	<include name="VideoInfoDialogButtonFocus">
+		<include condition="Control.IsEnabled(8)">VideoInfoDialogButtonFocus8</include>
+		<include condition="Control.IsEnabled(15)">VideoInfoDialogButtonFocus15</include>
+		<include condition="Control.IsEnabled(16)">VideoInfoDialogButtonFocus16</include>
+		<include condition="Control.IsEnabled(17)">VideoInfoDialogButtonFocus17</include>
+		<include condition="Control.IsEnabled(18)">VideoInfoDialogButtonFocus18</include>
+		<include condition="Control.IsEnabled(19)">VideoInfoDialogButtonFocus19</include>
+		<include condition="Control.IsEnabled(20)">VideoInfoDialogButtonFocus20</include>
+		<include condition="Control.IsEnabled(13)">VideoInfoDialogButtonFocus13</include>
+		<include condition="Control.IsEnabled(11)">VideoInfoDialogButtonFocus11</include>
+		<include condition="Control.IsEnabled(7)">VideoInfoDialogButtonFocus7</include>
+		<include condition="Control.IsEnabled(6)">VideoInfoDialogButtonFocus6</include>
+		<include condition="Control.IsEnabled(10)">VideoInfoDialogButtonFocus10</include>
+		<include condition="Control.IsEnabled(21)">VideoInfoDialogButtonFocus21</include>
+		<include condition="Control.IsEnabled(22)">VideoInfoDialogButtonFocus22</include>
+	</include>
+	<include name="VideoInfoDialogButtonFocus8">
+		<defaultcontrol always="true">8</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus15">
+		<defaultcontrol always="true">15</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus16">
+		<defaultcontrol always="true">16</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus17">
+		<defaultcontrol always="true">17</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus18">
+		<defaultcontrol always="true">18</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus19">
+		<defaultcontrol always="true">19</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus20">
+		<defaultcontrol always="true">20</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus13">
+		<defaultcontrol always="true">13</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus11">
+		<defaultcontrol always="true">11</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus7">
+		<defaultcontrol always="true">7</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus6">
+		<defaultcontrol always="true">6</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus10">
+		<defaultcontrol always="true">10</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus21">
+		<defaultcontrol always="true">21</defaultcontrol>
+	</include>
+	<include name="VideoInfoDialogButtonFocus22">
+		<defaultcontrol always="true">22</defaultcontrol>
+	</include>
+	
+	<!-- Scrollbars depending on background overlay design -->
+	<include name="BackgroundOverlayStyleScrollbarVertical">
+		<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarVerticalNew</include>
+		<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarVerticalOld</include>
+	</include>
+	<include name="BackgroundOverlayStyleScrollbarVerticalNew">
+		<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripFO.png</texturesliderbar>
+	</include>
+	<include name="BackgroundOverlayStyleScrollbarVerticalOld">
+		<texturesliderbackground border="0,5,0,5">common/ScrollBackground.png</texturesliderbackground>
+		<texturesliderbar border="0,5,0,5" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripNF.png</texturesliderbar>
+	</include>
+	
+	<include name="BackgroundOverlayStyleScrollbarHorizontal">
+		<include condition="!Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarHorizontalNew</include>
+		<include condition="Skin.HasSetting(BackgroundOverlayStyle)">BackgroundOverlayStyleScrollbarHorizontalOld</include>
+	</include>
+	<include name="BackgroundOverlayStyleScrollbarHorizontalNew">
+		<texturesliderbar border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripHorizontalFO.png</texturesliderbar>
+	</include>
+	<include name="BackgroundOverlayStyleScrollbarHorizontalOld">
+		<texturesliderbackground border="5,0,5,0">common/ScrollBackgroundHorizontal.png</texturesliderbackground>
+		<texturesliderbar border="5,0,5,0" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripHorizontalNF.png</texturesliderbar>
+	</include>
+	
+	<!-- Wall and wide view images -->
+	<include name="MediaViewImageNF">
+		<param name="fallback">DefaultVideos.png</param>
+		<param name="visible">False</param>
+		<definition>
+			<control type="image">
+				<include>$PARAM[coords]</include>
+				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]</visible>
+			</control>
+			<!-- Watched status -->
+			<control type="group">
+				<include>$PARAM[coords2]</include>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
+				</control>
+				<control type="image">
+					<include>$PARAM[coords3]</include>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+					<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="MediaViewImageFO">
+		<param name="fallback">DefaultVideos.png</param>
+		<param name="visible">False</param>
+		<definition>
+			<control type="image">
+				<include>$PARAM[coords]</include>
+				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>$PARAM[visible]</visible>
+				<visible>[!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]] + !System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="image">
+				<include>$PARAM[coords]</include>
+				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				<texture fallback="$PARAM[fallback]" background="true">$VAR[mediaImages]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<visible>$PARAM[visible]</visible>
+				<visible>[!Integer.IsEqual(Container.NumItems,0) | [Integer.IsEqual(Container.NumItems,0) + ListItem.IsParentFolder]] + [System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])]</visible>
+			</control>
+			<!-- Watched status -->
+			<control type="group">
+				<visible>!System.HasActiveModalDialog + Control.HasFocus($PARAM[id])</visible>
+				<include>$PARAM[coords2]</include>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
+				</control>
+				<control type="image">
+					<include>$PARAM[coords3]</include>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<visible>System.HasActiveModalDialog | !Control.HasFocus($PARAM[id])</visible>
+				<include>$PARAM[coords2]</include>
+				<fadetime>200</fadetime>
+				<control type="image">
+					<texture background="true">views/OverlayBottomBar.png</texture>
+				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+					<visible>[ListItem.IsFolder + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)] | String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable | !String.IsEmpty(ListItem.PlayCount)</visible>
+					<visible>[String.IsEqual(ListItem.DBTYPE,music) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,artist)] + !Skin.HasSetting(MusicListenedToStatus) | [String.IsEqual(ListItem.DBTYPE,video) | String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)] + !Skin.HasSetting(VideoWatchedStatus)</visible>
+				</control>
+				<control type="image">
+					<include>$PARAM[coords3]</include>
+					<texture background="true">$VAR[StatusOverlayWide]</texture>
+				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+</includes>

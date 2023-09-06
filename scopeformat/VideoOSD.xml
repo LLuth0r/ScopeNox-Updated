@@ -251,7 +251,7 @@
 					<height>100</height>
 					<font>-</font>
 					<onclick>RunScript(script.scopenox.tools,zoom,in)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddon(script.scopenox.tools)</visible>
+					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddOn(script.scopenox.tools)</visible>
 				</control>
 				<control type="button" id="714">
 					<texturefocus>osd/buttons/zoomoutfo.png</texturefocus>
@@ -261,7 +261,7 @@
 					<height>100</height>
 					<font>-</font>
 					<onclick>RunScript(script.scopenox.tools,zoom,out)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddon(script.scopenox.tools)</visible>
+					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddOn(script.scopenox.tools)</visible>
 				</control>
 				
 				<!--Subtitle Adjustment Buttons-->
@@ -273,7 +273,7 @@
 					<height>100</height>
 					<font>-</font>
 					<onclick>RunScript(script.scopenox.tools,subtitles,up)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddon(script.scopenox.tools)</visible>
+					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				
 				<control type="button" id="716">
@@ -284,7 +284,7 @@
 					<height>100</height>
 					<font>-</font>
 					<onclick>RunScript(script.scopenox.tools,subtitles,down)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddon(script.scopenox.tools)</visible>
+					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 			</control>
 

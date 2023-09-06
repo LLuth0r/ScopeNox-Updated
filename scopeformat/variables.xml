@@ -2,10 +2,21 @@
 <includes>
 
 <!-- Background images/overlay -->
+
+<!-- Background images/overlay -->
 	<variable name="GlobalBackgroundVar">
 		<value condition="Window.Next(home)"></value>
 		<value condition="Window.IsActive(pictures) + Container.Content(images)">$INFO[ListItem.FolderPath]</value>
+		<value condition="Window.Next(home)"></value>
+		<value condition="Window.IsActive(pictures) + Container.Content(images)">$INFO[ListItem.FolderPath]</value>
 		<value condition="Window.IsActive(1133) + !String.IsEmpty(Container(51).ListItem.Art(fanart)) + Control.HasFocus(51)">$INFO[Container(51).ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Control.GetLabel(4411)) + !Skin.HasSetting(Disable.Extrafanart) + !Skin.HasSetting(Disable.Fanart)">$INFO[Control.GetLabel(4411)]</value>
+		<value condition="!String.IsEmpty(Control.GetLabel(4410)) + !Skin.HasSetting(Disable.Extrafanart) + !Skin.HasSetting(Disable.Fanart)">$INFO[Control.GetLabel(4410)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(artist.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Container.ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(set.fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Container.Art(set.fanart)]</value>
+		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(4411)) + !Skin.HasSetting(Disable.Extrafanart) + !Skin.HasSetting(Disable.Fanart)">$INFO[Control.GetLabel(4411)]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(4410)) + !Skin.HasSetting(Disable.Extrafanart) + !Skin.HasSetting(Disable.Fanart)">$INFO[Control.GetLabel(4410)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
@@ -20,6 +31,8 @@
 		<value condition="String.IsEqual(Container(9033).ListItem.Thumb,5)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value condition="String.IsEqual(Container(9033).ListItem.Thumb,6)">$INFO[Skin.String(weatherfanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundTypeVar]</value>
 		<value condition="!String.IsEmpty(Container(9033).ListItem.Thumb)">$INFO[Container(9033).ListItem.Thumb]</value>
+		<value condition="String.IsEmpty(Container(9033).ListItem.Art(thumb)) + !String.IsEmpty(Skin.String(CustomDefaultBackground.path))">$INFO[Skin.String(CustomDefaultBackground.path)]</value>
+		<value>$INFO[Window(Home).Property(fakelabel)]</value>
 		<value condition="String.IsEmpty(Container(9033).ListItem.Art(thumb)) + !String.IsEmpty(Skin.String(CustomDefaultBackground.path))">$INFO[Skin.String(CustomDefaultBackground.path)]</value>
 		<value>$INFO[Window(Home).Property(fakelabel)]</value>
 	</variable>
@@ -664,6 +677,8 @@
 	</variable>
 
 	<!--Studio flags-->
+
+	<!--Studio flags-->
 	<variable name="StudioFlagColorVar">
 		<value condition="[String.IsEmpty(Skin.String(StudioLogos.path)) | String.IsEqual(Skin.String(StudioLogos.path),resource://resource.images.studios.white/)] + Window.IsActive(fullscreeninfo)">grey2</value>
 		<value condition="[String.IsEmpty(Skin.String(StudioLogos.path)) | String.IsEqual(Skin.String(StudioLogos.path),resource://resource.images.studios.white/)]">grey</value>
@@ -696,6 +711,8 @@
 	</variable>
 
 	<!--DialogVideoInfo-->
+
+	<!--DialogVideoInfo-->
 	<variable name="VideoInfoDetailsLabelVar">
 		<value condition="Control.HasFocus(900171)">$LOCALIZE[207] - $LOCALIZE[31175]</value>
 		<value condition="ControlGroup(9001).HasFocus(50)">$LOCALIZE[206]$INFO[Container(50).NumItems, [COLOR grey3](,)[/COLOR]]</value>
@@ -719,6 +736,8 @@
 	</variable>
 
 	<!--DialogMusicInfo-->
+
+	<!--DialogMusicInfo-->
 	<variable name="MusicInfoHeader">
 		<value condition="Container.Content(Artists)">$LOCALIZE[21891]</value>
 		<value condition="Container.Content(Albums)">$LOCALIZE[10523]</value>
@@ -726,10 +745,13 @@
 	</variable>
 
 	<!--Select dialog-->
+
+	<!--Select dialog-->
 	<variable name="DialogSelectLabel2Var">
 		<value condition="String.IsEqual(Control.GetLabel(1),$LOCALIZE[25006])">$INFO[ListItem.Duration,, [LOWERCASE]$LOCALIZE[12391][/LOWERCASE]]</value>
 		<value>$INFO[ListItem.AddonVersion]</value>
 	</variable>
+
 
 	<!-- Weather -->
 	<variable name="WeatherBackgroundTypeVar">
@@ -789,6 +811,7 @@
 	
 	<variable name="AspectRatio">
     <value condition="SubString(ListItem.FileNameAndPath,1.33) | SubString(ListItem.FileNameAndPath,4-3)">1.33</value>
+    <value condition="SubString(ListItem.FileNameAndPath,1.33) | SubString(ListItem.FileNameAndPath,4-3)">1.33</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.37) | SubString(ListItem.FileNameAndPath,4-3)">1.37</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.66) | SubString(ListItem.FileNameAndPath,15-9)">1.66</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.78) | SubString(ListItem.FileNameAndPath,16-9)">1.78</value>
@@ -821,6 +844,7 @@
 	</variable>
 	
 	<variable name="VideoPlayerAspectRatio">
+    <value condition="SubString(Player.Filenameandpath,1.33) | SubString(Player.Filenameandpath,4-3)">1.33</value>
     <value condition="SubString(Player.Filenameandpath,1.33) | SubString(Player.Filenameandpath,4-3)">1.33</value>
 		<value condition="SubString(Player.Filenameandpath,1.37) | SubString(Player.Filenameandpath,4-3)">1.37</value>
 		<value condition="SubString(Player.Filenameandpath,1.66) | SubString(Player.Filenameandpath,15-9)">1.66</value>
