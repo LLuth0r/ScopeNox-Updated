@@ -522,3 +522,527 @@
 		</item>
 	</include>
 </includes>
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Built-in-Select -->
+	<include name="DefaultSelect">
+		<control type="group">
+			<include>DialogOpenCloseAnimation</include>
+			<left>160</left>
+			<top>245</top>
+			<animation effect="slide" end="0,-35" condition="Control.IsVisible(6)">Conditional</animation>
+			<control type="image">
+				<width>1600</width>
+				<height>660</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+				<visible>Control.IsVisible(6)</visible>
+			</control>
+			<control type="image">
+				<left>293</left>
+				<width>1030</width>
+				<height>660</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+				<visible>!Control.IsVisible(6)</visible>
+			</control>
+			<control type="group">
+				<visible>!Control.IsVisible(3)</visible>
+				<left>17</left>
+				<top>30</top>
+				<control type="label">
+					<left>30</left>
+					<width>1420</width>
+					<height>40</height>
+					<font>font16_title_bold</font>
+					<label>$VAR[DialogSelectHeaderLabelVar]</label>
+					<textcolor>dialogheader</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>1566</width>
+					<height>1</height>
+					<texture colordiffuse="$VAR[ThemeLabelColor]">separator_horizontal.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(3)</visible>
+				<left>310</left>
+				<top>30</top>
+				<control type="label">
+					<left>28</left>
+					<width>840</width>
+					<height>40</height>
+					<font>font16_title_bold</font>
+					<label>$VAR[DialogSelectHeaderLabelVar]</label>
+					<textcolor>dialogheader</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="image">
+					<top>50</top>
+					<width>996</width>
+					<height>1</height>
+					<texture colordiffuse="$VAR[ThemeLabelColor]">separator_horizontal.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<left>1075</left>
+				<top>115</top>
+				<control type="multiimage">
+					<width>500</width>
+					<height>500</height>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+					<aspectratio aligny="top">keep</aspectratio>
+					<imagepath background="true">$INFO[Container(6).ListItem.Icon]</imagepath>
+					<visible>Control.IsVisible(6) + ![Window.IsVisible(script-skinshortcuts.xml) + String.StartsWith(Container(6).ListItem.Icon(Icon), special://skin/extras/icons)]</visible>
+				</control>
+				<control type="multiimage">
+					<width>500</width>
+					<height>500</height>
+					<timeperimage>70</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+					<aspectratio>center</aspectratio>
+					<imagepath background="true">$INFO[Container(6).ListItem.Icon]</imagepath>
+					<visible>Control.IsVisible(6) + [Window.IsVisible(script-skinshortcuts.xml) + String.StartsWith(Container(6).ListItem.Icon(Icon), special://skin/extras/icons)]</visible>
+				</control>
+			</control>
+			<control type="group" id="9000">
+				<control type="list" id="3">
+					<left>480</left>
+					<top>88</top>
+					<width>980</width>
+					<height>540</height>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<onleft>60</onleft>
+					<onright>90000</onright>
+					<pagecontrol>60</pagecontrol>
+					<animation effect="slide" start="0" end="-157" time="0" tween="quadratic" condition="!Control.IsVisible(6)">Conditional</animation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="60" width="980" condition="!Control.IsVisible(6)">
+						<control type="label">
+							<width>980</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>980</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="980" condition="!Control.IsVisible(6)">
+						<control type="image">
+							<width>980</width>
+							<height>60</height>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+							<visible>Control.HasFocus(3)</visible>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="label">
+							<width>980</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<scroll>true</scroll>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(3)">Conditional</animation>
+						</control>
+						<control type="label">
+							<width>980</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<align>right</align>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(3)">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<itemlayout height="60" width="800" condition="Control.IsVisible(6)">
+						<control type="label">
+							<width>780</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>780</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<align>right</align>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="60" width="800" condition="Control.IsVisible(6)">
+						<control type="image">
+							<width>780</width>
+							<height>60</height>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+							<visible>Control.HasFocus(3)</visible>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="label">
+							<width>780</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<scroll>true</scroll>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(3)">Conditional</animation>
+						</control>
+						<control type="label">
+							<width>780</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<font>font14</font>
+							<align>right</align>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label2]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(3)">Conditional</animation>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="list" id="6">
+					<left>32</left>
+					<top>88</top>
+					<width>1030</width>
+					<height>550</height>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>60</onleft>
+					<onright>90000</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="55" width="1041">
+						<control type="label">
+							<width>1030</width>
+							<height>55</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<width>1030</width>
+							<height>55</height>
+							<font>font13</font>
+							<textoffsetx>15</textoffsetx>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<align>right</align>
+							<label>$VAR[DialogSelectLabel2Var]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="55" width="1041">
+						<control type="image">
+							<left>1</left>
+							<width>1030</width>
+							<height>55</height>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+							<visible>Control.HasFocus(6)</visible>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="label">
+							<width>1030</width>
+							<height>55</height>
+							<font>font14</font>
+							<textoffsetx>15</textoffsetx>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(6)">Conditional</animation>
+						</control>
+						<control type="label">
+							<width>1030</width>
+							<height>55</height>
+							<font>font13</font>
+							<textoffsetx>15</textoffsetx>
+							<align>right</align>
+							<shadowcolor>shadow</shadowcolor>
+							<label>$VAR[DialogSelectLabel2Var]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(6)">Conditional</animation>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>16</left>
+				<top>88</top>
+				<height>540</height>
+				<width>14</width>
+				<onleft condition="Control.IsVisible(8)">98</onleft>
+				<onleft condition="Control.IsVisible(5) + !Control.IsVisible(8)">95</onleft>
+				<onleft condition="!Control.IsVisible(5)">97</onleft>
+				<onright>9000</onright>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+				<animation effect="slide" start="0" end="293" time="0" tween="quadratic" condition="!Control.IsVisible(6)">Conditional</animation>
+			</control>
+			<control type="grouplist" id="90000">
+				<animation effect="slide" start="0" end="-275" time="0" condition="!Control.IsVisible(6)">Conditional</animation>
+				<left>1415</left>
+				<top>2</top>
+				<width>200</width>
+				<itemgap>-40</itemgap>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<control type="button" id="98">
+					<description>Add/Get More... button</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>90</width>
+					<height>90</height>
+					<font>IconMedium</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label></label>
+					<onclick>SendClick(2000,8)</onclick>
+					<ondown>9000</ondown>
+					<visible>Control.IsVisible(8) + String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				</control>
+				<control type="button" id="95">
+					<description>Manual button</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>90</width>
+					<height>90</height>
+					<font>IconMedium</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label></label>
+					<onclick>SendClick(2000,5)</onclick>
+					<ondown>9000</ondown>
+					<visible>Control.IsVisible(5)</visible>
+				</control>
+				<control type="button" id="97">
+					<description>Cancel button</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>90</width>
+					<height>90</height>
+					<font>IconMedium</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label></label>
+					<onclick>back</onclick>
+					<ondown>9000</ondown>
+				</control>
+			</control>
+			<control type="label" id="1">
+				<include>HiddenObject</include>
+			</control>
+			<control type="button" id="7">
+				<description>Cancel button</description>
+				<label>$LOCALIZE[15067]</label>
+				<include>HiddenObject</include>
+				<onfocus>SetFocus(97)</onfocus>
+			</control>
+			<control type="button" id="5">
+				<description>Manual button</description>
+				<include>HiddenObject</include>
+				<onfocus>SetFocus(95)</onfocus>
+			</control>
+			<control type="button" id="8">
+				<description>Add/Get More... button</description>
+				<include>HiddenObject</include>
+				<onfocus>SetFocus(98)</onfocus>
+			</control>
+		</control>
+	</include>
+	<include name="GameSelect">
+		<control type="group">
+			<top>750</top>
+			<animation effect="slide" end="0,60" condition="!Window.IsActive(gamevideofilter)">Conditional</animation>
+			<animation effect="slide" start="0,400" end="0,0" time="500" tween="cubic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,400" start="0,0" time="500" tween="cubic" easing="out">WindowClose</animation>
+			<control type="image">
+				<top>1</top>
+				<width>100%</width>
+				<height>345</height>
+				<texture colordiffuse="99FFFFFF" flipy="true" border="1,40,1,1">topbar.png</texture>
+			</control>
+			<control type="panel" id="11">
+				<left>5</left>
+				<top>25</top>
+				<width>100%</width>
+				<height>325</height>
+				<onleft>9000</onleft>
+				<onright>11</onright>
+				<ondown>60</ondown>
+				<onup>11</onup>
+				<scrolltime tween="quadratic" easing="out">400</scrolltime>
+				<viewtype label="536">icon</viewtype>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<itemlayout height="325" width="480">
+					<control type="group">
+						<left>15</left>
+						<top>15</top>
+						<control type="gamewindow">
+							<width>400</width>
+							<height>225</height>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+						</control>
+						<control type="image">
+							<top>175</top>
+							<width>400</width>
+							<height>50</height>
+							<texture colordiffuse="88FFFFFF">black.png</texture>
+						</control>
+						<control type="group">
+							<visible>!String.IsEmpty(ListItem.Label2)</visible>
+							<control type="label">
+								<top>175</top>
+								<width>400</width>
+								<height>40</height>
+								<textoffsetx>10</textoffsetx>
+								<textcolor>grey2</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<top>175</top>
+								<width>400</width>
+								<height>40</height>
+								<align>right</align>
+								<textoffsetx>10</textoffsetx>
+								<textcolor>grey2</textcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</control>
+						<control type="label">
+							<top>175</top>
+							<width>400</width>
+							<height>40</height>
+							<textoffsetx>10</textoffsetx>
+							<textcolor>grey2</textcolor>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEmpty(ListItem.Label2)</visible>
+						</control>
+						<control type="image">
+							<width>400</width>
+							<height>225</height>
+							<texture colordiffuse="44FFFFFF">black.png</texture>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="325" width="480">
+					<control type="group">
+						<left>15</left>
+						<top>15</top>
+						<control type="gamewindow">
+							<width>400</width>
+							<height>225</height>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
+						</control>
+						<control type="image">
+							<top>175</top>
+							<width>400</width>
+							<height>50</height>
+							<texture colordiffuse="88FFFFFF">black.png</texture>
+						</control>
+						<control type="group">
+							<visible>!String.IsEmpty(ListItem.Label2)</visible>
+							<control type="label">
+								<top>175</top>
+								<width>400</width>
+								<height>40</height>
+								<textoffsetx>10</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<top>175</top>
+								<width>400</width>
+								<height>40</height>
+								<align>right</align>
+								<textoffsetx>10</textoffsetx>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</control>
+						<control type="label">
+							<top>175</top>
+							<width>400</width>
+							<height>40</height>
+							<textoffsetx>10</textoffsetx>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEmpty(ListItem.Label2)</visible>
+						</control>
+						<control type="image">
+							<width>400</width>
+							<height>225</height>
+							<texture colordiffuse="44FFFFFF">black.png</texture>
+							<include>FocusFadeOutAnimation</include>
+						</control>
+					</control>
+					<control type="image">
+						<width>430</width>
+						<height>255</height>
+						<texture colordiffuse="$VAR[ThemeLabelColor]" border="10">thumbs/thumbnail_focused.png</texture>
+						<bordersize>10</bordersize>
+						<include>FocusFadeInAnimation</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="12">
+				<top>270</top>
+				<width>100%</width>
+				<height>60</height>
+				<align>justify</align>
+				<textoffsetx>20</textoffsetx>
+				<shadowcolor>shadow</shadowcolor>
+				<font>font14_textbox</font>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</include>
+	<!-- Custom Select -->
+	<include name="SelectDefaultBackground">
+		<item>
+			<label>$LOCALIZE[13007]</label>
+			<onclick>Dialog.Close(1130)</onclick>
+			<onclick>Skin.Reset(CustomDefaultBackground.path)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[31023]</label>
+			<onclick>Dialog.Close(1130)</onclick>
+			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/extras/backgrounds)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[31022]</label>
+			<onclick>Dialog.Close(1130)</onclick>
+			<onclick>Skin.SetPath(CustomDefaultBackground.path)</onclick>
+		</item>
+	</include>
+</includes>
