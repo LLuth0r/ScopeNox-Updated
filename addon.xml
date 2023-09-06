@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.scope.nox.matrix" version="1.4.4" name="ScopeNox" provider-name="Funkd/LxLuthor">
+<addon id="skin.scope.nox.matrix" version="1.4.4" name="ScopeNox" provider-name="Funkd/LLuthor">
 	<requires>
-		<import addon="xbmc.gui" version="5.15.0"/>
+		<import addon="xbmc.gui" version="5.16.0"/>
 		<import addon="script.grab.fanart" version="0.12.8"/>
 		<import addon="script.skinshortcuts" version="0.4.5"/>
 		<import addon="service.library.data.provider" version="0.0.7"/>
@@ -12,7 +12,7 @@
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="scopeformat" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">ScopeNox : Mod by LxLuthor, Aeon Nox formatted to suit Zoomed CIH projector setups.</summary>
+		<summary lang="en">ScopeNox : Mod by Funkd, updated by LLuthor, Aeon Nox formatted to suit Zoomed CIH projector setups.</summary>
 		<description lang="en">ScopeNox: Aeon Nox in a format suitable for people using projectors and zooming for CIH. (GUI within 800-820 pixels)</description>
 		<platform>all</platform>
 		<assets>

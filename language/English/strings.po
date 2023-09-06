@@ -1155,3 +1155,7 @@ msgstr ""
 msgctxt "#31973"
 msgid "How long to wait before displaying Netflix style pause screen."
 msgstr ""
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr ""

@@ -9,6 +9,7 @@
 	<include file="Includes_LiveTV.xml" />
 	<include file="Includes_LiveTV_Views.xml" />
 	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Select.xml" />
 	<include file="Includes_Widgets.xml" />
 	<include file="Includes_16x9.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)" />
 	<include file="Includes_21x9.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)" />

@@ -10,6 +10,57 @@
 	<include>DialogOpenCloseAnimation</include>
 	<controls>
 
+		<!-- Single background image -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$VAR[ScopeNoxBackgroundImage]</texture>
+			<visible>[String.IsEqual(Skin.String(BackgroundDefaultImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),yes) | String.IsEqual(Skin.String(BackgroundSingleImage),no) + String.IsEmpty(Skin.String(CustomBackgroundFolder))] + String.IsEmpty(Container(211).ListItem.Property(background))</visible>
+			<aspectratio>scale</aspectratio>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
+		<!-- Multiple background images -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$VAR[ScopeNoxBackgroundImage]</imagepath>
+			<visible>String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder)) + String.IsEmpty(Container(211).ListItem.Property(background))</visible>
+			<aspectratio>scale</aspectratio>
+			<include>CustomBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		
+		<!-- Single individual background image -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Container(211).ListItem.Property(Background)]</texture>
+			<visible>!String.IsEmpty(Container(211).ListItem.Property(background)) + ![String.EndsWith(Container(211).ListItem.Property(background),\) | String.EndsWith(Container(211).ListItem.Property(background),/)]</visible>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+		<!-- Multiple individual background images -->
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<imagepath background="true">$INFO[Container(211).ListItem.Property(Background)]</imagepath>
+			<visible>!String.IsEmpty(Container(211).ListItem.Property(background)) + [String.EndsWith(Container(211).ListItem.Property(background),\) | String.EndsWith(Container(211).ListItem.Property(background),/)]</visible>
+			<aspectratio>scale</aspectratio>
+			<include>IndividualBackgroundFolderDuration</include>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" start="0" end="100" time="200" delay="70">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			<include>DialogZoomAnimation</include>
+			<include>DialogBackgroundDepth</include>
+		</control>
+
 		<control type="button" id="500">
 			<description>Needed Button</description>
 			<visible>false</visible>
@@ -58,6 +109,7 @@
 				<height>542</height>
 				<texture border="5">dialogs/default/inner.png</texture>
 			</control>
+
 			<!-- id 211 - Current shortcuts -->
 			<control type="list" id="211">
 				<left>31</left>

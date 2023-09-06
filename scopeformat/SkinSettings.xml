@@ -99,6 +99,11 @@
 						<onclick>noop</onclick>
 						<icon />
 					</item>
+					<item id="6">
+						<label>Background Settings</label>
+						<onclick>Control.SetFocus(9006)</onclick>
+						<icon />
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -481,8 +486,6 @@
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 				</control>
-				
-				
 				<control type="grouplist" id="9005">
 					<description>control area</description>
 					<left>522</left>
@@ -522,13 +525,36 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>31968</label>
-						<visible>System.HasAddon(script.scopenox.tools)</visible>
+						<!-- <visible>System.HasAddon(script.scopenox.tools)</visible> -->
 						<onclick>Skin.ToggleSetting(showZoomButtons)</onclick>
 						<selected>Skin.HasSetting(showZoomButtons)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 				</control>
-				
+				<control type="grouplist" id="9006">
+					<description>control area</description>
+					<left>522</left>
+					<top>80</top>
+					<width>1316</width>
+					<height>590</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<visible>Container(9000).HasFocus(6)</visible>
+					<control type="button" id="111">
+						<width>1316</width>
+						<height>60</height>
+						<font>Font15</font>
+						<label>Background Image Selection</label>
+						<label2>[COLOR themecolor]$INFO[Skin.String(CustomDefaultBackground.path)][/COLOR]</label2>
+						<onclick>SetProperty(customSelectDefaultBackground,True,Home)</onclick>
+						<onclick>ActivateWindow(1130)</onclick>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
+				</control>
 			</control>
 		</control>
 	</controls>
