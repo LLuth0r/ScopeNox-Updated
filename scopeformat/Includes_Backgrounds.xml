@@ -131,14 +131,14 @@
 		<control type="multiimage">
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
-			<imagepath fallback="special://skin/backgrounds/tree-macro.png" background="true">$VAR[GlobalBackgroundVar]</imagepath>
+			<imagepath  background="true">$VAR[GlobalBackgroundVar]</imagepath>
 		</control>
 	</include>
 	<include name="HomeFanart">
 		<control type="multiimage">
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
-			<imagepath fallback="special://skin/backgrounds/tree-macro.png" background="true">$VAR[HomeBackgroundVar]</imagepath>
+			<imagepath fallback="special://skin/extras/backgrounds/1.jpg" background="true">$VAR[HomeBackgroundVar]</imagepath>
 			<visible>![ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()]</visible>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -147,7 +147,7 @@
 			<aspectratio align="center">scale</aspectratio>
 			<include>FullscreenDimensions</include>
 			<fadetime>600</fadetime>
-			<texture fallback="special://skin/backgrounds/tree-macro.png" background="true">$VAR[WidgetFanartVar]</texture>
+			<texture fallback="special://skin/extras/backgrounds/1.jpg" background="true">$VAR[WidgetFanartVar]</texture>
 			<visible>[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] | [[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + System.HasModalDialog]</visible>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -290,7 +290,7 @@
 	</include>
 	<include name="GlobalSearchBG">
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(111).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(111).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(111)</visible>
@@ -299,7 +299,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(121).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(121).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(121)</visible>
@@ -308,7 +308,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(131)</visible>
@@ -317,7 +317,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(141)</visible>
@@ -326,7 +326,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(151)</visible>
@@ -335,7 +335,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(161)</visible>
@@ -344,7 +344,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(171)</visible>
@@ -353,7 +353,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(181)</visible>
@@ -362,7 +362,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(211)</visible>
@@ -371,7 +371,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(221)</visible>
@@ -380,7 +380,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="backgrounds/tree-macro.png">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(231)</visible>
