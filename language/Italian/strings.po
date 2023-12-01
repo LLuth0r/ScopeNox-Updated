@@ -533,23 +533,23 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]CONFIGURA IMPOSTAZIONI VIDEO[/B][CR][CR]Gestisci la tua Libreria Video · Imposta le impostazioni di riproduzione dei video · Cambia impostazioni per le liste video[CR]Imposta il fonts dei sottotitoli"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
-msgstr "[B]CONFIGURA IMPOSTAZIONI MUSICA[/B][CR][CR]Gestisci la tua Libreria Musicale · Imposta le impostazioni di riproduzione della musica · Cambia impostazioni per le liste audio[CR]Imposta invio canzone · Imposta le opzioni per il karaoke"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgstr "[B]CONFIGURA IMPOSTAZIONI MusicA[/B][CR][CR]Gestisci la tua Libreria Musicale · Imposta le impostazioni di riproduzione della musica · Cambia impostazioni per le liste audio[CR]Imposta invio canzone · Imposta le opzioni per il karaoke"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshows"
 msgstr "[B]CONFIGURA IMPOSTAZIONI IMMAGINI[/B][CR][CR]Cambia impostazioni per le liste delle immagini· Configura lo slideshows"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]CONFIGURA IMPOSTAZIONI METEO[/B][CR][CR]Imposta tre città su cui avere le informazioni meteo"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]TIENI SOTTO CONTROLLO IL TUO SISTEMA[/B][CR][CR]Verifica il tuo hardware   Monitorizza l'utilizzo della CPU[CR]Verifica la versione di Kodi"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]CONFIGURA IMPOSTAZIONI DI SISTEMA[/B][CR][CR]Imposta e calibra il video · Configura l'uscita Audio · Imposta i controlli remoti[CR]Imposta le ozioni di risparmio energetico · Abilita il Debug · Imposta il master lock"
 
 msgctxt "#31407"
@@ -765,47 +765,47 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "Imposta la disposizione della vista liste. Di default è di 7 elementi con informazioni estese, \"Lista ridotta\" è a 14 elementi, una disposizione più semplice"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "TEMPO"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "FOTO"
 
 msgctxt "#31952"
-msgid "LIVE TV"
-msgstr "LIVE TV"
+msgid "Live TV"
+msgstr "Live TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEO"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILM"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SERIE TV"
 
 msgctxt "#31956"
-msgid "MUSIC"
-msgstr "MUSICA"
+msgid "Music"
+msgstr "MusicA"
 
 msgctxt "#31957"
-msgid "APPS"
-msgstr "APPS"
+msgid "Apps"
+msgstr "Apps"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "RIPRODUCI DISCO"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMA"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "CONCERTI"
 
 msgctxt "#31961"

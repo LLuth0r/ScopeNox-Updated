@@ -477,7 +477,7 @@ msgid "More movies from"
 msgstr "Mais filmes de"
 
 msgctxt "#31115"
-msgid "Similar TV shows"
+msgid "Similar TV Shows"
 msgstr "Seriados similares"
 
 msgctxt "#31117"
@@ -553,7 +553,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]CONFIGURAÇÕES DE VÍDEO[/B][CR][CR]Gerenciar sua coleção de vídeos · Definir opções de execução de vídeo · Alterar opções de listagem de vídeo[CR]Definir fonte para legendas"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]CONFIGURAÇÕES DE MÚSICA[/B][CR][CR]Gerenciar sua coleção de músicas · Defina opções de execução de música · Altere opções de listagem de música · Configure submissão de música · Defina opções de karaokê"
 
 msgctxt "#31403"
@@ -561,15 +561,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]CONFIGURAÇÕES IMAGEN[/B][CR][CR]Defina opções de listagem de imagens · Configure slideshow de imagens"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]CONFIGURAÇÕES DE CLIMA[/B][CR][CR]Defina três cidades para coletar informações sobre o tempo"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]MONITORE SEU SISTEMA[/B][CR][CR]Verifique seu hardware - Uso da CPU[CR]Verifique o número da revisão do Kodi"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]CONFIGURAÇÕES DE SISTEMA[/B][CR][CR]Configurar e calibrar telas · Configurar saída de áudio · Configurar controles remotos[CR]Definir opções para economia de energia · Habilitar depuração · Configurar bloqueio mestre"
 
 msgctxt "#31407"
@@ -785,47 +785,47 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "Altera o layout da visualização de lista. Padrão é layout de 7 itens com informação extendida. \"Lista Curta\" apresenta 14 itens com layout mais básico"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "CLIMA"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "IMAGENS"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TV AO VIVO"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VÍDEOS"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMES"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SERIADOS"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MÚSICAS"
 
 msgctxt "#31957"
-msgid "APPS"
-msgstr "APPS"
+msgid "Apps"
+msgstr "Apps"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "REPRODUZIR DISCO"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMA"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "CONCERTOS"
 
 msgctxt "#31961"

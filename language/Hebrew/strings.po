@@ -513,7 +513,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]שינוי הגדרות וידאו[/B][CR][CR]ניהול ספריית הווידאו · קביעת העדפות ניגון וידאו · שינוי אפשרויות תצוגת קבצי וידאו[CR]הגדרת גופן כתוביות"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]שינוי הגדרות מוזיקה[/B][CR][CR]ניהול ספריית המוזיקה · קביעת העדפות ניגון מוזיקה · שינוי אפשרויות תצוגת קבצי מוזיקה[CR]הגדרת אפשרויות קריוקי"
 
 msgctxt "#31403"
@@ -521,15 +521,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]שינוי הגדרות תמונות[/B][CR][CR]הגדרת אפשרויות תצוגת קבצי תמונה · הגדרת אפשרויות מצגת תמונה"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]שינוי הגדרות מזג אוויר[/B][CR][CR]בחירת עד שלוש ערים עבורן תוצג תחזית מזג אוויר"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]בדיקת פרטי המערכת[/B][CR][CR]פירוט חומרה · ניטור עומס על המעבד[CR]הצגת גרסת Kodi"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]שינוי הגדרות מערכת[/B][CR][CR]הגדרת וכיול התקני תצוגה · הגדרת התקן פלט שמע · הגדרת שלט רחוק[CR]קביעת העדפות חיסכון בחשמל · הפעלת יומן רישום מורחב · הגדרת קוד נעילה ראשי"
 
 msgctxt "#31407"
@@ -745,35 +745,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "משנה את מראה תצוגת רשימה. ברירת מחדל היא 7 פריטים עם מידע מורחב, \"רשימה דקה\" הוא מערך בסיסי יותר הכולל 14 פריטים."
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "מזג אוויר"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "תמונות"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "טלוויזיה חיה"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "וידאו"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "סרטים"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "סדרות"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "מוזיקה"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "תוכנות"
 
 msgctxt "#31958"
@@ -781,9 +781,9 @@ msgid "PLAY DISC"
 msgstr "ניגון דיסק"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "מערכת"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "הופעות"

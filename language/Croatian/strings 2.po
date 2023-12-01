@@ -513,7 +513,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]UREDI POSTAVKE VIDEA[/B][CR][CR]Upravljanje Vašom video zbirkom · Postavi mogućnosti izvođenja videa · Promjeni  mogućnosti prikaza video sadržaja[CR]Podesi izgled podnapisa"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]UREDI POSTAVKE GLAZBE[/B][CR][CR]Upravljanje Vašom glazbenom zbirkom · Postavi mogućnosti izvođenja glazbe · Promjeni mogućnosti prikaza glazbenoga sadržaja[CR]Postavi slanje pjesama · Podesi mogućnosti karaoka"
 
 msgctxt "#31403"
@@ -521,15 +521,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]UREDI POSTAVKE SLIKE[/B][CR][CR]Uredi sliku unos opcije · Postavke slikovnom prikazu"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]UREDI POSTAVKE VREMENA[/B][CR][CR]Postavi tri grada i prikupi informacije o vremenskoj prognozi"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]NADGLEDAJTE VAŠ SUSTAV[/B][CR][CR]Provjerite vaš hardware · Nadgledajte  CPU uporabu[CR]Provjerite Kodi inačicu"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]UREDI POSTAVKE SUSTAVA[/B][CR][CR]Podešavanje i kalibriranjem zaslona · Uredi audio izlaz · Postavljanje daljinskog upravljača[CR]Postavite opcije uštede energije  · Omogućite ispravljanje pogrešaka · Postavljanje glavnog zaključavanja"
 
 msgctxt "#31407"
@@ -689,35 +689,35 @@ msgid "Choose a widget to display on the Home screen to have easy access to cont
 msgstr "Odaberite widget koji će biti na početnom zaslonu kako bi imali lakši pristup sadržaju zbirke."
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "VRIJEME"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "SLIKE"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TELEVIZIJA"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEO"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMOVI"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TV SERIJE"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "GLAZBA"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "APLIKACIJE"
 
 msgctxt "#31958"
@@ -725,9 +725,9 @@ msgid "PLAY DISC"
 msgstr "REPRODUCIRAJ DISK"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SUSTAV"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "KONCERTI"

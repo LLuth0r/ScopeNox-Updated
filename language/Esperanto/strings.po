@@ -33,31 +33,31 @@ msgid "Skin default"
 msgstr "Skin Default"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "VETERO"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "BILDOJ"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TELEVIDO"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEOJ"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMOJ"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TELEVIDAĴOJ"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUZIKO"
 
 msgctxt "#31958"
@@ -65,5 +65,5 @@ msgid "PLAY DISC"
 msgstr "LUDI DISKON"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMO"

@@ -397,7 +397,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]CONFIGURAR PARÁMETROS DE VIDEO[/B][CR][CR]Xestionar a bibloteca de video · Estabrecer opcións da reprodución de video · Trocar opcións de listado de videos[CR]Estabrecer fontes dos subtítulos"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]CONFIGURAR PARÁMETROS DE MÚSICA[/B][CR][CR]Xestionar a bibloteca de música · Estabrecer as opcións de reprodución de música · Trocar opcións do listado da música[CR]Estabrecer a sumisión das cancións · Estabrecer as opcións do karaoke"
 
 msgctxt "#31403"
@@ -405,15 +405,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]CONFIGURAR PARÁMETROS DE IMAXES[/B][CR][CR]Estabrecer opcións do listado de imaxes · Configurar presentacións"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]CONFIGURAR PARÁMETROS DA METEOROLOXÍA[/B][CR][CR]Estabrecer tres cidade para a colleita de información meteorolóxica"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]MONITORICE O SEU SISTEMA[/B][CR][CR]Verifique o seu hardware · Monitorice o uso da CPU[CR]Verifique a versión do Kodi"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]CONFIGURAR PARÁMETROS DO SISTEMA[/B][CR][CR]Configurar as pantallas · Configurar a saída de audio · Estabrecer mandos remotos[CR]Estabrecer opcións de aforro enerxético · Activar depuración · Estabrecer bloque mestre"
 
 msgctxt "#31408"
@@ -517,35 +517,35 @@ msgid "Watched status indicator"
 msgstr "Indicador do estado \"Visto\""
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "O TEMPO"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "IMAXES"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TV EN DIRECTO"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VÍDEOS"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMES"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SERIES DE TV"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MÚSICA"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "APLICACIÓNS"
 
 msgctxt "#31958"
@@ -553,9 +553,9 @@ msgid "PLAY DISC"
 msgstr "REPRODUCIR DISCO"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMA"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "CONCERTOS"

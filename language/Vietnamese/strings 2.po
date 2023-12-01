@@ -269,7 +269,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]TUỲ CHỈNH CÀI ĐẶT VIDEO[/B][CR][CR]Quản lý thư viện video · Đặt chế độ xem video · Thay đổi cách liệt kê video[CR]Đặt font phụ đề"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]TUỲ CHỈNH CÀI ĐẶT NHẠC[/B][CR][CR]Quản lý thư viện nhạc · Đặt chế độ nghe nhạc · Thay đổi cách liệt kê nhạc[CR]Cài đặt gửi và lấy thông tin nhạc · Đặt chế độ karaoke"
 
 msgctxt "#31403"
@@ -277,11 +277,11 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]TUỲ CHỈNH CÀI ĐẶT ẢNH[/B][CR][CR]Đặt cách liệt kê ảnh · Chỉnh chương trình chiếu ảnh"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]TUỲ CHỈNH CÀI ĐẶT THỜI TIẾT[/B][CR][CR]Đặt ba thành phố để thu thập dữ liệu thời tiết"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]TUỲ CHỈNH CÀI ĐẶT HỆ THỐNG[/B][CR][CR]Cài đặt và điều chỉnh màn hình · Chỉnh đầu ra audio · Cài đặt điều khiển từ xa[CR]Đặt chế độ tiết kiệm năng lượng · Bật chế độ tìm sửa lỗi · Đặt khoá chủ"
 
 msgctxt "#31408"
@@ -353,31 +353,31 @@ msgid "Map & Alerts"
 msgstr "Bản đồ & Cảnh Báo"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "Thời tiết"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "Ảnh"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TV trực tuyến"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "Video"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "Phim"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TV Show"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "Nhạc"
 
 msgctxt "#31958"
@@ -385,5 +385,5 @@ msgid "PLAY DISC"
 msgstr "Chơi đĩa"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "Hệ thống"

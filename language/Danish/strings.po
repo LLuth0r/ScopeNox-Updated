@@ -265,7 +265,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]KONFIGURER VIDEOINDSTILLINGER[/B][CR][CR]Administrer dit videobibliotek · Vælg indstillinger for videoafspilning · Skift indstillinger for videooversigt[CR]Vælg skrifttype til undertekster"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]KONFIGURER MUSIKINDSTILLINGER[/B][CR][CR]Administrer dit musikbibliotek · Vælg indstillinger for musikafspilning · Skift indstillinger for musikoversigt[CR]Opsæt sangindsendelse · Vælg karaoke-indstillinger"
 
 msgctxt "#31403"
@@ -273,16 +273,16 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]KONFIGURER BILLEDEINDSTILLINGER[/B][CR][CR]Vælg indstillinger for billedeoversigt · Konfigurer diasshow"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]KONFIGURER VEJRINDSTILLINGER[/B][CR][CR]Du kan vælge tre byer, der skal hentes vejrudsigter for"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
-msgstr "[B]OVERVÅG DIT SYSTEM[/B][CR][CR]Se din hardware · Overvåg CPU-brug[CR]Tjek Kodi revisionsnummer"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgstr "[B]OVERVÅG DIT System[/B][CR][CR]Se din hardware · Overvåg CPU-brug[CR]Tjek Kodi revisionsnummer"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
-msgstr "[B]KONFIGURER SYSTEMINDSTILLINGER[/B][CR][CR]Indstil og kalibrer skærme · Konfigurer lydudgang · Opsæt fjernbetjeninger[CR]Opsæt strømstyring · Aktiver fejllogning · Opret hovedlås"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgstr "[B]KONFIGURER SystemINDSTILLINGER[/B][CR][CR]Indstil og kalibrer skærme · Konfigurer lydudgang · Opsæt fjernbetjeninger[CR]Opsæt strømstyring · Aktiver fejllogning · Opret hovedlås"
 
 msgctxt "#31408"
 msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from kodi.tv[CR]Modify Add-on settings"
@@ -357,31 +357,31 @@ msgid "Kiosk mode"
 msgstr "Kiosktilstand"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "VEJR"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "BILLEDER"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "DIREKTE TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEOER"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILM"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TV-SERIER"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUSIK"
 
 msgctxt "#31958"
@@ -389,5 +389,5 @@ msgid "PLAY DISC"
 msgstr "AFSPIL PLADE"
 
 msgctxt "#31959"
-msgid "SYSTEM"
-msgstr "SYSTEM"
+msgid "System"
+msgstr "System"

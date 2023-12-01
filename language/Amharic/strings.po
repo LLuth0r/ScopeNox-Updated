@@ -197,31 +197,31 @@ msgid "Map & Alerts"
 msgstr "ካርታ & ማስጠንቀቂያ"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "የ አየር ንብረት"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "ስእሎች"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "በቀጥታ የሚሰራጭ ቲቪ"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "ቪዲዮዎች"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "ሙቪዎች"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "የ ቲቪ ትእይንቶች"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "ሙዚቃ"
 
 msgctxt "#31958"
@@ -229,5 +229,5 @@ msgid "PLAY DISC"
 msgstr "ዲስክ ማጫወቻ"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "ስርአቱ"

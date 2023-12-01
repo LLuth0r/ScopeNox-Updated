@@ -413,7 +413,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]VIDEÓ BEÁLLÍTÁSOK[/B][CR][CR]Film médiatár kezelése · Videólejátszás beállítása · Videólistázás módjának beállítása[CR]Feliratok karaktertípusának váltása"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]ZENE BEÁLLÍTÁSOK[/B][CR][CR]Zene médiatár kezelése · Zenelejátszás beállítása · Zenelistázás módjának beállítása[CR]Zene lejátszási szabályok felállítása · Karaoke lehetőségek"
 
 msgctxt "#31403"
@@ -421,15 +421,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]KÉP BEÁLLÍTÁSOK[/B][CR][CR]Képek listázási módjának beállítása · Diavetítés beállítása"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]IDŐJÁRÁS BEÁLLÍTÁSOK[/B][CR][CR]Három város megadása, melyekről időjárás információk fognak megjelenni"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]RENDSZER MONITOR[/B][CR][CR]Hardver ellenőrzése · Processzor használat[CR]Kodi revízió száma"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]RENDSZERBEÁLLÍTÁSOK[/B][CR][CR]Kijelzők beállítása, kalibrálása · Hangkimenet konfigurálása · Távirányító beállítása[CR]Energiagazdálkodási lehetőségek beállítása · Hibakeresés bekapcsolása[CR]Mesterzár felállítása"
 
 msgctxt "#31408"
@@ -513,35 +513,35 @@ msgid "Kiosk mode"
 msgstr "Kiosk mód"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "IDŐJÁRÁS"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "KÉPEK"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "ÉLŐ TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEÓK"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMEK"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SOROZATOK"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "ZENE"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "ALKALMAZÁSOK"
 
 msgctxt "#31958"
@@ -549,9 +549,9 @@ msgid "PLAY DISC"
 msgstr "LEMEZ LEJÁTSZÁSA"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "RENDSZER"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "KONCERTEK"

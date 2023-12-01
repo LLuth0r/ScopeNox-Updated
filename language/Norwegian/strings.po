@@ -477,7 +477,7 @@ msgid "More movies from"
 msgstr "Flere filmer fra"
 
 msgctxt "#31115"
-msgid "Similar TV shows"
+msgid "Similar TV Shows"
 msgstr "Lignende TV-Serier"
 
 msgctxt "#31116"
@@ -581,7 +581,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]ENDRE DINE GRAFIKKINNSTILLINGER:[/B][CR][CR]Håndter ditt filmbibliotek · Filmavspillingskvalitet og rendring · Konfigurer skrifttype for undertekster · Oppgi filmautogjenopptaging"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]ENDRE DINE MUSIKKINNSTILLINGER:[/B][CR][CR] Velg visualisering · Håndter ditt musikkbibliotek · Oppgi din Last.FM konto · Endre karaokeskrifttype og -innstillinger"
 
 msgctxt "#31403"
@@ -589,16 +589,16 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]ENDRE DINE BILDEINNSTILLINGER:[/B][CR][CR]Aktiver automatisk miniatyrgenerering og lesing av EXIF-tagger · Juster overgangseffekter for bildeframvising · Oppgi din Kodi skjermdumpsmappe"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]ENDRE DINE VÆRINNSTILLINGER:[/B][CR][CR]Oppgi de tre stedene som Kodi viser på værskjermen · Endre dine regionale innstillinger, inklusive temperaturenheter"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
-msgstr "[B]OVERVÅK DITT SYSTEM[/B][CR][CR]Sjekk din maskinvare · Overvåk CPU-bruk[CR]Sjekk Kodi revisjonsnummer"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgstr "[B]OVERVÅK DITT System[/B][CR][CR]Sjekk din maskinvare · Overvåk CPU-bruk[CR]Sjekk Kodi revisjonsnummer"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
-msgstr "[B]ENDRE DINE SYSTEMINNSTILLINGER:[/B][CR][CR]Endre standarden for strømsparingsmodus · Konfigurer videomaskinvare · Still inn din lydmaskinvare · Konfigurer hovedbrukerens passord- og systemlåser"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgstr "[B]ENDRE DINE SystemINNSTILLINGER:[/B][CR][CR]Endre standarden for strømsparingsmodus · Konfigurer videomaskinvare · Still inn din lydmaskinvare · Konfigurer hovedbrukerens passord- og systemlåser"
 
 msgctxt "#31407"
 msgid "[B]SETUP PROFILES[/B][CR][CR]Setup and manage user profiles · Enable login screen[CR]Change password · Add a profile picture"
@@ -817,35 +817,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "Denne justerer oppsettet for Liste visning. Standard er 7 elementers oppsett med utvidet informasjon, \"Smal Liste\" er et 14 elementers, mer grunnleggende oppsett."
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "VÆR"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "BILDER"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "DIREKTE TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEOER"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMER"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TV-SERIER"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUSIKK"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "PROGRAMMER"
 
 msgctxt "#31958"
@@ -853,11 +853,11 @@ msgid "PLAY DISC"
 msgstr "SPILL CD"
 
 msgctxt "#31959"
-msgid "SYSTEM"
-msgstr "SYSTEM"
+msgid "System"
+msgstr "System"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "KONSERTER"
 
 msgctxt "#31961"

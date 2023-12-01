@@ -477,7 +477,7 @@ msgid "More movies from"
 msgstr "Enemmän elokuvia henkilöltä"
 
 msgctxt "#31115"
-msgid "Similar TV shows"
+msgid "Similar TV Shows"
 msgstr "Samankaltaisia TV-Sarjoja"
 
 msgctxt "#31116"
@@ -581,7 +581,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]MUOKKAA VIDEO-ASETUKSIA[/B][CR][CR]Hallitse videokirjastoa · Aseta videotoiston asetukset · Vaihda videolistauksen asetuksia[CR]Aseta tekstitysasetukset"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]MUOKKAA MUSIIKKI-ASETUKSIA[/B][CR][CR]Hallitse musiikkikirjastoa · Aseta musiikkitoiston asetukset · Vaihda musiikkilistauksen[CR]asetuksia · Aseta kappaleen lähetysasetuksia · Aseta karaoke-asetukset"
 
 msgctxt "#31403"
@@ -589,15 +589,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]MUOKKAA KUVA-ASETUKSIA[/B][CR][CR]Aseta kuvalistauksen asetukset · Määritä kuvaesityksiä"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]MUOKKAA SÄÄ-ASETUKSIA[/B][CR][CR]Aseta kolme kaupunkia joista noudetaan säätiedot"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]JÄRJESTELMÄN TIEDOT[/B][CR][CR]Tarkista laitteistosi · Seuraa CPU käyttöä[CR]Tarkista Kodi:n revisionumero"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]MUOKAA JÄRJESTELMÄASETUKSIA[/B][CR][CR]Aseta ja kalibroi näyttö · Määritä äänilähtö · Aseta kauko-ohjaus[CR]Aseta sähkönsäästöasetukset · Ota debuggaus käyttöön · Aseta pääkäyttäjän lukitus"
 
 msgctxt "#31407"
@@ -817,35 +817,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "Tämä vaihtaa listanäkymän ulkoasun. Oletuksena 7 nimikettä lisätietoineen. \"Ohut Lista\" näyttää 14 nimikettä ollen yksinkertaisempi näkymä."
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "SÄÄ"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "KUVAT"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEOT"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "ELOKUVAT"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TV-SARJAT"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUSIIKKI"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "OHJELMAT"
 
 msgctxt "#31958"
@@ -853,11 +853,11 @@ msgid "PLAY DISC"
 msgstr "TOISTA LEVY"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "JÄRJESTELMÄ"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "KONSERTIT"
 
 msgctxt "#31961"

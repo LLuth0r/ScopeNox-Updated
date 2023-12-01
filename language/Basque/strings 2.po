@@ -185,27 +185,27 @@ msgid "Map & Alerts"
 msgstr "Mapa eta alertak"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "EGURALDIA"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "IRUDIAK"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "BIDEOAK"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMAK"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "TB SAIOAK"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUSIKA"
 
 msgctxt "#31958"
@@ -213,5 +213,5 @@ msgid "PLAY DISC"
 msgstr "ERREPRODUZITU DISKOA"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMA"

@@ -482,7 +482,7 @@ msgstr ""
 
 #: \1080i\variables.xml:616
 msgctxt "#31115"
-msgid "Similar TV shows"
+msgid "Similar TV Shows"
 msgstr ""
 
 #: \1080i\custom_1128_WindowCustomizer.xml:65
@@ -840,11 +840,11 @@ msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR][CR]Change the skin · Set languag
 msgstr ""
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr ""
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · [CR]Set power saving options · Enable debugging"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · [CR]Set power saving options · Enable debugging"
 msgstr ""
 
 msgctxt "#31407"
@@ -1068,35 +1068,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr ""
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr ""
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr ""
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr ""
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr ""
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr ""
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr ""
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr ""
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr ""
 
 msgctxt "#31958"
@@ -1104,11 +1104,11 @@ msgid "PLAY DISC"
 msgstr ""
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr ""
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr ""
 
 msgctxt "#31961"

@@ -385,7 +385,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]КОНФИГУРИРАЙТЕ ВИДЕОТО[/B][CR][CR]Управлявайте видео библиотеката си · Настройте възпроизвеждането на видео[CR]Променете настройките на списъците с видео файлове · Задайте шрифт за субтитрите"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]КОНФИГУРИРАЙТЕ МУЗИКАТА[/B][CR][CR]Управлявайте музикалната си библиотека · Настройте възпроизвеждането на музика[CR]Променете настройките на списъците с аудио файлове · Настройте караоке плеъра"
 
 msgctxt "#31403"
@@ -393,11 +393,11 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]КОНФИГУРИРАЙТЕ СНИМКИТЕ[/B][CR][CR]Променете настройките на списъците със снимки · Конфигурирайте презентациите"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]КОНФИГУРИРАЙТЕ ПРОГНОЗАТА ЗА ВРЕМЕТО[/B][CR][CR]Изберете до три града, за които желаете да следите прогнозата"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]КОНФИГУРИРАЙТЕ СИСТЕМАТА[/B][CR][CR]Настройте и калибрирайте екраните · Настройте компютъра да пести енергия[CR]Настройте дистанционните · Конфигурирайте аудио изхода ·  Включете режима \"дебъг\" · Задайте код за заключване"
 
 msgctxt "#31408"
@@ -489,35 +489,35 @@ msgid "Kiosk mode"
 msgstr "Kiosk режим"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "ВРЕМЕТО"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "СНИМКИ"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "ТВ"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "ВИДЕО"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "ФИЛМИ"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "ТВ СЕРИАЛИ"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "МУЗИКА"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "ПРОГРАМИ"
 
 msgctxt "#31958"
@@ -525,9 +525,9 @@ msgid "PLAY DISC"
 msgstr "ДИСК"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "СИСТЕМА"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "КОНЦЕРТИ"

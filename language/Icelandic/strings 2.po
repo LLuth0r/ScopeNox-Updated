@@ -477,7 +477,7 @@ msgid "More movies from"
 msgstr "Fleiri myndir frá"
 
 msgctxt "#31115"
-msgid "Similar TV shows"
+msgid "Similar TV Shows"
 msgstr "Líkir sjónvarpsþættir"
 
 msgctxt "#31116"
@@ -581,7 +581,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]BREYTA SKJÁSTILLINGUM[/B][CR][CR]Sýsla með myndabandasafn · Breyta myndbandaspilun · Breyta stillingum myndbandalista[CR]Breyta leturgerðum þýðingartexta"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]BREYTA TÓNLISTARSTILLINGUM[/B][CR][CR]Sýsla með tónlistarsafn · Breyta stillingum tónlistarspilara · Breyta stillingum tónlistarlista[CR]Skilgreina laga upphal · Breyta karaoke stillingum"
 
 msgctxt "#31403"
@@ -589,15 +589,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]BREYTA LJÓSMYNDASTILLINGUM[/B][CR][CR]Breyta stillingum ljósmyndalista · Stilla myndasýningar"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]BREYTA VEÐURSTILLINGUM[/B][CR][CR]Skilgreindu þrjár borgir til að ná í veðurupplýsingar fyrir"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]YFIRSÝN KERFI[/B][CR][CR]Athuga vélbúnað   Fylgjast með örgjafa notkun[CR]Athuga útgáfunúmer Kodi"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]BREYTA KERFISSTILLINGUM[/B][CR][CR]Breyta og stilla skjái · Breyta hljóðúttaki · Skilgreina fjarstýringar[CR]Breyta orkukostum · Virkja aflúsun · Skilgreina aðallykilorð"
 
 msgctxt "#31407"
@@ -817,35 +817,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "Þetta breytir útliti lista. Sjálfgefið eru 7 hlutir með auka uppl. \"Mjór listi\" eru 14 hlutir."
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "VEÐUR"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "LJÓSMYNDIR"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "BEIN ÚTSENDING"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "MYNDEFNI"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "KVIKMYNDIR"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SJÓNVARPSÞÆTTIR"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "TÓNLIST"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "ÖPP"
 
 msgctxt "#31958"
@@ -853,11 +853,11 @@ msgid "PLAY DISC"
 msgstr "SPILA DISK"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "KERFI"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "TÓNLEIKAR"
 
 msgctxt "#31961"

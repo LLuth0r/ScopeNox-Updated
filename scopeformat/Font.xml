@@ -204,7 +204,7 @@
 		<!-- Normal Fonts -->
 		<font>
 			<name>font14_textbox_plot</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>20</size>
 			<linespacing>1.2</linespacing>
 		</font>
@@ -220,57 +220,57 @@
 		</font>
 		<font>
 			<name>font12</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>23</size>
 		</font>
 		<font>
 			<name>font14_textbox</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>33</size>
 			<linespacing>1.27</linespacing>
 		</font>
 		<font>
 			<name>font14_textbox2</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>33</size>
 			<linespacing>1.1</linespacing>
 		</font>
 		<font>
 			<name>font15_textbox</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>30</size>
 			<linespacing>1.4</linespacing>
 		</font>
 		<font>
 			<name>font15_textbox2</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>35</size>
 			<linespacing>1.26</linespacing>
 		</font>
 		<font>
 			<name>font14</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>font15</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>25</size>
 		</font>
 		<font>
 			<name>font15_bold</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<style>bold</style>
 			<size>35</size>
 		</font>
 		<font>
 			<name>font16</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
@@ -338,14 +338,13 @@
 		<!-- Title Fonts -->
 		<font>
 			<name>font12_title</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>font13_title</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<style>uppercase</style>
-			<size>30</size>
+			<size>28</size>
 		</font>
 		<font>
 			<name>font14_title</name>
@@ -368,7 +367,6 @@
 		<font>
 			<name>font16_title_bold</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
-			<style>uppercase bold</style>
 			<size>38</size>
 		</font>
 		<font>
@@ -427,7 +425,7 @@
 		</font>
 		<font>
 			<name>BigAssFont</name>
-			<filename>BebasNeue.ttf</filename>
+			<filename>TitilliumWeb-Regular.ttf</filename>
 			<size>600</size>
 		</font>
 		<font>

@@ -237,7 +237,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]CONFIGURAR AJUSTES DE VIDEO[/B][CR][CR]Administrar tu biblioteca de video · Configurar las opciones de reproducción de vídeo · Cambiar las opciones de listado de videos[CR]Establecer fuentes de subtítulos"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]CONFIGURAR AJUSTES DE MÚSICA[/B][CR][CR]Administrar tu biblioteca de música · Configurar las opciones de reproducción de música · Cambiar las opciones de listado de música [CR]Configurar el envío de canciones · Ajustar opciones de karaoke"
 
 msgctxt "#31403"
@@ -245,11 +245,11 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]CONFIGURAR AJUSTES DE IMAGEN[/B][CR][CR]Cambiar las opciones de listado de imágenes · Configurar presentaciones"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]CONFIGURAR AJUSTES DE CLIMA[/B][CR][CR]Establecer tres ciudades para recopilar información sobre el clima"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]CONFIGURAR AJUSTES DE SISTEMA[/B][CR][CR]Configurar y calibrar las pantallas · Configurar salida de audio · Configurar controles remotos[CR]Configurar opciones de ahorro de energía · Habilitar depuración · Configurar Bloqueo Maestro"
 
 msgctxt "#31408"
@@ -325,37 +325,37 @@ msgid "Kiosk mode"
 msgstr "Modo Quiosco"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "CLIMA"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "IMAGENES"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "TV EN VIVO"
 
 msgctxt "#31953"
-msgid "VIDEOS"
-msgstr "VIDEOS"
+msgid "Videos"
+msgstr "Videos"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "PELICULAS"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "PROGRAMAS DE TV"
 
 msgctxt "#31956"
-msgid "MUSIC"
-msgstr "MUSICA"
+msgid "Music"
+msgstr "MusicA"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "REPRODUCIR DISCO"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SISTEMA"

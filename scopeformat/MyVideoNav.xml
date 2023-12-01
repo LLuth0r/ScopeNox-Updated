@@ -131,6 +131,7 @@
 						<font>font13_title</font>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<textoffsetx>30</textoffsetx>
+						<textoffsety>10</textoffsety>
 					</control>
 				</control>
 				<control type="group">

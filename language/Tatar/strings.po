@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "ВИДЕОЛАР"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "КИНОЛАР"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "МУЗЫКА"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "СИСТЕМА"

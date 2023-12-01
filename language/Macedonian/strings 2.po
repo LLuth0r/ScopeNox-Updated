@@ -177,7 +177,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]КОНФИГУРИРАЊЕ ПОСТАВКИ ЗА ФИЛМОВИ[/B][CR][CR]Управувајте со вашата библиотека на филмови · Поставете опции на репродукција  на филмови[CR]Променете опции на излистување на филмови · Поставете изглед на букви во преводот"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]КОНФИГУРИРАЊЕ ПОСТАВКИ НА МУЗИКА[/B][CR][CR]Управувајте со вашата библиотека на музички нумери · Поставете опции за репрод. музика[CR]Променете опции на излиставање на музика · Поставете праќање на песни · Поставете караоке опции"
 
 msgctxt "#31403"
@@ -185,11 +185,11 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]КОНФИГУРИРАЊЕ ПОСТАВКИ ЗА СЛИКИ[/B][CR][CR]Поставете опции на излиставање на слики · Конфигурирајте репродукција на слајдови"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]КОНФИГУРИРАЊЕ ПОСТАВКИ ЗА ВРЕМЕНСКА ПРОГНОЗА[/B][CR][CR]Поставете три градови за собирање на информации за временската состојба"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]КОНФИГУРИРАЊЕ ПОСТАВКИ ЗА СИСТЕМ[/B][CR][CR]Подесете и калибрирајте екрани · Конфигурирајте звучен излез · Подесете далечинско управување · Поставете опции за заштеда на енергија[CR]Овозможете евиденција на грешки · Подесете главна лозинка"
 
 msgctxt "#31408"
@@ -261,31 +261,31 @@ msgid "Map & Alerts"
 msgstr "Мапи и Предупредувања"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "Време"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "Слики"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "ТВ во живо"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "Видеа"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "Филмови"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "ТВ Серијали"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "Музика"
 
 msgctxt "#31958"
@@ -293,5 +293,5 @@ msgid "PLAY DISC"
 msgstr "Пушти диск"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "Систем"

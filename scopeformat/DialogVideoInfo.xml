@@ -648,14 +648,14 @@
 						<param name="content" value="plugin://script.extendedinfo?info=topratedtvshows" />
 					</include>
 					<include content="ExtendedInfoListLayout" condition="System.HasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
-						<description>TV shows airing today</description>
+						<description>TV Shows airing today</description>
 						<param name="controlId" value="90021" />
 						<param name="label2" value="$INFO[ListItem.Year]" />
 						<param name="listVisible" value="!String.IsEqual(Window(Home).Property(AiringTodayTVShows.Count),0)" />
 						<param name="content" value="plugin://script.extendedinfo?info=airingtodaytvshows" />
 					</include>
 					<include content="ExtendedInfoListLayout" condition="System.HasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">
-						<description>On-the-air TV shows</description>
+						<description>On-the-air TV Shows</description>
 						<param name="controlId" value="90022" />
 						<param name="label2" value="$INFO[ListItem.Year]" />
 						<param name="listVisible" value="!String.IsEqual(Window(Home).Property(OnAirTVShows.Count),0)" />

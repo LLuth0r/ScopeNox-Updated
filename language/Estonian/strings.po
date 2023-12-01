@@ -481,7 +481,7 @@ msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set v
 msgstr "[B]VIDEO SEADED[/B][CR][CR]Halda enda videoteeki · Määra video esitamise seaded · Muuda videoloendi valikuid[CR]Määra subtiitrite font"
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE Music SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]MUUSIKA SEADED[/B][CR][CR]Halda enda muusikateeki · Muusika esitamise seaded · Muusika loendi seaded[CR]Loo esitamise seaded · Karaoke seaded"
 
 msgctxt "#31403"
@@ -489,15 +489,15 @@ msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · C
 msgstr "[B]PILTIDE SEADED[/B][CR][CR]Pildiloendi seaded · Slaidesitluse seaded"
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "[B]CONFIGURE Weather SETTINGS[/B][CR][CR]Set three cities to collect weather information"
 msgstr "[B]ILMA SEADED[/B][CR][CR]Vali kolm linna, millele ilmaprognoose koostatakse"
 
 msgctxt "#31405"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]MONITOR YOUR System[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
 msgstr "[B]JÄLGI OMA SÜSTEEMI[/B][CR][CR]Tutvu riistvaraga · Jälgi protsessori kasutust[CR]Vaata Kodi väljalaskenumbrit"
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE System SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]SÜSTEEMI SEADED[/B][CR][CR]Seadista ja kalibreeri ekraane · Seadista heliväljundit · Seadista kaugjuhtimist[CR]Energiasäästu valikud· Luba silumine · Seadista pealukk"
 
 msgctxt "#31407"
@@ -653,35 +653,35 @@ msgid "This toggles the layout of the List view. Default is a 7 item layout with
 msgstr "See muudab nimekirja vaate laotust. Vaikimisi on 7 ühikuga nimekiri koos lisainfoga, \"Väike nimekiri\" on 14 ühikuga ja tavapärasema laotusega"
 
 msgctxt "#31950"
-msgid "WEATHER"
+msgid "Weather"
 msgstr "ILM"
 
 msgctxt "#31951"
-msgid "PICTURES"
+msgid "Pictures"
 msgstr "PILDID"
 
 msgctxt "#31952"
-msgid "LIVE TV"
+msgid "Live TV"
 msgstr "OTSE-TV"
 
 msgctxt "#31953"
-msgid "VIDEOS"
+msgid "Videos"
 msgstr "VIDEOD"
 
 msgctxt "#31954"
-msgid "MOVIES"
+msgid "Movies"
 msgstr "FILMID"
 
 msgctxt "#31955"
-msgid "TV SHOWS"
+msgid "TV Shows"
 msgstr "SERIAALID"
 
 msgctxt "#31956"
-msgid "MUSIC"
+msgid "Music"
 msgstr "MUUSIKA"
 
 msgctxt "#31957"
-msgid "APPS"
+msgid "Apps"
 msgstr "RAKENDUSED"
 
 msgctxt "#31958"
@@ -689,9 +689,9 @@ msgid "PLAY DISC"
 msgstr "MÄNGI PLAATI"
 
 msgctxt "#31959"
-msgid "SYSTEM"
+msgid "System"
 msgstr "SÜSTEEM"
 
 msgctxt "#31960"
-msgid "CONCERTS"
+msgid "Concerts"
 msgstr "KONTSERDID"
