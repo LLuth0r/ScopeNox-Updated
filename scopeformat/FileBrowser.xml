@@ -250,17 +250,6 @@
 						<label>222</label>
 						<width>534</width>
 					</control>
-					<control type="button" id="415">
-						<description>Create folder button</description>
-						<label>119</label>
-						<width>534</width>
-					</control>
-					<control type="radiobutton" id="416">
-						<description>Flip Image button</description>
-						<radioposx>460</radioposx>
-						<width>534</width>
-						<label>749</label>
-					</control>
 				</control>
 			</control>
 		</control>

@@ -15,4 +15,9 @@ Latest Release (Nexus): https://github.com/LLuth0r/ScopeNox-Updated/releases
 In order to switch between 2.35 and 2.40 format go to :
 System -> Appearance -> Skin -> Settings -> Scope -> Scope Format (Toggle)
 
-This skin has an auto-zoom enabled.  It detects the media ratio and zooms based on that.  The downside is it does it every single time, so if you re-watch something, it'll zoom again.  I'm working on a resolution for this, but in the meantime, you can use the ScopeNox tools to adjust the zoom manually if needed.
+There are two tools for use with this script.  One is scopenox-tools.  This creates the sub-menu buttons for scope masking/zooming.
+https://github.com/LLuth0r/ScopeNox-Tools/releases
+
+
+The other is the scopenox-autozoom script.  With this installed, 16:9 content gets zoomed out so that it's the proper fit on a scope screen.
+https://github.com/LLuth0r/ScopeNox-Autozoom/releases
