@@ -540,6 +540,16 @@
 						<selected>Skin.HasSetting(showZoomButtons)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="112">
+						<width>1316</width>
+						<height>60</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>31975</label>
+						<onclick>Skin.ToggleSetting(enableAutoZoom)</onclick>
+						<selected>Skin.HasSetting(enableAutoZoom)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 				</control>
 				<control type="grouplist" id="9006">
 					<description>control area</description>

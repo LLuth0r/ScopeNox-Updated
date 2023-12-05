@@ -1159,3 +1159,11 @@ msgstr ""
 msgctxt "#31974"
 msgid "Choose your background image"
 msgstr ""
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr ""
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr ""

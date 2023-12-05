@@ -779,3 +779,24 @@ msgstr ""
 msgctxt "#31971"
 msgid "This will keep the 'Scope Mask' on or off once you set it. It will not reset for each movie/video."
 msgstr ""
+
+msgctxt "#31972"
+msgid "Netflix style pause wait time."
+msgstr ""
+
+#: /1080i/variables.xml
+msgctxt "#31973"
+msgid "How long to wait before displaying Netflix style pause screen."
+msgstr ""
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr ""
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr ""
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr ""

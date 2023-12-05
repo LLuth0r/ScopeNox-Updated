@@ -11,11 +11,11 @@
 					   String.Contains(Player.Process(VideoDAR),2.76)">
 		Skin.SetBool(scopemask)
 	</onload>
-	<onload condition="String.Contains(Player.Process(VideoDAR),1.33) |
+	<onload condition="Skin.HasSetting(enableAutoZoom) + [String.Contains(Player.Process(VideoDAR),1.33) |
 						String.Contains(Player.Process(VideoDAR), 1.37) |
 						String.Contains(Player.Process(VideoDAR), 1.66) |
 						String.Contains(Player.Process(VideoDAR), 1.78) |
-						String.Contains(Player.Process(VideoDAR), 1.85)">
+						String.Contains(Player.Process(VideoDAR), 1.85)]">
 		RunScript(script.scopenox-autozoom)
 	</onload>
 	<controls>
