@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.scopenox.tools" name="ScopeNox Tools" version="1.0.0" provider-name="Funkd">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">ScopeNox Tools</summary>
+		<description lang="en">Allows repositioning of subtitles and zooming in/out for 16:9/4:3 content on a scope screen. Only for use with ScopeNox. Select the 'Show Zoom/Subtitle Buttons for Non-Scope' option in skin settings. You must also allow control of XBMC via HTTP.</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+	</extension>
+</addon>
