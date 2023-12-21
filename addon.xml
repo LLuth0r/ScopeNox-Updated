@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.scope.nox.nexus" version="1.1.2" name="ScopeNox" provider-name="Funkd/LLuthor">
+<addon id="skin.scope.nox.nexus" version="1.1.3" name="ScopeNox" provider-name="Funkd/LLuthor">
 	<requires>
 		<import addon="xbmc.gui" version="5.16.0"/>
 		<import addon="script.grab.fanart" version="0.12.8"/>
