@@ -1,5 +1,21 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.1.4 - Fixed the aspect ratio display on VideoInfoWall screen
+        Now showing the actual video aspect ratio instead of an image
+
+1.1.3 - Updated the calibration screen, fixed missing subtitle position bar
+
+1.1.2 - Created skin settings for enabling autozoom
+        Updated labels
+
+1.1.1 - Removed non-functional 'New Folder & Mirror Image' buttons on the background selection
+        Added extra backgrounds
+        Updated the VideoFullScreen.xml file to run the autozoom script if content is 16:9
+
+1.1.0 - Added scopenox-tools & scopenox-autozoom zip packages to the skin folder
+
+1.0.9 - Updated fonts to get rid of the all title-capped font.  Removed legacy scopenox-tools.
+
 1.0.8 - Updated the full screen calibration settings.  Fixed the missing subtitle bar.
 
 1.0.7 - Fixed the subtitles window disappearing
