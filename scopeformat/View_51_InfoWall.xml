@@ -223,12 +223,12 @@
 						<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 						<visible>!IsEmpty(Control.GetLabel(9903))</visible>
 					</control>
-					<control type="image">
+					<control type="label">
 						<width>90</width>
+						<align>center</align>
+						<font>font24_bold</font>
 						<colordiffuse>grey</colordiffuse>
-						<include>MediaFlagVars</include>
-						<texture>flags/aspectratio/$VAR[AspectRatio].png</texture>
-						<visible>!IsEmpty(Control.GetLabel(9901))</visible>
+						<label>$VAR[AspectRatio]</label>
 					</control>
 					<control type="image">
 						<width>90</width>

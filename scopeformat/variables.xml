@@ -817,7 +817,6 @@
 	
 	<variable name="AspectRatio">
     <value condition="SubString(ListItem.FileNameAndPath,1.33) | SubString(ListItem.FileNameAndPath,4-3)">1.33</value>
-    <value condition="SubString(ListItem.FileNameAndPath,1.33) | SubString(ListItem.FileNameAndPath,4-3)">1.33</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.37) | SubString(ListItem.FileNameAndPath,4-3)">1.37</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.66) | SubString(ListItem.FileNameAndPath,15-9)">1.66</value>
 		<value condition="SubString(ListItem.FileNameAndPath,1.78) | SubString(ListItem.FileNameAndPath,16-9)">1.78</value>
