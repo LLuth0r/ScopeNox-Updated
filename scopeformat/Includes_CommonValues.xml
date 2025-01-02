@@ -116,7 +116,7 @@
 		<onclick>noop</onclick>
 	</include>
 	<!-- Media Flags -->
-	<include name="MediaFlagVars">
+	<include name="MediaFlagValues">
 		<width>135</width>
 		<height>00</height>
 		<aspectratio>keep</aspectratio>

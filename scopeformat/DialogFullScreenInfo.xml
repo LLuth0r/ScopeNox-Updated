@@ -42,53 +42,53 @@
 				<control type="image">
 					<width>320</width>
 					<height>88</height>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture background="true">$INFO[Player.Art(thumb)]</texture>
 					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="image">
 					<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
 					<width>260</width>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<bordersize>2</bordersize>
 					<texture fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[VideoPlayer.Studio,,.png]</texture>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture fallback="flags/mpaa/NR.png">$VAR[VideoRatingFlagVar]</texture>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
 					<visible>VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$VAR[VideoSourceFlagVar,flags/video/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>320</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
 				</control>
 			</control>
@@ -264,38 +264,38 @@
 				<control type="image">
 					<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
 					<width>260</width>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<bordersize>2</bordersize>
 					<texture fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[VideoPlayer.Studio,,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture fallback="flags/mpaa/NR.png">$VAR[VideoRatingFlagVar]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$VAR[VideoSourceFlagVar,flags/video/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
 					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
 				</control>
 			</control>

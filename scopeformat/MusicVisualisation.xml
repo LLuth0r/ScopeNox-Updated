@@ -196,7 +196,7 @@
 						<width>90</width>
 						<height>60</height>
 						<colordiffuse>grey</colordiffuse>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture>$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
 					</control>
 					<control type="label">

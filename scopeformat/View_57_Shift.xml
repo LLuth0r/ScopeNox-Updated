@@ -125,7 +125,8 @@
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
-			<control type="group"> <!-- Codec etc -->
+			<!-- Codec etc -->
+			<control type="group">
 				<left>1250</left>
 				<top>850</top>
 				<width>1840</width>
@@ -154,95 +155,7 @@
 					<height>70</height>
 					<texture border="1">separator3.png</texture>
 				</control>
-				<control type="image">
-					<left>0</left>
-					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
-					<include>VisibleFadeAnimation</include>
-				</control>
-				<control type="image">
-					<left>125</left>
-					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
-					<include>VisibleFadeAnimation</include>
-				</control>
-				<control type="image">
-					<left>250</left>
-					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
-					<include>VisibleFadeAnimation</include>
-				</control>
-				<control type="image">
-					<left>375</left>
-					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
-					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
-					<include>VisibleFadeAnimation</include>
-				</control>
-				<control type="image">
-					<left>500</left>
-					<colordiffuse>grey2</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-					<include>VisibleFadeAnimation</include>
-				</control>
 			</control>
 		</control>
-<!-- 	</include> -->
-<!-- 	<include name="AlbumShift">
-		<control type="group">
-			<include>ViewAnimation</include>
-			<visible>Control.IsVisible(57) + !Window.IsActive(addoninformation)</visible>
-			<control type="fixedlist" id="57">
-				<left>-120</left>
-				<top>200</top>
-				<width>2100</width>
-				<height>750</height>
-				<onup>SetProperty(MediaMenu,True,home)</onup>
-				<onup>SetFocus(9050)</onup>
-				<onleft>57</onleft>
-				<onright>57</onright>
-				<ondown>61</ondown>
-				<orientation>horizontal</orientation>
-				<viewtype label="31079">BigWrap</viewtype>
-				<pagecontrol>61</pagecontrol>
-				<scrolltime tween="quadratic">400</scrolltime>
-				<focusposition>3</focusposition>
-				<visible>Container.Content(games) | Container.Content(addons) | Container.Content(songs) | Container.Content(artists) | Container.Content(albums) | Container.Content(genres)</visible>
-				<itemlayout width="315" height="750">
-					<include>ShiftSquareThumbs</include>
-				</itemlayout>
-				<focusedlayout width="315" height="750">
-					<control type="group">
-						<animation effect="zoom" center="150,450" start="100" end="130" time="400" tween="quadratic" reversible="false">Focus</animation>
-						<animation effect="zoom" center="150,450" start="130" end="100" time="400" tween="quadratic" reversible="false">Unfocus</animation>
-						<include>ShiftSquareThumbs</include>
-					</control>
-				</focusedlayout>
-			</control>
-			<control type="scrollbar" id="61">
-				<top>840</top>
-				<width>1920</width>
-				<height>12</height>
-				<onup>57</onup>
-				<ondown>noop</ondown>
-				<texturesliderbackground />
-				<texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
-				<texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
-				<textureslidernib />
-				<textureslidernibfocus />
-				<showonepage>false</showonepage>
-				<orientation>horizontal</orientation>
-				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
-			</control> -->
-
-		<!-- </control> -->
 	</include>
 </includes>

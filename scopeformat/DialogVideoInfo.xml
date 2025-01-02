@@ -161,7 +161,7 @@
 						<control type="image" id="800011">
 							<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
 							<width>300</width>
-							<include>MediaFlagVars</include>
+							<include>MediaFlagValues</include>
 							<bordersize>2</bordersize>
 							<texture>$VAR[StudioFlagPathVar]$INFO[ListItem.Studio,,.png]</texture>
 						</control>
@@ -185,7 +185,7 @@
 					<control type="image">
 						<width>70</width>
 						<colordiffuse>grey</colordiffuse>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture fallback="flags/mpaa/NR.png">$VAR[RatingFlagVar]</texture>
 					</control>
 					<control type="image">
@@ -390,9 +390,9 @@
 						<include>SettingsFadeAnimation</include>
 						<control type="image">
 							<width>70</width>
-							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
-							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+							<!-- <colordiffuse>grey</colordiffuse> -->
+							<include>MediaFlagValues</include>
+							<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="group">
@@ -426,9 +426,9 @@
 						</control>
 						<control type="image">
 							<width>95</width>
-							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
-							<texture>flags/audio/$VAR[AudioCodecCustom].png</texture>
+							<!-- <colordiffuse>grey</colordiffuse> -->
+							<include>MediaFlagValues</include>
+							<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 							<visible>!IsEmpty(Control.GetLabel(9904))</visible>
 						</control>
 						<control type="label" id="9904">
@@ -466,9 +466,9 @@
 						</control>
 						<control type="image">
 							<width>70</width>
-							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
-							<texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
+							<!-- <colordiffuse>grey</colordiffuse> -->
+							<include>MediaFlagValues</include>
+							<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="group">
@@ -502,7 +502,7 @@
 						<control type="image">
 							<width>70</width>
 							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
+							<include>MediaFlagValues</include>
 							<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
 						</control>
 						<control type="image">
@@ -512,9 +512,9 @@
 						</control>
 						<control type="image">
 							<width>70</width>
-							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
-							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+							<!-- <colordiffuse>grey</colordiffuse> -->
+							<include>MediaFlagValues</include>
+							<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 						</control>
 						<control type="image">
 							<width>2</width>
@@ -524,7 +524,7 @@
 						<control type="image">
 							<width>70</width>
 							<colordiffuse>grey</colordiffuse>
-							<include>MediaFlagVars</include>
+							<include>MediaFlagValues</include>
 							<texture>flags/cc.png</texture>
 							<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 						</control>

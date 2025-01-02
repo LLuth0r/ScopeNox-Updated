@@ -237,6 +237,16 @@
 						<selected>Skin.HasSetting(Enable.VisibleSubmenu)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="115">
+						<width>1316</width>
+						<height>60</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>Use colored icons and media flags</label>
+						<onclick condition="System.HasAddon(resource.images.studios.coloured)">Skin.ToggleSetting(coloredflags)</onclick>
+						<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>
+						<selected>Skin.HasSetting(coloredflags)</selected>
+					</control>
 				</control>
 				<control type="grouplist" id="9002">
 					<description>control area</description>

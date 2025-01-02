@@ -99,7 +99,7 @@
 						<colordiffuse>white</colordiffuse>
 						<width>200</width>
 						<fadetime>50</fadetime>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture>$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
@@ -108,7 +108,7 @@
 						<colordiffuse>white</colordiffuse>
 						<width>200</width>
 						<fadetime>50</fadetime>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture fallback="rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
 						<visible>String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
@@ -151,18 +151,18 @@
 					<visible>Container.Content(albums) | Container.Content(songs)</visible>
 					<control type="image">
 						<width>198</width>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture>$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
 					</control>
 					<control type="image">
 						<width>198</width>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture>$INFO[ListItem.UserRating,flags/rating/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					</control>
 					<control type="image">
 						<width>198</width>
-						<include>MediaFlagVars</include>
+						<include>MediaFlagValues</include>
 						<texture fallback="rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
 						<visible>String.IsEmpty(ListItem.UserRating)</visible>
 					</control>

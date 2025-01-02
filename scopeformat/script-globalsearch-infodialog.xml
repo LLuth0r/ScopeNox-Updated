@@ -49,28 +49,28 @@
 				<visible>Control.IsVisible(110) | Control.IsVisible(140) | Control.IsVisible(150)</visible>
 				<control type="image">
 					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[Container(100).ListItem.Property(VideoResolution),flags/resolution/,.png]</texture>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 				</control>
 				<control type="image">
 					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[Container(100).ListItem.Property(VideoCodec),flags/video/,.png]</texture>
 				</control>
 				<control type="image">
 					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
+					<include>MediaFlagValues</include>
 					<texture>$INFO[Container(100).ListItem.Property(VideoAspect),flags/aspectratio/,.png]</texture>
 				</control>
 				<control type="image">
 					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[Container(100).ListItem.Property(AudioCodec),flags/audio/,.png]</texture>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 				</control>
 				<control type="image">
 					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$INFO[Container(100).ListItem.Property(AudioChannels),flags/channels/,.png]</texture>
+					<include>MediaFlagValues</include>
+					<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 				</control>
 			</control>
 			<control type="group" id="101">

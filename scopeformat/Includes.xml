@@ -414,7 +414,7 @@
 				<width>45%</width>
 				<height>90</height>
 				<font>font12_title</font>
-				<textoffsetx>15</textoffsetx>
+				<textoffsetx>45</textoffsetx>
 				<textcolor>grey2</textcolor>
 				<aligny>top</aligny>
 				<textoffsety>-2</textoffsety>
@@ -449,7 +449,7 @@
 			<control type="button" id="90022">
 				<top>143</top>
 				<label />
-				<left>-30</left>
+				<left>-10</left>
 				<onclick condition="String.IsEmpty(Window(home).Property(MediaMenu))">SetProperty(MediaMenu,True,home)</onclick>
 				<onclick condition="!String.IsEmpty(Window(home).Property(MediaMenu))">ClearProperty(MediaMenu,Home)</onclick>
 				<texturenofocus>mediamenu_indicator.png</texturenofocus>
