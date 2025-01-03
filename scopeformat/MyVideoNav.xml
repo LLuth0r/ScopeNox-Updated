@@ -149,7 +149,7 @@
 						<animation effect="slide" end="80" condition="Control.IsVisible(50) + Container.Content(movies)">Conditional</animation>
 						<control type="group">
 							<left>40</left>
-							<visible>[Container.Content(movies) + Control.IsVisible(50) + !Skin.HasSetting(Disable.List.Mediaflags)] | [Container.Content(episodes) + Control.IsVisible(50)]  | [Container.Content(movies) + Control.IsVisible(506) + !Skin.HasSetting(Disable.RightList.Mediaflags)] | [Container.Content(episodes) + Control.IsVisible(506) + !Skin.HasSetting(Disable.RightList.EpisodeMediaflags)] | Control.IsVisible(591) + [Container.Content(movies) | Container.Content(episodes)] | Control.IsVisible(509) + !Skin.HasSetting(Disable.MyFlix.Mediaflags) + [Container.Content(movies) | Container.Content(episodes)] | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(500) | Control.IsVisible(602)</visible>
+							<visible>[Container.Content(movies) + Control.IsVisible(50) | [Container.Content(episodes) + Control.IsVisible(50)]  | [Container.Content(movies) + Control.IsVisible(506) + !Skin.HasSetting(Disable.RightList.Mediaflags)] | [Container.Content(episodes) + Control.IsVisible(506) + !Skin.HasSetting(Disable.RightList.EpisodeMediaflags)] | Control.IsVisible(591) + [Container.Content(movies) | Container.Content(episodes)] | Control.IsVisible(509) + !Skin.HasSetting(Disable.MyFlix.Mediaflags) + [Container.Content(movies) | Container.Content(episodes)] | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(500) | Control.IsVisible(602)</visible>
 							<include>ViewAnimation</include>
 							<include condition="!System.AddonIsEnabled(script.embuary.helper) + !System.AddonIsEnabled(plugin.video.themoviedb.helper)">NoRatingsHelperFlagAnimations</include>
 							<!-- ROTTENTOMATOES/METACRITIC/TMDb/TRAKT/IMDb -->
@@ -530,6 +530,7 @@
 				</control>
 			</control>
 			<control type="group">
+				<!-- Remove Control.IsVisible(55)(TriPanel) and create a separate view for that -->
 				<visible>Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57)</visible>
 				<animation effect="slide" start="0" end="40" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" start="0" end="60" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(55)">Conditional</animation>
@@ -564,6 +565,9 @@
 						<textoffsetx>30</textoffsetx>
 					</control>
 				</control>
+				<!-- Icon Wall, Shift Wall, TriPanel Wall -->
+				<!-- Need to fix TriPanel Wall or separate -->
+				<!-- Create separate control group for Tripanel (view55), see above -->
 				<control type="group">
 					<left>1444</left>
 					<top>885</top>
@@ -630,29 +634,39 @@
 					</control>
 				</control>
 				<control type="group">
-					<right>30</right>
+					<right>300</right>
 					<top>880</top>
 					<width>563</width>
 					<height>90</height>
 					<include>VisibleFadeAnimation</include>
 					<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					<control type="image">
-						<left>13</left>
+						<left>0</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<left>176</left>
+						<left>150</left>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+					</control>
+					<control type="image">
+						<left>300</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
-						<left>339</left>
+						<left>450</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<left>600</left>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 					</control>
 				</control>
 			</control>
