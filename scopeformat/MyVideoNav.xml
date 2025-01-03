@@ -54,35 +54,35 @@
 		<control type="group">
 			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>
+			<!-- view id = 50 -->
 			<include condition="!Skin.HasSetting(Enable.SlimList)">VideoList</include>
 			<include condition="Skin.HasSetting(Enable.SlimList)">SlimVideoList</include>
-			<!-- view id = 50 -->
-			<include>VideoInfoWall</include>
 			<!-- view id = 51 -->
-			<include>View_52_Landscape</include>
+			<include>VideoInfoWall</include>
 			<!-- view id = 52 -->
-			<include>View_53_ShowCase</include>
+			<include>View_52_Landscape</include>
 			<!-- view id = 53 -->
-			<include>VideoTriPanel</include>
+			<include>View_53_ShowCase</include>
 			<!-- view id = 55 -->
-			<include>Video_56_Posters</include>
+			<include>VideoTriPanel</include>
 			<!-- view id = 56 -->
-			<include>PosterShift</include>
+			<include>Video_56_Posters</include>
 			<!-- view id = 57 -->
-			<include>BannerWall</include>
+			<include>PosterShift</include>
 			<!-- view id = 58 -->
-			<include>View_59_Logo</include>
+			<include>BannerWall</include>
 			<!-- view id = 59 -->
-			<include>VideoWall</include>
+			<include>View_59_Logo</include>
 			<!-- view id = 500 -->
-			<include>VideoLowList</include>
+			<include>VideoWall</include>
 			<!-- view id = 501 -->
-			<include>VideoEpisode</include>
+			<include>VideoLowList</include>
 			<!-- view id = 502 -->
-			<include>View_503_Wall</include>
+			<include>VideoEpisode</include>
 			<!-- view id = 503 -->
-			<include>Video_510_BigList</include>
+			<include>View_503_Wall</include>
 			<!-- view id = 510 -->
+			<include>Video_510_BigList</include>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
@@ -638,7 +638,7 @@
 					<width>563</width>
 					<height>90</height>
 					<include>VisibleFadeAnimation</include>
-					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(55)]</visible>
+					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(55) | Control.IsVisible(50)]</visible>
 					<control type="image">
 						<left>0</left>
 						<include>MediaFlagValues</include>
