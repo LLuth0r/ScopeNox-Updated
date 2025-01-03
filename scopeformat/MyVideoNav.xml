@@ -566,8 +566,6 @@
 					</control>
 				</control>
 				<!-- Icon Wall, Shift Wall, TriPanel Wall -->
-				<!-- Need to fix TriPanel Wall or separate -->
-				<!-- Create separate control group for Tripanel (view55), see above -->
 				<control type="group">
 					<left>1444</left>
 					<top>885</top>
@@ -633,13 +631,14 @@
 						<texture fallback="flags/default/mpaa/NR.png">$VAR[MediaFlagsPathVar]/mpaa/$VAR[RatingFlagVar]</texture>
 					</control>
 				</control>
+				<!-- Everything but TriPanel -->
 				<control type="group">
 					<right>300</right>
 					<top>880</top>
 					<width>563</width>
 					<height>90</height>
 					<include>VisibleFadeAnimation</include>
-					<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(55)]</visible>
 					<control type="image">
 						<left>0</left>
 						<include>MediaFlagValues</include>
@@ -665,6 +664,48 @@
 					</control>
 					<control type="image">
 						<left>600</left>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
+					</control>
+				</control>
+				<!-- TriPanel Media Flags -->
+				<control type="group">
+					<right>300</right>
+					<top>880</top>
+					<width>563</width>
+					<height>90</height>
+					<include>VisibleFadeAnimation</include>
+					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(510)]</visible>
+					<control type="image">
+						<left>0</left>
+						<top>2</top>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+					</control>
+					<control type="image">
+						<left>150</left>
+						<top>2</top>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+					</control>
+					<control type="image">
+						<left>300</left>
+						<top>2</top>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+					</control>
+					<control type="image">
+						<left>450</left>
+						<top>2</top>
+						<include>MediaFlagValues</include>
+						<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
+						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+					</control>
+					<control type="image">
+						<left>600</left>
+						<top>2</top>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 					</control>
