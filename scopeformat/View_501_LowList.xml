@@ -123,7 +123,7 @@
 					<top>0</top>
 					<width>615</width>
 					<height>305</height>
-					<font>font13</font>
+					<font>font10</font>
 					<pagecontrol>62</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
@@ -156,7 +156,7 @@
 					<top>8</top>
 					<width>615</width>
 					<height>160</height>
-					<font>font14_textbox</font>
+					<font>font12</font>
 					<pagecontrol>62</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
@@ -238,17 +238,17 @@
 						<width>162.5</width>
 						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 						<control type="label">
-							<top>2</top>
+							<top>20</top>
 							<width>162.5</width>
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Property(TotalSeasons)]</label>
-							<font>font48_bold</font>
+							<font>font30</font>
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>grey2</textcolor>
 						</control>
 						<control type="label">
-							<top>52</top>
+							<top>72</top>
 							<width>162.5</width>
 							<height>30</height>
 							<align>center</align>
@@ -264,17 +264,17 @@
 						<top>-6</top>
 						<control type="label">
 							<left>0</left>
-							<top>2</top>
+							<top>20</top>
 							<width>162.5</width>
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-							<font>font48_bold</font>
+							<font>font30</font>
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>grey2</textcolor>
 						</control>
 						<control type="label">
-							<top>52</top>
+							<top>72</top>
 							<width>162.5</width>
 							<height>30</height>
 							<align>center</align>
@@ -285,6 +285,7 @@
 					</control>
 					<control type="image">
 						<left>339</left>
+						<top>2</top>
 						<bordersize>2</bordersize>
 						<colordiffuse>$VAR[StudioFlagColorVar]</colordiffuse>
 						<include>MediaFlagValues</include>
@@ -292,6 +293,7 @@
 					</control>
 					<control type="image">
 						<left>506</left>
+						<top>2</top>
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagValues</include>
 						<texture fallback="flags/default/mpaa/NR.png">$VAR[MediaFlagsPathVar]/mpaa/$VAR[RatingFlagVar]</texture>
