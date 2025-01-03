@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.scope.nox.omega" version="1.1.5" name="ScopeNox" provider-name="Funkd/LLuthor">
+<addon id="skin.scope.nox.omega" version="1.1.6" name="ScopeNox" provider-name="Funkd/LLuthor">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 		<import addon="script.grab.fanart" version="0.12.8"/>
