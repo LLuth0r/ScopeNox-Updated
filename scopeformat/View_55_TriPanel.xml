@@ -6,18 +6,9 @@
 			<visible>Control.IsVisible(55)</visible>
 			<include>ViewAnimation</include>
 			<top>0</top>
-
 			<control type="group"><!-- Info Right -->
 				<left>1400</left>
 				<top>136</top>
-<!-- 				<control type="image"> -->
-<!-- 					<description>background image</description> -->
-<!-- 					<left>-32</left> -->
-<!-- 					<top>780</top> -->
-<!-- 					<width>542</width> -->
-<!-- 					<height>752</height> -->
-<!-- 					<texture border="40">panel_reflect.png</texture> -->
-<!-- 				</control> -->
 				<control type="image">
 					<description>background image</description>
 					<left>-32</left>
@@ -125,7 +116,8 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
-			<control type="group"> <!-- Poster -->
+			<!-- Poster -->
+			<control type="group"> 
 				<left>866</left>
 				<top>180</top>
 				<control type="image">
@@ -147,25 +139,11 @@
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
 					<bordersize>20</bordersize>
 				</control>
-<!-- 				<control type="image"> -->
-<!-- 					<left>550</left> -->
-<!-- 					<top>58</top> -->
-<!-- 					<width>80</width> -->
-<!-- 					<height>720</height> -->
-<!-- 					<texture flipx="true" border="1">side_shadow.png</texture> -->
-<!-- 				</control> -->
 			</control>
-			<control type="group"> <!--   Left List -->
+			<!--   Left List -->
+			<control type="group"> 
 				<left>36</left>
 				<top>80</top>
-<!-- 				<control type="image"> -->
-<!-- 					<description>background image</description> -->
-<!-- 					<left>-32</left> -->
-<!-- 					<top>932</top> -->
-<!-- 					<width>270</width> -->
-<!-- 					<height>750</height> -->
-<!-- 					<texture border="40">panel_reflect.png</texture> -->
-<!-- 				</control> -->
 				<control type="image">
 					<description>background image</description>
 					<left>-32</left>
