@@ -9,6 +9,7 @@
 	<onload condition="!VideoPlayer.Content(livetv)">SetFocus(602)</onload>
 	<controls>
 		<control type="slider">
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<description>Seek Slider</description>
 			<left>100</left>
 			<top>886</top>
@@ -18,7 +19,6 @@
 			<textureslidernib />
 			<textureslidernibfocus>osd/osd_slider_nib.png</textureslidernibfocus>
 			<action>seek</action>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
 		</control>
 		<control type="group">
 			<animation effect="slide" end="0,300" time="400" tween="quadratic" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
