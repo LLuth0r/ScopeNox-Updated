@@ -84,6 +84,7 @@
 			<!-- view id = 510 -->
 			<include>Video_510_BigList</include>
 		</control>
+		<!-- Control group for everything but VideoList -->
 		<control type="group">
 			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
@@ -136,9 +137,9 @@
 					</control>
 				</control>
 				<!-- MEDIAFLAGS -->
-				<!-- (List - Tripanel - Posters - Shift - BannerWall - Icons - RightList - MyFlix - BigFan - FanartList) -->
+				<!-- (Tripanel - Posters - Shift - BannerWall - Icons - RightList - MyFlix - BigFan - FanartList) -->
 				<control type="group">
-					<visible>Control.IsVisible(50) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58)] | Control.IsVisible(500) | Control.IsVisible(506) | Control.IsVisible(509) | Control.IsVisible(591) | Control.IsVisible(602)</visible>
+					<visible>Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58)] | Control.IsVisible(500) | Control.IsVisible(506) | Control.IsVisible(509) | Control.IsVisible(591) | Control.IsVisible(602)</visible>
 					<include>ViewAnimation</include>
 					<top>1014</top>
 					<height>90</height>
@@ -530,7 +531,6 @@
 				</control>
 			</control>
 			<control type="group">
-				<!-- Remove Control.IsVisible(55)(TriPanel) and create a separate view for that -->
 				<visible>Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57)</visible>
 				<animation effect="slide" start="0" end="40" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" start="0" end="60" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(55)">Conditional</animation>
@@ -717,6 +717,48 @@
 				<height>140</height>
 				<texture border="1">gradient_floor.png</texture>
 				<animation effect="slide" start="0,0" end="0,15" time="720" tween="cubic" easing="inout" condition="Control.IsVisible(56)">Conditional</animation>
+			</control>
+		</control>
+		<!-- List View Media Flags -->
+		<control type="group">
+			<right>300</right>
+			<top>855</top>
+			<width>563</width>
+			<height>90</height>
+			<include>VisibleFadeAnimation</include>
+			<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(510)]</visible>
+			<control type="image">
+				<left>0</left>
+				<top>2</top>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+			<control type="image">
+				<left>150</left>
+				<top>2</top>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+			</control>
+			<control type="image">
+				<left>300</left>
+				<top>2</top>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
+				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+			</control>
+			<control type="image">
+				<left>450</left>
+				<top>2</top>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
+				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+			</control>
+			<control type="image">
+				<left>600</left>
+				<top>2</top>
+				<include>MediaFlagValues</include>
+				<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 			</control>
 		</control>
 		<include>UpDownShadow</include>
