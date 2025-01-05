@@ -1,5 +1,9 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.1.7 - Fixed issues with the missing scope backgrounds
+        Adjusted position and sizes of flags on certain views
+        Adjusted height of background on list view
+
 1.1.6 - Added colored flags, updated a lot of the views to use them.
         Fixed some miscellaneous issues with button locations
         Updated some of the textures to the Aeon Nox Silvo textures
