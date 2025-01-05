@@ -50,7 +50,7 @@
 				</control>
 				<!-- This adjusts the list view height of the middle poster section -->
 				<control type="image">
-					<visible>![Control.IsVisible(50) ]</visible>
+					<visible>![Control.IsVisible(50)]</visible>
 					<bottom>0</bottom>
 					<width>100%</width>
 					<height>600</height>
@@ -58,10 +58,18 @@
 				</control>
 				<!-- This adjusts the tri panel view height of the middle poster section -->
 				<control type="image">
-					<visible>![Control.IsVisible(55)]</visible>
+					<visible>![Control.IsVisible(55) | Control.IsVisible(500)]</visible>
 					<bottom>0</bottom>
 					<width>100%</width>
 					<height>830</height>
+					<texture>floor.png</texture>
+				</control>
+				<!-- This adjusts the tri panel view height of the middle poster section -->
+				<control type="image">
+					<visible>Control.IsVisible(500)</visible>
+					<bottom>0</bottom>
+					<width>100%</width>
+					<height>680</height>
 					<texture>floor.png</texture>
 				</control>
 			</control>
