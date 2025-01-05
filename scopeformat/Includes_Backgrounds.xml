@@ -51,7 +51,7 @@
 				<control type="image">
 					<bottom>0</bottom>
 					<width>100%</width>
-					<height>680</height>
+					<height>820</height>
 					<texture>floor.png</texture>
 				</control>
 			</control>
