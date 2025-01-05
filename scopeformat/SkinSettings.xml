@@ -244,7 +244,6 @@
 						<font>font15</font>
 						<label>Use colored icons and media flags</label>
 						<onclick>Skin.ToggleSetting(coloredflags)</onclick>
-						<!-- <onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick> -->
 						<selected>Skin.HasSetting(coloredflags)</selected>
 					</control>
 				</control>

@@ -243,17 +243,17 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Property(TotalSeasons)]</label>
-							<font>font30</font>
+							<font>font15_bold</font>
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>grey2</textcolor>
 						</control>
 						<control type="label">
-							<top>72</top>
+							<top>64</top>
 							<width>162.5</width>
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>font13</font>
 							<textcolor>grey2</textcolor>
 						</control>
 					</control>
@@ -269,17 +269,17 @@
 							<height>60</height>
 							<align>center</align>
 							<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-							<font>font30</font>
+							<font>font15_bold</font>
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>grey2</textcolor>
 						</control>
 						<control type="label">
-							<top>72</top>
+							<top>64</top>
 							<width>162.5</width>
 							<height>30</height>
 							<align>center</align>
 							<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-							<font>font12</font>
+							<font>font13</font>
 							<textcolor>grey2</textcolor>
 						</control>
 					</control>
