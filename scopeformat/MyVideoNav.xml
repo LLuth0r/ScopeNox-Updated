@@ -211,90 +211,7 @@
 									<include>MediaFlagValues</include>
 									<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 								</control>
-								<!-- LANGUAGE FLAGS -->
-								<control type="grouplist">
-									<height>78</height>
-									<align>center</align>
-									<control type="grouplist">
-										<width>140</width>
-										<height>30</height>
-										<orientation>horizontal</orientation>
-										<itemgap>5</itemgap>
-										<visible>String.IsEqual(Skin.String(LanguageFlags),1) | String.IsEqual(Skin.String(LanguageFlags),3)</visible>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>flags/audio.png</texture>
-											<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) | !String.IsEmpty(ListItem.Property(AudioLanguage.2)) | !String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
-										</control>
-									</control>
-									<control type="grouplist">
-										<top>30</top>
-										<width>140</width>
-										<height>30</height>
-										<orientation>horizontal</orientation>
-										<itemgap>5</itemgap>
-										<visible>String.IsEqual(Skin.String(LanguageFlags),2) | String.IsEqual(Skin.String(LanguageFlags),3)</visible>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>flags/subtitles.png</texture>
-											<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | !String.IsEmpty(ListItem.Property(SubtitleLanguage.2)) | !String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.1),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.2),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
-										</control>
-										<control type="image">
-											<width>30</width>
-											<height>30</height>
-											<aspectratio>keep</aspectratio>
-											<colordiffuse>grey</colordiffuse>
-											<texture>$VAR[PathFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.3),,.png]</texture>
-											<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
-										</control>
-									</control>
-								</control>
+								
 							</control>
 						</control>
 					</control>
@@ -643,6 +560,7 @@
 						<left>0</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
+						<texture condition="!Skin.HasSetting(coloredflags)">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
@@ -677,8 +595,8 @@
 					<include>VisibleFadeAnimation</include>
 					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(55) | Control.IsVisible(50)]</visible>
 					<control type="image">
-						<width>120</width>
-						<height>100</height>
+						<width>100</width>
+						<height>80</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
 						<left>100</left>
 						<include>MediaFlagValues</include>
@@ -686,16 +604,16 @@
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<width>120</width>
-						<height>100</height>
+						<width>100</width>
+						<height>80</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
 						<left>225</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 					</control>
 					<control type="image">
-						<width>120</width>
-						<height>100</height>
+						<width>100</width>
+						<height>80</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
 						<left>350</left>
 						<include>MediaFlagValues</include>
@@ -704,7 +622,7 @@
 					</control>
 					<control type="image">
 						<width>120</width>
-						<height>100</height>
+						<height>80</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
 						<left>475</left>
 						<include>MediaFlagValues</include>
@@ -712,10 +630,10 @@
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image">
-						<width>120</width>
-						<height>100</height>
+						<width>100</width>
+						<height>80</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
-						<left>600</left>
+						<left>615</left>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 					</control>
@@ -729,8 +647,8 @@
 					<include>VisibleFadeAnimation</include>
 					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(510)]</visible>
 					<control type="image">
-						<width>100</width>
-						<height>80</height>
+						<width>90</width>
+						<height>70</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
 						<left>0</left>
 						<top>-50</top>
@@ -739,38 +657,38 @@
 						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<width>100</width>
-						<height>80</height>
+						<width>90</width>
+						<height>70</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
-						<left>100</left>
+						<left>80</left>
 						<top>-50</top>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 					</control>
 					<control type="image">
-						<width>100</width>
-						<height>80</height>
+						<width>90</width>
+						<height>70</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
-						<left>200</left>
+						<left>180</left>
 						<top>-50</top>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
-						<width>100</width>
-						<height>80</height>
-						<aspectratio aligny="bottom" align="right">scale</aspectratio>
-						<left>300</left>
-						<top>-50</top>
+						<width>110</width>
+						<height>60</height>
+						<aspectratio aligny="center" align="right">scale</aspectratio>
+						<left>280</left>
+						<top>-45</top>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image">
-						<width>100</width>
-						<height>80</height>
-						<aspectratio aligny="bottom" align="right">scale</aspectratio>
+						<width>110</width>
+						<height>70</height>
+						<aspectratio aligny="center" align="right">scale</aspectratio>
 						<left>400</left>
 						<top>-50</top>
 						<include>MediaFlagValues</include>
