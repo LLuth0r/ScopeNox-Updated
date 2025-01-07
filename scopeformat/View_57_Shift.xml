@@ -125,37 +125,6 @@
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
-			<!-- Codec etc -->
-			<control type="group">
-				<left>1250</left>
-				<top>850</top>
-				<width>1840</width>
-				<height>70</height>
-				<control type="image">
-					<left>128</left>
-					<width>2</width>
-					<height>70</height>
-					<texture border="1">separator3.png</texture>
-				</control>
-				<control type="image">
-					<left>253</left>
-					<width>2</width>
-					<height>70</height>
-					<texture border="1">separator3.png</texture>
-				</control>
-				<control type="image">
-					<left>378</left>
-					<width>2</width>
-					<height>70</height>
-					<texture border="1">separator3.png</texture>
-				</control>
-				<control type="image">
-					<left>503</left>
-					<width>2</width>
-					<height>70</height>
-					<texture border="1">separator3.png</texture>
-				</control>
-			</control>
 		</control>
 	</include>
 </includes>

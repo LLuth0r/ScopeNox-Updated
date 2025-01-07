@@ -205,7 +205,6 @@
 									<include>MediaFlagValues</include>
 									<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 								</control>
-								
 							</control>
 						</control>
 					</control>

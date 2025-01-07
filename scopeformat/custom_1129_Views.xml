@@ -5,7 +5,7 @@
 	<controls>
 		<control type="button" id="8999">
 			<description>Close Window button</description>
-			<top>130</top>
+			<top>140</top>
 			<left>350</left>
 			<width>64</width>
 			<height>48</height>
