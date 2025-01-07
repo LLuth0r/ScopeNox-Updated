@@ -662,47 +662,62 @@
 		</control>
 		<!-- List View Media Flags with colored flags -->
 		<control type="group">
-			<right>300</right>
+			<right>200</right>
 			<top>855</top>
-			<width>563</width>
+			<width>550</width>
 			<height>90</height>
 			<include>VisibleFadeAnimation</include>
 			<texture>black.png</texture>
 			<visible>Skin.HasSetting(coloredflags) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(502) | Control.IsVisible(503) | Control.IsVisible(510)]</visible>
 			<control type="image">
 				<left>0</left>
-				<top>-50</top>
+				<top>10</top>
+				<width>100</width>
+				<height>85</height>
+				<aspectratio>scale</aspectratio>
 				<aligny>center</aligny>
 				<include>MediaFlagValues</include>
 				<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<control type="image">
-				<left>130</left>
-				<top>-50</top>
+				<left>100</left>
+				<top>10</top>
+				<width>90</width>
+				<height>85</height>
+				<aspectratio>scale</aspectratio>
 				<aligny>center</aligny>
 				<include>MediaFlagValues</include>
 				<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 			</control>
 			<control type="image">
-				<left>270</left>
-				<top>-55</top>
+				<left>210</left>
+				<top>10</top>
+				<width>130</width>
+				<height>85</height>
+				<aspectratio>scale</aspectratio>
 				<aligny>center</aligny>
 				<include>MediaFlagValues</include>
 				<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
 				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 			</control>
 			<control type="image">
-				<left>420</left>
-				<top>0</top>
+				<left>350</left>
+				<top>20</top>
+				<width>110</width>
+				<height>65</height>
+				<aspectratio>scale</aspectratio>
 				<aligny>center</aligny>
 				<include>MediaFlagValues</include>
 				<texture>$VAR[MediaFlagsPathVar]/videocodec/$VAR[SourceFlagVar]</texture>
 				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 			</control>
 			<control type="image">
-				<left>570</left>
-				<top>-55</top>
+				<left>470</left>
+				<top>20</top>
+				<width>90</width>
+				<height>65</height>
+				<aspectratio>scale</aspectratio>
 				<aligny>center</aligny>
 				<include>MediaFlagValues</include>
 				<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
