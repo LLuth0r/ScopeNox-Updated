@@ -1106,7 +1106,7 @@
 			<control type="group">
 				<visible>![Container.Content(movies) | Container.Content(genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content() | Container.Content(files) | Container.Content(addons)]</visible>
 				<left>1280</left>
-				<top>22</top>
+				<top>-10</top>
 				<include>VisibleFadeAnimation</include>
 				<control type="image">
 					<description>background image</description>
@@ -1124,18 +1124,6 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordersize>32</bordersize>
-				</control>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
-					<left>32</left>
-					<top>468</top>
-					<width>506</width>
-					<height>101</height>
-					<texture border="1">separator2.png</texture>
-					<texture border="1">separator2.png</texture>
-					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
-					<texture border="1">separator2.png</texture>					
-					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 				</control>
 				<control type="button">
 					<visible>Container.Content(videos)</visible>
@@ -1160,11 +1148,6 @@
 					<top>500</top>
 					<width>506</width>
 					<height>60</height>
-					<texture border="1">separator2.png</texture>
-					<texture border="1">separator2.png</texture>
-					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
-					<texture border="1">separator2.png</texture>					
-					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
 				</control>
 				<control type="textbox" id="70">
 					<visible>Container.Content(episodes) | Container.Content(videos)</visible>
