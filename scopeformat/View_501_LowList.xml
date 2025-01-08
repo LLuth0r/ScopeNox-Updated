@@ -26,41 +26,46 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<left>1270</left>
-				<top>610</top>
+				<left>1285</left>
+				<top>625</top>
 				<width>650</width>
 				<height>270</height>
 				<animation effect="slide" end="0,-170" time="120" condition="!Skin.HasSetting(nohighlist)">Conditional</animation>
-				<control type="button">
+				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 					<width>650</width>
+					<font>font10</font>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 				</control>
-				<control type="button">
+				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 					<width>650</width>
+					<font>font10</font>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Premiered) + Container.Content(episodes)</visible>
 				</control>
-				<control type="button">
+				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</label>
 					<width>650</width>
+					<font>font10</font>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Studio) + Container.Content(episodes)</visible>
 				</control>
-				<control type="button">
+				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 					<width>650</width>
+					<font>font10</font>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Genre) + !Container.Content(episodes)</visible>
 				</control>
-				<control type="button">
+				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 					<width>650</width>
+					<font>font10</font>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeAnimation</include>
 					<visible>!String.IsEmpty(ListItem.Duration) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
@@ -79,6 +84,7 @@
 				<visible>Container.Content(episodes)</visible>
 				<animation effect="slide" end="0,-170" time="120" condition="!Skin.HasSetting(nohighlist)">Conditional</animation>
 			</control>
+			<!-- Episodes Plot box-->
 			<control type="group">
 				<left>1270</left>
 				<top>595</top>
