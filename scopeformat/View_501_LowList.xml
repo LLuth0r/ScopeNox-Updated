@@ -25,12 +25,14 @@
 					<bordersize>20</bordersize>
 				</control>
 			</control>
+			<!-- Description / Plot info window -->
 			<control type="grouplist">
 				<left>1285</left>
 				<top>625</top>
 				<width>650</width>
 				<height>270</height>
 				<animation effect="slide" end="0,-170" time="120" condition="!Skin.HasSetting(nohighlist)">Conditional</animation>
+				<!-- Information headers -->
 				<control type="textbox">
 					<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 					<width>650</width>
@@ -71,6 +73,7 @@
 					<visible>!String.IsEmpty(ListItem.Duration) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				</control>
 			</control>
+			<!-- Episode image -->
 			<control type="image">
 				<left>1655</left>
 				<top>623</top>
