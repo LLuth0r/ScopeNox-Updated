@@ -6,91 +6,101 @@
 			<visible>Control.IsVisible(55)</visible>
 			<include>ViewAnimation</include>
 			<top>0</top>
-			<control type="group"><!-- Info Right -->
+			<!-- Info panel on right -->
+			<control type="group">
 				<left>1400</left>
-				<top>136</top>
+				<top>115</top>
 				<control type="image">
 					<description>background image</description>
 					<left>-32</left>
-					<top>60</top>
+					<top>65</top>
 					<width>552</width>
-					<height>778</height>
+					<height>685</height>
 					<texture border="40">listpanel_back.png</texture>
 				</control>
 				<control type="grouplist">
-					<left>0</left>
-					<top>92</top>
+					<left>15</left>
+					<top>105</top>
 					<width>448</width>
 					<height>270</height>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Director)]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Director)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[126]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.Status)]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Premiered) + [Container.Content(episodes) | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Disable.NextAired)]]</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Studio)</visible>
 						<visible>[[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Disable.NextAired)] | Container.Content(episodes)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31010]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.NextDate),,: ]$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31011]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.LatestNumber),, - ]$INFO[Window(Home).Property(NextAired.LatestTitle)]</label>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Genre) + !Container.Content(episodes)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Genre)]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Genre)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
-					<control type="button">
+					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
 						<width>448</width>
+						<font>font10</font>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Runtime)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
 				</control>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar]</label>
-					<left>25</left>
+					<left>15</left>
 					<top>370</top>
 					<width>448</width>
 					<height>350</height>
@@ -122,7 +132,7 @@
 				<top>180</top>
 				<control type="image">
 					<width>510</width>
-					<height>763</height>
+					<height>685</height>
 					<aspectratio aligny="bottom" align="right">scale</aspectratio>
 					<texture background="true">$VAR[PosterThumbVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
@@ -133,7 +143,7 @@
 					<left>30</left>
 					<top>797</top>
 					<width>540</width>
-					<height>835</height>
+					<height>685</height>
 					<aspectratio aligny="top" align="right">scale</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<texture diffuse="thumbs/thumb_reflect.png" flipy="true" background="true">$VAR[PosterThumbVar]</texture>
@@ -149,13 +159,13 @@
 					<left>-32</left>
 					<top>100</top>
 					<width>870</width>
-					<height>750</height>
+					<height>685</height>
 					<texture border="40">listpanel_back.png</texture>
 				</control>
 				<control type="list" id="55">
 					<left>0</left>
 					<top>130</top>
-					<height>683</height>
+					<height>590</height>
 					<width>806</width>
 					<onleft>SetProperty(MediaMenu,True,home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
@@ -273,6 +283,7 @@
 							<texture>$VAR[ListItem.Overlay]</texture>
 						</control>
 					</focusedlayout>
+					<!-- TV Shows Left List -->
 					<itemlayout height="70" width="806" condition="Container.Content(tvshows)">
 						<control type="image">
 							<top>12</top>
@@ -293,6 +304,7 @@
 							<visible>!ListItem.IsParentFolder</visible>
 						</control>
 						<control type="label">
+							<description>TV Show Title</description>
 							<left>110</left>
 							<width>565</width>
 							<height>68</height>
@@ -658,13 +670,6 @@
 					<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-				</control>
-				<control type="image">
-					<left>822</left>
-					<top>114</top>
-					<width>40</width>
-					<height>795</height>
-					<texture flipx="true" border="1">side_shadow.png</texture>
 				</control>
 			</control>
 		</control>

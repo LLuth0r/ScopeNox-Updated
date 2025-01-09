@@ -530,13 +530,19 @@
 						</control>
 					</control>
 					<control type="image">
+						<top>25</top>
 						<left>32</left>
-						<width>198</width>
+						<width>100</width>
+						<height>60</height>
+						<aligny>center</aligny>
 						<include>MediaFlagValues</include>
 						<texture fallback="flags/studios/default-studio.png">$VAR[StudioFlagPathVar]$INFO[ListItem.Studio,,.png]</texture>
 					</control>
 					<control type="image">
-						<left>230</left>
+						<top>25</top>
+						<left>120</left>
+						<width>100</width>
+						<height>50</height>
 						<include>MediaFlagValues</include>
 						<texture fallback="flags/default/mpaa/NR.png">$VAR[MediaFlagsPathVar]/mpaa/$VAR[RatingFlagVar]</texture>
 					</control>
@@ -596,7 +602,7 @@
 				<!-- TriPanel Media Flags -->
 				<control type="group">
 					<right>20</right>
-					<top>930</top>
+					<top>955</top>
 					<width>563</width>
 					<height>90</height>
 					<include>VisibleFadeAnimation</include>
@@ -621,10 +627,10 @@
 						<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 					</control>
 					<control type="image">
-						<width>90</width>
+						<width>110</width>
 						<height>70</height>
 						<aspectratio aligny="bottom" align="right">scale</aspectratio>
-						<left>180</left>
+						<left>165</left>
 						<top>-50</top>
 						<include>MediaFlagValues</include>
 						<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
@@ -661,7 +667,7 @@
 		</control>
 		<!-- List View Media Flags with colored flags -->
 		<control type="group">
-			<right>200</right>
+			<right>75</right>
 			<top>855</top>
 			<width>550</width>
 			<height>90</height>
