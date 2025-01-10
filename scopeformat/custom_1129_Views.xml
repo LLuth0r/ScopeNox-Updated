@@ -3,9 +3,9 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include>WindowSettingsFadeAnimation</include>
 	<controls>
-		<control type="button" id="8999">
+		<control type="button" id="8999" condition="Skin.HasSetting(scopeFormat235)">
 			<description>Close Window button</description>
-			<top>140</top>
+			<top>130</top>
 			<left>350</left>
 			<width>64</width>
 			<height>48</height>

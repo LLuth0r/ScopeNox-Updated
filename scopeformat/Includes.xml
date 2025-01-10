@@ -49,8 +49,6 @@
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="String.IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
-		<!-- <top>44</top> -->
 		<control type="image">
 			<left>0</left>
 			<top>140</top>
@@ -68,7 +66,7 @@
 		<control type="button" id="8999">
 			<description>Close Window button</description>
 			<left>350</left>
-			<top>140</top>
+			<top>130</top>
 			<width>64</width>
 			<height>48</height>
 			<label></label>

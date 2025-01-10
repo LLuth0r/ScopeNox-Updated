@@ -5,14 +5,14 @@
 		<control type="group">
 			<control type="image">
 				<left>0</left>
-				<top>130</top>
+				<top>140</top>
 				<width>432</width>
 				<height>830</height>
 				<texture border="40">mediamenu_back.png</texture>
 			</control>
 			<control type="button" id="8999">
 				<description>Close Window button</description>
-				<top>140</top>
+				<top>130</top>
 				<left>343</left>
 				<width>64</width>
 				<height>48</height>
