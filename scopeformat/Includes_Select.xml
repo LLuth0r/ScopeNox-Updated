@@ -521,7 +521,101 @@
 			<onclick>Skin.SetPath(CustomDefaultBackground.path)</onclick>
 		</item>
 	</include>
+	<include name="CustomSelectLayout">
+		<control type="list" id="90100">
+			<left>1</left>
+			<top>68</top>
+			<width>628</width>
+			<height>480</height>
+			<onup>90100</onup>
+			<ondown>90100</ondown>
+			<onleft>90100</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="60" width="628">
+				<control type="label">
+					<width>628</width>
+					<height>60</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font14</font>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="628">
+				<control type="image">
+					<width>629</width>
+					<height>60</height>
+					<texture colordiffuse="$VAR[HighlightBarColor]" border="5">listselect_fo.png</texture>
+					<visible>Control.HasFocus(90100)</visible>
+					<include>VisibleFadeAnimation</include>
+				</control>
+				<control type="label">
+					<width>628</width>
+					<height>60</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font14</font>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90100)">Conditional</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<include condition="!String.IsEmpty(Window(movieinformation).Property(ActorName))">SelectActorName</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),search)">SelectSearch</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),mainmenulayout)">SelectMainMenuLayout</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),fanarttimeperimage)">SelectFanartTimePerImage</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),defaultbackground)">SelectDefaultBackground</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),languageflags)">SelectLanguageFlags</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),widgetopacity)">SelectWidgetOpacity</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),widgetback)">SelectWidgetBack</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),widgetcaseinfo)">SelectWidgetCaseInfo</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),myflixdimmer)">SelectMyFlixDimmer</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),dialoginfodimmer)">SelectDialogInfoDimmer</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),musicvizbackground)">SelectMusicVizBackground</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),pvrguidelogos)">SelectPVRGuideLogos</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),musicgenreiconpath)">SelectMusicGenreIconPath</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),moviegenreiconpath)">SelectMovieGenreIconPath</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),autohidevideoosd)">SelectAutoHideVideoOSD</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),autohidemusicosd)">SelectAutoHideMusicOSD</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),rightlistbackgrounddim)">SelectRightListBackgroundDim</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),fallbackbackground)">SelectFallbackBackground</include>
+				<include condition="String.IsEqual(Window(Home).Property(CustomSelect),startupintro)">SelectStartupIntro</include>
+			</content>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>617</left>
+			<top>69</top>
+			<height>480</height>
+			<width>12</width>
+			<onleft>90100</onleft>
+			<onright>90100</onright>
+			<ondown>60</ondown>
+			<onup>60</onup>
+			<texturesliderbackground>colors/black.png</texturesliderbackground>
+			<texturesliderbar>colors/white25.png</texturesliderbar>
+			<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+			<showonepage>false</showonepage>
+		</control>
+	</include>
+	<include name="SelectActorName">
+		<item>
+			<label>$LOCALIZE[31148]</label>
+			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>SetProperty(DoAction,True,movieinformation)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[31149]</label>
+			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>ClearProperty(ActorID,movieinformation)</onclick>
+			<onclick>ClearProperty(DirectorID,movieinformation)</onclick>
+			<onclick>RunScript(plugin.video.themoviedb.helper,add_query='"$ESCINFO[Window(movieinformation).Property(ActorName)]"',type=person,call_auto=1111)</onclick>
+			<onclick>ClearProperty(ActorName,movieinformation)</onclick>
+		</item>
+	</include>
 </includes>
+<!-- Why are there 2 of these??  -->
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Built-in-Select -->
@@ -1043,6 +1137,21 @@
 			<label>$LOCALIZE[31022]</label>
 			<onclick>Dialog.Close(1130)</onclick>
 			<onclick>Skin.SetPath(CustomDefaultBackground.path)</onclick>
+		</item>
+	</include>
+		<include name="SelectActorName">
+		<item>
+			<label>$LOCALIZE[31148]</label>
+			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>SetProperty(DoAction,True,movieinformation)</onclick>
+		</item>
+		<item>
+			<label>$LOCALIZE[31149]</label>
+			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>ClearProperty(ActorID,movieinformation)</onclick>
+			<onclick>ClearProperty(DirectorID,movieinformation)</onclick>
+			<onclick>RunScript(plugin.video.themoviedb.helper,add_query='"$ESCINFO[Window(movieinformation).Property(ActorName)]"',type=person,call_auto=1111)</onclick>
+			<onclick>ClearProperty(ActorName,movieinformation)</onclick>
 		</item>
 	</include>
 </includes>

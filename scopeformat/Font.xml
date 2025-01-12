@@ -2,6 +2,7 @@
 <fonts>
 	<fontset id="Default" idloc="31390">
 	
+	<!-- I need to fix these fonts and make them organized and in order of size -->
 	<!-- Scope -->
 		<font>
 			<name>font_plot_small</name>

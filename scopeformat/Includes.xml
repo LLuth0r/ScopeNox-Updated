@@ -51,7 +51,7 @@
 		<animation effect="slide" start="0,0" end="-440,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 		<control type="image">
 			<left>0</left>
-			<top>140</top>
+			<top>130</top>
 			<width>432</width>
 			<height>810</height>
 			<texture border="40">mediamenu_back.png</texture>

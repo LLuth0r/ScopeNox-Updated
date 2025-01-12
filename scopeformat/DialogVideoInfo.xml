@@ -7,11 +7,12 @@
 	<onunload>ClearProperty(Extra.Info,movieinformation)</onunload>
 	<controls>
 		<control type="group">
-					<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
 			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="-729,0" time="500" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="-729,0" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
 			<animation effect="slide" end="-729,0" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
+			<!-- Left poster -->
 			<control type="image">
 				<top>140</top>
 				<width>553</width>
@@ -21,13 +22,16 @@
 				<texture background="true" fallback="black.png">$VAR[PosterVar]</texture>
 			</control>
 		</control>
+		<!-- Right information window -->
 		<control type="group">
-			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>	
+			<!-- This first animation control sets where the window ends up using the end="".  Works amazing when using an adjusting height skin.  *Sarcasm* -->
+			<animation effect="slide" start="0,0" end="0,0" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>	
 			<animation effect="slide" start="VideoInfoSlidePos" end="0,0" time="500" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="VideoInfoSlidePos" time="500" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="VideoInfoSlidePos" end="0,0" time="500" tween="quadratic" condition="![Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]">Conditional</animation>
 			<animation effect="slide" end="VideoInfoSlidePos" time="500" tween="quadratic" condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)">Conditional</animation>
 			<left>553</left>
+			<!-- Background color of information window -->
 			<control type="image">
 				<animation effect="slide" start="0" end="20" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
 				<animation effect="zoom" start="100" end="102.5" center="auto" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
@@ -364,9 +368,10 @@
 						<include>ButtonInfo</include>
 						<label>$INFO[Container(50).ListItemAbsolute(0).Label,[COLOR labelheader]$LOCALIZE[206]:   [/COLOR]]$INFO[Container(50).ListItemAbsolute(1).Label,$COMMA ]$INFO[Container(50).ListItemAbsolute(2).Label,$COMMA ]$INFO[Container(50).ListItemAbsolute(3).Label,$COMMA ]$INFO[Container(50).ListItemAbsolute(4).Label,$COMMA ]$INFO[Container(50).ListItemAbsolute(5).Label,$COMMA ]</label>
 						<visible>!String.IsEmpty(ListItem.Cast)</visible>
-						<onclick>SetFocus(50)</onclick>
+						<onclick>SetFocus(1135)</onclick>
 					</control>
 				</control>
+				<!-- Lower Media Flag Group in Information window -->
 				<control type="group">
 					<left>-37</left>
 					<top>710</top>
@@ -386,11 +391,10 @@
 						<aligny>center</aligny>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
-<!-- 						<visible>!ControlGroup(9001).HasFocus</visible> -->
+						<!-- <visible>!ControlGroup(9001).HasFocus</visible> -->
 						<include>SettingsFadeAnimation</include>
 						<control type="image">
 							<width>70</width>
-							<!-- <colordiffuse>grey</colordiffuse> -->
 							<include>MediaFlagValues</include>
 							<texture>$VAR[MediaFlagsPathVar]/resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
@@ -400,22 +404,22 @@
 							<width>200</width>
 							<control type="label">
 								<left>0</left>
-								<top>2</top>
+								<top>-5</top>
 								<width>200</width>
 								<height>60</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Property(TotalSeasons)]</label>
-								<font>font35_bold</font>
+								<font>font12</font>
 								<wrapmultiline>true</wrapmultiline>
 								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
-								<top>52</top>
+								<top>37</top>
 								<width>200</width>
 								<height>30</height>
 								<align>center</align>
 								<label>[LOWERCASE]$VAR[OneOrMoreSeasonsVar][/LOWERCASE]</label>
-								<font>font12</font>
+								<font>font12_textbox</font>
 								<textcolor>grey</textcolor>
 							</control>
 						</control>
@@ -426,36 +430,31 @@
 						</control>
 						<control type="image">
 							<width>95</width>
-							<!-- <colordiffuse>grey</colordiffuse> -->
 							<include>MediaFlagValues</include>
 							<texture>$VAR[MediaFlagsPathVar]/audiocodec/$VAR[AudioCodecFlagVar]</texture>
-							<visible>!IsEmpty(Control.GetLabel(9904))</visible>
-						</control>
-						<control type="label" id="9904">
-							<label>$VAR[AudioCodecCustom]</label>
-							<visible>false</visible>
+							<visible>String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 						</control>
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							<width>200</width>
 							<control type="label">
 								<left>0</left>
-								<top>2</top>
+								<top>-5</top>
 								<width>200</width>
 								<height>60</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Property(TotalEpisodes)]</label>
-								<font>font35_bold</font>
+								<font>font12</font>
 								<wrapmultiline>true</wrapmultiline>
 								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
-								<top>52</top>
+								<top>37</top>
 								<width>200</width>
 								<height>30</height>
 								<align>center</align>
 								<label>[LOWERCASE]$VAR[OneOrMoreEpisodesVar][/LOWERCASE]</label>
-								<font>font12</font>
+								<font>font12_textbox</font>
 								<textcolor>grey</textcolor>
 							</control>
 						</control>
@@ -466,7 +465,6 @@
 						</control>
 						<control type="image">
 							<width>70</width>
-							<!-- <colordiffuse>grey</colordiffuse> -->
 							<include>MediaFlagValues</include>
 							<texture>$VAR[MediaFlagsPathVar]/audiochannels/$INFO[ListItem.AudioChannels,,.png]</texture>
 							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
@@ -475,22 +473,22 @@
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 							<width>200</width>
 							<control type="label">
-								<top>2</top>
+								<top>-5</top>
 								<width>200</width>
 								<height>60</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-								<font>font35_bold</font>
+								<font>font12</font>
 								<wrapmultiline>true</wrapmultiline>
 								<textcolor>grey</textcolor>
 							</control>
 							<control type="label">
-								<top>52</top>
+								<top>37</top>
 								<width>200</width>
 								<height>30</height>
 								<align>center</align>
 								<label>[LOWERCASE]$LOCALIZE[16101][/LOWERCASE]</label>
-								<font>font12</font>
+								<font>font12_textbox</font>
 								<textcolor>grey</textcolor>
 							</control>
 						</control>
@@ -504,7 +502,9 @@
 							<colordiffuse>grey</colordiffuse>
 							<include>MediaFlagValues</include>
 							<texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
+							<visible>String.IsEmpty(ListItem.TotalEpisodes)</visible>
 						</control>
+						<!-- These next 2 separators need conditionals or regroup so they aren't visible with tv show info -->
 						<control type="image">
 							<width>2</width>
 							<height>90</height>
@@ -512,9 +512,9 @@
 						</control>
 						<control type="image">
 							<width>70</width>
-							<!-- <colordiffuse>grey</colordiffuse> -->
 							<include>MediaFlagValues</include>
 							<texture>$VAR[MediaFlagsPathVar]/aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+							<visible>String.IsEmpty(ListItem.TotalEpisodes)</visible>
 						</control>
 						<control type="image">
 							<width>2</width>
@@ -552,7 +552,7 @@
 							<description>FS Plot</description>
 							<texturenofocus />
 							<right>0</right>
-							<height>350</height>
+							<height>340</height>
 							<width />
 							<label />
 							<onup>9000</onup>
