@@ -602,12 +602,12 @@
 	<include name="SelectActorName">
 		<item>
 			<label>$LOCALIZE[31148]</label>
-			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>Dialog.Close(1135)</onclick>
 			<onclick>SetProperty(DoAction,True,movieinformation)</onclick>
 		</item>
 		<item>
 			<label>$LOCALIZE[31149]</label>
-			<onclick>Dialog.Close(1129)</onclick>
+			<onclick>Dialog.Close(1135)</onclick>
 			<onclick>ClearProperty(ActorID,movieinformation)</onclick>
 			<onclick>ClearProperty(DirectorID,movieinformation)</onclick>
 			<onclick>RunScript(plugin.video.themoviedb.helper,add_query='"$ESCINFO[Window(movieinformation).Property(ActorName)]"',type=person,call_auto=1111)</onclick>
