@@ -127,7 +127,7 @@
 							<align>center</align>
 							<font>font14</font>
 							<shadowcolor>shadow</shadowcolor>
-							<textcolor>$VAR[ThemeLabelColor]</textcolor>
+							<textcolor>blue</textcolor>
 							<label>$PARAM[label]</label>
 							<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 						</control>
@@ -148,7 +148,7 @@
 						<height>43</height>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$PARAM[label2]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 					</control>
@@ -160,7 +160,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$PARAM[label1]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 					</control>
@@ -655,7 +655,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90050)">Conditional</animation>
 					</control>
@@ -667,7 +667,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90050)">Conditional</animation>
 					</control>
@@ -783,7 +783,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -795,7 +795,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -855,7 +855,7 @@
 						<align>center</align>
 						<font>font14</font>
 						<shadowcolor>shadow</shadowcolor>
-						<textcolor>$VAR[ThemeLabelColor]</textcolor>
+						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
@@ -870,11 +870,12 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scrollout>false</scrollout>
 			<pauseatend>5500</pauseatend>
 			<label>$INFO[ListItem.Tagline]</label>
 			<label>$INFO[Container(9143).ListItem.Property(Awards)]</label>
+			<!-- Need to copy this string from Aeon Nox to all string files -->
 			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
 			<visible>!String.IsEmpty(ListItem.Tagline) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
 		</control>
@@ -884,7 +885,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<pauseatend>5500</pauseatend>
@@ -897,7 +898,7 @@
 		<control type="label">
 			<height>30</height>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
 			<visible>String.IsEmpty(ListItem.Tagline) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
@@ -910,7 +911,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<label>$INFO[Container(50).NumItems,, $LOCALIZE[342]]</label>
 		</control>
 	</include>
@@ -921,7 +922,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<pauseatend>4500</pauseatend>
@@ -935,7 +936,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<label>$VAR[VideoInfoTVSubtitleVar]</label>
 			<visible>[!String.IsEmpty(ListItem.Status) | !String.IsEmpty(Container(9143).ListItem.Status)] + String.IsEmpty(Container(9143).ListItem.Property(Awards))</visible>
 		</control>
@@ -947,7 +948,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<pauseatend>4500</pauseatend>
@@ -961,7 +962,7 @@
 		<control type="label">
 			<height>30</height>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<label>$INFO[ListItem.Artist]</label>
 			<visible>!String.IsEmpty(ListItem.Artist)</visible>
@@ -971,7 +972,7 @@
 		<control type="label">
 			<height>30</height>
 			<font>font15</font>
-			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
 			<label>$INFO[ListItem.Property(Department),$LOCALIZE[31546] ]</label>
 		</control>

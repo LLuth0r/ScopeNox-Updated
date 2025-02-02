@@ -933,4 +933,28 @@
 		<value condition="SubString(Player.Filenameandpath,2.76) | SubString(Player.Filenameandpath,11-4)">2.76</value>
 		<value>$INFO[VideoPlayer.VideoAspect]</value>
 	</variable>
+
+	<variable name="VideoInfoButtonLabelVar">
+		<value condition="Control.HasFocus(300) | Control.HasFocus(64) | [Control.HasFocus(9003) + String.IsEqual(ListItem.DBTYPE,song)]">$LOCALIZE[31271]</value>
+		<value condition="Control.HasFocus(8) + [String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] | Control.HasFocus(808)">$LOCALIZE[1024]</value>
+		<value condition="Control.HasFocus(8)">$LOCALIZE[208]</value>
+		<value condition="Control.HasFocus(909)">$INFO[System.AddonTitle(script.preshowexperience)]</value>
+		<value condition="Control.HasFocus(910)">$LOCALIZE[206]</value>
+		<value condition="Control.HasFocus(14)">$LOCALIZE[40000]</value>
+		<value condition="Control.HasFocus(15)">$LOCALIZE[40211]</value>
+		<value condition="Control.HasFocus(11)">$LOCALIZE[20410]</value>
+		<value condition="Control.HasFocus(911)">$LOCALIZE[31457]</value>
+		<value condition="Control.HasFocus(7) | Control.HasFocus(5007) + !String.IsEmpty(ListItem.UserRating)">$LOCALIZE[31147]</value>
+		<value condition="Control.HasFocus(7) | Control.HasFocus(5007)">$LOCALIZE[38023]</value>
+		<value condition="Control.HasFocus(10)">$LOCALIZE[13511]</value>
+		<value condition="Control.HasFocus(5010)">$INFO[Control.GetLabel(10)]</value>
+		<value condition="Control.HasFocus(5012)">$INFO[Control.GetLabel(12)]</value>
+		<value condition="Control.HasFocus(6) | Control.HasFocus(5006)">$LOCALIZE[184]</value>
+		<value condition="Control.HasFocus(208)">$LOCALIZE[22082]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31271]</value>
+		<value condition="[Control.HasFocus(9003) + !String.IsEqual(ListItem.DBTYPE,song)] | [Container(9001).HasNext + !Container(9001).HasPrevious] + Window.IsActive(musicinformation)">$LOCALIZE[31453]</value>
+		<value condition="Control.HasFocus(90003) | [Container(90001).HasNext + !Container(90001).HasPrevious] + !Window.IsActive(musicinformation)">$LOCALIZE[31453]</value>
+		<value condition="[Container(9001).HasNext + !Container(9001).HasPrevious] + !String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[31453]</value>
+		<value condition="Control.HasFocus(5000)">$LOCALIZE[20391]</value>
+	</variable>
 </includes>
