@@ -386,7 +386,7 @@
 				<!-- Buttons -->
 				<control type="grouplist" id="9000">
 					<right>0</right>
-					<top>600</top>
+					<top>645</top>
 					<width>585</width>
 					<height>60</height>
 					<onleft>9000</onleft>
@@ -402,7 +402,7 @@
 						<width>65</width>
 						<texturenofocus />
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label></label>
+						<label>Play</label>
 						<altlabel></altlabel>
 						<usealttexture>String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</usealttexture>
 						<visible>[System.AddonIsEnabled(script.preshowexperience) + !String.IsEqual(Skin.String(CinemaVision.Button),$LOCALIZE[31232])] | !System.AddonIsEnabled(script.preshowexperience)</visible>
@@ -512,7 +512,7 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label></label>
 						<enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
-						<!-- <visible>!String.IsEqual(ListItem.DBTYPE,set)</visible> -->
+						<visible>!String.IsEqual(ListItem.DBTYPE,set)</visible>
 					</control>
 					<control type="button" id="208">
 						<description>More...</description>
@@ -529,12 +529,12 @@
 					<left>3</left>
 					<top>604</top>
 					<height>1</height>
-					<texture colordiffuse="blue">separator3.png</texture>
+					<texture colordiffuse="red">separator3.png</texture>
 				</control>
 				<!-- Bottom Section -->
 				<control type="grouplist" id="90001">
 					<left>-7</left>
-					<top>606</top>
+					<top>600</top>
 					<width>2800</width>
 					<height>500</height>
 					<onup>9000</onup>
@@ -544,12 +544,12 @@
 					<scrolltime tween="quadratic" easing="out">300</scrolltime>
 					<control type="group" id="90002">
 						<width>1200</width>
-						<height>500</height>
+						<height>250</height>
 						<control type="button" id="90003">
 							<left>10</left>
 							<top>-2</top>
 							<width>1200</width>
-							<height>500</height>
+							<height>250</height>
 							<onup>9000</onup>
 							<ondown condition="String.IsEqual(ListItem.Property(item.type),person)">900010</ondown>
 							<ondown condition="[String.IsEqual(ListItem.DBTYPE,set) | !System.AddonIsEnabled(plugin.video.themoviedb.helper)] + !String.IsEqual(ListItem.Property(item.type),person) + !String.IsEqual(ListItem.DBTYPE,season)">50</ondown>
@@ -559,7 +559,7 @@
 							<onclick condition="String.IsEqual(ListItem.DBTYPE,set)">SetProperty(TextViewerSubHeader,$INFO[Container(50).NumItems,, $LOCALIZE[342],[I],[/I]],Home)</onclick>
 							<onclick condition="[String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] + !String.IsEmpty(Container(9143).ListItem.Property(Status))">SetProperty(TextViewerSubHeader,$ESCINFO[Container(9143).ListItem.Property(Status),[I],[/I]],Home)</onclick>
 							<onclick condition="String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.TvShowTitle)">SetProperty(TextViewerSubHeader,$ESCINFO[ListItem.TvShowTitle,[I],[/I]],Home)</onclick>
-							<onclick>SetProperty(TextViewerContent,$ESCVAR[VideoInfoPlotVar],Home)</onclick>
+							<onclick>SetProperty(TextViewerContent,$ESCVAR[VideoPlotVar],Home)</onclick>
 							<onclick condition="String.IsEqual(ListItem.Property(item.type),person)">SetProperty(TextViewerSubHeader,$INFO[ListItem.Property(Department),$LOCALIZE[31546] ]$INFO[ListItem.Property(Age), - , $LOCALIZE[31544]],Home)</onclick>
 							<onclick>ActivateWindow(1112)</onclick>
 							<include>ButtonInfoDialogsCommonValues</include>
@@ -572,7 +572,7 @@
 								<width>780</width>
 								<height>345</height>
 								<align>justify</align>
-								<label>$VAR[VideoInfoPlotVar]</label>
+								<label>$VAR[VideoPlotVar]</label>
 								<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(90003)</autoscroll>
 								<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 								<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90003)">Conditional</animation>
