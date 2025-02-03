@@ -1,4 +1,3 @@
-<!-- Copied over Aeon Nox Dialog Video Info -->
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="System.AddonIsEnabled(script.embuary.helper)">RunScript(script.embuary.helper,action=blurimg,file='"$VAR[PosterVar]"',prop=MyProp,radius=10)</onload>
@@ -120,7 +119,7 @@
 								<width>130</width>
 								<height>65</height>
 								<align>right</align>
-								<font>font12</font>
+								<font>font14_textbox</font>
 								<textcolor>grey</textcolor>
 								<label>$INFO[ListItem.Year,(,)]</label>
 								<visible>!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.Property(item.type),person)</visible>
