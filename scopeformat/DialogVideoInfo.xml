@@ -227,62 +227,62 @@
 					<control type="panel" id="300">
 						<top>78</top>
 						<width>1198</width>
-						<height>360</height>
+						<height>200</height>
 						<ondown>9000</ondown>
 						<orientation>horizontal</orientation>
 						<visible allowhiddenfocus="true">!Control.HasFocus(64)</visible>
 						<include>VisibleFadeAnimation</include>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<itemlayout height="52" width="1198" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
+						<itemlayout height="42" width="1198" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
 							<control type="label">
 								<width>1198</width>
-								<height>50</height>
+								<height>40</height>
 								<font>font15</font>
 								<textcolor>blue</textcolor>
 								<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Label,[COLOR grey], [/COLOR]]</label>
 								<textoffsetx>20</textoffsetx>
 							</control>
 						</itemlayout>
-						<focusedlayout height="52" width="1198" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
+						<focusedlayout height="42" width="1198" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
 							<control type="image">
 								<top>5</top>
 								<width>1198</width>
-								<height>42</height>
+								<height>32</height>
 								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 								<visible>Control.HasFocus(300)</visible>
 								<include>VisibleFadeAnimation</include>
 							</control>
 							<control type="label">
 								<width>1198</width>
-								<height>50</height>
+								<height>40</height>
 								<font>font15</font>
 								<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Label]</label>
 								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(300)">Conditional</animation>
 								<textoffsetx>20</textoffsetx>
 							</control>
 						</focusedlayout>
-						<itemlayout height="52" width="599" condition="Skin.HasSetting(MoreVideoInfoDetails) + Integer.IsGreater(Container(300).NumItems,5)">
+						<itemlayout height="42" width="599" condition="Skin.HasSetting(MoreVideoInfoDetails) + Integer.IsGreater(Container(300).NumItems,5)">
 							<control type="label">
 								<width>599</width>
-								<height>50</height>
+								<height>40</height>
 								<font>font15</font>
 								<textcolor>blue</textcolor>
 								<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Label,[COLOR grey], [/COLOR]]</label>
 								<textoffsetx>20</textoffsetx>
 							</control>
 						</itemlayout>
-						<focusedlayout height="52" width="599" condition="Skin.HasSetting(MoreVideoInfoDetails) + Integer.IsGreater(Container(300).NumItems,5)">
+						<focusedlayout height="42" width="599" condition="Skin.HasSetting(MoreVideoInfoDetails) + Integer.IsGreater(Container(300).NumItems,5)">
 							<control type="image">
 								<top>5</top>
 								<width>599</width>
-								<height>42</height>
+								<height>32</height>
 								<texture colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texture>
 								<visible>Control.HasFocus(300)</visible>
 								<include>VisibleFadeAnimation</include>
 							</control>
 							<control type="label">
 								<width>599</width>
-								<height>50</height>
+								<height>40</height>
 								<font>font15</font>
 								<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Label]</label>
 								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(300)">Conditional</animation>
@@ -348,7 +348,7 @@
 					</control>
 					<!-- Separator -->
 					<control type="image">
-						<top>390</top>
+						<top>245</top>
 						<height>1</height>
 						<texture colordiffuse="blue">separator3.png</texture>
 					</control>
@@ -356,7 +356,7 @@
 				<!-- Buttons LABEL -->
 				<control type="group">
 					<left>-5</left>
-					<top>640</top>
+					<top>500</top>
 					<control type="button">
 						<width>650</width>
 						<texturenofocus />
@@ -385,7 +385,7 @@
 				<!-- Buttons -->
 				<control type="grouplist" id="9000">
 					<right>0</right>
-					<top>645</top>
+					<top>500</top>
 					<width>585</width>
 					<height>60</height>
 					<onleft>9000</onleft>
@@ -526,7 +526,7 @@
 				</control>
 				<control type="image">
 					<left>3</left>
-					<top>690</top>
+					<top>545</top>
 					<height>1</height>
 					<texture colordiffuse="blue">separator3.png</texture>
 				</control>
