@@ -1252,7 +1252,7 @@
 				<height>60</height>
 				<align>center</align>
 				<label>$INFO[ListItem.Duration(mins)]</label>
-				<font>font48_bold</font>
+				<font>font15_bold</font>
 				<textcolor>grey</textcolor>
 				<visible>!String.IsEmpty(ListItem.Duration)</visible>
 			</control>
