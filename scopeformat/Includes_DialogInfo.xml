@@ -583,7 +583,7 @@
 		<control type="panel" id="90050">
 			<left>15</left>
 			<width>1196</width>
-			<height>500</height>
+			<height>475</height>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="">list</viewtype>
@@ -591,9 +591,9 @@
 			<itemlayout height="500" width="299">
 				<control type="image">
 					<left>-15</left>
-					<top>-10</top>
+					<top>-20</top>
 					<width>320</width>
-					<height>450</height>
+					<height>375</height>
 					<bordersize>22</bordersize>
 					<bordertexture border="20">thumbs/shadow.png</bordertexture>
 					<aspectratio aligny="top">scale</aspectratio>
@@ -607,7 +607,7 @@
 				</control>
 				<control type="label">
 					<left>8</left>
-					<top>374</top>
+					<top>325</top>
 					<width>274</width>
 					<height>43</height>
 					<align>center</align>
