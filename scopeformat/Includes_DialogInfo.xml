@@ -186,7 +186,7 @@
 				<icon>$INFO[Container(50).ListItemAbsolute($PARAM[CastListItemID]).Icon]</icon>
 				<onclick>SetProperty(ActorID,$PARAM[CastListItemID])</onclick>
 				<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute($PARAM[CastListItemID]).Label])</onclick>
-				<onclick>ActivateWindow(1129)</onclick>
+				<onclick>ActivateWindow(1130)</onclick>
 				<visible>!String.IsEmpty(Container(50).ListItemAbsolute($PARAM[CastListItemID]).Label)</visible>
 			</item>
 		</definition>
@@ -583,7 +583,7 @@
 		<control type="panel" id="90050">
 			<left>15</left>
 			<width>1196</width>
-			<height>475</height>
+			<height>500</height>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="">list</viewtype>
@@ -593,7 +593,7 @@
 					<left>-15</left>
 					<top>-20</top>
 					<width>320</width>
-					<height>375</height>
+					<height>365</height>
 					<bordersize>22</bordersize>
 					<bordertexture border="20">thumbs/shadow.png</bordertexture>
 					<aspectratio aligny="top">scale</aspectratio>
@@ -602,23 +602,23 @@
 				<control type="image">
 					<left>5</left>
 					<width>282</width>
-					<height>418</height>
+					<height>280</height>
 					<texture>poster_bottom_fade.png</texture>
 				</control>
 				<control type="label">
 					<left>8</left>
-					<top>325</top>
+					<top>320</top>
 					<width>274</width>
 					<height>43</height>
 					<align>center</align>
-					<font>font14</font>
+					<font>font10</font>
 					<shadowcolor>shadow</shadowcolor>
 					<textcolor>white2</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
 					<left>3</left>
-					<top>422</top>
+					<top>345</top>
 					<width>284</width>
 					<height>43</height>
 					<align>center</align>
@@ -635,7 +635,7 @@
 						<left>-15</left>
 						<top>-10</top>
 						<width>320</width>
-						<height>450</height>
+						<height>380</height>
 						<bordersize>22</bordersize>
 						<bordertexture border="20" colordiffuse="black">thumbs/shadow.png</bordertexture>
 						<aspectratio aligny="top">scale</aspectratio>
@@ -649,11 +649,11 @@
 					</control>
 					<control type="label">
 						<left>8</left>
-						<top>374</top>
+						<top>345</top>
 						<width>274</width>
 						<height>43</height>
 						<align>center</align>
-						<font>font14</font>
+						<font>font10</font>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -665,7 +665,7 @@
 						<width>284</width>
 						<height>43</height>
 						<align>center</align>
-						<font>font14</font>
+						<font>font10</font>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
