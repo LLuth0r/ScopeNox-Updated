@@ -14,6 +14,8 @@
 	<onunload>ClearProperty(CustomSelect,Home)</onunload>
 	<controls>
 		<control type="group">
+			<top>500</top>
+			<left>100</left>
 			<include>DialogOpenCloseAnimation</include>
 			<visible>![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation) | Window.IsActive(gamevolume) | Window.IsActive(InGameSaves)]</visible>
 			<include>VisibleFadeAnimation</include>

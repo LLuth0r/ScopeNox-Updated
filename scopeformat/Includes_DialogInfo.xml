@@ -186,7 +186,7 @@
 				<icon>$INFO[Container(50).ListItemAbsolute($PARAM[CastListItemID]).Icon]</icon>
 				<onclick>SetProperty(ActorID,$PARAM[CastListItemID])</onclick>
 				<onclick>SetProperty(ActorName,$INFO[Container(50).ListItemAbsolute($PARAM[CastListItemID]).Label])</onclick>
-				<onclick>ActivateWindow(1130)</onclick>
+				<onclick>ActivateWindow(1135)</onclick>
 				<visible>!String.IsEmpty(Container(50).ListItemAbsolute($PARAM[CastListItemID]).Label)</visible>
 			</item>
 		</definition>
