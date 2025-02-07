@@ -629,7 +629,7 @@
 			<top>67</top>
 			<width>628</width>
 			<height>1</height>
-			<texture colordiffuse="grey4">separator_horizontal.png</texture>
+			<texture colordiffuse="grey4">separator3.png</texture>
 		</control>
 		<control type="label" id="1">
 			<width>630</width>

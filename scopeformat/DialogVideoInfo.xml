@@ -50,13 +50,12 @@
 			<animation effect="slide" start="-730,0" end="0,0" delay="200" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="-730,0" delay="100" time="500" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" end="-730,0" time="500" tween="quadratic" condition="Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml)">Conditional</animation>
-			<width>720</width>
-			<height>100%</height>
+			<width>580</width>
 			<control type="image">
 				<texture>colors/black.png</texture>
 			</control>
 			<control type="multiimage">
-				<aspectratio>scale</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
 				<imagepath background="true">$VAR[PosterVar]</imagepath>
 			</control>
@@ -73,9 +72,9 @@
 			<animation effect="slide" start="1210,0" end="0,0" delay="200" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="1210,0" delay="100" time="500" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" end="1210,0" time="500" tween="quadratic" condition="Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml)">Conditional</animation>
-			<left>720</left>
+			<left>580</left>
 			<control type="group">
-				<width>1200</width>
+				<width>1400</width>
 				<!-- Info Background -->
 				<control type="group">
 					<height>100%</height>
@@ -95,12 +94,12 @@
 				</control>
 				<!-- Top Section -->
 				<control type="group">
-					<left>10</left>
+					<left>40</left>
 					<top>150</top>
 					<!-- Main Label/Sublabel -->
 					<control type="grouplist">
 						<top>-55</top>
-						<width>1300</width>
+						<width>1400</width>
 						<height>140</height>
 						<align>center</align>
 						<!-- Title + Year -->
@@ -173,7 +172,7 @@
 					<!-- Runtime/Ratings Bar -->
 					<control type="grouplist">
 						<top>93</top>
-						<width>1200</width>
+						<width>1400</width>
 						<height>90</height>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
@@ -209,11 +208,11 @@
 				</control>
 				<!-- Details Panel -->
 				<control type="group">
-					<left>3</left>
+					<left>40</left>
 					<top>250</top>
 					<control type="button" id="64">
 						<top>83</top>
-						<width>1198</width>
+						<width>1200</width>
 						<height>150</height>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<onunfocus>ClearProperty(MoreInfoTitle,movieinformation)</onunfocus>
@@ -226,16 +225,16 @@
 					</control>
 					<control type="panel" id="300">
 						<top>78</top>
-						<width>1198</width>
+						<width>1200</width>
 						<height>200</height>
 						<ondown>9000</ondown>
 						<orientation>horizontal</orientation>
 						<visible allowhiddenfocus="true">!Control.HasFocus(64)</visible>
 						<include>VisibleFadeAnimation</include>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<itemlayout height="42" width="1198" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
+						<itemlayout height="42" width="1200" condition="!Skin.HasSetting(MoreVideoInfoDetails) | Integer.IsLess(Container(300).NumItems,6)">
 							<control type="label">
-								<width>1198</width>
+								<width>1200</width>
 								<height>40</height>
 								<font>font15</font>
 								<textcolor>blue</textcolor>
@@ -325,8 +324,8 @@
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(64)</visible>
-						<left>-35</left>
-						<top>240</top>
+						<left>0</left>
+						<top>120</top>
 						<control type="button">
 							<width>36</width>
 							<height>36</height>
@@ -337,7 +336,7 @@
 							<include>VisibleFadeAnimation</include>
 						</control>
 						<control type="button">
-							<left>1185</left>
+							<left>1200</left>
 							<width>36</width>
 							<height>36</height>
 							<texturefocus colordiffuse="grey">arrowright.png</texturefocus>

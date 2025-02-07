@@ -957,4 +957,9 @@
 		<value condition="[Container(9001).HasNext + !Container(9001).HasPrevious] + !String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[31453]</value>
 		<value condition="Control.HasFocus(5000)">$LOCALIZE[20391]</value>
 	</variable>
+	<variable name="CustomSelectLabelVar">
+		<value condition="String.IsEqual(Window(Home).Property(CustomSelect),gameosdsettings)">$LOCALIZE[35221]</value>
+		<value condition="String.IsEqual(Window(Home).Property(CustomSelect),search)">$LOCALIZE[137]</value>
+		<value>$LOCALIZE[22080]</value>
+	</variable>
 </includes>
