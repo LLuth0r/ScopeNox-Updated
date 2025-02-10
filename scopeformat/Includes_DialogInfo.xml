@@ -1090,7 +1090,7 @@
 		</item>
 		<item>
 			<label>$INFO[ListItem.Premiered]</label>
-			<label2>Premiered:</label2>
+			<label2>$LOCALIZE[31452]:</label2>
 			<onclick>SetProperty(MoreInfoTitle,$LOCALIZE[31452])</onclick>
 			<onclick>SetProperty(MoreInfoContent,$ESCINFO[ListItem.Premiered])</onclick>
 			<onclick>SetFocus(64)</onclick>

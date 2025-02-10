@@ -94,7 +94,7 @@
 				</control>
 				<!-- Top Section -->
 				<control type="group">
-					<left>40</left>
+					<left>25</left>
 					<top>150</top>
 					<!-- Main Label/Sublabel -->
 					<control type="grouplist">
@@ -174,6 +174,7 @@
 						<top>93</top>
 						<width>1400</width>
 						<height>90</height>
+						<left>-10</left>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
 						<itemgap>8</itemgap>
@@ -208,7 +209,7 @@
 				</control>
 				<!-- Details Panel -->
 				<control type="group">
-					<left>40</left>
+					<left>10</left>
 					<top>250</top>
 					<control type="button" id="64">
 						<top>83</top>
@@ -354,7 +355,7 @@
 				</control>
 				<!-- Buttons LABEL -->
 				<control type="group">
-					<left>-5</left>
+					<left>15</left>
 					<top>500</top>
 					<control type="button">
 						<width>650</width>
@@ -383,7 +384,7 @@
 				</control>
 				<!-- Buttons -->
 				<control type="grouplist" id="9000">
-					<right>0</right>
+					<right>195</right>
 					<top>500</top>
 					<width>585</width>
 					<height>60</height>
@@ -531,7 +532,7 @@
 				</control>
 				<!-- Bottom Section -->
 				<control type="grouplist" id="90001">
-					<left>-7</left>
+					<left>5</left>
 					<top>550</top>
 					<width>2800</width>
 					<height>500</height>
