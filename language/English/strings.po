@@ -1171,3 +1171,7 @@ msgstr ""
 msgctxt "#31452"
 msgid "Premiered"
 msgstr ""
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "Ends at"
