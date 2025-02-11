@@ -179,26 +179,26 @@
 						<usecontrolcoords>true</usecontrolcoords>
 						<itemgap>8</itemgap>
 						<!-- Default Runtime -->
-						<include>InfoDefaultRuntime</include>
+						<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !Skin.HasSetting(Enable.HourMinuteDuration) + !String.IsEqual(ListItem.Property(item.type),person)">InfoDefaultRuntime</include>
 						<!-- Hour/Minute Runtime NOT USING!  But might add later -->
 						<!-- <include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.Property(item.type),person) + Skin.HasSetting(Enable.HourMinuteDuration)">InfoHourMinRuntime</include> -->
 						<!-- Episode Count -->
-						<include>InfoEpNumber</include>
+						<include condition="String.IsEqual(ListItem.DBTYPE,episode)">InfoEpNumber</include>
 						<!-- MPAA -->
-						<include>InfoMPAA</include>
+						<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.Property(item.type),person)">InfoMPAA</include>
 						<!-- Set Rating -->
-						<include>InfoSetRating</include>
+						<include condition="String.IsEqual(ListItem.DBTYPE,set)">InfoSetRating</include>
 						<!-- TV Watched Percent -->
-						<include>InfoTVWatchedPercent</include>
+						<include condition="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)">InfoTVWatchedPercent</include>
 						<!-- Main Rating -->
-						<include>InfoMainRating</include>
+						<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.Property(item.type),person)">InfoMainRating</include>
 						<!-- Top 250 -->
-						<include>InfoTop250</include>
+						<include condition="String.IsEqual(ListItem.DBTYPE,movie)">InfoTop250</include>
 						<!-- Extended Ratings -->
-						<include>InfoExtendedRatings</include>
+						<include condition="!String.IsEqual(ListItem.DBTYPE,season) + !String.IsEqual(ListItem.DBTYPE,set) + !String.IsEqual(ListItem.Property(item.type),person)">InfoExtendedRatings</include>
 					</control>
 					<!-- TMDbHelper Person Age -->
-					<include>InfoTMDbPersonAge</include>
+					<include condition="String.IsEqual(ListItem.Property(item.type),person)">InfoTMDbPersonAge</include>
 					<!-- Separator End -->
 					<control type="image">
 						<left>-7</left>
@@ -344,12 +344,6 @@
 							<visible>Container(300).HasNext</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
-					</control>
-					<!-- Separator -->
-					<control type="image">
-						<top>245</top>
-						<height>1</height>
-						<!-- <texture colordiffuse="blue">separator3.png</texture> -->
 					</control>
 				</control>
 				<!-- Buttons LABEL -->
@@ -505,7 +499,6 @@
 					<left>3</left>
 					<top>545</top>
 					<height>1</height>
-					<!-- <texture colordiffuse="blue">separator3.png</texture> -->
 				</control>
 				<!-- Bottom Section -->
 				<control type="grouplist" id="90001">
@@ -549,7 +542,7 @@
 								<height>445</height>
 								<align>justify</align>
 								<font>font12</font>
-								<label>$VAR[VideoPlotVar]</label>
+								<label>$VAR[VideoInfoPlotVar]</label>
 								<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(90003)</autoscroll>
 								<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 								<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90003)">Conditional</animation>
@@ -559,17 +552,17 @@
 								<width>1162</width>
 								<height>445</height>
 								<font>font12</font>
-								<label>$INFO[ListItem.Plot]</label>
+								<label>$VAR[VideoInfoPlotVar]</label>
 								<align>justify</align>
 								<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(90003)</autoscroll>
 								<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90003)">Conditional</animation>
 								<visible>[String.IsEqual(ListItem.DBTYPE,movie) + [!Skin.HasSetting(discartoninfo) | String.IsEmpty(ListItem.Art(discart))]] | [String.IsEqual(ListItem.DBTYPE,tvshow) + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(ListItem.Art(clearart))]] | [[String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)] + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(ListItem.Art(tvshow.clearart))]] | [String.IsEqual(ListItem.DBTYPE,musicvideo)]</visible>
 							</control>
 							<control type="textbox" id="402">
-								<top>-15</top>
 								<width>1162</width>
 								<height>500</height>
-								<label>$INFO[ListItem.Plot]</label>
+								<font>font12</font>
+								<label>$VAR[VideoInfoPlotVar]</label>
 								<align>justify</align>
 								<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(90003)</autoscroll>
 								<animation effect="fade" start="100" end="78" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90003)">Conditional</animation>

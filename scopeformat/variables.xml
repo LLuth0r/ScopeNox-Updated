@@ -226,6 +226,18 @@
 		<value condition="System.GetBool(videolibrary.showunwatchedplots)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
+	<variable name="VideoInfoPlotVar">
+		<value condition="String.IsEqual(ListItem.Property(item.type),person)">$INFO[ListItem.Property(Biography)]</value>
+		<value condition="System.AddonIsEnabled(script.skin.info.service) + String.IsEqual(ListItem.DBTYPE,set) + Skin.HasSetting(SetInfoPlotToggle) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Plot))">$INFO[Window(Home).Property(SkinInfo.Set.Movies.Plot)]</value>
+		<value condition="Skin.HasSetting(VideoInfoPlotToggle) + !String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value>$LOCALIZE[19055]</value>
+	</variable>
+	<variable name="VideoInfoDetailsImageVar">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(discartoninfo)]">$INFO[ListItem.Art(discart)]</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(CharacterOnInfo)]">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)] + Skin.HasSetting(CharacterOnInfo)">$INFO[ListItem.Art(tvshow.clearart)]</value>
+	</variable>
 	<variable name="OtherPlotVar">
 		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[414]</value>
