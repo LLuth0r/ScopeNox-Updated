@@ -616,13 +616,13 @@
 	</include>
 	<!-- Custom Select -->
 	<include name="CustomSelectDefaultBackPanel">
-		<left>645</left>
-		<top>265</top>
+		<left>20</left>
+		<top>385.5</top>
 		<include content="BackPanel">
 			<param name="left">0</param>
 			<param name="top">0</param>
 			<param name="width">630</param>
-			<param name="height">550</param>
+			<param name="height">309</param>
 		</include>
 		<control type="image">
 			<left>1</left>
@@ -630,6 +630,37 @@
 			<width>628</width>
 			<height>1</height>
 			<texture colordiffuse="grey4">separator3.png</texture>
+		</control>
+		<control type="label" id="1">
+			<width>630</width>
+			<height>70</height>
+			<font>font16_title_bold</font>
+			<label>$VAR[CustomSelectLabelVar]</label>
+			<align>center</align>
+			<textcolor>dialogheader</textcolor>
+		</control>
+	</include>
+	<include name="CustomSelectSearchBackPanel">
+		<left>20</left>
+		<top>385.5</top>
+		<control type="image">
+			<width>630</width>
+			<height>209</height>
+			<texture colordiffuse="CCFFFFFF">black.png</texture>
+			<include>FocusFadeOutAnimation</include>
+		</control>
+		<include content="BackPanel">
+			<param name="left">0</param>
+			<param name="top">0</param>
+			<param name="width">630</param>
+			<param name="height">309</param>
+		</include>
+		<control type="image">
+			<left>1</left>
+			<top>67</top>
+			<width>628</width>
+			<height>1</height>
+			<texture colordiffuse="grey4">separator_horizontal.png</texture>
 		</control>
 		<control type="label" id="1">
 			<width>630</width>
