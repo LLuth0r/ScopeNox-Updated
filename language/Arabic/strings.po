@@ -300,14 +300,6 @@ msgctxt "#31957"
 msgid "Apps"
 msgstr "التطبيقات"
 
-msgctxt "#31958"
-msgid "PLAY DISC"
-msgstr "القرص"
-
-msgctxt "#31959"
-msgid "System"
-msgstr "النظام"
-
 msgctxt "#31960"
 msgid "Concerts"
 msgstr "الموسيقى"

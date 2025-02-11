@@ -360,6 +360,91 @@ msgctxt "#31959"
 msgid "System"
 msgstr "System"
 
+msgctxt "#31957"
+msgid "Apps"
+msgstr ""
+
+msgctxt "#31960"
+msgid "Concerts"
+msgstr ""
+
+msgctxt "#31961"
+msgid "Hide ratings in list views"
+msgstr ""
+
+msgctxt "#31962"
+msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
+msgstr ""
+
+msgctxt "#31964"
+msgid "NoTo"
+msgstr ""
+
+msgctxt "#31966"
+msgid "Scope Format"
+msgstr ""
+
+msgctxt "#31967"
+msgid "This will adjust the Skin to fit 2.35 or 2.40 format screens."
+msgstr ""
+
+msgctxt "#31968"
+msgid "Show Zoom/Subtitle Buttons for Non-Scope"
+msgstr ""
+
+msgctxt "#31969"
+msgid "This will display 2 extra buttons, zoom out and zoom in, which can be used to fit 16:9 / 4:3 content inside your scope view without zooming your projector out."
+msgstr ""
+
+msgctxt "#31970"
+msgid "Remember Scope Mask"
+msgstr ""
+
+msgctxt "#31971"
+msgid "This will keep the 'Scope Mask' on or off once you set it. It will not reset for each movie/video."
+msgstr ""
+
+msgctxt "#31972"
+msgid "Netflix style pause wait time."
+msgstr ""
+
+#: /1080i/variables.xml
+msgctxt "#31973"
+msgid "How long to wait before displaying Netflix style pause screen."
+msgstr ""
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr ""
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr ""
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr ""
+
 msgctxt "#31452"
 msgid "Premiered"
+msgstr ""
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "Ends at"
+
+msgctxt "#31544"
+msgid "Years old"
+msgstr "Years old"
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr ""
+
+msgctxt "#31614"
+msgid "Also known as"
+msgstr ""
+
+msgctxt "#31546"
+msgid "Known for"
 msgstr ""
