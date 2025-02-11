@@ -379,3 +379,7 @@ msgstr "REPRODUIR DISC"
 msgctxt "#31959"
 msgid "System"
 msgstr "SISTEMA"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

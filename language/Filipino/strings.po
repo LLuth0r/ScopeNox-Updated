@@ -63,3 +63,7 @@ msgstr "Huling Dinagdag"
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "Default ng Skin"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

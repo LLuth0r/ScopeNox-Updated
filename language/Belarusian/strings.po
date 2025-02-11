@@ -359,3 +359,7 @@ msgstr "PLAY DISC"
 msgctxt "#31959"
 msgid "System"
 msgstr "System"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

@@ -139,3 +139,7 @@ msgstr "နာရီနှင့်အမျှ ခန့်မှန်းခ�
 msgctxt "#31904"
 msgid "10 Day Forecast"
 msgstr "၁၀ ရက် ကြိုတင်ခန့်မှန်းခြင်း"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

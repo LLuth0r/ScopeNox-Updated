@@ -695,3 +695,7 @@ msgstr "SÜSTEEM"
 msgctxt "#31960"
 msgid "Concerts"
 msgstr "KONTSERDID"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

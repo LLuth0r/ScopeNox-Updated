@@ -215,3 +215,7 @@ msgstr "Heinti upplýsing til forsøgn..."
 msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr "Kort og fráboðanir"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

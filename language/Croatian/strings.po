@@ -731,3 +731,7 @@ msgstr "SUSTAV"
 msgctxt "#31960"
 msgid "Concerts"
 msgstr "KONCERTI"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

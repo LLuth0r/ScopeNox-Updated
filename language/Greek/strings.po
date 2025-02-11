@@ -787,3 +787,7 @@ msgstr "ΣΥΣΤΗΜΑ"
 msgctxt "#31960"
 msgid "Concerts"
 msgstr "ΣΥΝΑΥΛΙΕΣ"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

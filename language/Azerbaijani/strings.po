@@ -27,3 +27,7 @@ msgstr "Şəbəkə"
 msgctxt "#31502"
 msgid "Live TV"
 msgstr "TV"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

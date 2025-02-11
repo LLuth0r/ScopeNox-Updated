@@ -867,3 +867,7 @@ msgstr "Piilota arvosanat listanäkymissä"
 msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr "Tämä vaihtaa arvosanojen näkyvyyttä Lista, MatalaLista ja KolmiPaneelissa, paitsi jos järjestetty arvosanan mukaan."
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

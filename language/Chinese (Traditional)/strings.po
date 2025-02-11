@@ -403,3 +403,7 @@ msgstr "播放光碟"
 msgctxt "#31959"
 msgid "System"
 msgstr "系統"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

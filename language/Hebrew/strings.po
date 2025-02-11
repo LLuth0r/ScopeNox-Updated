@@ -787,3 +787,7 @@ msgstr "מערכת"
 msgctxt "#31960"
 msgid "Concerts"
 msgstr "הופעות"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

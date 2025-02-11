@@ -859,3 +859,7 @@ msgstr "Bewertungen in Listen ausblenden"
 msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr "Blendet Bewertungen von Videos in den Ansichten Liste, LowList und TriPanel aus, es sei denn, es wird nach Bewertung sortiert."
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

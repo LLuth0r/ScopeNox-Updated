@@ -67,3 +67,7 @@ msgstr "LUDI DISKON"
 msgctxt "#31959"
 msgid "System"
 msgstr "SISTEMO"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

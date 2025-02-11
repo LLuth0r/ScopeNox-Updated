@@ -912,3 +912,7 @@ msgstr ""
 msgctxt "#31976"
 msgid "Zooms out 16:9 Content to fit CIH Screen."
 msgstr ""
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

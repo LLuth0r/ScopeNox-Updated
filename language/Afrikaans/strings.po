@@ -307,3 +307,7 @@ msgstr "SPEEL OPTIESE SKYF"
 msgctxt "#31959"
 msgid "System"
 msgstr "STELSEL"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

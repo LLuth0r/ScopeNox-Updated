@@ -542,7 +542,7 @@ msgstr "condensé"
 
 msgctxt "#31301"
 msgid "Last Updated"
-msgstr "Dernière mise à  jour"
+msgstr "Dernière mise à jour"
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -867,3 +867,7 @@ msgstr "Masquer les évaluations pour la vue en liste"
 msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr "Bascule la visibilité des évaluations dans les vues Liste, Liste basse et Tri panneau, sauf si le tri est fait par évaluation."
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""

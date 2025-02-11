@@ -231,3 +231,7 @@ msgstr "ዲስክ ማጫወቻ"
 msgctxt "#31959"
 msgid "System"
 msgstr "ስርአቱ"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""
