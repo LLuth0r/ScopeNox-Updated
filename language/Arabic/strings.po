@@ -296,6 +296,99 @@ msgctxt "#31959"
 msgid "System"
 msgstr "النظام"
 
+msgctxt "#31957"
+msgid "Apps"
+msgstr "التطبيقات"
+
+msgctxt "#31958"
+msgid "PLAY DISC"
+msgstr "القرص"
+
+msgctxt "#31959"
+msgid "System"
+msgstr "النظام"
+
+msgctxt "#31960"
+msgid "Concerts"
+msgstr "الموسيقى"
+
+msgctxt "#31961"
+msgid "Hide ratings in list views"
+msgstr "إخفاء التقييمات في عرض قائمة القائمة"
+
+msgctxt "#31962"
+msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
+msgstr "يقلب الإظهار الظاهري للتقييمات في عروض النوع List, LowList و TriPanel, ما عدا إذا قام بالفرز بناءً على التقييمات."
+
+msgctxt "#31964"
+msgid "NoTo"
+msgstr "لا"
+
+msgctxt "#31966"
+msgid "Scope Format"
+msgstr "تنسيق المدى"
+
+msgctxt "#31967"
+msgid "This will adjust the Skin to fit 2.35 or 2.40 format screens."
+msgstr "يضبط المظهر ليناسب شاشات 2.35 أو 2.40"
+
+msgctxt "#31968"
+msgid "Show Zoom/Subtitle Buttons for Non-Scope"
+msgstr "إظهار زر التكبير/الترجمة للمحتوى غير المحدد"
+
+msgctxt "#31969"
+msgid "This will display 2 extra buttons, zoom out and zoom in, which can be used to fit 16:9 / 4:3 content inside your scope view without zooming your projector out."
+msgstr "ستظهر زران إضافيان، تكبير وتصغير، يمكن استخدامها لتناسب 16:9 / 4:3 المحتوى داخل عرض المدى بدون تكبير المشروع خارجه."
+
+msgctxt "#31970"
+msgid "Remember Scope Mask"
+msgstr "تذكير المدى المظلل"
+
+msgctxt "#31971"
+msgid "This will keep the 'Scope Mask' on or off once you set it. It will not reset for each movie/video."
+msgstr "ستحفظ المدى المظلل على أو إغلاقه بمجرد تعيينه. لن يعيد تعيينه لكل فيلم/مقطع فيديو."
+
+msgctxt "#31972"
+msgid "Netflix style pause wait time."
+msgstr "وقت الإنتظار للتوقف المثلي لـNetflix."
+
+#: /1080i/variables.xml
+msgctxt "#31973"
+msgid "How long to wait before displaying Netflix style pause screen."
+msgstr "كم عدد الثواني التي يجب أن ينتظرها قبل إظهار شاشة التوقف المثلي لـNetflix."
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr "اختر صورة الخلفية الخاصة بك"
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr "تمكين AutoZoom للمحتوى 16:9. يتطلب إضافة AutoZoom."
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr "يضبط المظهر ليناسب شاشات 2.35 أو 2.40"
+
 msgctxt "#31452"
 msgid "Premiered"
-msgstr ""
+msgstr "أظهرت"
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "أظهرت"
+
+msgctxt "#31544"
+msgid "Years old"
+msgstr "أظهرت"
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr "أظهرت"
+
+msgctxt "#31614"
+msgid "Also known as"
+msgstr "أظهرت"
+
+msgctxt "#31546"
+msgid "Known for"
+msgstr "أظهرت"
