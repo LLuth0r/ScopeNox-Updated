@@ -1233,7 +1233,7 @@
 			<onclick>SetFocus(64)</onclick>
 			<visible>!String.IsEmpty(ListItem.Property(Gender))</visible>
 		</item>
-		<item>
+		<item condition="!String.IsEmpty(ListItem.Property(Aliases))">
 			<label>$INFO[ListItem.Property(Aliases)]</label>
 			<label2>$LOCALIZE[31614]:</label2>
 			<onclick>SetProperty(MoreInfoTitle,$LOCALIZE[31614])</onclick>

@@ -52,7 +52,7 @@
 			<animation effect="slide" end="-730,0" time="500" tween="quadratic" condition="Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-video.xml)">Conditional</animation>
 			<width>580</width>
 			<control type="image">
-				<texture>colors/black.png</texture>
+				<texture>black.png</texture>
 			</control>
 			<control type="multiimage">
 				<aspectratio>keep</aspectratio>
