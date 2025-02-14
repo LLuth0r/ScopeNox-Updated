@@ -1,5 +1,12 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.1.8 - Added TMDB Info Helper from AeonNox Silvo
+        Updated the DialogVideoInfo screen to mimic AeonNox Silvo screen
+        Added the option to turn on TMDB Info from skin settings page
+        Removed duplicate language files
+        Added the TMDB Actor info window and adjusted for CIH
+        Some miscellaneous cleanup
+
 1.1.7 - Fixed issues with the missing scope backgrounds
         Adjusted position and sizes of flags on certain views
         Adjusted height of background on list view
