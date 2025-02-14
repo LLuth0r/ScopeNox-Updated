@@ -283,6 +283,12 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>font16_bold</name>
+			<filename>TitilliumWeb-Regular.ttf</filename>
+			<size>30</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>font25</name>
 			<filename>Orbitron-VariableFont_wght.ttf</filename>
 			<size>28</size>

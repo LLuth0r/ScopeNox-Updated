@@ -16,6 +16,7 @@
 			<left>15</left>
 			<width>1196</width>
 			<height>500</height>
+			<top>-10</top>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
 			<onup>90002</onup>
@@ -23,12 +24,12 @@
 			<itemlayout height="500" width="299">
 				<control type="image">
 					<left>-15</left>
-					<top>-10</top>
+					<top>-20</top>
 					<width>320</width>
-					<height>450</height>
+					<height>365</height>
 					<bordersize>22</bordersize>
 					<bordertexture border="20">thumbs/shadow.png</bordertexture>
-					<aspectratio aligny="top">scale</aspectratio>
+					<aspectratio aligny="top">keep</aspectratio>
 					<texture background="true">$PARAM[texture]</texture>
 				</control>
 				<control type="group">
@@ -36,16 +37,16 @@
 					<control type="image">
 						<left>5</left>
 						<width>282</width>
-						<height>418</height>
+						<height>280</height>
 						<texture>poster_bottom_fade.png</texture>
 					</control>
 					<control type="label">
 						<left>8</left>
-						<top>374</top>
+						<top>320</top>
 						<width>274</width>
 						<height>43</height>
 						<align>center</align>
-						<font>font14</font>
+						<font>font10</font>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>white2</textcolor>
 						<label>$PARAM[label]</label>
@@ -53,7 +54,7 @@
 				</control>
 				<control type="label">
 					<left>3</left>
-					<top>422</top>
+					<top>345</top>
 					<width>284</width>
 					<height>43</height>
 					<align>center</align>
@@ -63,7 +64,7 @@
 				</control>
 				<control type="label">
 					<left>3</left>
-					<top>422</top>
+					<top>345</top>
 					<width>284</width>
 					<height>43</height>
 					<align>center</align>
@@ -79,15 +80,6 @@
 					<texture>colors/black50.png</texture>
 					<aspectratio aligny="center">scale</aspectratio>
 					<visible>!String.IsEmpty(ListItem.Year) + !Control.HasFocus(90016)</visible>
-				</control>
-				<control type="label">
-					<left>8</left>
-					<top>4</top>
-					<width>274</width>
-					<height>43</height>
-					<font>font14</font>
-					<shadowcolor>shadow</shadowcolor>
-					<label>$PARAM[label2]</label>
 				</control>
 				<control type="image">
 					<left>242</left>
@@ -105,10 +97,10 @@
 						<left>-15</left>
 						<top>-10</top>
 						<width>320</width>
-						<height>450</height>
+						<height>380</height>
 						<bordersize>22</bordersize>
-						<bordertexture border="20">thumbs/shadow.png</bordertexture>
-						<aspectratio aligny="top">scale</aspectratio>
+						<bordertexture border="20" colordiffuse="black">thumbs/shadow.png</bordertexture>
+						<aspectratio aligny="top">keep</aspectratio>
 						<texture background="true">$PARAM[texture]</texture>
 					</control>
 					<control type="group">
@@ -121,11 +113,11 @@
 						</control>
 						<control type="label">
 							<left>8</left>
-							<top>374</top>
+							<top>345</top>
 							<width>274</width>
 							<height>43</height>
 							<align>center</align>
-							<font>font14</font>
+							<font>font10</font>
 							<shadowcolor>shadow</shadowcolor>
 							<textcolor>blue</textcolor>
 							<label>$PARAM[label]</label>
@@ -142,23 +134,12 @@
 						<visible>!String.IsEmpty(ListItem.Year) + !Control.HasFocus(90016)</visible>
 					</control>
 					<control type="label">
-						<left>8</left>
-						<top>4</top>
-						<width>274</width>
-						<height>43</height>
-						<font>font14</font>
-						<shadowcolor>shadow</shadowcolor>
-						<textcolor>blue</textcolor>
-						<label>$PARAM[label2]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
-					</control>
-					<control type="label">
 						<left>3</left>
 						<top>422</top>
 						<width>284</width>
 						<height>43</height>
 						<align>center</align>
-						<font>font14</font>
+						<font>font10</font>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>blue</textcolor>
 						<label>$PARAM[label1]</label>
