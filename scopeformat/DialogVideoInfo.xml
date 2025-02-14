@@ -163,12 +163,12 @@
 						</control>
 					</control>
 					<!-- Separator Start -->
-					<control type="image">
+					<!-- <control type="image">
 						<left>-7</left>
 						<top>90</top>
 						<height>1</height>
-						<!-- <texture colordiffuse="blue">separator3.png</texture> -->
-					</control>
+						<texture colordiffuse="blue">separator3.png</texture>
+					</control> -->
 					<!-- Runtime/Ratings Bar -->
 					<control type="grouplist">
 						<top>93</top>
@@ -200,18 +200,20 @@
 					<!-- TMDbHelper Person Age -->
 					<include condition="String.IsEqual(ListItem.Property(item.type),person)">InfoTMDbPersonAge</include>
 					<!-- Separator End -->
-					<control type="image">
+					<!-- <control type="image">
 						<left>-7</left>
 						<height>1</height>
 						<top>180</top>
-						<!-- <texture colordiffuse="blue">separator3.png</texture> -->
-					</control>
+						<texture colordiffuse="blue">separator3.png</texture>
+					</control> -->
 				</control>
 				<!-- Details Panel -->
 				<control type="group">
 					<left>10</left>
 					<top>250</top>
-					<control type="button" id="64">
+
+					<!-- Why is this section a button?  Commenting it out for now -->
+					 <!-- <control type="button" id="64">
 						<top>83</top>
 						<width>1200</width>
 						<height>150</height>
@@ -223,7 +225,8 @@
 						<onright>SetFocus(300)</onright>
 						<onup>SetFocus(300)</onup>
 						<ondown>SetFocus(300)</ondown>
-					</control>
+					</control> -->
+
 					<control type="panel" id="300">
 						<top>78</top>
 						<width>1200</width>
@@ -326,17 +329,18 @@
 					<control type="group">
 						<visible>!Control.HasFocus(64)</visible>
 						<left>-21</left>
-						<top>120</top>
-						<control type="button">
+						<top>140</top>
+						<control type="label">
 							<width>80</width>
 							<height>50</height>
+							<left>15</left>
 							<font>MaterialIcons</font>
 							<label>arrow_back_ios</label>
 							<visible>Container(300).HasPrevious</visible>
 							<include>VisibleFadeAnimation</include>
 						</control>
-						<control type="button">
-							<left>1200</left>
+						<control type="label">
+							<left>1215</left>
 							<width>80</width>
 							<height>50</height>
 							<font>MaterialIcons</font>
