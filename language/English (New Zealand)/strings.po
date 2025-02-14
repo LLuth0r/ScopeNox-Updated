@@ -800,3 +800,27 @@ msgstr ""
 msgctxt "#31976"
 msgid "Zooms out 16:9 Content to fit CIH Screen."
 msgstr ""
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr ""
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "Ends at"
+
+msgctxt "#31544"
+msgid "Years old"
+msgstr "Years old"
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr ""
+
+msgctxt "#31614"
+msgid "Also known as"
+msgstr ""
+
+msgctxt "#31546"
+msgid "Known for"
+msgstr ""

@@ -260,6 +260,10 @@ msgctxt "#31956"
 msgid "Music"
 msgstr "Muzik"
 
+msgctxt "#31957"
+msgid "Apps"
+msgstr "Aplikacione"
+
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "Luaj diskun"
@@ -267,3 +271,88 @@ msgstr "Luaj diskun"
 msgctxt "#31959"
 msgid "System"
 msgstr "Sistemi"
+
+msgctxt "#31960"
+msgid "Concerts"
+msgstr "Konserte"
+
+msgctxt "#31961"
+msgid "Hide ratings in list views"
+msgstr "Fsheh vlerësime në listat"
+
+msgctxt "#31962"
+msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
+msgstr "Kjo ndrysho shikimin e vlerësimeve në listat e tipit List, LowList dhe TriPanel, përveç nëse janë renditë sipas vlerësimeve."
+
+msgctxt "#31964"
+msgid "NoTo"
+msgstr "Jo"
+
+msgctxt "#31966"
+msgid "Scope Format"
+msgstr "Formati i Skuqit"
+
+msgctxt "#31967"
+msgid "This will adjust the Skin to fit 2.35 or 2.40 format screens."
+msgstr "Kjo ndrysho formatin e maskës për të pasuar ekranet me format 2.35 ose 2.40."
+
+msgctxt "#31968"
+msgid "Show Zoom/Subtitle Buttons for Non-Scope"
+msgstr "Trego Butonat Zoom/Subtitra për Nuk-Skuq"
+
+msgctxt "#31969"
+msgid "This will display 2 extra buttons, zoom out and zoom in, which can be used to fit 16:9 / 4:3 content inside your scope view without zooming your projector out."
+msgstr "Kjo do të tregojë 2 butona shtesë, zoom shumë dhe zoom pak, që mund të përdoren për të pasuar 16:9 / 4:3 përmbajtje brenda skuqit tënde pa zoomuar projektorin."
+
+msgctxt "#31970"
+msgid "Remember Scope Mask"
+msgstr "Vlerëso Skuq Maskën"
+
+msgctxt "#31971"
+msgid "This will keep the 'Scope Mask' on or off once you set it. It will not reset for each movie/video."
+msgstr "Kjo do të mbaje 'Skuq Maskën' në orën e caktuar ose në orën e njëjtë, nëse e caktoni. Nuk do të ristartojë për secilën film/video."
+
+msgctxt "#31972"
+msgid "Netflix style pause wait time."
+msgstr "Kohëzgjatja e një pauseje në stil Netflix."
+
+#: /1080i/variables.xml
+msgctxt "#31973"
+msgid "How long to wait before displaying Netflix style pause screen."
+msgstr "Sa kohe të pritet për të treguar ekranin e pausejes në stil Netflix."
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr "Zgjidhni një skenë të fonit"
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr "Aktivizoni AutoZoom për përmbajtje 16:9. Për të aktivizuar AutoZoom, duhet të instalohet Addon-i AutoZoom."
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr "Zoom shumë 16:9 për të pasuar CIH Ekran."
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr "Treguar"
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "Treguar"
+
+msgctxt "#31544"
+msgid "Years old"
+msgstr "Vjet"
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr "Vendbanimi"
+
+msgctxt "#31614"
+msgid "Also known as"
+msgstr "E dijeni si"
+
+msgctxt "#31546"
+msgid "Known for"
+msgstr "E dijeni si"

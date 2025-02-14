@@ -300,6 +300,10 @@ msgctxt "#31956"
 msgid "Music"
 msgstr "MUSIEK"
 
+msgctxt "#31957"
+msgid "Apps"
+msgstr ""
+
 msgctxt "#31958"
 msgid "PLAY DISC"
 msgstr "SPEEL OPTIESE SKYF"
@@ -307,3 +311,92 @@ msgstr "SPEEL OPTIESE SKYF"
 msgctxt "#31959"
 msgid "System"
 msgstr "STELSEL"
+
+msgctxt "#31960"
+msgid "CONCERTS"
+msgstr "KONKERTES"
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr "Gestart"
+
+msgctxt "#31961"
+msgid "Hide ratings in list views"
+msgstr "Versteek beoordeling in lyste weergawes"
+
+msgctxt "#31962"
+msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
+msgstr "Dit wissel die sichtbaarheid van beoordeling in weergawes van soort List, LowList en TriPanel, tensy gesorteer deur beoordeling."
+
+msgctxt "#31964"
+msgid "NoTo"
+msgstr "Geen"
+
+msgctxt "#31966"
+msgid "Scope Format"
+msgstr "Skuifweergawe"
+
+msgctxt "#31967"
+msgid "This will adjust the Skin to fit 2.35 or 2.40 format screens."
+msgstr "Dit sal die oortreksel aanpass aan 2.35 of 2.40 formaat skerms."
+
+msgctxt "#31968"
+msgid "Show Zoom/Subtitle Buttons for Non-Scope"
+msgstr "Wys Zoom/Subtitel Knoppies vir Niet-Oortreksel"
+
+msgctxt "#31969"
+msgid "This will display 2 extra buttons, zoom out and zoom in, which can be used to fit 16:9 / 4:3 content inside your scope view without zooming your projector out."
+msgstr "Dit sal 2 aanvullende knoppies toon, zoom uit en zoom in, wat gebruik kan word om 16:9 / 4:3 inhoud binnen jou oortreksel weergawe te pas zonder om jou projektor uit te zoom."
+
+msgctxt "#31970"
+msgid "Remember Scope Mask"
+msgstr "Onthou Oortreksel Masker"
+
+msgctxt "#31971"
+msgid "This will keep the 'Scope Mask' on or off once you set it. It will not reset for each movie/video."
+msgstr "Dit sal die 'Oortreksel Masker' aan of uit hou, tenzij jy dit opnieuw stel vir elke film/video."
+
+msgctxt "#31972"
+msgid "Netflix style pause wait time."
+msgstr "Wachttyd vir Netflix-styl Pause"
+
+#: /1080i/variables.xml
+msgctxt "#31973"
+msgid "How long to wait before displaying Netflix style pause screen."
+msgstr "Hoe lank om te wacht voordat die Netflix-styl Pause skerm getoon word."
+
+msgctxt "#31974"
+msgid "Choose your background image"
+msgstr "Kies jou agtergrond beeld"
+
+msgctxt "#31975"
+msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgstr "Stel AutoZoom in vir 16:9 Inhoud in. Vereis AutoZoom Byvoegsel."
+
+msgctxt "#31976"
+msgid "Zooms out 16:9 Content to fit CIH Screen."
+msgstr "Zoom uit 16:9 Inhoud om te pas CIH Skerm."
+
+msgctxt "#31452"
+msgid "Premiered"
+msgstr "Gestart"
+
+msgctxt "#31393"
+msgid "Ends at"
+msgstr "Eindig by"
+
+msgctxt "#31544"
+msgid "Years old"
+msgstr "Jare oud"
+
+msgctxt "#31600"
+msgid "Place of birth"
+msgstr "Gebore in"
+
+msgctxt "#31614"
+msgid "Also known as"
+msgstr "Ook bekend as"
+
+msgctxt "#31546"
+msgid "Known for"
+msgstr "Gekend vir"

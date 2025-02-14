@@ -54,7 +54,7 @@
 		<width>254</width>
 		<textoffsetx>0</textoffsetx>
 		<align>center</align>
-		<font>font15</font>
+		<font>MaterialIcons</font>
 		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 	</include>

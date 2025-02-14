@@ -226,6 +226,18 @@
 		<value condition="System.GetBool(videolibrary.showunwatchedplots)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
+	<variable name="VideoInfoPlotVar">
+		<value condition="String.IsEqual(ListItem.Property(item.type),person)">$INFO[ListItem.Property(Biography)]</value>
+		<value condition="System.AddonIsEnabled(script.skin.info.service) + String.IsEqual(ListItem.DBTYPE,set) + Skin.HasSetting(SetInfoPlotToggle) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Plot))">$INFO[Window(Home).Property(SkinInfo.Set.Movies.Plot)]</value>
+		<value condition="Skin.HasSetting(VideoInfoPlotToggle) + !String.IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value>$LOCALIZE[19055]</value>
+	</variable>
+	<variable name="VideoInfoDetailsImageVar">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(discartoninfo)]">$INFO[ListItem.Art(discart)]</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(CharacterOnInfo)]">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="[String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)] + Skin.HasSetting(CharacterOnInfo)">$INFO[ListItem.Art(tvshow.clearart)]</value>
+	</variable>
 	<variable name="OtherPlotVar">
 		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[414]</value>
@@ -264,6 +276,10 @@
 		<value condition="[String.Contains(Player.Filenameandpath,dvd) | String.Contains(Player.Filenameandpath,.ifo)]">dvd.png</value>
 		<value condition="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,brrip) | String.Contains(Player.Filenameandpath,.bdmv) | String.Contains(Player.Filenameandpath,.iso) | String.Contains(Player.Filenameandpath,remux)]">bluray.png</value>
 		<value>$INFO[VideoPlayer.VideoCodec,,.png]</value>
+	</variable>
+	<variable name="InfoListTopVar">
+    <value condition="Integer.IsGreater(Container(900010).NumItems,0)">450</value>
+    <value>550</value>
 	</variable>
 
 	<!-- InfoPanel -->
@@ -932,5 +948,34 @@
 		<value condition="SubString(Player.Filenameandpath,2.55) | SubString(Player.Filenameandpath,23-9)">2.55</value>
 		<value condition="SubString(Player.Filenameandpath,2.76) | SubString(Player.Filenameandpath,11-4)">2.76</value>
 		<value>$INFO[VideoPlayer.VideoAspect]</value>
+	</variable>
+
+	<variable name="VideoInfoButtonLabelVar">
+		<value condition="Control.HasFocus(300) | Control.HasFocus(64) | [Control.HasFocus(9003) + String.IsEqual(ListItem.DBTYPE,song)]">$LOCALIZE[31271]</value>
+		<value condition="Control.HasFocus(8) + [String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)] | Control.HasFocus(808)">$LOCALIZE[1024]</value>
+		<value condition="Control.HasFocus(8)">$LOCALIZE[208]</value>
+		<value condition="Control.HasFocus(909)">$INFO[System.AddonTitle(script.preshowexperience)]</value>
+		<value condition="Control.HasFocus(910)">$LOCALIZE[206]</value>
+		<value condition="Control.HasFocus(14)">$LOCALIZE[40000]</value>
+		<value condition="Control.HasFocus(15)">$LOCALIZE[40211]</value>
+		<value condition="Control.HasFocus(11)">$LOCALIZE[20410]</value>
+		<value condition="Control.HasFocus(911)">$LOCALIZE[31457]</value>
+		<value condition="Control.HasFocus(7) | Control.HasFocus(5007) + !String.IsEmpty(ListItem.UserRating)">$LOCALIZE[31147]</value>
+		<value condition="Control.HasFocus(7) | Control.HasFocus(5007)">$LOCALIZE[38023]</value>
+		<value condition="Control.HasFocus(10)">$LOCALIZE[13511]</value>
+		<value condition="Control.HasFocus(5010)">$INFO[Control.GetLabel(10)]</value>
+		<value condition="Control.HasFocus(5012)">$INFO[Control.GetLabel(12)]</value>
+		<value condition="Control.HasFocus(6) | Control.HasFocus(5006)">$LOCALIZE[184]</value>
+		<value condition="Control.HasFocus(208)">$LOCALIZE[22082]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31271]</value>
+		<value condition="[Control.HasFocus(9003) + !String.IsEqual(ListItem.DBTYPE,song)] | [Container(9001).HasNext + !Container(9001).HasPrevious] + Window.IsActive(musicinformation)">$LOCALIZE[31453]</value>
+		<value condition="Control.HasFocus(90003) | [Container(90001).HasNext + !Container(90001).HasPrevious] + !Window.IsActive(musicinformation)">$LOCALIZE[31453]</value>
+		<value condition="[Container(9001).HasNext + !Container(9001).HasPrevious] + !String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[31453]</value>
+		<value condition="Control.HasFocus(5000)">$LOCALIZE[20391]</value>
+	</variable>
+	<variable name="CustomSelectLabelVar">
+		<value condition="String.IsEqual(Window(Home).Property(CustomSelect),gameosdsettings)">$LOCALIZE[35221]</value>
+		<value condition="String.IsEqual(Window(Home).Property(CustomSelect),search)">$LOCALIZE[137]</value>
+		<value>$LOCALIZE[22080]</value>
 	</variable>
 </includes>

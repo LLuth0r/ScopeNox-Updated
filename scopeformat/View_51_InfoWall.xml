@@ -194,7 +194,6 @@
 						<label>$VAR[AudioCodecCustom]</label>
 						<visible>false</visible>
 					</control>
-
 					<control type="image">
 						<width>90</width>
 						<include>MediaFlagValues</include>
@@ -240,7 +239,6 @@
 					<height>270</height>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
-					
 					<control type="label">
 						<label>$VAR[VideoSubLabelVar]</label>
 						<width>680</width>
@@ -330,6 +328,7 @@
 						<width>180</width>
 						<height>180</height>
 						<texture>black.png</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<bordersize>2</bordersize>
 						<colordiffuse>44ffffff</colordiffuse>
 					</control>
@@ -448,11 +447,11 @@
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
-				<left>1270</left>
-				<top>240</top>
+				<left>1160</left>
+				<top>190</top>
 				<control type="image">
-					<width>380</width>
-					<height>400</height>
+					<width>625</width>
+					<height>368</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Container(51).ListItem.Art(fanart)]</texture>
 					<fadetime>300</fadetime>
@@ -460,8 +459,8 @@
 					<bordersize>2</bordersize>
 				</control>
 				<control type="label">
-					<top>401</top>
-					<width>615</width>
+					<top>360</top>
+					<width>628</width>
 					<height>60</height>
 					<font>font16_title_bold</font>
 					<textcolor>grey</textcolor>
@@ -470,21 +469,21 @@
 					<textoffsetx>15</textoffsetx>
 				</control>
 				<control type="button">
-					<top>461</top>
+					<top>406</top>
 					<width>680</width>
 					<label>$INFO[ListItem.Artist,,[CR]]$INFO[ListItem.Year]$INFO[ListItem.Property(Album_Label), � ]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="button">
-					<top>461</top>
+					<top>490</top>
 					<width>680</width>
 					<label>$INFO[ListItem.Property(Artist_Genre),,[CR]]$INFO[ListItem.Property(Artist_YearsActive)]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>Container.Content(artists)</visible>
 				</control>
 				<control type="button">
-					<top>461</top>
+					<top>406</top>
 					<width>680</width>
 					<label>$INFO[ListItem.AddonCreator,,[CR]]$INFO[ListItem.AddonVersion]</label>
 					<include>ShowCaseInfoPanelButtonsValues</include>
@@ -492,20 +491,20 @@
 				</control>
 				<control type="textbox">
 					<label>$VAR[MusicPlotVar]</label>
-					<top>555</top>
+					<top>490</top>
 					<left>15</left>
-					<width>650</width>
-					<height>342</height>
-					<font>font14_textbox</font>
+					<width>690</width>
+					<height>232</height>
+					<font>font12_textbox</font>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(61)</autoscroll>
 					<pagecontrol>61</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 				</control>
 				<control type="scrollbar" id="61">
-					<left>590</left>
-					<top>555</top>
+					<left>700</left>
+					<top>480</top>
 					<width>14</width>
-					<height>342</height>
+					<height>225</height>
 					<onleft>50</onleft>
 					<onright>SetProperty(MediaMenu,True,home)</onright>
 					<onright>SetFocus(9050)</onright>
@@ -663,7 +662,7 @@
 				</control>
 				<control type="textbox">
 					<label>$VAR[MusicPlotVar]</label>
-					<top>470</top>
+					<top>490</top>
 					<left>15</left>
 					<width>690</width>
 					<height>232</height>
