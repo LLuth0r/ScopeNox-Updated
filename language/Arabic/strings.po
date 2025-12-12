@@ -169,7 +169,7 @@ msgid "Recently Added"
 msgstr "أضيف مؤخراً"
 
 msgctxt "#31390"
-msgid "Skin default"
+msgid "Skin Default"
 msgstr "الخلفية الاإفتراضية"
 
 msgctxt "#31400"
@@ -312,8 +312,12 @@ msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr "يقلب الإظهار الظاهري للتقييمات في عروض النوع List, LowList و TriPanel, ما عدا إذا قام بالفرز بناءً على التقييمات."
 
-msgctxt "#31964"
-msgid "NoTo"
+msgctxt "#31391"
+msgid "NoTo-Sans"
+msgstr "لا"
+
+msgctxt "#31392"
+msgid "Inter-Regular"
 msgstr "لا"
 
 msgctxt "#31966"
@@ -365,7 +369,7 @@ msgctxt "#31452"
 msgid "Premiered"
 msgstr "أظهرت"
 
-msgctxt "#31393"
+msgctxt "#31392"
 msgid "Ends at"
 msgstr "أظهرت"
 

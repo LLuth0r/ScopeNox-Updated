@@ -177,7 +177,7 @@ msgid "Recently Added"
 msgstr "Onlangs Bygevoeg"
 
 msgctxt "#31390"
-msgid "Skin default"
+msgid "Skin Default"
 msgstr "Bestek omslag"
 
 msgctxt "#31400"
@@ -328,8 +328,12 @@ msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr "Dit wissel die sichtbaarheid van beoordeling in weergawes van soort List, LowList en TriPanel, tensy gesorteer deur beoordeling."
 
-msgctxt "#31964"
-msgid "NoTo"
+msgctxt "#31391"
+msgid "NoTo-Sans"
+msgstr "Geen"
+
+msgctxt "#31392"
+msgid "Inter-Regular"
 msgstr "Geen"
 
 msgctxt "#31966"
@@ -381,7 +385,7 @@ msgctxt "#31452"
 msgid "Premiered"
 msgstr "Gestart"
 
-msgctxt "#31393"
+msgctxt "#31392"
 msgid "Ends at"
 msgstr "Eindig by"
 

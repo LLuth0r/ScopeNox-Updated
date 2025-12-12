@@ -857,7 +857,7 @@
 			<label>$INFO[ListItem.Tagline]</label>
 			<label>$INFO[Container(9143).ListItem.Property(Awards)]</label>
 			<!-- Need to copy this string from Aeon Nox to all string files -->
-			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
+			<label>$INFO[ListItem.EndTime,$LOCALIZE[31392]: ,]</label>
 			<visible>!String.IsEmpty(ListItem.Tagline) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
 		</control>
 		<control type="fadelabel">
@@ -872,7 +872,7 @@
 			<pauseatend>5500</pauseatend>
 			<label>$INFO[ListItem.Tagline]</label>
 			<label>$INFO[Container(9143).ListItem.Property(Awards)]</label>
-			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
+			<label>$INFO[ListItem.EndTime,$LOCALIZE[31392]: ,]</label>
 			<label>$INFO[ListItem.OriginalTitle]</label>
 			<visible>!String.IsEmpty(ListItem.Tagline) + !String.IsEqual(ListItem.OriginalTitle,ListItem.Title)</visible>
 		</control>
@@ -881,7 +881,7 @@
 			<font>font15</font>
 			<textcolor>blue</textcolor>
 			<scroll>true</scroll>
-			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
+			<label>$INFO[ListItem.EndTime,$LOCALIZE[31392]: ,]</label>
 			<visible>String.IsEmpty(ListItem.Tagline) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
 		</control>
 	</include>
@@ -934,7 +934,7 @@
 			<scrollout>false</scrollout>
 			<pauseatend>4500</pauseatend>
 			<label>$INFO[ListItem.TvShowTitle]</label>
-			<label>$INFO[ListItem.EndTime,$LOCALIZE[31393]: ,]</label>
+			<label>$INFO[ListItem.EndTime,$LOCALIZE[31392]: ,]</label>
 			<label>$VAR[VideoInfoTVSubtitleVar]</label>
 			<label>$INFO[Container(9143).ListItem.Property(Next_Aired.Season),S]$INFO[Container(9143).ListItem.Property(Next_Aired.Episode),E,  - ]$INFO[Container(9143).ListItem.Property(Next_Aired.Name)]$INFO[Container(9143).ListItem.Property(Next_Aired), (,)]</label>
 		</control>
