@@ -72,8 +72,12 @@ msgctxt "#31962"
 msgid "This toggles the visibility of ratings in views of type List, LowList and TriPanel, except if sorted by rating."
 msgstr ""
 
-msgctxt "#31964"
-msgid "NoTo"
+msgctxt "#31391"
+msgid "NoTo-Sans"
+msgstr ""
+
+msgctxt "#31392"
+msgid "Inter-Regular"
 msgstr ""
 
 msgctxt "#31966"
@@ -125,7 +129,7 @@ msgctxt "#31452"
 msgid "Premiered"
 msgstr ""
 
-msgctxt "#31393"
+msgctxt "#31392"
 msgid "Ends at"
 msgstr "Ends at"
 
