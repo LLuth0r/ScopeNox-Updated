@@ -515,11 +515,6 @@
 			<onclick>Dialog.Close(1130)</onclick>
 			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/extras/backgrounds)</onclick>
 		</item>
-		<item>
-			<label>$LOCALIZE[31022]</label>
-			<onclick>Dialog.Close(1130)</onclick>
-			<onclick>Skin.SetPath(CustomDefaultBackground.path)</onclick>
-		</item>
 	</include>
 	<include name="CustomSelectLayout">
 		<control type="list" id="90100">

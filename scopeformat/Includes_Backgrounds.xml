@@ -159,6 +159,7 @@
 			<imagepath fallback="special://skin/extras/backgrounds/1.jpg" background="true">$VAR[HomeBackgroundVar]</imagepath>
 			<visible>![ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()]</visible>
 			<include>VisibleFadeAnimation</include>
+      <aspectratio align="center">keep</aspectratio>
 		</control>
 		<control type="image">
 			<description>Widget background image</description>
