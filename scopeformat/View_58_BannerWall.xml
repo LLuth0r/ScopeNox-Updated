@@ -65,7 +65,7 @@
 							<bordersize>20</bordersize>
 						</control>
 					</control>
-          <!-- Resumeable (Star Overlay) -->
+          <!-- Resumable (Star Overlay) -->
 					<control type="image">
 						<left>1000</left>
 						<width>100</width>
@@ -116,7 +116,7 @@
 							<bordersize>20</bordersize>
 						</control>
 					</control>
-          <!-- Resumeable (Star Overlay) -->
+          <!-- Resumable (Star Overlay) -->
 					<control type="image">
 						<left>1000</left>
 						<width>100</width>
@@ -175,7 +175,7 @@
 							<colordiffuse>BAffffff</colordiffuse>
 						</control>
 					</control>
-          <!-- Resumeable (Star Overlay) -->
+          <!-- Resumable (Star Overlay) -->
 					<control type="image">
 						<left>490</left>
 						<width>60</width>
@@ -228,7 +228,7 @@
 							<colordiffuse>BAffffff</colordiffuse>
 						</control>
 					</control>
-          <!-- Resumeable (Star Overlay) -->
+          <!-- Resumable (Star Overlay) -->
 					<control type="image">
 						<left>490</left>
 						<width>60</width>

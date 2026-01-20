@@ -101,7 +101,7 @@
 	</variable>
   <!-- Watched/Unwatched/Resumable (Star Overlay) -->
 	<variable name="OverlayVar">
-		<value condition="Container.ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))"></value>
+		<value condition="Container.ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
 		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/3/)">$INFO[ListItem.Overlay,overlays/showcase/3/]</value>
 		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/2/)">$INFO[ListItem.Overlay,overlays/showcase/2/]</value>
 		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/1/)">$INFO[ListItem.Overlay,overlays/showcase/1/]</value>
