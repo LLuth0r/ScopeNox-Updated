@@ -21,6 +21,7 @@
 			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
 		</control>
+    <!-- Resumeable (Star Overlay) -->
 		<control type="image">
 			<left>177</left>
 			<top>18</top>
@@ -57,6 +58,7 @@
 			<animation effect="fade" start="100" end="30" time="400">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="400">UnFocus</animation>
 		</control>
+    <!-- Resumeable (Star Overlay) -->
 		<control type="image">
 			<left>200</left>
 			<top>149</top>

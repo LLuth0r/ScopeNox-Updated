@@ -4,7 +4,12 @@
 	
 	<!-- I need to fix these fonts and make them organized and in order of size -->
 	<!-- Scope -->
-
+    <font>
+      <name>font6</name>
+      <filename>Orbitron-VariableFont_wght.ttf</filename>
+      <size>12</size>
+      <color>white</color>
+    </font>
 		<font>
 			<name>MaterialIcons</name>
 			<filename>MaterialIcons-Regular.ttf</filename>

@@ -529,6 +529,16 @@
 						<selected>Skin.HasSetting(Enable.HideRatings)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+          <control type="radiobutton" id="407">
+						<width>1316</width>
+						<height>60</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>Toggle Large Posters on InfoWall</label>
+						<onclick>Skin.ToggleSetting(Enable.LargePosters)</onclick>
+						<selected>Skin.HasSetting(Enable.LargePosters)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 				</control>
 				<control type="grouplist" id="9005">
 					<description>control area</description>

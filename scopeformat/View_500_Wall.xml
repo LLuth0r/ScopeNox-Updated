@@ -74,6 +74,7 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
+          <!-- Watched/Unwatched/Resumable (Star Overlay) -->
 					<control type="image">
 						<left>90</left>
 						<width>50</width>
@@ -98,6 +99,7 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
+          <!-- Resumeable (Star Overlay) -->
 					<control type="image">
 						<left>90</left>
 						<width>50</width>
@@ -170,6 +172,7 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
+          <!-- Resumeable (Star Overlay) -->
 					<control type="image">
 						<left>320</left>
 						<width>100</width>
@@ -211,6 +214,7 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
+          <!-- Resumeable (Star Overlay) -->
 					<control type="image">
 						<left>320</left>
 						<width>100</width>
