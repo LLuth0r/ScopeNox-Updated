@@ -40,7 +40,8 @@
 				<viewtype label="InfoWall">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
-				<itemlayout height="234" width="156">
+				<!-- Standard Posters -->
+        <itemlayout height="234" width="156" condition="!Skin.HasSetting(Enable.LargePosters)">
 					<control type="image">
 						<width>156</width>
 						<height>234</height>
@@ -51,6 +52,7 @@
 						<bordersize>2</bordersize>
 						<colordiffuse>BAffffff</colordiffuse>
 					</control>
+          <!-- Resumable (Star Overlay) Unfocused -->
 					<control type="image">
 						<left>100</left>
 						<top>0</top>
@@ -73,7 +75,42 @@
 						<colordiffuse>44ffffff</colordiffuse>
 					</control>
 				</itemlayout>
-				<focusedlayout height="234" width="156">
+        <!-- Large Posters -->
+        <itemlayout height="351" width="234" condition="Skin.HasSetting(Enable.LargePosters)">
+					<control type="image">
+						<width>234</width>
+						<height>351</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<fadetime>400</fadetime>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+						<colordiffuse>BAffffff</colordiffuse>
+					</control>
+          <!-- Resumable (Star Overlay) Unfocused -->
+					<control type="image">
+						<left>150</left>
+						<top>0</top>
+						<width>93</width>
+						<height>93</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<bordersize>1</bordersize>
+					</control>
+					<control type="group">
+						<left>30</left>
+						<top>30</top>
+						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+					</control>
+					<control type="image">
+						<width>234</width>
+						<height>351</height>
+						<texture>black.png</texture>
+						<bordersize>2</bordersize>
+						<colordiffuse>44ffffff</colordiffuse>
+					</control>
+				</itemlayout>
+				<focusedlayout height="234" width="156" condition="!Skin.HasSetting(Enable.LargePosters)">
 					<control type="image">
 						<width>156</width>
 						<height>234</height>
@@ -82,6 +119,7 @@
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
+          <!-- Resumable (Star Overlay) Focused -->
 					<control type="image">
 						<left>100</left>
 						<top>0</top>
@@ -107,6 +145,46 @@
 					<control type="image">
 						<width>156</width>
 						<height>234</height>
+						<texture border="10">thumbs/thumbnail_focused.png</texture>
+						<include>FocusFadeInAnimation</include>
+					</control>
+				</focusedlayout>
+        <!-- Large Posters -->
+				<focusedlayout height="351" width="234" condition="Skin.HasSetting(Enable.LargePosters)">
+					<control type="image">
+						<width>234</width>
+						<height>351</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$VAR[PosterThumb]</texture>
+						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordersize>2</bordersize>
+					</control>
+          <!-- Resumable (Star Overlay) Focused -->
+					<control type="image">
+						<left>150</left>
+						<top>0</top>
+						<width>93</width>
+						<height>93</height>
+						<texture>$VAR[OverlayVar]</texture>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<bordersize>2</bordersize>
+					</control>
+					<control type="group">
+						<left>30</left>
+						<top>30</top>
+						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+					</control>
+					<control type="image">
+						<width>234</width>
+						<height>351</height>
+						<texture>black.png</texture>
+						<bordersize>2</bordersize>
+						<colordiffuse>44ffffff</colordiffuse>
+						<include>FocusFadeOutAnimation</include>
+					</control>
+					<control type="image">
+						<width>234</width>
+						<height>351</height>
 						<texture border="10">thumbs/thumbnail_focused.png</texture>
 						<include>FocusFadeInAnimation</include>
 					</control>

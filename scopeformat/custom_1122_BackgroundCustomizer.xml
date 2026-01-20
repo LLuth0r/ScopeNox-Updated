@@ -104,12 +104,6 @@
 					<onclick>Dialog.Close(1122)</onclick>
 				</item>
 				<item>
-					<label>$LOCALIZE[31022]</label>
-					<onclick>Skin.SetString(ItemToEdit.BGType,2)</onclick>
-					<onclick>Skin.SetPath(ItemToEdit.MultiFanart)</onclick>
-					<onclick>Dialog.Close(1122)</onclick>
-				</item>
-				<item>
 					<label>$LOCALIZE[31062]</label>
 					<onclick>Skin.SetString(ItemToEdit.BGType,3)</onclick>
 					<onclick>Skin.SetString(ItemToEdit.MultiFanart,1)</onclick>

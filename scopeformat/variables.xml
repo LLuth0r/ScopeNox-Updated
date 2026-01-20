@@ -99,6 +99,7 @@
 		<value condition="Window.IsActive(pictures)">SetProperty(Nox.Temp,Pictures.Fallback,home)</value>
 		<value condition="Window.IsActive(games)">SetProperty(Nox.Temp,Games.Fallback,home)</value>
 	</variable>
+  <!-- Watched/Unwatched/Resumable (Star Overlay) -->
 	<variable name="OverlayVar">
 		<value condition="Container.ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
 		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/3/)">$INFO[ListItem.Overlay,overlays/showcase/3/]</value>

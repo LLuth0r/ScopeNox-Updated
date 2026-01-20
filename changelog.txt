@@ -1,5 +1,8 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.2.0 - Added a skin settings toggle to do large posters on InfoWall.
+        Added additional wallpapers
+
 1.1.9 - Fixed system font selection by adding Noto-Sans & Inter-Regular fonts.
         Adjusted all strings files to account for these updated fonts and the font.xml file
         Added a couple of holiday themed wallpapers for shits and giggles.

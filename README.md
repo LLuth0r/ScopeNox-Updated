@@ -21,3 +21,4 @@ https://github.com/LLuth0r/ScopeNox-Tools/releases
 
 The other is the scopenox-autozoom script.  With this installed, 16:9 content gets zoomed out so that it's the proper fit on a scope screen.
 https://github.com/LLuth0r/ScopeNox-Autozoom/releases
+
