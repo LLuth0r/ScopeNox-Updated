@@ -2,16 +2,18 @@
 <window type="dialog" id="142">
 	<controls>
 		<control type="group">
-			<animation effect="slide" end="0,0" start="0,-540" time="200" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,-540" time="200" tween="quadratic" easing="out">WindowClose</animation>
+			<!-- keep inside the CIH safe area (GUI band ~130-950) -->
+			<top>140</top>
+			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 			<control type="image">
 				<width>100%</width>
-				<height>540</height>
+				<height>640</height>
 				<texture border="1,1,1,40">topbar.png</texture>
 			</control>
 			<control type="grouplist">
 				<width>100%</width>
-				<height>540</height>
+				<height>640</height>
 				<itemgap>1</itemgap>
 				<control type="label">
 					<description>Header</description>
@@ -65,6 +67,30 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[169]:</label>
 					<label2>$INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label2>
+					<texturefocus />
+					<texturenofocus />
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="button">
+					<description>HDR type</description>
+					<width>50%</width>
+					<height>45</height>
+					<textoffsetx>30</textoffsetx>
+					<label>HDR:</label>
+					<label2>$VAR[PPIHdrTypeVar]</label2>
+					<texturefocus />
+					<texturenofocus />
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="button">
+					<description>Display</description>
+					<width>50%</width>
+					<height>45</height>
+					<textoffsetx>30</textoffsetx>
+					<label>Display:</label>
+					<label2>$INFO[System.ScreenResolution]</label2>
 					<texturefocus />
 					<texturenofocus />
 					<font>font15</font>
@@ -140,7 +166,7 @@
 			<control type="grouplist">
 				<left>50%</left>
 				<width>100%</width>
-				<height>540</height>
+				<height>640</height>
 				<itemgap>1</itemgap>
 				<visible>VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
 				<control type="button">
