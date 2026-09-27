@@ -19,6 +19,6 @@ There are two tools for use with this script.  One is scopenox-tools.  This crea
 https://github.com/LLuth0r/ScopeNox-Tools/releases
 
 
-The other is the scopenox-autozoom script.  With this installed, 16:9 content gets zoomed out so that it's the proper fit on a scope screen.
-https://github.com/LLuth0r/ScopeNox-Autozoom/releases
-
+AutoZoom is built into the skin (as of 1.2.1). Turn it on at System -> Appearance -> Skin -> Settings -> Scope -> AutoZoom.
+It reads the video stream's aspect ratio and zooms 16:9 (and 1.33 - 2.19) content out to fit the scope frame for the selected
+2.35 / 2.40 format. Content 2.20 and wider is left alone and gets the scope mask. The separate scopenox-autozoom script is no longer needed.

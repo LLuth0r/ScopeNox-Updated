@@ -1,5 +1,10 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.2.1 - AutoZoom is now built into the skin; script.scopenox-autozoom is no longer needed.
+        Zoom amount is based on the video stream's aspect ratio (1.33 - 2.19) and the selected scope format
+        (2.35 or 2.40), instead of a fixed amount for everything. Runs once per file.
+        Scope mask detection now covers any stream 2.20 and wider (e.g. 2.39), not just a fixed list.
+
 1.2.0 - Added a skin settings toggle to do large posters on InfoWall.
         Added additional wallpapers
 
