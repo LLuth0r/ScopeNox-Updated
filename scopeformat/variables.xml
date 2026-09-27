@@ -880,7 +880,14 @@
 	<variable name="VideoHWDecoderVar">
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[19074]</value>
 		<value>$LOCALIZE[31172]</value>
-	</variable>	
+	</variable>
+	<variable name="PPIHdrTypeVar">
+		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>
+		<value condition="String.IsEqual(VideoPlayer.HdrType,hdr10)">HDR10</value>
+		<value condition="String.IsEqual(VideoPlayer.HdrType,hlg)">HLG</value>
+		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType]</value>
+		<value>SDR</value>
+	</variable>
 	<variable name="SimilarShowsIDVar">
 		<value condition="String.IsEqual(ListItem.DBType,episode)">name=$INFO[ListItem.TvShowTitle]</value>
 		<value>dbid=$INFO[ListItem.DBID]</value>

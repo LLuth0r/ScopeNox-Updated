@@ -174,7 +174,19 @@
 					<onclick>ActivateWindow(fullscreeninfo)</onclick>
 					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 				</control>
-				
+
+				<!--Player Process Info Button (textures are loose files in media/osd/buttons)-->
+				<control type="button" id="717">
+					<texturefocus>osd/buttons/ppifo.png</texturefocus>
+					<texturenofocus>osd/buttons/ppinf.png</texturenofocus>
+					<label>-</label>
+					<width>100</width>
+					<height>100</height>
+					<font>-</font>
+					<onclick>Close</onclick>
+					<onclick>ActivateWindow(playerprocessinfo)</onclick>
+				</control>
+
 				<!--Scope Mask Buttons-->
 				<control type="button" id="708">
 					<texturefocus>osd/buttons/scopeonfo.png</texturefocus>
