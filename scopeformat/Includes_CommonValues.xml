@@ -102,6 +102,14 @@
 		<texturenofocus border="1">separator5.png</texturenofocus>
 		<onclick>noop</onclick>
 	</include>
+	<!-- Rows in the Add-on Status window (custom_1117) and Skin Settings; matches the Skin Settings row style -->
+	<include name="SettingsButtonCommonValues">
+		<width>1401</width>
+		<height>60</height>
+		<textoffsetx>30</textoffsetx>
+		<font>font15</font>
+		<texturenofocus border="1">separator5.png</texturenofocus>
+	</include>
 	<include name="SettingsPanelButtonsValues">
 		<height>90</height>
 		<width>1256</width>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Skin timers (Kodi 20+). None defined; this file stops Kodi logging "Could not load timers file" on every skin load. -->
+<timers>
+</timers>
