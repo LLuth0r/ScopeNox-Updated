@@ -1,6 +1,14 @@
 Below is the changelog for ScopeNox by LLuth0r
 
-1.2.3 - AutoZoom remembers full size per movie: press zoom in once on a scope movie with baked-in black bars (reported as 1.78)
+1.2.4 - New Save zoom button on the playback OSD: set any zoom (e.g. 0.81 with Kodi's zoom slider for an IMAX 1.90 release
+        stored in a 16:9 frame) and press Save zoom to remember it for that movie. The button shows a bar while one is saved.
+        Playback OSD buttons are smaller (84px) so the whole row fits on screen, and every icon is now properly centred.
+        Video calibration arrows, subtitle bar and reset icon are visible again (they were hidden behind the scope bars
+        and drawn transparent).
+        Focus highlight bars now show in the info screen details list, select dialogs and the Add-on Status window.
+        Added tools/genosd.ps1, the generator for the playback OSD button icons.
+
+1.2.3 -AutoZoom remembers full size per movie: press zoom in once on a scope movie with baked-in black bars (reported as 1.78)
         and it plays at 1.00 from then on. Zoom out forgets it again. Works with PlexKodiConnect (saved by IMDb/TMDb id, not file path).
         The zoom-in button shows an "on" bar while the playing movie has a remembered zoom.
         New "Clear saved AutoZoom settings" option in Skin Settings -> Scope.
