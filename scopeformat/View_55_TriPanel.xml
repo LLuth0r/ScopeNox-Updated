@@ -27,6 +27,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 					</control>
@@ -34,6 +35,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[31000]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Director)]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Director)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
@@ -41,6 +43,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[126]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.Status)]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.Status))</visible>
 					</control>
@@ -48,6 +51,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[20416]:[/COLOR][CR]$INFO[ListItem.Premiered]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Premiered) + [Container.Content(episodes) | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Disable.NextAired)]]</visible>
 					</control>
@@ -55,17 +59,20 @@
 						<label>[COLOR labelheader]$LOCALIZE[31019]:[/COLOR][CR]$INFO[ListItem.Studio]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Studio)</visible>
 						<visible>[[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(Disable.NextAired)] | Container.Content(episodes)</visible>
 					</control>
 					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31010]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.NextDate),,: ]$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
 					<control type="textbox">
 						<label>[COLOR labelheader]$LOCALIZE[31011]:[/COLOR][CR]$INFO[Window(Home).Property(NextAired.LatestNumber),, - ]$INFO[Window(Home).Property(NextAired.LatestTitle)]</label>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.LatestDate)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 					</control>
@@ -73,6 +80,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[ListItem.Genre]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Genre) + !Container.Content(episodes)</visible>
 					</control>
@@ -80,6 +88,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[515]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Genre)]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Genre)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
@@ -87,6 +96,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
@@ -94,6 +104,7 @@
 						<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
 						<width>448</width>
 						<font>font10</font>
+						<height max="100">auto</height>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<visible>!String.IsEmpty(Window(home).Property(Set.Movies.Runtime)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
