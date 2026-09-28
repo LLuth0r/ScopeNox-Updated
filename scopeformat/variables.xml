@@ -488,6 +488,7 @@
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(112)">$LOCALIZE[31976]</value>
+		<value condition="Control.HasFocus(117)">Where your screen sits in the 16:9 picture. Centre: projector zoom centred on the picture. Top / Bottom: projector zoom anchored at the top / bottom edge of the picture; menus and movies move to that edge. Use Video calibration for fine adjustment.</value>
 		<value condition="Control.HasFocus(116)">Zoom in (full size) and Save zoom (the current zoom) remember a zoom for that movie, and AutoZoom uses it from then on. Zoom out forgets it for that movie; this clears all of them.</value>
 		<value condition="Control.HasFocus(113)">How long each image is shown when the background is set to a folder (slideshow).</value>
 		<value condition="Control.HasFocus(200)">$LOCALIZE[31917]</value>
@@ -893,6 +894,11 @@
 		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),60)">1 minute</value>
 		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),300)">5 minutes</value>
 		<value>20 seconds</value>
+	</variable>
+	<variable name="ProjectorAlignLabelVar">
+		<value condition="String.IsEqual(Skin.String(ProjectorAlign),top)">Top</value>
+		<value condition="String.IsEqual(Skin.String(ProjectorAlign),bottom)">Bottom</value>
+		<value>Centre</value>
 	</variable>
 	<variable name="AutoZoomSavedLabelVar">
 		<value condition="String.IsEmpty(Skin.String(AutoZoomOverrideCount)) | String.IsEqual(Skin.String(AutoZoomOverrideCount),0)">none saved</value>

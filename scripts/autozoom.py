@@ -37,6 +37,9 @@ HOME = xbmcgui.Window(10000)
 FRAME_HEIGHT_235 = 820.0
 FRAME_HEIGHT_240 = 800.0
 SCOPE_DAR = 2.2  # 2.20 and wider already fills the frame (and gets the scope mask)
+# Letterbox height above/below the scope frame in the 1080 frame: (1080 - frame height) / 2
+LETTERBOX_235 = (1080.0 - FRAME_HEIGHT_235) / 2
+LETTERBOX_240 = (1080.0 - FRAME_HEIGHT_240) / 2
 
 
 def log(msg, level=xbmc.LOGINFO):
@@ -121,6 +124,10 @@ def stream_dar(timeout=10.0):
         try:
             dar = float(value)
             if dar > 0:
+                # Kodi reports two decimals; snap 1.78 / 1.33 back to exact 16:9 / 4:3
+                for exact in (16.0 / 9.0, 4.0 / 3.0):
+                    if abs(dar - exact) < 0.006:
+                        return exact
                 return dar
         except ValueError:
             pass
@@ -140,6 +147,36 @@ def fit_zoom(dar):
     return min(1.0, math.floor(frame / displayed * 100 + 0.1) / 100)
 
 
+# ---------------------------------------------------------------- projector alignment
+
+def align_shift_px():
+    """Vertical shift (in 1080-frame pixels, negative = up) for Skin Settings -> Projector alignment.
+
+    Top / Bottom move the picture by the letterbox height, so the scope band lands at the top / bottom
+    edge of the frame, matching the GUI (Includes_ProjectorAlign.xml)."""
+    align = xbmc.getInfoLabel('Skin.String(ProjectorAlign)')
+    letterbox = LETTERBOX_235 if xbmc.getCondVisibility('Skin.HasSetting(scopeFormat235)') else LETTERBOX_240
+    return {'top': -letterbox, 'bottom': letterbox}.get(align, 0.0)
+
+
+def vertical_shift_value(dar, zoom, shift_px):
+    """Kodi verticalshift that moves the picture by shift_px (see CBaseRenderer::CalcNormalRenderRect).
+
+    -1..1 moves the picture within its black bars; beyond that it moves by a fraction of the picture height.
+    Everything is a ratio, so the 1920x1080 frame gives the same values at any output resolution."""
+    if not shift_px:
+        return 0.0
+    height = min(1080.0, 1920.0 / dar) * zoom  # displayed picture height
+    bars = max((1080.0 - height) / 2.0, 0.0)
+    distance = abs(shift_px)
+    if distance <= bars:
+        value = distance / bars
+    else:
+        shift_range = min(height, height - (height - 1080.0) / 2.0)
+        value = 1.0 + (distance - bars) / shift_range
+    return round(math.copysign(value, shift_px), 4)
+
+
 # ---------------------------------------------------------------- zoom
 
 def jsonrpc(method, params=None):
@@ -149,8 +186,12 @@ def jsonrpc(method, params=None):
     return json.loads(xbmc.executeJSONRPC(json.dumps(request)))
 
 
-def set_zoom(zoom):
-    result = jsonrpc('Player.SetViewMode', {'viewmode': {'zoom': zoom}})
+def set_zoom(zoom, dar=None):
+    """Set the zoom, with the vertical shift for the projector alignment at that zoom."""
+    if dar is None:
+        dar = stream_dar(timeout=2.0) or 16.0 / 9.0
+    shift = vertical_shift_value(dar, zoom, align_shift_px())
+    result = jsonrpc('Player.SetViewMode', {'viewmode': {'zoom': zoom, 'verticalshift': shift}})
     if 'error' not in result:
         return True
     # fallback: step from the current zoom with the relative zoom actions
@@ -162,6 +203,7 @@ def set_zoom(zoom):
     action = 'zoomin' if steps > 0 else 'zoomout'
     for _ in range(abs(steps)):
         jsonrpc('Input.ExecuteAction', {'action': action})
+    jsonrpc('Player.SetViewMode', {'viewmode': {'verticalshift': shift}})
     return True
 
 
@@ -188,21 +230,30 @@ def action_apply():
     saved = load_store()['items'].get(key) if key else None
     set_indicator(saved['zoom'] if saved else None)  # refreshed every time fullscreen opens, even if AutoZoom is off
 
-    if not xbmc.getCondVisibility('Skin.HasSetting(enableAutoZoom)'):
-        return
     current_file = playing_file()
     if not current_file or HOME.getProperty(APPLIED_PROP) == current_file:
         return
     HOME.setProperty(APPLIED_PROP, current_file)
 
-    if saved:
-        zoom, source = saved['zoom'], 'saved'
-    else:
-        dar = stream_dar()
-        zoom, source = fit_zoom(dar), 'aspect ratio %s' % dar
-    log('apply: %s key=%s zoom=%s (%s)' % (label, key, zoom, source))
+    autozoom = xbmc.getCondVisibility('Skin.HasSetting(enableAutoZoom)')
+    shift_px = align_shift_px()
+    view = jsonrpc('Player.GetViewMode').get('result', {})
+    stale_shift = bool(view.get('verticalshift'))  # Kodi restores a shift saved for this file
+    if not autozoom and not shift_px and not stale_shift:
+        return  # centre alignment and AutoZoom off: leave the view alone
+
+    dar = stream_dar()
+    zoom, source = None, 'unchanged'
+    if autozoom:
+        if saved:
+            zoom, source = saved['zoom'], 'saved'
+        else:
+            zoom, source = fit_zoom(dar), 'aspect ratio %s' % dar
+    if zoom is None and (shift_px or stale_shift):
+        zoom = round(float(view.get('zoom', 1.0)), 2)  # only the shift changes
+    log('apply: %s key=%s zoom=%s (%s) shift=%spx' % (label, key, zoom, source, shift_px))
     if zoom is not None:
-        set_zoom(zoom)
+        set_zoom(zoom, dar or 16.0 / 9.0)
 
 
 def remember(zoom):

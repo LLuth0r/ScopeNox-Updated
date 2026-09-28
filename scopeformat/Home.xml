@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload condition="Window.Previous(startup)">SetFocus(9000,2,absolute)</onload>
