@@ -562,98 +562,9 @@
 	</include>
 	<include name="CustomActorList">
 		<control type="panel" id="90050">
-			<left>15</left>
-			<width>1196</width>
-			<height>500</height>
-			<orientation>horizontal</orientation>
-			<preloaditems>2</preloaditems>
-			<viewtype label="">list</viewtype>
-			<scrolltime tween="quadratic" easing="out">300</scrolltime>
-			<itemlayout height="500" width="299">
-				<control type="image">
-					<left>-15</left>
-					<top>-20</top>
-					<width>320</width>
-					<height>365</height>
-					<bordersize>22</bordersize>
-					<bordertexture border="20">thumbs/shadow.png</bordertexture>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
-				</control>
-				<control type="image">
-					<left>5</left>
-					<width>282</width>
-					<height>280</height>
-					<texture>poster_bottom_fade.png</texture>
-				</control>
-				<control type="label">
-					<left>8</left>
-					<top>320</top>
-					<width>274</width>
-					<height>43</height>
-					<align>center</align>
-					<font>font10</font>
-					<shadowcolor>shadow</shadowcolor>
-					<textcolor>white2</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-				<control type="label">
-					<left>3</left>
-					<top>345</top>
-					<width>284</width>
-					<height>43</height>
-					<align>center</align>
-					<font>font14</font>
-					<shadowcolor>shadow</shadowcolor>
-					<textcolor>white2</textcolor>
-					<label>$INFO[ListItem.Label2]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="500" width="299">
-				<control type="group">
-					<animation effect="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto">Focus</animation>
-					<control type="image">
-						<left>-15</left>
-						<top>-10</top>
-						<width>320</width>
-						<height>380</height>
-						<bordersize>22</bordersize>
-						<bordertexture border="20" colordiffuse="black">thumbs/shadow.png</bordertexture>
-						<aspectratio aligny="top">scale</aspectratio>
-						<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
-					</control>
-					<control type="image">
-						<left>5</left>
-						<width>282</width>
-						<height>418</height>
-						<texture>poster_bottom_fade.png</texture>
-					</control>
-					<control type="label">
-						<left>8</left>
-						<top>345</top>
-						<width>274</width>
-						<height>43</height>
-						<align>center</align>
-						<font>font10</font>
-						<shadowcolor>shadow</shadowcolor>
-						<textcolor>blue</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90050)">Conditional</animation>
-					</control>
-					<control type="label">
-						<left>3</left>
-						<top>422</top>
-						<width>284</width>
-						<height>43</height>
-						<align>center</align>
-						<font>font10</font>
-						<shadowcolor>shadow</shadowcolor>
-						<textcolor>blue</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90050)">Conditional</animation>
-					</control>
-				</control>
-			</focusedlayout>
+			<include content="ActorPanelLayout">
+				<param name="PanelID">90050</param>
+			</include>
 			<content>
 				<include>CastPanelContent</include>
 			</content>
@@ -690,35 +601,41 @@
 	</include>
 	<include name="DefaultActorList">
 		<control type="panel" id="50">
+			<include content="ActorPanelLayout">
+				<param name="PanelID">50</param>
+			</include>
+		</control>
+	</include>
+	<!--
+		Cast row on the info dialog. Sized to fit the scope frame: the row starts at y=550 and must end
+		above ~y=940, so each item is 360px tall (portrait + name + role) and 5 actors fit across.
+	-->
+	<include name="ActorPanelLayout">
+		<param name="PanelID" />
+		<definition>
 			<left>15</left>
 			<width>1196</width>
-			<height>500</height>
+			<height>380</height>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
 			<viewtype label="">list</viewtype>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
-			<itemlayout height="500" width="299">
+			<itemlayout height="380" width="239">
 				<control type="image">
 					<left>-15</left>
-					<top>-10</top>
-					<width>320</width>
-					<height>450</height>
+					<top>-20</top>
+					<width>262</width>
+					<height>334</height>
 					<bordersize>22</bordersize>
 					<bordertexture border="20">thumbs/shadow.png</bordertexture>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 				</control>
-				<control type="image">
-					<left>5</left>
-					<width>282</width>
-					<height>418</height>
-					<texture>poster_bottom_fade.png</texture>
-				</control>
 				<control type="label">
-					<left>8</left>
-					<top>374</top>
-					<width>274</width>
-					<height>43</height>
+					<left>5</left>
+					<top>298</top>
+					<width>222</width>
+					<height>34</height>
 					<align>center</align>
 					<font>font14</font>
 					<shadowcolor>shadow</shadowcolor>
@@ -726,63 +643,59 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<left>3</left>
-					<top>422</top>
-					<width>284</width>
-					<height>43</height>
+					<left>5</left>
+					<top>330</top>
+					<width>222</width>
+					<height>30</height>
 					<align>center</align>
-					<font>font14</font>
+					<font>font10</font>
 					<shadowcolor>shadow</shadowcolor>
-					<textcolor>white2</textcolor>
+					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="500" width="299">
+			<focusedlayout height="380" width="239">
 				<control type="group">
 					<animation effect="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto">Focus</animation>
 					<control type="image">
 						<left>-15</left>
-						<top>-10</top>
-						<width>320</width>
-						<height>450</height>
+						<top>-20</top>
+						<width>262</width>
+						<height>334</height>
 						<bordersize>22</bordersize>
 						<bordertexture border="20" colordiffuse="black">thumbs/shadow.png</bordertexture>
 						<aspectratio aligny="top">scale</aspectratio>
 						<texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="image">
-						<left>5</left>
-						<width>282</width>
-						<height>418</height>
-						<texture>poster_bottom_fade.png</texture>
-					</control>
 					<control type="label">
-						<left>8</left>
-						<top>374</top>
-						<width>274</width>
-						<height>43</height>
+						<left>5</left>
+						<top>298</top>
+						<width>222</width>
+						<height>34</height>
 						<align>center</align>
 						<font>font14</font>
+						<scroll>true</scroll>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>3</left>
-						<top>422</top>
-						<width>284</width>
-						<height>43</height>
+						<left>5</left>
+						<top>330</top>
+						<width>222</width>
+						<height>30</height>
 						<align>center</align>
-						<font>font14</font>
+						<font>font10</font>
+						<scroll>true</scroll>
 						<shadowcolor>shadow</shadowcolor>
 						<textcolor>blue</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
-						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+						<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[PanelID])">Conditional</animation>
 					</control>
 				</control>
 			</focusedlayout>
-		</control>
+		</definition>
 	</include>
 	<include name="DefaultSetList">
 		<control type="panel" id="50">
