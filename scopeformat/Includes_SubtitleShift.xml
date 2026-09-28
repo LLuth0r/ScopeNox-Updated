@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OSD subtitle up/down buttons (VideoOSD.xml). AutoZoom and the zoom buttons are in scripts/autozoom.py. -->
+<includes>
+	<!-- Subtitle buttons: move subtitles 110 steps up into / down out of the scope frame -->
+	<include name="SubShiftUp10">
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+	</include>
+	<include name="SubShiftDown10">
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+	</include>
+	<include name="SubShiftUpClick">
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+	</include>
+	<include name="SubShiftDownClick">
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+	</include>
+</includes>

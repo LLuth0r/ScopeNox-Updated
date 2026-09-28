@@ -478,6 +478,7 @@
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(112)">$LOCALIZE[31976]</value>
+		<value condition="Control.HasFocus(116)">Pressing zoom in during playback remembers full size (1.00) for that movie, and AutoZoom skips it from then on. Zoom out forgets it for that movie; this clears all of them.</value>
 		<value condition="Control.HasFocus(113)">How long each image is shown when the background is set to a folder (slideshow).</value>
 		<value condition="Control.HasFocus(200)">$LOCALIZE[31917]</value>
 		<value condition="Control.HasFocus(201)">$LOCALIZE[31918]</value>
@@ -882,6 +883,10 @@
 		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),60)">1 minute</value>
 		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),300)">5 minutes</value>
 		<value>20 seconds</value>
+	</variable>
+	<variable name="AutoZoomSavedLabelVar">
+		<value condition="String.IsEmpty(Skin.String(AutoZoomOverrideCount)) | String.IsEqual(Skin.String(AutoZoomOverrideCount),0)">none saved</value>
+		<value>$INFO[Skin.String(AutoZoomOverrideCount)] saved</value>
 	</variable>
 	<variable name="PPIHdrTypeVar">
 		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>

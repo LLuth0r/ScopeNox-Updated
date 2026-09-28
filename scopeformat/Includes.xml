@@ -12,7 +12,7 @@
 	<include file="Includes_Backgrounds.xml" />
 	<include file="Includes_Select.xml" />
 	<include file="Includes_Widgets.xml" />
-	<include file="Includes_AutoZoom.xml" />
+	<include file="Includes_SubtitleShift.xml" />
 	<include file="Includes_16x9.xml" condition="!String.IsEqual(Skin.AspectRatio,21:9)" />
 	<include file="Includes_21x9.xml" condition="String.IsEqual(Skin.AspectRatio,21:9)" />
 	<include file="View_50_List.xml" />

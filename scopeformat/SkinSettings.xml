@@ -593,6 +593,17 @@
 						<selected>Skin.HasSetting(enableAutoZoom)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+					<!-- per-movie zooms saved by the OSD zoom-in button (scripts/autozoom.py) -->
+					<control type="button" id="116">
+						<width>1316</width>
+						<height>60</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>Clear saved AutoZoom settings</label>
+						<label2>[COLOR themecolor]$VAR[AutoZoomSavedLabelVar][/COLOR]</label2>
+						<onclick>RunScript(special://skin/scripts/autozoom.py,clear)</onclick>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 				</control>
 				<control type="grouplist" id="9006">
 					<description>control area</description>

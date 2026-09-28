@@ -266,7 +266,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font />
-					<include>ZoomClickFull</include>
+					<!-- full size, remembered for this movie -->
+					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</onclick>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				<control type="button" id="714">
@@ -276,7 +277,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font />
-					<include>ZoomClickScopeFit</include>
+					<!-- fit to the scope frame, forgets any saved zoom for this movie -->
+					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomout)</onclick>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				

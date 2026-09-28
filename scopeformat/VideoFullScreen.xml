@@ -7,8 +7,9 @@
 	<onload condition="String.StartsWith(Player.Process(VideoDAR),2.2) | String.StartsWith(Player.Process(VideoDAR),2.3) | String.StartsWith(Player.Process(VideoDAR),2.4) | String.StartsWith(Player.Process(VideoDAR),2.5) | String.StartsWith(Player.Process(VideoDAR),2.6) | String.StartsWith(Player.Process(VideoDAR),2.7) | String.StartsWith(Player.Process(VideoDAR),2.8) | String.StartsWith(Player.Process(VideoDAR),2.9) | String.StartsWith(Player.Process(VideoDAR),3.)">
 		Skin.SetBool(scopemask)
 	</onload>
-	<include>AutoZoom</include>
-	<onunload condition="!Player.HasMedia">Skin.Reset(autozoomfile)</onunload>
+	<!-- AutoZoom (scripts/autozoom.py): saved per-movie zoom, else fit to the scope frame; once per file -->
+	<onload>RunScript(special://skin/scripts/autozoom.py,apply)</onload>
+	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Applied,Home)</onunload>
 	<controls>
 		<!-- codec info -->
 		<control type="group" id="0">
