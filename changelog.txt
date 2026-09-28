@@ -1,6 +1,18 @@
 Below is the changelog for ScopeNox by LLuth0r
 
-1.2.1 - AutoZoom is now built into the skin; script.scopenox-autozoom is no longer needed.
+1.2.2 - Fixed AutoZoom zooming movies out too far on replay (e.g. 0.54 instead of 0.76). It now sets an exact zoom every time.
+        Zoom in/out and subtitle up/down buttons on the playback OSD are built into the skin; ScopeNox-Tools is no longer needed.
+        Zoom out fits 16:9 inside the scope frame (0.74 / 0.76); zoom in goes back to 1.00 for scope movies with baked-in bars.
+        New thin-ring playback OSD buttons that follow the theme colour; button row centred on the OSD bar.
+        Actor portraits and names on the info screen now fit inside the scope frame (5 across).
+        Background can be your own image or a folder slideshow, with a selectable slideshow interval.
+        Fixed the default background (was pointing at a removed image).
+        Fixed wrapped genres being covered by Runtime in the LowList and TriPanel views.
+        Video library media flags show again; fixed the Add-on Status window layout and the debug overlay.
+        Fixed skin errors in kodi.log. Replaced leftover "Aeon Nox" wording in the skin settings.
+        Removed the bundled ScopeNox-Tools add-on; README updated.
+
+1.2.1 -AutoZoom is now built into the skin; script.scopenox-autozoom is no longer needed.
         Zoom amount is based on the video stream's aspect ratio (1.33 - 2.19) and the selected scope format
         (2.35 or 2.40), instead of a fixed amount for everything. Runs once per file.
         Scope mask detection now covers any stream 2.20 and wider (e.g. 2.39), not just a fixed list.
