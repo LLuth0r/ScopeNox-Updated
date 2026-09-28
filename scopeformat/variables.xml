@@ -484,6 +484,7 @@
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(111)">$LOCALIZE[31974]</value>
 		<value condition="Control.HasFocus(112)">$LOCALIZE[31976]</value>
+		<value condition="Control.HasFocus(113)">How long each image is shown when the background is set to a folder (slideshow).</value>
 		<value condition="Control.HasFocus(200)">$LOCALIZE[31917]</value>
 		<value condition="Control.HasFocus(201)">$LOCALIZE[31918]</value>
 		<value condition="Control.HasFocus(202)">$LOCALIZE[31919]</value>
@@ -880,6 +881,13 @@
 	<variable name="VideoHWDecoderVar">
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[19074]</value>
 		<value>$LOCALIZE[31172]</value>
+	</variable>
+	<variable name="BackgroundSlideshowTimeLabelVar">
+		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),10)">10 seconds</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),30)">30 seconds</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),60)">1 minute</value>
+		<value condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),300)">5 minutes</value>
+		<value>20 seconds</value>
 	</variable>
 	<variable name="PPIHdrTypeVar">
 		<value condition="String.IsEqual(VideoPlayer.HdrType,dolbyvision)">Dolby Vision</value>

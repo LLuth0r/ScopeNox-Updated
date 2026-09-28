@@ -511,9 +511,21 @@
 			<onclick>Skin.Reset(CustomDefaultBackground.path)</onclick>
 		</item>
 		<item>
-			<label>$LOCALIZE[31023]</label>
+			<label>Choose from skin backgrounds</label>
 			<onclick>Dialog.Close(1130)</onclick>
 			<onclick>Skin.SetImage(CustomDefaultBackground.path,special://skin/extras/backgrounds)</onclick>
+		</item>
+		<!-- no start path: the browser offers all sources (local drives, network shares, picture sources) -->
+		<item>
+			<label>Choose your own image</label>
+			<onclick>Dialog.Close(1130)</onclick>
+			<onclick>Skin.SetImage(CustomDefaultBackground.path)</onclick>
+		</item>
+		<!-- a folder path is shown as a slideshow by the background multiimage controls -->
+		<item>
+			<label>Choose a folder (slideshow)</label>
+			<onclick>Dialog.Close(1130)</onclick>
+			<onclick>Skin.SetPath(CustomDefaultBackground.path)</onclick>
 		</item>
 	</include>
 	<include name="CustomSelectLayout">

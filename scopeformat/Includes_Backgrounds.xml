@@ -150,13 +150,33 @@
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
 			<imagepath  background="true">$VAR[GlobalBackgroundVar]</imagepath>
+			<include>BackgroundSlideshowTiming</include>
 		</control>
 	</include>
+	<!--
+		Timing for the background multiimage controls. Only matters when the chosen background is a folder
+		(slideshow). Picked when the window loads, like the other *Duration settings.
+	-->
+	<include name="BackgroundSlideshowTiming">
+		<randomize>true</randomize>
+		<fadetime>1000</fadetime>
+		<include condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),10)">BackgroundSlideshowTime10</include>
+		<include condition="String.IsEmpty(Skin.String(BackgroundSlideshowTime)) | String.IsEqual(Skin.String(BackgroundSlideshowTime),20)">BackgroundSlideshowTime20</include>
+		<include condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),30)">BackgroundSlideshowTime30</include>
+		<include condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),60)">BackgroundSlideshowTime60</include>
+		<include condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),300)">BackgroundSlideshowTime300</include>
+	</include>
+	<include name="BackgroundSlideshowTime10"><timeperimage>10000</timeperimage></include>
+	<include name="BackgroundSlideshowTime20"><timeperimage>20000</timeperimage></include>
+	<include name="BackgroundSlideshowTime30"><timeperimage>30000</timeperimage></include>
+	<include name="BackgroundSlideshowTime60"><timeperimage>60000</timeperimage></include>
+	<include name="BackgroundSlideshowTime300"><timeperimage>300000</timeperimage></include>
 	<include name="HomeFanart">
 		<control type="multiimage">
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
-			<imagepath fallback="special://skin/extras/backgrounds/1.jpg" background="true">$VAR[HomeBackgroundVar]</imagepath>
+			<imagepath fallback="special://skin/extras/backgrounds/2.jpg" background="true">$VAR[HomeBackgroundVar]</imagepath>
+			<include>BackgroundSlideshowTiming</include>
 			<visible>![ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()]</visible>
 			<include>VisibleFadeAnimation</include>
       <aspectratio align="center">keep</aspectratio>
@@ -166,7 +186,7 @@
 			<aspectratio align="center">scale</aspectratio>
 			<include>FullscreenDimensions</include>
 			<fadetime>600</fadetime>
-			<texture fallback="special://skin/extras/backgrounds/1.jpg" background="true">$VAR[WidgetFanartVar]</texture>
+			<texture fallback="special://skin/extras/backgrounds/2.jpg" background="true">$VAR[WidgetFanartVar]</texture>
 			<visible>[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] | [[ControlGroup(9003).HasFocus() | ControlGroup(9004).HasFocus()] + System.HasModalDialog]</visible>
 			<include>VisibleFadeAnimation</include>
 		</control>
@@ -309,7 +329,7 @@
 	</include>
 	<include name="GlobalSearchBG">
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(111).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(111).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(111)</visible>
@@ -318,7 +338,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(121).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(121).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(121)</visible>
@@ -327,7 +347,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(131).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(131)</visible>
@@ -336,7 +356,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(141).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(141)</visible>
@@ -345,7 +365,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(151).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(151)</visible>
@@ -354,7 +374,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(161).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(161)</visible>
@@ -363,7 +383,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(171).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(171)</visible>
@@ -372,7 +392,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(181).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(181)</visible>
@@ -381,7 +401,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(211)</visible>
@@ -390,7 +410,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(221).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(221)</visible>
@@ -399,7 +419,7 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<texture background="true" fallback="special://skin/extras/backgrounds/1.jpg">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
+			<texture background="true" fallback="special://skin/extras/backgrounds/2.jpg">$INFO[Container(231).ListItem.Property(Fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<visible>Control.HasFocus(231)</visible>
