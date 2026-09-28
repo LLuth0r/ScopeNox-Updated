@@ -1,27 +1,46 @@
 # ScopeNox
 
-This is a modified version of AeonNox by BigNoid. 
+This is a modified version of AeonNox by BigNoid.
 
 It is made to suit people with CIH (Constant Image Height) setups that have the resolution at 1920x1080 and have the projector zoomed so that scope images fill the screen.
 
 Using the normal Kodi skins in this case causes part of the skin to spill outside the scope frame onto walls.
 
-This version of the skin contains all the GUI within an 800/820 pixel height. 
+This version of the skin contains all the GUI within an 800/820 pixel height.
 
-To install simply download the zip file and then within Kodi go to AddOns and 'Install from Zip' and it should install.
+## Install
 
-Latest Release (Nexus): https://github.com/LLuth0r/ScopeNox-Updated/releases
+Download the zip file, then in Kodi go to Add-ons -> Install from zip file.
 
-In order to switch between 2.35 and 2.40 format go to :
+Latest release (Kodi 21 Omega): https://github.com/LLuth0r/ScopeNox-Updated/releases
+
+No extra add-ons are needed for the scope features. The skin does its own zooming, scope masking and subtitle positioning.
+
+## Scope format
+
+To switch between the 2.35 and 2.40 formats go to:
 System -> Appearance -> Skin -> Settings -> Scope -> Scope Format (Toggle)
 
-There are two tools for use with this script.  One is scopenox-tools.  This creates the sub-menu buttons for scope masking/zooming.
-https://github.com/LLuth0r/ScopeNox-Tools/releases
-
+## AutoZoom
 
 AutoZoom is built into the skin (as of 1.2.1). Turn it on at System -> Appearance -> Skin -> Settings -> Scope -> AutoZoom.
 It reads the video stream's aspect ratio and zooms 16:9 (and 1.33 - 2.19) content out to fit the scope frame for the selected
 2.35 / 2.40 format. Content 2.20 and wider is left alone and gets the scope mask. The separate scopenox-autozoom script is no longer needed.
+
+Kodi takes the aspect ratio from the encoded frame. Scope movies stored as a 16:9 frame with the black bars as part of the picture
+(most Blu-ray and UHD rips) report 1.78, so AutoZoom zooms them out too. Use the zoom-in button on the playback menu to put them back to 1.00.
+
+## Zoom and subtitle buttons
+
+Turn on System -> Appearance -> Skin -> Settings -> Scope -> Show Zoom/Subtitle Buttons for Non-Scope to add four buttons to the playback menu:
+
+- Zoom out: fits a 16:9 picture inside the scope frame (0.74 for 2.40, 0.76 for 2.35)
+- Zoom in: back to full size (1.00)
+- Subtitles up / down: moves subtitles into or out of the scope frame
+
+These used to need the ScopeNox-Tools add-on; they are now built into the skin.
+
+## Player Process Info (PPI)
 
 Player Process Info (PPI) shows what Kodi is doing with the current video: hardware decoding, decoder and pixel format, deinterlacing,
 source resolution / aspect ratio / FPS, HDR type (Dolby Vision, HDR10, HLG or SDR), output display mode, audio decoder and channels,
