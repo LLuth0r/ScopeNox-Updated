@@ -99,4 +99,122 @@
 		<!-- 4. remember this file so re-entering fullscreen doesn't redo it -->
 		<onload condition="$EXP[AutoZoomRun]">Skin.SetString(autozoomfile,"$INFO[Player.Filenameandpath]")</onload>
 	</include>
+
+	<!--
+		OSD button actions (VideoOSD.xml). Same idea as AutoZoom: clamp to 0.50 first, then zoom in
+		to an absolute value, so pressing a button twice gives the same result.
+	-->
+	<include name="ZoomClickOut10">
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+		<onclick>Action(zoomout)</onclick>
+	</include>
+	<include name="ZoomClickIn8">
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+	</include>
+	<!-- 150 x zoomout: lands on 0.50 from anywhere -->
+	<include name="ZoomClickToMin">
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+		<include>ZoomClickOut10</include>
+	</include>
+	<!-- Zoom in button: back to 1.00 (e.g. scope movies with the black bars encoded in a 16:9 frame) -->
+	<include name="ZoomClickFull">
+		<include>ZoomClickToMin</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<onclick>Action(zoomin)</onclick>
+		<onclick>Action(zoomin)</onclick>
+	</include>
+	<!-- Zoom out button: fit a 16:9 frame inside the scope frame, 0.74 (2.40) or 0.76 (2.35) -->
+	<include name="ZoomClickScopeFit">
+		<include>ZoomClickToMin</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<include>ZoomClickIn8</include>
+		<onclick condition="Skin.HasSetting(scopeFormat235)">Action(zoomin)</onclick>
+		<onclick condition="Skin.HasSetting(scopeFormat235)">Action(zoomin)</onclick>
+	</include>
+
+	<!-- Subtitle buttons: move subtitles 110 steps up into / down out of the scope frame -->
+	<include name="SubShiftUp10">
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+		<onclick>Action(subtitleshiftup)</onclick>
+	</include>
+	<include name="SubShiftDown10">
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+		<onclick>Action(subtitleshiftdown)</onclick>
+	</include>
+	<include name="SubShiftUpClick">
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+		<include>SubShiftUp10</include>
+	</include>
+	<include name="SubShiftDownClick">
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+		<include>SubShiftDown10</include>
+	</include>
 </includes>
