@@ -1,27 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1155">
-	<include>ProjectorAlignCoordinates</include>
 	<zorder>1</zorder>
 	<visible>Skin.HasSetting(DebugInfo)</visible>
 	<controls>
-		<control type="grouplist">
-			<posx>15</posx>
-			<posy>15</posy>
-			<width>780</width>
-			<height>450</height>
-			<itemgap>12</itemgap>
-
-			<control type="label" id="20">
-				<left>0</left>
-				<top>32</top>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
+		<control type="group">
+			<include>ProjectorAlignShift</include>
+			<control type="grouplist">
+				<posx>15</posx>
+				<posy>15</posy>
 				<width>780</width>
-				<height>21</height>
-				<align>left</align>
-				<font>font15_title</font>
-				<label>custom_1117_WidgetContextMenu.xml</label>
-				<textcolor>white</textcolor>
-			</control>
+				<height>450</height>
+				<itemgap>12</itemgap>
 
+				<control type="label" id="20">
+					<left>0</left>
+					<top>32</top>
+					<width>780</width>
+					<height>21</height>
+					<align>left</align>
+					<font>font15_title</font>
+					<label>custom_1117_WidgetContextMenu.xml</label>
+					<textcolor>white</textcolor>
+				</control>
+
+			</control>
 		</control>
 	</controls>
 </window>

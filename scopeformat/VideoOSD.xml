@@ -4,492 +4,491 @@
 		<system>1</system>
 		<left>0</left>
 		<top>0</top>
-		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="0" y="-130">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="-140">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="130">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="140">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<onload condition="VideoPlayer.Content(livetv)">SetFocus(808)</onload>
 	<onload condition="!VideoPlayer.Content(livetv)">SetFocus(602)</onload>
 	<controls>
-		<control type="slider">
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
-			<description>Seek Slider</description>
-			<left>100</left>
-			<top>886</top>
-			<width>1920</width>
-			<height>64</height>
-			<texturesliderbar>seekslider2.png</texturesliderbar>
-			<textureslidernib />
-			<textureslidernibfocus>osd/osd_slider_nib.png</textureslidernibfocus>
-			<action>seek</action>
-		</control>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
 		<control type="group">
-			<animation effect="slide" end="0,300" time="400" tween="quadratic" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
-			<animation effect="slide" start="0,300" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="0,300" start="0,0" time="400" tween="quadratic">WindowClose</animation>
-			<top>910</top>
-			<animation effect="slide" start="0,0" end="0,-100" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-120" time="700" condition="!Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,110" time="700" condition="Skin.HasSetting(osd169) + Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(osd169) + !Skin.HasSetting(scopeFormat235)">Conditional</animation>
-			<control type="image">
-				<width>100%</width>
-				<height>136</height>
-				<texture border="1,1,1,40">topbar.png</texture>
-			</control>
-			<control type="grouplist" id="202">
-				<!-- 84px buttons: top 8 puts their centre where the 100px buttons' was (y=50) -->
-				<top>8</top>
-				<height>144</height>
-				<width>100%</width>
-				<align>center</align>
-				<scrolltime tween="sine">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onup>703</onup>
-				<ondown>701</ondown>
-				<onleft>202</onleft>
-				<onright>202</onright>
-				<!-- centre the buttons between the top of the bar and the seek bar's top edge (DialogSeekBar) -->
-				<animation effect="slide" start="0,0" end="0,-6" time="0" condition="Skin.HasSetting(scopeFormat235) + !Skin.HasSetting(osd169)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,4" time="0" condition="Skin.HasSetting(scopeFormat235) + Skin.HasSetting(osd169)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-1" time="0" condition="!Skin.HasSetting(scopeFormat235) + !Skin.HasSetting(osd169)">Conditional</animation>
+			<include>ProjectorAlignShift</include>
+			<control type="slider">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<control type="button" id="700">
-					<textoffsety>60</textoffsety>
-					<texturefocus colordiffuse="themecolor">osd/modern/osdbookmarksfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdbookmarksnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(videobookmarks)</onclick>
-				</control>
-				<control type="button" id="701">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdaudiofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdaudionf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(osdaudiosettings)</onclick>
-				</control>
-				<control type="button" id="702">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font /> 
-					<onclick>ActivateWindow(osdvideosettings)</onclick>
-				</control>
-				<control type="button" id="600">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdprevtrackfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdprevtracknf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Previous)</onclick>
-				</control>
-				<control type="button" id="601">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick condition="!Player.TempoEnabled">PlayerControl(Rewind)</onclick>
-					<onclick condition="Player.TempoEnabled">PlayerControl(tempodown)</onclick>
-				</control>
-				<control type="togglebutton" id="602">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
-					<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
-					<label />
-					<altlabel>208</altlabel>
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<onclick>PlayerControl(Play)</onclick>
-				</control>
-				<control type="button" id="603">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Stop)</onclick>
-				</control>
-				<control type="button" id="604">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick condition="!Player.TempoEnabled">PlayerControl(Forward)</onclick>
-					<onclick condition="Player.TempoEnabled">PlayerControl(tempoup)</onclick>
-				</control>
-				<control type="button" id="605">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdnexttrackfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdnexttracknf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Next)</onclick>
-				</control>
-				<control type="button" id="703">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdsubtitlesfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdsubtitlesnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
-					<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
-				</control>
-				<control type="button" id="704">
-					<texturefocus colordiffuse="themecolor">osd/modern/osddvdfo.png</texturefocus>
-					<texturenofocus>osd/modern/osddvdnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(ShowVideoMenu)</onclick>
-					<visible>VideoPlayer.HasMenu</visible>
-				</control>
-				<control type="button" id="705">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdstereoscopicfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdstereoscopicnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>StereoMode</onclick>
-					<visible>VideoPlayer.IsStereoscopic</visible>
-				</control>
-				<control type="button" id="706">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdinfofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdinfonf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>Close</onclick>
-					<onclick>ActivateWindow(fullscreeninfo)</onclick>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
-				</control>
-
-				<!--Player Process Info Button (textures are loose files in media/osd/buttons)-->
-				<control type="button" id="717">
-					<texturefocus colordiffuse="themecolor">osd/modern/ppifo.png</texturefocus>
-					<texturenofocus>osd/modern/ppinf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>Close</onclick>
-					<onclick>ActivateWindow(playerprocessinfo)</onclick>
-				</control>
-
-				<!--Scope Mask Buttons-->
-				<control type="button" id="708">
-					<texturefocus colordiffuse="themecolor">osd/modern/scopeonfo.png</texturefocus>
-					<texturenofocus>osd/modern/scopeonnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>Skin.HasSetting(scopemask)</visible>
-					<onclick>Skin.ToggleSetting(scopemask)</onclick>
-				</control>
-				<control type="button" id="707">
-					<texturefocus colordiffuse="themecolor">osd/modern/scopeofffo.png</texturefocus>
-					<texturenofocus>osd/modern/scopeoffnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>!Skin.HasSetting(scopemask)</visible>
-					<onclick>Skin.Reset(osd169)</onclick>
-					<onclick>Skin.SetBool(scopemask)</onclick>
-				</control>          
-	            	            
-				<control type="button" id="710">
-					<texturefocus colordiffuse="themecolor">osd/modern/219onfo.png</texturefocus>
-					<texturenofocus>osd/modern/219onnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>!Skin.HasSetting(osd169)</visible>
-					<onclick>Skin.Reset(scopemask)</onclick>
-					<onclick>Skin.SetBool(osd169)</onclick>
-				</control>
-				<control type="button" id="709">
-					<texturefocus colordiffuse="themecolor">osd/modern/219offfo.png</texturefocus>
-					<texturenofocus>osd/modern/219offnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>Skin.HasSetting(osd169)</visible>
-					<onclick>Skin.Reset(osd169)</onclick>
-				</control>
-	            
-				<control type="button" id="712">
-					<texturefocus colordiffuse="themecolor">osd/modern/169onfo.png</texturefocus>
-					<texturenofocus>osd/modern/169onnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>Skin.HasSetting(osd169)</visible>
-					<onclick>Skin.Reset(osd169)</onclick>
-				</control>
-				<control type="button" id="711">
-					<texturefocus colordiffuse="themecolor">osd/modern/169offfo.png</texturefocus>
-					<texturenofocus>osd/modern/169offnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<visible>!Skin.HasSetting(osd169)</visible>
-					<onclick>Skin.SetBool(osd169)</onclick>
-					<onclick>Skin.Reset(scopemask)</onclick>
-				</control>
-
-				<!--Zoom Buttons-->
-				<!-- full size, remembered for this movie; shows the "on" bar while this movie has a saved zoom -->
-				<control type="togglebutton" id="713">
-					<texturefocus colordiffuse="themecolor">osd/modern/zoominfo.png</texturefocus>
-					<texturenofocus>osd/modern/zoominnf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/zoominonfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/zoominonnf.png</alttexturenofocus>
-					<usealttexture>String.IsEqual(Window(Home).Property(ScopeNox.AutoZoom.Saved),1.00)</usealttexture>
-					<label />
-					<altlabel />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</onclick>
-					<altclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</altclick>
-					<visible>Skin.HasSetting(showZoomButtons)</visible>
-				</control>
-				<control type="button" id="714">
-					<texturefocus colordiffuse="themecolor">osd/modern/zoomoutfo.png</texturefocus>
-					<texturenofocus>osd/modern/zoomoutnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<!-- fit to the scope frame, forgets any saved zoom for this movie -->
-					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomout)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons)</visible>
-				</control>
-				<!-- remember the current zoom (e.g. set with Kodi's zoom slider) for this movie; "on" bar while one is saved -->
-				<control type="togglebutton" id="718">
-					<texturefocus colordiffuse="themecolor">osd/modern/savezoomfo.png</texturefocus>
-					<texturenofocus>osd/modern/savezoomnf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/savezoomonfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/savezoomonnf.png</alttexturenofocus>
-					<usealttexture>!String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Saved))</usealttexture>
-					<label />
-					<altlabel />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>RunScript(special://skin/scripts/autozoom.py,save)</onclick>
-					<altclick>RunScript(special://skin/scripts/autozoom.py,save)</altclick>
-					<visible>Skin.HasSetting(showZoomButtons)</visible>
-				</control>
-				
-				<!--Subtitle Adjustment Buttons-->
-				<control type="button" id="715">
-					<texturefocus colordiffuse="themecolor">osd/modern/subsupfo.png</texturefocus>
-					<texturenofocus>osd/modern/subsupnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<include>SubShiftUpClick</include>
-					<visible>Skin.HasSetting(showZoomButtons)</visible>
-				</control>
-				
-				<control type="button" id="716">
-					<texturefocus colordiffuse="themecolor">osd/modern/subsdownfo.png</texturefocus>
-					<texturenofocus>osd/modern/subsdownnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<include>SubShiftDownClick</include>
-					<visible>Skin.HasSetting(showZoomButtons)</visible>
-				</control>
+				<description>Seek Slider</description>
+				<left>100</left>
+				<top>886</top>
+				<width>1920</width>
+				<height>64</height>
+				<texturesliderbar>seekslider2.png</texturesliderbar>
+				<textureslidernib />
+				<textureslidernibfocus>osd/osd_slider_nib.png</textureslidernibfocus>
+				<action>seek</action>
 			</control>
+			<control type="group">
+				<animation effect="slide" end="0,300" time="400" tween="quadratic" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVROSDTeletext) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)">Conditional</animation>
+				<animation effect="slide" start="0,300" end="0,0" time="400" tween="quadratic">WindowOpen</animation>
+				<animation effect="slide" end="0,300" start="0,0" time="400" tween="quadratic">WindowClose</animation>
+				<top>910</top>
+				<animation effect="slide" start="0,0" end="0,-100" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-120" time="700" condition="!Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,110" time="700" condition="Skin.HasSetting(osd169) + Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(osd169) + !Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<control type="image">
+					<width>100%</width>
+					<height>136</height>
+					<texture border="1,1,1,40">topbar.png</texture>
+				</control>
+				<control type="grouplist" id="202">
+					<!-- 84px buttons: top 8 puts their centre where the 100px buttons' was (y=50) -->
+					<top>8</top>
+					<height>144</height>
+					<width>100%</width>
+					<align>center</align>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>703</onup>
+					<ondown>701</ondown>
+					<onleft>202</onleft>
+					<onright>202</onright>
+					<!-- centre the buttons between the top of the bar and the seek bar's top edge (DialogSeekBar) -->
+					<animation effect="slide" start="0,0" end="0,-6" time="0" condition="Skin.HasSetting(scopeFormat235) + !Skin.HasSetting(osd169)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,4" time="0" condition="Skin.HasSetting(scopeFormat235) + Skin.HasSetting(osd169)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-1" time="0" condition="!Skin.HasSetting(scopeFormat235) + !Skin.HasSetting(osd169)">Conditional</animation>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<control type="button" id="700">
+						<textoffsety>60</textoffsety>
+						<texturefocus colordiffuse="themecolor">osd/modern/osdbookmarksfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdbookmarksnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(videobookmarks)</onclick>
+					</control>
+					<control type="button" id="701">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdaudiofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdaudionf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(osdaudiosettings)</onclick>
+					</control>
+					<control type="button" id="702">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font /> 
+						<onclick>ActivateWindow(osdvideosettings)</onclick>
+					</control>
+					<control type="button" id="600">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdprevtrackfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdprevtracknf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="601">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick condition="!Player.TempoEnabled">PlayerControl(Rewind)</onclick>
+						<onclick condition="Player.TempoEnabled">PlayerControl(tempodown)</onclick>
+					</control>
+					<control type="togglebutton" id="602">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
+						<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
+						<label />
+						<altlabel>208</altlabel>
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<onclick>PlayerControl(Play)</onclick>
+					</control>
+					<control type="button" id="603">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="604">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick condition="!Player.TempoEnabled">PlayerControl(Forward)</onclick>
+						<onclick condition="Player.TempoEnabled">PlayerControl(tempoup)</onclick>
+					</control>
+					<control type="button" id="605">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdnexttrackfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdnexttracknf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+					<control type="button" id="703">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdsubtitlesfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdsubtitlesnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(osdsubtitlesettings)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.HasSubtitles</visible>
+					</control>
+					<control type="button" id="704">
+						<texturefocus colordiffuse="themecolor">osd/modern/osddvdfo.png</texturefocus>
+						<texturenofocus>osd/modern/osddvdnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<visible>VideoPlayer.HasMenu</visible>
+					</control>
+					<control type="button" id="705">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdstereoscopicfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdstereoscopicnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>StereoMode</onclick>
+						<visible>VideoPlayer.IsStereoscopic</visible>
+					</control>
+					<control type="button" id="706">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdinfofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdinfonf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>Close</onclick>
+						<onclick>ActivateWindow(fullscreeninfo)</onclick>
+						<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
+					</control>
+
+					<!--Player Process Info Button (textures are loose files in media/osd/buttons)-->
+					<control type="button" id="717">
+						<texturefocus colordiffuse="themecolor">osd/modern/ppifo.png</texturefocus>
+						<texturenofocus>osd/modern/ppinf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>Close</onclick>
+						<onclick>ActivateWindow(playerprocessinfo)</onclick>
+					</control>
+
+					<!--Scope Mask Buttons-->
+					<control type="button" id="708">
+						<texturefocus colordiffuse="themecolor">osd/modern/scopeonfo.png</texturefocus>
+						<texturenofocus>osd/modern/scopeonnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>Skin.HasSetting(scopemask)</visible>
+						<onclick>Skin.ToggleSetting(scopemask)</onclick>
+					</control>
+					<control type="button" id="707">
+						<texturefocus colordiffuse="themecolor">osd/modern/scopeofffo.png</texturefocus>
+						<texturenofocus>osd/modern/scopeoffnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>!Skin.HasSetting(scopemask)</visible>
+						<onclick>Skin.Reset(osd169)</onclick>
+						<onclick>Skin.SetBool(scopemask)</onclick>
+					</control>          
+	            	            
+					<control type="button" id="710">
+						<texturefocus colordiffuse="themecolor">osd/modern/219onfo.png</texturefocus>
+						<texturenofocus>osd/modern/219onnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>!Skin.HasSetting(osd169)</visible>
+						<onclick>Skin.Reset(scopemask)</onclick>
+						<onclick>Skin.SetBool(osd169)</onclick>
+					</control>
+					<control type="button" id="709">
+						<texturefocus colordiffuse="themecolor">osd/modern/219offfo.png</texturefocus>
+						<texturenofocus>osd/modern/219offnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>Skin.HasSetting(osd169)</visible>
+						<onclick>Skin.Reset(osd169)</onclick>
+					</control>
+	            
+					<control type="button" id="712">
+						<texturefocus colordiffuse="themecolor">osd/modern/169onfo.png</texturefocus>
+						<texturenofocus>osd/modern/169onnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>Skin.HasSetting(osd169)</visible>
+						<onclick>Skin.Reset(osd169)</onclick>
+					</control>
+					<control type="button" id="711">
+						<texturefocus colordiffuse="themecolor">osd/modern/169offfo.png</texturefocus>
+						<texturenofocus>osd/modern/169offnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<visible>!Skin.HasSetting(osd169)</visible>
+						<onclick>Skin.SetBool(osd169)</onclick>
+						<onclick>Skin.Reset(scopemask)</onclick>
+					</control>
+
+					<!--Zoom Buttons-->
+					<!-- full size, remembered for this movie; shows the "on" bar while this movie has a saved zoom -->
+					<control type="togglebutton" id="713">
+						<texturefocus colordiffuse="themecolor">osd/modern/zoominfo.png</texturefocus>
+						<texturenofocus>osd/modern/zoominnf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/zoominonfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/zoominonnf.png</alttexturenofocus>
+						<usealttexture>String.IsEqual(Window(Home).Property(ScopeNox.AutoZoom.Saved),1.00)</usealttexture>
+						<label />
+						<altlabel />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</onclick>
+						<altclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</altclick>
+						<visible>Skin.HasSetting(showZoomButtons)</visible>
+					</control>
+					<control type="button" id="714">
+						<texturefocus colordiffuse="themecolor">osd/modern/zoomoutfo.png</texturefocus>
+						<texturenofocus>osd/modern/zoomoutnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<!-- fit to the scope frame, forgets any saved zoom for this movie -->
+						<onclick>RunScript(special://skin/scripts/autozoom.py,zoomout)</onclick>
+						<visible>Skin.HasSetting(showZoomButtons)</visible>
+					</control>
+					<!-- remember the current zoom (e.g. set with Kodi's zoom slider) for this movie; "on" bar while one is saved -->
+					<control type="togglebutton" id="718">
+						<texturefocus colordiffuse="themecolor">osd/modern/savezoomfo.png</texturefocus>
+						<texturenofocus>osd/modern/savezoomnf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/savezoomonfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/savezoomonnf.png</alttexturenofocus>
+						<usealttexture>!String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Saved))</usealttexture>
+						<label />
+						<altlabel />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>RunScript(special://skin/scripts/autozoom.py,save)</onclick>
+						<altclick>RunScript(special://skin/scripts/autozoom.py,save)</altclick>
+						<visible>Skin.HasSetting(showZoomButtons)</visible>
+					</control>
+				
+					<!--Subtitle Adjustment Buttons-->
+					<control type="button" id="715">
+						<texturefocus colordiffuse="themecolor">osd/modern/subsupfo.png</texturefocus>
+						<texturenofocus>osd/modern/subsupnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<include>SubShiftUpClick</include>
+						<visible>Skin.HasSetting(showZoomButtons)</visible>
+					</control>
+				
+					<control type="button" id="716">
+						<texturefocus colordiffuse="themecolor">osd/modern/subsdownfo.png</texturefocus>
+						<texturenofocus>osd/modern/subsdownnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<include>SubShiftDownClick</include>
+						<visible>Skin.HasSetting(showZoomButtons)</visible>
+					</control>
+				</control>
 
 				
-			<control type="grouplist" id="202">
-				<!-- 84px buttons: top 8 puts their centre where the 100px buttons' was (y=50) -->
-				<top>8</top>
-				<height>144</height>
-				<width>100%</width>
-				<align>center</align>
-				<scrolltime tween="sine">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onup>800</onup>
-				<ondown>807</ondown>
-				<onleft>202</onleft>
-				<onright>202</onright>
-				<visible>VideoPlayer.Content(LiveTV)</visible>
-				<control type="button" id="800">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdaudiofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdaudionf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(osdaudiosettings)</onclick>
-				</control>
-				<control type="button" id="801">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(osdvideosettings)</onclick>
-				</control>
-				<control type="button" id="802">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdchannelupfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdchannelupnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Previous)</onclick>
-				</control>
-				<control type="button" id="803">
-					<textoffsety>60</textoffsety>
-					<texturefocus colordiffuse="themecolor">osd/modern/osdchanneldownfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdchanneldownnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Next)</onclick>
-				</control>
-				<control type="button" id="804">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Rewind)</onclick>
-					<visible>Player.SeekEnabled</visible>
-				</control>
-				<control type="togglebutton" id="812">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
-					<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
-					<label />
-					<altlabel>208</altlabel>
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<onclick>PlayerControl(Play)</onclick>
-					<visible>Player.PauseEnabled</visible>
-				</control>
-				<control type="button" id="805">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Stop)</onclick>
-				</control>
-				<control type="button" id="806">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Forward)</onclick>
-					<visible>Player.SeekEnabled</visible>
-				</control>
-				<control type="togglebutton" id="10">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdrecordofffo.png</texturefocus>
-					<texturenofocus>osd/modern/osdrecordoffnf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/osdrecordonfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/osdrecordonnf.png</alttexturenofocus>
-					<label />
-					<altlabel>208</altlabel>
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>PlayerControl(Record)</onclick>
-					<visible>Player.CanRecord</visible>
-					<usealttexture>Player.Recording</usealttexture>
-				</control>
-				<control type="button" id="807">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdchannellistfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdchannellistnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(PVROSDChannels)</onclick>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-				</control>
-				<control type="button" id="808">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdchannelguidefo.png</texturefocus>
-					<texturenofocus>osd/modern/osdchannelguidenf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(PVROSDGuide)</onclick>
-				</control>
-				<control type="button" id="809">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdstereoscopicfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdstereoscopicnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ToggleStereoMode</onclick>
-					<visible>VideoPlayer.IsStereoscopic</visible>
-				</control>
-				<control type="button" id="811">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdguidefo.png</texturefocus>
-					<texturenofocus>osd/modern/osdguidenf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(TVGuide)</onclick>
-				</control>
-				<control type="button" id="810">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdteletextfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdteletextnf.png</texturenofocus>
-					<label />
-					<width>84</width>
-					<height>84</height>
-					<font />
-					<onclick>ActivateWindow(Teletext)</onclick>
+				<control type="grouplist" id="202">
+					<!-- 84px buttons: top 8 puts their centre where the 100px buttons' was (y=50) -->
+					<top>8</top>
+					<height>144</height>
+					<width>100%</width>
+					<align>center</align>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>800</onup>
+					<ondown>807</ondown>
+					<onleft>202</onleft>
+					<onright>202</onright>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="button" id="800">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdaudiofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdaudionf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(osdaudiosettings)</onclick>
+					</control>
+					<control type="button" id="801">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(osdvideosettings)</onclick>
+					</control>
+					<control type="button" id="802">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdchannelupfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdchannelupnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="803">
+						<textoffsety>60</textoffsety>
+						<texturefocus colordiffuse="themecolor">osd/modern/osdchanneldownfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdchanneldownnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+					<control type="button" id="804">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Rewind)</onclick>
+						<visible>Player.SeekEnabled</visible>
+					</control>
+					<control type="togglebutton" id="812">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
+						<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
+						<label />
+						<altlabel>208</altlabel>
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<onclick>PlayerControl(Play)</onclick>
+						<visible>Player.PauseEnabled</visible>
+					</control>
+					<control type="button" id="805">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="806">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Forward)</onclick>
+						<visible>Player.SeekEnabled</visible>
+					</control>
+					<control type="togglebutton" id="10">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdrecordofffo.png</texturefocus>
+						<texturenofocus>osd/modern/osdrecordoffnf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/osdrecordonfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/osdrecordonnf.png</alttexturenofocus>
+						<label />
+						<altlabel>208</altlabel>
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>PlayerControl(Record)</onclick>
+						<visible>Player.CanRecord</visible>
+						<usealttexture>Player.Recording</usealttexture>
+					</control>
+					<control type="button" id="807">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdchannellistfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdchannellistnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(PVROSDChannels)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+					</control>
+					<control type="button" id="808">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdchannelguidefo.png</texturefocus>
+						<texturenofocus>osd/modern/osdchannelguidenf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(PVROSDGuide)</onclick>
+					</control>
+					<control type="button" id="809">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdstereoscopicfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdstereoscopicnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ToggleStereoMode</onclick>
+						<visible>VideoPlayer.IsStereoscopic</visible>
+					</control>
+					<control type="button" id="811">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdguidefo.png</texturefocus>
+						<texturenofocus>osd/modern/osdguidenf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(TVGuide)</onclick>
+					</control>
+					<control type="button" id="810">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdteletextfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdteletextnf.png</texturenofocus>
+						<label />
+						<width>84</width>
+						<height>84</height>
+						<font />
+						<onclick>ActivateWindow(Teletext)</onclick>
+					</control>
 				</control>
 			</control>
 		</control>

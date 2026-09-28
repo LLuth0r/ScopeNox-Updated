@@ -5,26 +5,25 @@
 		<system>1</system>
 		<left>0</left>
 		<top>0</top>
-		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="0" y="-130">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="-140">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="130">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
-		<origin x="0" y="140">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<animation condition="!Skin.HasSetting(alternatetvosd)" effect="slide" start="-1000,0" end="0,0" time="800" tween="back" easing="out">WindowOpen</animation>
 	<animation condition="!Skin.HasSetting(alternatetvosd)" effect="slide" start="0,0" end="-1000,0" time="800" tween="back" easing="in">WindowClose</animation>
 	<animation condition="Skin.HasSetting(alternatetvosd)" effect="fade" start="0" end="100" time="300" easing="out">WindowOpen</animation>
 	<animation condition="Skin.HasSetting(alternatetvosd)" effect="fade" start="100" end="0" time="300" easing="in">WindowClose</animation>
 	<controls>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
 		<control type="group">
-			<!-- Standard big channels OSD -->
-			<visible>!Window.IsActive(fullscreeninfo) + !Skin.HasSetting(alternatetvosd)</visible>
-			<include condition="!Skin.HasSetting(alternatetvosd) + VideoPlayer.Content(LiveTV)">ChannelOSDStandard</include>
-		</control>
-		<control type="group">
-			<!-- Extended channels OSD -->
-			<visible>!Window.IsActive(fullscreeninfo) + Skin.HasSetting(alternatetvosd)</visible>
-			<include condition="Skin.HasSetting(alternatetvosd) + VideoPlayer.Content(LiveTV)">ChannelOSDExtended</include>
+			<include>ProjectorAlignShift</include>
+			<control type="group">
+				<!-- Standard big channels OSD -->
+				<visible>!Window.IsActive(fullscreeninfo) + !Skin.HasSetting(alternatetvosd)</visible>
+				<include condition="!Skin.HasSetting(alternatetvosd) + VideoPlayer.Content(LiveTV)">ChannelOSDStandard</include>
+			</control>
+			<control type="group">
+				<!-- Extended channels OSD -->
+				<visible>!Window.IsActive(fullscreeninfo) + Skin.HasSetting(alternatetvosd)</visible>
+				<include condition="Skin.HasSetting(alternatetvosd) + VideoPlayer.Content(LiveTV)">ChannelOSDExtended</include>
+			</control>
 		</control>
 	</controls>
 </window>
