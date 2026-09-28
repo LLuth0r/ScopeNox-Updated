@@ -43,7 +43,6 @@
 			<label>$INFO[ListItem.Art(poster18)]</label>
 			<label>$INFO[ListItem.Art(poster19)]</label>
 			<label>$INFO[ListItem.Art(poster20)]</label>
-			<include>FadeLabelTime</include>
 		</control>
 		<!-- Poster Side -->
 		<control type="group">
