@@ -262,8 +262,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font>-</font>
-					<onclick>RunScript(script.scopenox.tools,zoom,in)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddOn(script.scopenox.tools)</visible>
+					<include>ZoomClickFull</include>
+					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				<control type="button" id="714">
 					<texturefocus>osd/buttons/zoomoutfo.png</texturefocus>
@@ -272,8 +272,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font>-</font>
-					<onclick>RunScript(script.scopenox.tools,zoom,out)</onclick>
-					<visible>Skin.HasSetting(showZoomButtons) + System.HasAddOn(script.scopenox.tools)</visible>
+					<include>ZoomClickScopeFit</include>
+					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				
 				<!--Subtitle Adjustment Buttons-->
@@ -284,7 +284,7 @@
 					<width>100</width>
 					<height>100</height>
 					<font>-</font>
-					<onclick>RunScript(script.scopenox.tools,subtitles,up)</onclick>
+					<include>SubShiftUpClick</include>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				
@@ -295,7 +295,7 @@
 					<width>100</width>
 					<height>100</height>
 					<font>-</font>
-					<onclick>RunScript(script.scopenox.tools,subtitles,down)</onclick>
+					<include>SubShiftDownClick</include>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 			</control>

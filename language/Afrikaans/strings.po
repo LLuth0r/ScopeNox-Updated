@@ -374,7 +374,7 @@ msgid "Choose your background image"
 msgstr "Kies jou agtergrond beeld"
 
 msgctxt "#31975"
-msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgid "Enable AutoZoom for 16:9 Content."
 msgstr "Stel AutoZoom in vir 16:9 Inhoud in. Vereis AutoZoom Byvoegsel."
 
 msgctxt "#31976"

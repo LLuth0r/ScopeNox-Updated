@@ -862,7 +862,7 @@ msgid "Choose your background image"
 msgstr ""
 
 msgctxt "#31975"
-msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgid "Enable AutoZoom for 16:9 Content."
 msgstr ""
 
 msgctxt "#31976"

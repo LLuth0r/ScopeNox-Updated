@@ -330,7 +330,7 @@ msgid "Choose your background image"
 msgstr "Zgjidhni një skenë të fonit"
 
 msgctxt "#31975"
-msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgid "Enable AutoZoom for 16:9 Content."
 msgstr "Aktivizoni AutoZoom për përmbajtje 16:9. Për të aktivizuar AutoZoom, duhet të instalohet Addon-i AutoZoom."
 
 msgctxt "#31976"

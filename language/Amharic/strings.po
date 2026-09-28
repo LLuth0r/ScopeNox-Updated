@@ -294,7 +294,7 @@ msgid "Choose your background image"
 msgstr "የቡድን ምርጫዎች ውስጥ የተሰራ መመርመር የለበት።"
 
 msgctxt "#31975"
-msgid "Enable AutoZoom for 16:9 Content.  Requires AutoZoom Addon."
+msgid "Enable AutoZoom for 16:9 Content."
 msgstr "የቡድን ምርጫዎች ውስጥ የተሰራ መመርመር የለበት።"
 
 msgctxt "#31976"
