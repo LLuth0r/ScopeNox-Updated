@@ -5,10 +5,10 @@
 		<left>0</left>
 		<top>0</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="0" y="-130">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="0" y="-140">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="0" y="130">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="0" y="140">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="0" y="-130">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="-140">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="130">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="140">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<onload condition="VideoPlayer.Content(livetv)">SetFocus(808)</onload>
 	<onload condition="!VideoPlayer.Content(livetv)">SetFocus(602)</onload>

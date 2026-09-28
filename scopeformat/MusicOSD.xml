@@ -6,10 +6,10 @@
 		<left>0</left>
 		<top>130</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="0" y="0">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="0" y="-10">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="0" y="260">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="0" y="270">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="0" y="0">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="-10">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="260">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="0" y="270">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<controls>
 		<control type="group">

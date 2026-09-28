@@ -137,14 +137,34 @@ def stream_dar(timeout=10.0):
     return None
 
 
+def screen_size():
+    """Output size in pixels. The skin's 1920x1080 layout is stretched to fill it, so on a 16:9 screen
+    everything below matches the 1080 layout; on e.g. a 16:10 monitor the video gets extra bars."""
+    try:
+        width = float(xbmc.getInfoLabel('System.ScreenWidth'))
+        height = float(xbmc.getInfoLabel('System.ScreenHeight'))
+        if width > 0 and height > 0:
+            return width, height
+    except ValueError:
+        pass
+    return 1920.0, 1080.0
+
+
+def picture_height(dar, zoom, screen):
+    """Displayed height (screen px) of a picture with this aspect ratio: fitted to the screen, then zoomed."""
+    width, height = screen
+    return min(height, width / dar) * zoom
+
+
 def fit_zoom(dar):
     """Zoom that fits the displayed picture inside the scope frame (None = leave alone)."""
     if dar is None or dar >= SCOPE_DAR:
         return None
+    screen = screen_size()
     frame = FRAME_HEIGHT_235 if xbmc.getCondVisibility('Skin.HasSetting(scopeFormat235)') else FRAME_HEIGHT_240
-    displayed = 1080.0 if dar <= 16.0 / 9.0 else 1920.0 / dar
+    frame *= screen[1] / 1080.0  # the scope frame (skin layout) in screen px
     # zoom steps are 0.01; round down so the picture never overflows the frame by more than ~1px
-    return min(1.0, math.floor(frame / displayed * 100 + 0.1) / 100)
+    return min(1.0, math.floor(frame / picture_height(dar, 1.0, screen) * 100 + 0.1) / 100)
 
 
 # ---------------------------------------------------------------- projector alignment
@@ -159,20 +179,23 @@ def align_shift_px():
     return {'top': -letterbox, 'bottom': letterbox}.get(align, 0.0)
 
 
-def vertical_shift_value(dar, zoom, shift_px):
-    """Kodi verticalshift that moves the picture by shift_px (see CBaseRenderer::CalcNormalRenderRect).
+def vertical_shift_value(dar, zoom, shift_px, screen=None):
+    """Kodi verticalshift that moves the picture by shift_px of the skin's 1080 layout
+    (see CBaseRenderer::CalcNormalRenderRect).
 
     -1..1 moves the picture within its black bars; beyond that it moves by a fraction of the picture height.
-    Everything is a ratio, so the 1920x1080 frame gives the same values at any output resolution."""
+    Works in screen pixels, because the bars depend on the screen's shape (16:9 vs e.g. 16:10)."""
     if not shift_px:
         return 0.0
-    height = min(1080.0, 1920.0 / dar) * zoom  # displayed picture height
-    bars = max((1080.0 - height) / 2.0, 0.0)
-    distance = abs(shift_px)
+    screen = screen or screen_size()
+    screen_height = screen[1]
+    distance = abs(shift_px) * screen_height / 1080.0  # skin layout px -> screen px
+    height = picture_height(dar, zoom, screen)
+    bars = max((screen_height - height) / 2.0, 0.0)
     if distance <= bars:
         value = distance / bars
     else:
-        shift_range = min(height, height - (height - 1080.0) / 2.0)
+        shift_range = min(height, height - (height - screen_height) / 2.0)
         value = 1.0 + (distance - bars) / shift_range
     return round(math.copysign(value, shift_px), 4)
 
@@ -225,16 +248,44 @@ def notify(message):
 
 # ---------------------------------------------------------------- actions
 
+def watch_playback(current_file):
+    """Stay alive until this playback ends, then clear the once-per-file marker.
+
+    The skin also clears it when fullscreen video closes with nothing playing, but a quick stop and
+    replay of the same file can race that check, and the replay would then skip AutoZoom."""
+    monitor = xbmc.Monitor()
+    player = xbmc.Player()
+    while not monitor.abortRequested():
+        if not player.isPlayingVideo() or playing_file() != current_file:
+            break
+        if monitor.waitForAbort(1):
+            return
+    if HOME.getProperty(APPLIED_PROP) == current_file:
+        HOME.clearProperty(APPLIED_PROP)
+        HOME.clearProperty(SAVED_PROP)
+
+
 def action_apply():
     key, label = item_key()
     saved = load_store()['items'].get(key) if key else None
     set_indicator(saved['zoom'] if saved else None)  # refreshed every time fullscreen opens, even if AutoZoom is off
 
     current_file = playing_file()
-    if not current_file or HOME.getProperty(APPLIED_PROP) == current_file:
+    if not current_file:
+        log('apply: skipped, nothing playing yet', xbmc.LOGDEBUG)
+        return
+    if HOME.getProperty(APPLIED_PROP) == current_file:
+        log('apply: skipped, already handled %s' % label, xbmc.LOGDEBUG)
         return
     HOME.setProperty(APPLIED_PROP, current_file)
+    try:
+        apply_view(saved, key, label)
+    finally:
+        watch_playback(current_file)
 
+
+def apply_view(saved, key, label):
+    """Set the zoom (AutoZoom) and vertical shift (projector alignment) for a newly started video."""
     autozoom = xbmc.getCondVisibility('Skin.HasSetting(enableAutoZoom)')
     shift_px = align_shift_px()
     view = jsonrpc('Player.GetViewMode').get('result', {})

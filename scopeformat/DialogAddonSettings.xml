@@ -6,14 +6,14 @@
 		<left>122</left>
 		<top>254</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="443" y="124">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop235]</origin>
-		<origin x="443" y="114">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop240]</origin>
-		<origin x="443" y="384">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom235]</origin>
-		<origin x="443" y="394">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom240]</origin>
-		<origin x="122" y="124">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="122" y="114">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="122" y="384">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="122" y="394">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="443" y="124">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="443" y="114">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="443" y="384">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="443" y="394">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="122" y="124">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="122" y="114">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="122" y="384">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="122" y="394">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 		<origin x="443" y="254">String.IsEqual(Skin.AspectRatio,21:9)</origin>
 	</coordinates>
 	<include>DialogOpenCloseAnimation</include>

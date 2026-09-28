@@ -4,14 +4,14 @@
 		<left>560</left>
 		<top>155</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="880" y="-97">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop235]</origin>
-		<origin x="880" y="-107">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop240]</origin>
-		<origin x="880" y="163">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom235]</origin>
-		<origin x="880" y="173">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom240]</origin>
-		<origin x="560" y="25">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="560" y="15">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="560" y="285">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="560" y="295">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="880" y="-97">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="-107">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="163">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="173">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="25">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="15">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="285">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="295">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 		<origin x="880" y="33">String.IsEqual(Skin.AspectRatio,21:9)</origin>
 	</coordinates>
 	<include>DialogPopupAnimation</include>

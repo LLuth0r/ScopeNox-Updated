@@ -6,10 +6,10 @@
 		<left>399</left>
 		<top>165</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="399" y="35">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="399" y="25">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="399" y="295">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="399" y="305">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="399" y="35">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="399" y="25">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="399" y="295">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="399" y="305">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<include>DialogOpenCloseAnimation</include>
 	<controls>

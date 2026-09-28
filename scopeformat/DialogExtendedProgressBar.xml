@@ -4,14 +4,14 @@
 		<left>560</left>
 		<top>200</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="880" y="-100">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop235]</origin>
-		<origin x="880" y="-110">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop240]</origin>
-		<origin x="880" y="160">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom235]</origin>
-		<origin x="880" y="170">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom240]</origin>
-		<origin x="560" y="70">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="560" y="60">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="560" y="330">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="560" y="340">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="880" y="-100">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="-110">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="160">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="880" y="170">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="70">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="60">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="330">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="560" y="340">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 		<origin x="880" y="30">String.IsEqual(Skin.AspectRatio,21:9)</origin>
 	</coordinates>
 	<include>DialogPopupAnimation</include>

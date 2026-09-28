@@ -6,10 +6,10 @@
 		<left>450</left>
 		<top>20</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="450" y="-110">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="450" y="-120">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="450" y="150">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="450" y="160">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="450" y="-110">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="450" y="-120">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="450" y="150">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="450" y="160">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 	</coordinates>
 	<animation effect="fade" start="0" end="100" time="300" easing="out">WindowOpen</animation>
 	<animation effect="fade" start="100" end="0" time="300" easing="in">WindowClose</animation>

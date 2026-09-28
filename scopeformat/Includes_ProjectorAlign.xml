@@ -6,7 +6,9 @@
 	up (or down) by the letterbox height; scripts/autozoom.py shifts the video by the same amount.
 
 	Skin.String(ProjectorAlign): empty = centre, "top", "bottom".
-	A window <origin> replaces its left/top, so these are for windows positioned at 0,0.
+	A window <origin> replaces its left/top, so these are for windows positioned at 0,0; windows with their own
+	<coordinates> carry their own shifted origins. Kodi does not expand $EXP[] inside <origin>, so origin
+	conditions are written out in full (the expressions below are for <visible> etc., e.g. the scope bars).
 -->
 <includes>
 	<expression name="ProjectorAlignTop235">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</expression>
@@ -18,10 +20,10 @@
 		<coordinates>
 			<left>0</left>
 			<top>0</top>
-			<origin x="0" y="-130">$EXP[ProjectorAlignTop235]</origin>
-			<origin x="0" y="-140">$EXP[ProjectorAlignTop240]</origin>
-			<origin x="0" y="130">$EXP[ProjectorAlignBottom235]</origin>
-			<origin x="0" y="140">$EXP[ProjectorAlignBottom240]</origin>
+			<origin x="0" y="-130">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+			<origin x="0" y="-140">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+			<origin x="0" y="130">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+			<origin x="0" y="140">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 		</coordinates>
 	</include>
 </includes>

@@ -6,14 +6,14 @@
 		<left>457</left>
 		<top>240</top>
 		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
-		<origin x="777" y="110">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop235]</origin>
-		<origin x="777" y="100">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop240]</origin>
-		<origin x="777" y="370">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom235]</origin>
-		<origin x="777" y="380">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom240]</origin>
-		<origin x="457" y="110">$EXP[ProjectorAlignTop235]</origin>
-		<origin x="457" y="100">$EXP[ProjectorAlignTop240]</origin>
-		<origin x="457" y="370">$EXP[ProjectorAlignBottom235]</origin>
-		<origin x="457" y="380">$EXP[ProjectorAlignBottom240]</origin>
+		<origin x="777" y="110">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="777" y="100">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="777" y="370">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="777" y="380">String.IsEqual(Skin.AspectRatio,21:9) + String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="457" y="110">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="457" y="100">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="457" y="370">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</origin>
+		<origin x="457" y="380">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</origin>
 		<origin x="777" y="240">String.IsEqual(Skin.AspectRatio,21:9)</origin>
 	</coordinates>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(DirectorID)) + !String.IsEmpty(Window(movieinformation).Property(DoAction))">SendClick(2003,13)</onunload>

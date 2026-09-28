@@ -616,6 +616,8 @@
 						<onclick condition="String.IsEmpty(Skin.String(ProjectorAlign))">Skin.SetString(ProjectorAlign,top)</onclick>
 						<onclick condition="String.IsEqual(Skin.String(ProjectorAlign),top)">Skin.SetString(ProjectorAlign,bottom)</onclick>
 						<onclick condition="String.IsEqual(Skin.String(ProjectorAlign),bottom)">Skin.Reset(ProjectorAlign)</onclick>
+						<!-- window origins only take effect on the next redraw; reload so the change shows immediately -->
+						<onclick>ReloadSkin()</onclick>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 				</control>
