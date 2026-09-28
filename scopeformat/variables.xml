@@ -4,6 +4,16 @@
 <!-- Background images/overlay -->
 
 <!-- Background images/overlay -->
+	<!-- Theme tint colours used via colordiffuse="$VAR[...]". They were never defined, so everything
+	     tinted with them (calibration arrows, focus bars, spinners, separators) rendered transparent. -->
+	<!-- white textures that should take the theme colour -->
+	<variable name="ThemeLabelColor">
+		<value>themecolor</value>
+	</variable>
+	<!-- listselect_fo.png is already coloured per theme (orange.xbt / red.xbt), so no tint -->
+	<variable name="HighlightBarColor">
+		<value>FFFFFFFF</value>
+	</variable>
 	<variable name="GlobalBackgroundVar">
 		<value condition="Window.Next(home)"></value>
 		<value condition="Window.IsActive(pictures) + Container.Content(images)">$INFO[ListItem.FolderPath]</value>

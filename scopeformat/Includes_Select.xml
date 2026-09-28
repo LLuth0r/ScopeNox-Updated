@@ -485,7 +485,7 @@
 					<control type="image">
 						<width>430</width>
 						<height>255</height>
-						<texture colordiffuse="$VAR[ThemeLabelColor]" border="10">thumbs/thumbnail_focused.png</texture>
+						<texture border="10">thumbs/thumbnail_focused.png</texture>
 						<bordersize>10</bordersize>
 						<include>FocusFadeInAnimation</include>
 					</control>
