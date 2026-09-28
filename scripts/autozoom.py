@@ -4,13 +4,18 @@
 Run by the skin with RunScript(special://skin/scripts/autozoom.py,<action>):
 
   apply    VideoFullScreen onload. Once per file: use the zoom saved for this movie,
-           otherwise fit the picture to the scope frame from the stream's aspect ratio.
+           otherwise fit the picture to the scope frame from the stream's aspect ratio;
+           shift it for Skin Settings -> Projector alignment; keep subtitles in the scope frame.
+           Keeps running while the playback lasts, to handle the next playlist item.
   zoomin   OSD zoom-in button. Set 1.00 and remember it for this movie
            (e.g. scope movies with the black bars encoded in a 16:9 frame).
   zoomout  OSD zoom-out button. Fit to the scope frame and forget any saved zoom.
   save     OSD save-zoom button. Remember the current zoom for this movie
            (e.g. 0.81 set with Kodi's zoom slider to crop thin baked-in bars).
   clear    Skin Settings. Forget all saved zooms.
+  subsup / subsdown
+           OSD subtitle buttons. Move subtitles 1% of the screen height up / down (remembered
+           when the skin keeps subtitles in the scope frame).
 
 Saved zooms are keyed by the movie's IMDb/TMDb/TVDB id, not the file path: with
 PlexKodiConnect add-on paths the playing path is a Plex stream URL that changes.
@@ -31,7 +36,14 @@ APPLIED_PROP = 'ScopeNox.AutoZoom.Applied'  # playing file AutoZoom already hand
 # saved zoom of the playing movie, e.g. "0.81"; empty when none. Drives the OSD "on" bars:
 # save-zoom button for any saved zoom, zoom-in button when it is "1.00"
 SAVED_PROP = 'ScopeNox.AutoZoom.Saved'
+# set once the playing video's zoom/shift are applied; VideoFullScreen covers the video until then
+POSITIONED_PROP = 'ScopeNox.AutoZoom.Positioned'
 HOME = xbmcgui.Window(10000)
+
+# Kodi subtitle settings (Settings -> Player -> Subtitles): position "Bottom of screen" places subtitles
+# by the vertical margin (% of the screen height); the other positions are left alone
+SUBTITLE_ALIGN_BOTTOM_OF_SCREEN = 2
+SUBTITLE_BASE_MARGIN = 4.95  # Kodi's default margin, kept between the subtitles and the scope frame
 
 # Visible scope frame height on the 1920x1080 panel for each skin scope format
 FRAME_HEIGHT_235 = 820.0
@@ -116,10 +128,10 @@ def playing_file():
 
 
 def stream_dar(timeout=10.0):
-    """Wait for the player to report the stream's display aspect ratio."""
+    """Wait (up to timeout seconds; 0 = check once) for the player to report the stream's aspect ratio."""
     monitor = xbmc.Monitor()
     waited = 0.0
-    while waited < timeout:
+    while True:
         value = xbmc.getInfoLabel('Player.Process(VideoDAR)')
         try:
             dar = float(value)
@@ -131,10 +143,20 @@ def stream_dar(timeout=10.0):
                 return dar
         except ValueError:
             pass
-        if monitor.waitForAbort(0.25):
-            break
+        if waited >= timeout or monitor.waitForAbort(0.25):
+            return None
         waited += 0.25
-    return None
+
+
+def wait_for_file(timeout=5.0):
+    """The playing file; VideoFullScreen can open a moment before the player reports it."""
+    monitor = xbmc.Monitor()
+    waited = 0.0
+    while True:
+        current = playing_file()
+        if current or waited >= timeout or monitor.waitForAbort(0.25):
+            return current
+        waited += 0.25
 
 
 def screen_size():
@@ -242,27 +264,145 @@ def set_indicator(zoom):
         HOME.setProperty(SAVED_PROP, '%.2f' % zoom)
 
 
-def notify(message):
-    xbmcgui.Dialog().notification('AutoZoom', message, xbmcgui.NOTIFICATION_INFO, 2500, False)
+def notify(message, heading='AutoZoom'):
+    xbmcgui.Dialog().notification(heading, message, xbmcgui.NOTIFICATION_INFO, 2500, False)
+
+
+# ---------------------------------------------------------------- subtitles
+
+def get_setting(setting_id):
+    return jsonrpc('Settings.GetSettingValue', {'setting': setting_id}).get('result', {}).get('value')
+
+
+def set_setting(setting_id, value):
+    return 'error' not in jsonrpc('Settings.SetSettingValue', {'setting': setting_id, 'value': value})
+
+
+def subtitle_offset():
+    """The user's adjustment from the OSD subtitle up/down buttons, in % of the screen height."""
+    try:
+        return float(xbmc.getInfoLabel('Skin.String(SubtitleOffset)') or 0)
+    except ValueError:
+        return 0.0
+
+
+def clamp_margin(value):
+    return round(min(max(value, 0.0), 50.0), 2)
+
+
+def subtitle_margin_target():
+    """Kodi vertical margin that puts subtitles just above the bottom of the scope frame.
+
+    The frame's bottom edge is the letterbox height above the bottom of the picture (Centre), twice that
+    (Top alignment) or at the bottom (Bottom alignment)."""
+    align = xbmc.getInfoLabel('Skin.String(ProjectorAlign)')
+    letterbox = LETTERBOX_235 if xbmc.getCondVisibility('Skin.HasSetting(scopeFormat235)') else LETTERBOX_240
+    below_frame = {'top': 2 * letterbox, 'bottom': 0.0}.get(align, letterbox)
+    return clamp_margin(below_frame / 1080.0 * 100.0 + SUBTITLE_BASE_MARGIN + subtitle_offset())
+
+
+def subtitles_managed():
+    """Skin Settings -> Keep subtitles in the scope frame, and Kodi's subtitle position is 'Bottom of screen'."""
+    if xbmc.getCondVisibility('Skin.HasSetting(SubtitleFrameOff)'):
+        return False
+    return get_setting('subtitles.align') == SUBTITLE_ALIGN_BOTTOM_OF_SCREEN
+
+
+def apply_subtitles():
+    if not subtitles_managed():
+        return
+    target = subtitle_margin_target()
+    current = get_setting('subtitles.marginvertical')
+    if current is None or abs(float(current) - target) > 0.005:
+        set_setting('subtitles.marginvertical', float(target))
+        log('subtitle margin %s -> %s%%' % (current, target))
+
+
+def shift_subtitles(delta):
+    """OSD subtitle up/down buttons: move subtitles by delta % of the screen height."""
+    if subtitles_managed():
+        # compute from the current offset before updating it (Skin.SetString is applied asynchronously)
+        target = clamp_margin(subtitle_margin_target() + delta)
+        offset = round(subtitle_offset() + delta, 2)
+        xbmc.executebuiltin('Skin.SetString(SubtitleOffset,%g)' % offset)
+        set_setting('subtitles.marginvertical', float(target))
+        notify('Position %+g%% (remembered)' % offset, 'Subtitles')
+    else:
+        current = float(get_setting('subtitles.marginvertical') or SUBTITLE_BASE_MARGIN)
+        target = clamp_margin(current + delta)
+        set_setting('subtitles.marginvertical', float(target))
+        notify('Vertical margin %g%%' % target, 'Subtitles')
+
+
+def action_subsup():
+    shift_subtitles(1.0)
+
+
+def action_subsdown():
+    shift_subtitles(-1.0)
 
 
 # ---------------------------------------------------------------- actions
 
 def watch_playback(current_file):
-    """Stay alive until this playback ends, then clear the once-per-file marker.
+    """Stay alive while this playback runs.
 
-    The skin also clears it when fullscreen video closes with nothing playing, but a quick stop and
-    replay of the same file can race that check, and the replay would then skip AutoZoom."""
+    - The next item of a playlist (next episode, Live TV channel change) plays without VideoFullScreen
+      reopening, so the skin never calls apply for it: handle it here.
+    - When playback ends, clear the once-per-file marker. The skin also clears it when fullscreen video
+      closes with nothing playing, but a quick stop and replay can race that check."""
     monitor = xbmc.Monitor()
     player = xbmc.Player()
     while not monitor.abortRequested():
-        if not player.isPlayingVideo() or playing_file() != current_file:
-            break
+        if HOME.getProperty(APPLIED_PROP) != current_file:
+            return  # another apply took over (new playback started from the menus)
+        if not player.isPlayingVideo():
+            # brief gap between playlist items: give the next item a moment to start
+            waited = 0.0
+            while waited < 3.0 and not player.isPlayingVideo():
+                if monitor.waitForAbort(0.25):
+                    return
+                waited += 0.25
+            if not player.isPlayingVideo():
+                break
+        new_file = playing_file()
+        if new_file and new_file != current_file:
+            log('next item: %s' % new_file, xbmc.LOGDEBUG)
+            current_file = new_file
+            handle_file(current_file)
         if monitor.waitForAbort(1):
             return
     if HOME.getProperty(APPLIED_PROP) == current_file:
-        HOME.clearProperty(APPLIED_PROP)
-        HOME.clearProperty(SAVED_PROP)
+        for prop in (APPLIED_PROP, SAVED_PROP, POSITIONED_PROP):
+            HOME.clearProperty(prop)
+
+
+def handle_file(current_file):
+    """Position a newly started video: early alignment shift, then zoom/shift, then subtitles."""
+    HOME.setProperty(APPLIED_PROP, current_file)
+    HOME.clearProperty(POSITIONED_PROP)
+    try:
+        key, label = item_key()
+        saved = load_store()['items'].get(key) if key else None
+        set_indicator(saved['zoom'] if saved else None)
+        early_shift()
+        apply_view(saved, key, label)
+        apply_subtitles()
+    except Exception as e:  # never leave the video covered
+        log('apply failed: %s' % e, xbmc.LOGWARNING)
+    finally:
+        HOME.setProperty(POSITIONED_PROP, 'true')
+
+
+def early_shift():
+    """Apply the alignment shift straight away with the current zoom, before waiting for the stream's
+    aspect ratio, so the picture starts (nearly) in place. apply_view refines it."""
+    shift_px = align_shift_px()
+    if not shift_px:
+        return
+    zoom = round(float(jsonrpc('Player.GetViewMode').get('result', {}).get('zoom', 1.0)), 2)
+    dar = stream_dar(timeout=0) or 16.0 / 9.0
+    jsonrpc('Player.SetViewMode', {'viewmode': {'zoom': zoom, 'verticalshift': vertical_shift_value(dar, zoom, shift_px)}})
 
 
 def action_apply():
@@ -270,18 +410,17 @@ def action_apply():
     saved = load_store()['items'].get(key) if key else None
     set_indicator(saved['zoom'] if saved else None)  # refreshed every time fullscreen opens, even if AutoZoom is off
 
-    current_file = playing_file()
+    current_file = wait_for_file()
     if not current_file:
-        log('apply: skipped, nothing playing yet', xbmc.LOGDEBUG)
+        log('apply: skipped, nothing playing', xbmc.LOGDEBUG)
+        HOME.setProperty(POSITIONED_PROP, 'true')
         return
     if HOME.getProperty(APPLIED_PROP) == current_file:
         log('apply: skipped, already handled %s' % label, xbmc.LOGDEBUG)
+        HOME.setProperty(POSITIONED_PROP, 'true')
         return
-    HOME.setProperty(APPLIED_PROP, current_file)
-    try:
-        apply_view(saved, key, label)
-    finally:
-        watch_playback(current_file)
+    handle_file(current_file)
+    watch_playback(current_file)
 
 
 def apply_view(saved, key, label):
@@ -371,6 +510,8 @@ ACTIONS = {
     'zoomout': action_zoomout,
     'save': action_save,
     'clear': action_clear,
+    'subsup': action_subsup,
+    'subsdown': action_subsdown,
 }
 
 if __name__ == '__main__':

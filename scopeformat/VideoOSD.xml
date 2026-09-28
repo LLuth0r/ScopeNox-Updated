@@ -316,7 +316,8 @@
 						<width>84</width>
 						<height>84</height>
 						<font />
-						<include>SubShiftUpClick</include>
+						<!-- Kodi 21's shift actions only work with subtitle position "Manual"; the script moves the vertical margin -->
+						<onclick>RunScript(special://skin/scripts/autozoom.py,subsup)</onclick>
 						<visible>Skin.HasSetting(showZoomButtons)</visible>
 					</control>
 				
@@ -327,7 +328,7 @@
 						<width>84</width>
 						<height>84</height>
 						<font />
-						<include>SubShiftDownClick</include>
+						<onclick>RunScript(special://skin/scripts/autozoom.py,subsdown)</onclick>
 						<visible>Skin.HasSetting(showZoomButtons)</visible>
 					</control>
 				</control>

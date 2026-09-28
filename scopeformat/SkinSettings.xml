@@ -620,6 +620,17 @@
 							<onclick condition="String.IsEqual(Skin.String(ProjectorAlign),bottom)">Skin.Reset(ProjectorAlign)</onclick>
 							<texturenofocus border="1">separator5.png</texturenofocus>
 						</control>
+						<!-- on by default (stored as an "off" flag); scripts/autozoom.py sets Kodi's subtitle vertical margin -->
+						<control type="radiobutton" id="118">
+							<width>1316</width>
+							<height>60</height>
+							<textoffsetx>30</textoffsetx>
+							<font>font15</font>
+							<label>Keep subtitles in the scope frame</label>
+							<onclick>Skin.ToggleSetting(SubtitleFrameOff)</onclick>
+							<selected>!Skin.HasSetting(SubtitleFrameOff)</selected>
+							<texturenofocus border="1">separator5.png</texturenofocus>
+						</control>
 					</control>
 					<control type="grouplist" id="9006">
 						<description>control area</description>

@@ -11,7 +11,18 @@
 	<onload>RunScript(special://skin/scripts/autozoom.py,apply)</onload>
 	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Applied,Home)</onunload>
 	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Saved,Home)</onunload>
+	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Positioned,Home)</onunload>
 	<controls>
+		<!-- Covers the video until autozoom.py has applied the zoom / alignment shift, so the picture doesn't
+		     visibly jump into place. Outside the alignment group so it always covers the whole screen.
+		     Safety net: fades out after 3s even if the script never reports back. -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>black.png</texture>
+			<visible>String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Positioned)) + [!String.IsEmpty(Skin.String(ProjectorAlign)) | Skin.HasSetting(enableAutoZoom)]</visible>
+			<animation effect="fade" start="100" end="0" delay="3000" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250">Hidden</animation>
+		</control>
 		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
 		<control type="group">
 			<include>ProjectorAlignShift</include>
