@@ -493,12 +493,12 @@ msgid "Map & Alerts"
 msgstr "Mapas e Alertas"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Configurar o menú principal no Aeon Nox"
+msgid "Setup the ScopeNox main menu"
+msgstr "Configurar o menú principal no ScopeNox"
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Posición horizontal do menú principal no Aeon Nox"
+msgid "ScopeNox main menu horizontal position"
+msgstr "Posición horizontal do menú principal no ScopeNox"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."

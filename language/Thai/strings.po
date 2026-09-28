@@ -657,16 +657,16 @@ msgid "Map & Alerts"
 msgstr "แผนที่และการเตือน"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "ตั้งค่าเมนูหลักของ Aeon Nox"
+msgid "Setup the ScopeNox main menu"
+msgstr "ตั้งค่าเมนูหลักของ ScopeNox"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "ปรับแต่งเมนูหลักด้วยตัวแขวน, พื้นหลังและสถิติ เพิ่มรายการของคุณเองในรายการเมนูหลัก"
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "ตำแหน่งเมนูหลักแนวนอนของ Aeon Nox"
+msgid "ScopeNox main menu horizontal position"
+msgstr "ตำแหน่งเมนูหลักแนวนอนของ ScopeNox"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -677,8 +677,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "รูปแบบการเลื่อนของรายการตามแนวนอน"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "เปลี่ยนวิธีการเลื่อนรายการแนวนอนใน Aeon Nox ค่าเริ่มต้นคือเลื่อนรายการแบบหมุนวนกลับ \"คงที่\" คือรายการแบบมีจุดเริ่มต้นและสิ้นสุด"
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "เปลี่ยนวิธีการเลื่อนรายการแนวนอนใน ScopeNox ค่าเริ่มต้นคือเลื่อนรายการแบบหมุนวนกลับ \"คงที่\" คือรายการแบบมีจุดเริ่มต้นและสิ้นสุด"
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -725,8 +725,8 @@ msgid "Resets all above values to their defaults."
 msgstr "ย้อนคืนค่าด้านบนทั้งหมด สู่ค่าเริ่มต้น"
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "การจัดวางเมนูหลักของ Aeon Nox"
+msgid "ScopeNox main menu layout"
+msgstr "การจัดวางเมนูหลักของ ScopeNox"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

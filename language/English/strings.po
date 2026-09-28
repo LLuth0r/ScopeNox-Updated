@@ -936,7 +936,7 @@ msgid "Map & Alerts"
 msgstr ""
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
+msgid "Setup the ScopeNox main menu"
 msgstr ""
 
 msgctxt "#31912"
@@ -944,7 +944,7 @@ msgid "Customize the main menu with widgets, backgrounds and statistics. Add you
 msgstr ""
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu vertical position"
+msgid "ScopeNox main menu vertical position"
 msgstr ""
 
 msgctxt "#31914"
@@ -956,7 +956,7 @@ msgid "Navigation style for horizontal lists"
 msgstr ""
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
 msgstr ""
 
 msgctxt "#31917"
@@ -1004,7 +1004,7 @@ msgid "Resets all above values to their defaults."
 msgstr ""
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
+msgid "ScopeNox main menu layout"
 msgstr ""
 
 msgctxt "#31929"

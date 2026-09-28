@@ -649,16 +649,16 @@ msgid "Map & Alerts"
 msgstr "Карта и предупреждения"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Настройка главного меню Aeon Nox"
+msgid "Setup the ScopeNox main menu"
+msgstr "Настройка главного меню ScopeNox"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Дополнить главное меню виджетами, фоновыми картинками и статистиков. Добавить собственные пункты главного меню."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Положение главного меню Aeon Nox по горизонтали"
+msgid "ScopeNox main menu horizontal position"
+msgstr "Положение главного меню ScopeNox по горизонтали"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."

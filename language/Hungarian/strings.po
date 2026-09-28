@@ -505,8 +505,8 @@ msgid "Map & Alerts"
 msgstr "Térkép & Riasztások"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Az Aeon Nox főmenü beállítása"
+msgid "Setup the ScopeNox main menu"
+msgstr "Az ScopeNox főmenü beállítása"
 
 msgctxt "#31941"
 msgid "Kiosk mode"
