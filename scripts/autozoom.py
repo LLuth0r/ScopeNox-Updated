@@ -26,6 +26,7 @@ LOG_PREFIX = '[ScopeNox AutoZoom] '
 STORE_DIR = 'special://profile/addon_data/skin.scope.nox.omega/'
 STORE_FILE = STORE_DIR + 'autozoom.json'
 APPLIED_PROP = 'ScopeNox.AutoZoom.Applied'  # playing file AutoZoom already handled
+SAVED_PROP = 'ScopeNox.AutoZoom.Saved'  # set while the playing movie has a saved zoom (OSD zoom-in "on" bar)
 HOME = xbmcgui.Window(10000)
 
 # Visible scope frame height on the 1920x1080 panel for each skin scope format
@@ -160,6 +161,13 @@ def set_zoom(zoom):
     return True
 
 
+def set_indicator(saved):
+    if saved:
+        HOME.setProperty(SAVED_PROP, 'true')
+    else:
+        HOME.clearProperty(SAVED_PROP)
+
+
 def notify(message):
     xbmcgui.Dialog().notification('AutoZoom', message, xbmcgui.NOTIFICATION_INFO, 2500, False)
 
@@ -167,6 +175,10 @@ def notify(message):
 # ---------------------------------------------------------------- actions
 
 def action_apply():
+    key, label = item_key()
+    saved = load_store()['items'].get(key) if key else None
+    set_indicator(saved)  # refreshed every time fullscreen opens, even if AutoZoom is off
+
     if not xbmc.getCondVisibility('Skin.HasSetting(enableAutoZoom)'):
         return
     current_file = playing_file()
@@ -174,8 +186,6 @@ def action_apply():
         return
     HOME.setProperty(APPLIED_PROP, current_file)
 
-    key, label = item_key()
-    saved = load_store()['items'].get(key) if key else None
     if saved:
         zoom, source = saved['zoom'], 'saved'
     else:
@@ -194,6 +204,7 @@ def action_zoomin():
     data = load_store()
     data['items'][key] = {'zoom': 1.0, 'title': label}
     save_store(data)
+    set_indicator(True)
     log('saved zoom 1.00 for %s (%s)' % (label, key))
     notify('Remembering full size for %s' % label)
 
@@ -202,6 +213,7 @@ def action_zoomout():
     zoom = fit_zoom(stream_dar(timeout=2.0) or 16.0 / 9.0)
     if zoom is not None:
         set_zoom(zoom)
+    set_indicator(False)
     key, label = item_key()
     data = load_store()
     if key and data['items'].pop(key, None):
@@ -219,6 +231,7 @@ def action_clear():
     if xbmcgui.Dialog().yesno('AutoZoom', 'Forget the saved zoom for %d title(s)?' % count):
         data['items'] = {}
         save_store(data)
+        set_indicator(False)
         log('cleared %d saved zooms' % count)
 
 

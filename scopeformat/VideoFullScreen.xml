@@ -10,6 +10,7 @@
 	<!-- AutoZoom (scripts/autozoom.py): saved per-movie zoom, else fit to the scope frame; once per file -->
 	<onload>RunScript(special://skin/scripts/autozoom.py,apply)</onload>
 	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Applied,Home)</onunload>
+	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Saved,Home)</onunload>
 	<controls>
 		<!-- codec info -->
 		<control type="group" id="0">
