@@ -1,6 +1,16 @@
 Below is the changelog for ScopeNox by LLuth0r
 
-1.2.4 - New Save zoom button on the playback OSD: set any zoom (e.g. 0.81 with Kodi's zoom slider for an IMAX 1.90 release
+1.3.0 - New Projector alignment setting (Skin Settings -> Scope): Centre / Top / Bottom. For projectors whose zoom is anchored
+        at the top or bottom edge of the picture, Top/Bottom move the whole skin AND every movie to that edge of the frame,
+        so only small adjustments are needed in Video calibration. Centre (default) works as before.
+        No more jump when a movie starts: the picture is positioned before it's shown.
+        New "Keep subtitles in the scope frame" setting (on by default): subtitles are placed just above the bottom of the
+        scope frame for your alignment and scope format.
+        Subtitle up/down buttons work again in Kodi 21 (1% per press, remembered).
+        AutoZoom now also applies to the next item in a playlist (next episode, Live TV channel change).
+        AutoZoom's fit and the video shift account for non-16:9 screens.
+
+1.2.4 -New Save zoom button on the playback OSD: set any zoom (e.g. 0.81 with Kodi's zoom slider for an IMAX 1.90 release
         stored in a 16:9 frame) and press Save zoom to remember it for that movie. The button shows a bar while one is saved.
         Playback OSD buttons are smaller (84px) so the whole row fits on screen, and every icon is now properly centred.
         Video calibration arrows, subtitle bar and reset icon are visible again (they were hidden behind the scope bars
