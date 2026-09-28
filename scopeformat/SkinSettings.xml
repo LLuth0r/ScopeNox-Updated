@@ -618,6 +618,20 @@
 						<onclick>ActivateWindow(1130)</onclick>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+					<!-- used when the background is a folder (slideshow); cycles 10s / 20s / 30s / 1 min / 5 min -->
+					<control type="button" id="113">
+						<width>1316</width>
+						<height>60</height>
+						<font>Font15</font>
+						<label>Background slideshow interval</label>
+						<label2>[COLOR themecolor]$VAR[BackgroundSlideshowTimeLabelVar][/COLOR]</label2>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),10)">Skin.SetString(BackgroundSlideshowTime,20)</onclick>
+						<onclick condition="String.IsEmpty(Skin.String(BackgroundSlideshowTime)) | String.IsEqual(Skin.String(BackgroundSlideshowTime),20)">Skin.SetString(BackgroundSlideshowTime,30)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),30)">Skin.SetString(BackgroundSlideshowTime,60)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),60)">Skin.SetString(BackgroundSlideshowTime,300)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(BackgroundSlideshowTime),300)">Skin.SetString(BackgroundSlideshowTime,10)</onclick>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 				</control>
 			</control>
 		</control>
