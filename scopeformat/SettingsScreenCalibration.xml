@@ -16,7 +16,7 @@
 				<description>top left mover</description>
 				<width>128</width>
 				<height>128</height>
-				<texturefocus colordiffuse="$VAR[ThemeLabelColor]">calibrate/cal_TL.png</texturefocus>
+				<texturefocus colordiffuse="themecolor">calibrate/cal_TL.png</texturefocus>
 				<texturenofocus>calibrate/cal_TL.png</texturenofocus>
 				<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
 					<eventconfig type="up" />
@@ -29,7 +29,7 @@
 				<description>right bottom mover</description>
 				<width>128</width>
 				<height>128</height>
-				<texturefocus colordiffuse="$VAR[ThemeLabelColor]">calibrate/cal_BR.png</texturefocus>
+				<texturefocus colordiffuse="themecolor">calibrate/cal_BR.png</texturefocus>
 				<texturenofocus>calibrate/cal_BR.png</texturenofocus>
 				<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
 					<eventconfig type="up" />
@@ -44,7 +44,7 @@
 				<top>750</top>
 				<width>750</width>
 				<height>90</height>
-				<texturefocus colordiffuse="$VAR[ThemeLabelColor]">calibrate/cal_SUB.png</texturefocus>
+				<texturefocus colordiffuse="themecolor">calibrate/cal_SUB.png</texturefocus>
 				<texturenofocus>calibrate/cal_SUB.png</texturenofocus>
 				<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
 					<eventconfig type="up" />
@@ -58,7 +58,7 @@
 				<top>390</top>
 				<width>500</width>
 				<height>500</height>
-				<texturefocus colordiffuse="$VAR[ThemeLabelColor]">calibrate/cal_ratio.png</texturefocus>
+				<texturefocus colordiffuse="themecolor">calibrate/cal_ratio.png</texturefocus>
 				<texturenofocus>calibrate/cal_ratio.png</texturenofocus>
 				<movingspeed acceleration="140" maxvelocity="300" resettimeout="180" delta="1">
 					<eventconfig type="left" />
@@ -71,7 +71,7 @@
 				<top>900</top>
 				<width>100</width>
 				<height>100</height>
-				<texturefocus colordiffuse="$VAR[ThemeLabelColor]">calibrate/reset.png</texturefocus>
+				<texturefocus colordiffuse="themecolor">calibrate/reset.png</texturefocus>
 				<texturenofocus>calibrate/reset.png</texturenofocus>
 			</control>
 			<control type="label">
