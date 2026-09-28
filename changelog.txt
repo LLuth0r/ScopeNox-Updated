@@ -1,6 +1,13 @@
 Below is the changelog for ScopeNox by LLuth0r
 
-1.2.2 - Fixed AutoZoom zooming movies out too far on replay (e.g. 0.54 instead of 0.76). It now sets an exact zoom every time.
+1.2.3 - AutoZoom remembers full size per movie: press zoom in once on a scope movie with baked-in black bars (reported as 1.78)
+        and it plays at 1.00 from then on. Zoom out forgets it again. Works with PlexKodiConnect (saved by IMDb/TMDb id, not file path).
+        The zoom-in button shows an "on" bar while the playing movie has a remembered zoom.
+        New "Clear saved AutoZoom settings" option in Skin Settings -> Scope.
+        AutoZoom now sets the exact zoom directly (no more zoom slider flashing) and fits to the stream's actual aspect ratio.
+        AutoZoom and the zoom buttons run from a script inside the skin (scripts/autozoom.py); nothing extra to install.
+
+1.2.2 -Fixed AutoZoom zooming movies out too far on replay (e.g. 0.54 instead of 0.76). It now sets an exact zoom every time.
         Zoom in/out and subtitle up/down buttons on the playback OSD are built into the skin; ScopeNox-Tools is no longer needed.
         Zoom out fits 16:9 inside the scope frame (0.74 / 0.76); zoom in goes back to 1.00 for scope movies with baked-in bars.
         New thin-ring playback OSD buttons that follow the theme colour; button row centred on the OSD bar.
