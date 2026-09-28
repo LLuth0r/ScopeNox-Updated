@@ -28,8 +28,8 @@
 				<onleft>202</onleft>
 				<onright>202</onright>
 				<control type="button" id="802">
-					<texturefocus>osd/buttons/OSDChannelUPFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDChannelUPNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdchannelupfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdchannelupnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -37,8 +37,8 @@
 					<onclick>SetRating</onclick>
 				</control>
 				<control type="button" id="700">
-					<texturefocus>osd/buttons/OSDPlaylistFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPlaylistNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdplaylistfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdplaylistnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -47,16 +47,16 @@
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
 				</control>
 				<control type="button" id="500">
-					<texturefocus>osd/buttons/OSDVizFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDVizNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdvizfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdviznf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
 					<font />
 				</control>
 				<control type="button" id="702">
-					<texturefocus>osd/buttons/OSDSettingsFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDSettingsNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdsettingsfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdsettingsnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -65,8 +65,8 @@
 					<visible>Visualisation.Enabled</visible>
 				</control>
 				<control type="button" id="705">
-					<texturefocus>osd/buttons/OSDVideoFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDVideoNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
+					<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
 					<width>100</width>
 					<height>100</height>
 					<font />
@@ -74,8 +74,8 @@
 					<visible>Visualisation.HasPresets</visible>
 				</control>
 				<control type="button" id="600">
-					<texturefocus>osd/buttons/OSDPrevTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPrevTrackNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdprevtrackfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdprevtracknf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -83,8 +83,8 @@
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button" id="601">
-					<texturefocus>osd/buttons/OSDRewindFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDRewindNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -92,10 +92,10 @@
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
 				<control type="togglebutton" id="602">
-					<texturefocus>osd/buttons/OSDPauseFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPauseNF.png</texturenofocus>
-					<alttexturefocus>osd/buttons/OSDPlayFO.png</alttexturefocus>
-					<alttexturenofocus>osd/buttons/OSDPlayNF.png</alttexturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
+					<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
+					<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
+					<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
 					<label />
 					<altlabel>208</altlabel>
 					<width>100</width>
@@ -105,8 +105,8 @@
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button" id="603">
-					<texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDStopNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -114,8 +114,8 @@
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button" id="604">
-					<texturefocus>osd/buttons/OSDForwardFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDForwardNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -123,8 +123,8 @@
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button" id="605">
-					<texturefocus>osd/buttons/OSDNextTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDNextTrackNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdnexttrackfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdnexttracknf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -132,8 +132,8 @@
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 				<control type="button" id="703">
-					<texturefocus>osd/buttons/OSDLyricsFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDLyricsNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdlyricsfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdlyricsnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -142,10 +142,10 @@
 					<onclick>RunScript(script.cu.lrclyrics)</onclick>
 				</control>
 				<control type="togglebutton" id="704">
-					<texturefocus>osd/buttons/OSDRandomOffFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDRandomOffNF.png</texturenofocus>
-					<alttexturefocus>osd/buttons/OSDRandomOnFO.png</alttexturefocus>
-					<alttexturenofocus>osd/buttons/OSDRandomOnNF.png</alttexturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdrandomofffo.png</texturefocus>
+					<texturenofocus>osd/modern/osdrandomoffnf.png</texturenofocus>
+					<alttexturefocus colordiffuse="themecolor">osd/modern/osdrandomonfo.png</alttexturefocus>
+					<alttexturenofocus>osd/modern/osdrandomonnf.png</alttexturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
@@ -162,14 +162,26 @@
 					<font />
 					<onclick>PlayerControl(Repeat)</onclick>
 				</control>
-				<control type="image" id="708">
-					<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+				<!-- repeat state image for button 707; the focused version is tinted with the theme colour -->
+				<control type="group" id="708">
 					<width>100</width>
 					<height>100</height>
+					<control type="image">
+						<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+						<width>100</width>
+						<height>100</height>
+						<visible>!Control.HasFocus(707)</visible>
+					</control>
+					<control type="image">
+						<texture colordiffuse="themecolor">$VAR[MusicOSDRepeatButtonVar]</texture>
+						<width>100</width>
+						<height>100</height>
+						<visible>Control.HasFocus(707)</visible>
+					</control>
 				</control>
 				<control type="button" id="706">
-					<texturefocus>osd/buttons/OSDSkinFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDSkinNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdskinfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdskinnf.png</texturenofocus>
 					<label />
 					<width>100</width>
 					<height>100</height>
