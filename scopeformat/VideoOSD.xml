@@ -259,14 +259,20 @@
 				</control>
 
 				<!--Zoom Buttons-->
-				<control type="button" id="713">
+				<!-- full size, remembered for this movie; shows the "on" bar while this movie has a saved zoom -->
+				<control type="togglebutton" id="713">
 					<texturefocus colordiffuse="themecolor">osd/modern/zoominfo.png</texturefocus>
 					<texturenofocus>osd/modern/zoominnf.png</texturenofocus>
+					<alttexturefocus colordiffuse="themecolor">osd/modern/zoominonfo.png</alttexturefocus>
+					<alttexturenofocus>osd/modern/zoominonnf.png</alttexturenofocus>
+					<usealttexture>!String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Saved))</usealttexture>
 					<label />
+					<altlabel />
 					<width>100</width>
 					<height>100</height>
 					<font />
-					<include>ZoomClickFull</include>
+					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</onclick>
+					<altclick>RunScript(special://skin/scripts/autozoom.py,zoomin)</altclick>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				<control type="button" id="714">
@@ -276,7 +282,8 @@
 					<width>100</width>
 					<height>100</height>
 					<font />
-					<include>ZoomClickScopeFit</include>
+					<!-- fit to the scope frame, forgets any saved zoom for this movie -->
+					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomout)</onclick>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				

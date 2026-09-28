@@ -28,14 +28,20 @@ It reads the video stream's aspect ratio and zooms 16:9 (and 1.33 - 2.19) conten
 2.35 / 2.40 format. Content 2.20 and wider is left alone and gets the scope mask. The separate scopenox-autozoom script is no longer needed.
 
 Kodi takes the aspect ratio from the encoded frame. Scope movies stored as a 16:9 frame with the black bars as part of the picture
-(most Blu-ray and UHD rips) report 1.78, so AutoZoom zooms them out too. Use the zoom-in button on the playback menu to put them back to 1.00.
+(most Blu-ray and UHD rips) report 1.78, so AutoZoom zooms them out too. Press the zoom-in button on the playback menu once for such
+a movie: it goes back to 1.00 and AutoZoom remembers that for the movie, so it plays at full size from then on.
+
+Remembered movies are stored by IMDb/TMDb id rather than file path, so they survive library rescans, file moves and
+PlexKodiConnect's changing stream URLs. TV episodes are remembered per show. Pressing zoom out forgets a movie again, and
+System -> Appearance -> Skin -> Settings -> Scope -> Clear saved AutoZoom settings forgets them all. AutoZoom runs from
+scripts/autozoom.py inside the skin; there is nothing extra to install.
 
 ## Zoom and subtitle buttons
 
 Turn on System -> Appearance -> Skin -> Settings -> Scope -> Show Zoom/Subtitle Buttons for Non-Scope to add four buttons to the playback menu:
 
-- Zoom out: fits a 16:9 picture inside the scope frame (0.74 for 2.40, 0.76 for 2.35)
-- Zoom in: back to full size (1.00)
+- Zoom out: fits the picture inside the scope frame (0.74 for 16:9 at 2.40, 0.76 at 2.35) and forgets any remembered zoom for the movie
+- Zoom in: back to full size (1.00), remembered for the movie
 - Subtitles up / down: moves subtitles into or out of the scope frame
 
 These used to need the ScopeNox-Tools add-on; they are now built into the skin.
