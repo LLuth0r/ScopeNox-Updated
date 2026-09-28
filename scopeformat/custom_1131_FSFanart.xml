@@ -5,20 +5,24 @@
 	<animation effect="fade" time="300">WindowClose</animation>
 	<onunload>ClearProperty(FSFanart,movieinformation)</onunload>
 	<controls>
-		<control type="button" id="90300">
-			<description>FS Fanart button</description>
-			<width>100%</width>
-			<height>1080</height>
-			<texturefocus />
-			<texturenofocus />
-			<onclick>Dialog.Close(1131)</onclick>
-			<label />
-			<hitrect x="0" y="0" w="0" h="0"/>
-		</control>
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture>$INFO[Window(movieinformation).Property(FSFanart)]</texture>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
+		<control type="group">
+			<include>ProjectorAlignShift</include>
+			<control type="button" id="90300">
+				<description>FS Fanart button</description>
+				<width>100%</width>
+				<height>1080</height>
+				<texturefocus />
+				<texturenofocus />
+				<onclick>Dialog.Close(1131)</onclick>
+				<label />
+				<hitrect x="0" y="0" w="0" h="0"/>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<texture>$INFO[Window(movieinformation).Property(FSFanart)]</texture>
+			</control>
 		</control>
 	</controls>
 </window>

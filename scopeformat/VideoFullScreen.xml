@@ -11,54 +11,69 @@
 	<onload>RunScript(special://skin/scripts/autozoom.py,apply)</onload>
 	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Applied,Home)</onunload>
 	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Saved,Home)</onunload>
+	<onunload condition="!Player.HasMedia">ClearProperty(ScopeNox.AutoZoom.Positioned,Home)</onunload>
 	<controls>
-		<!-- codec info -->
-		<control type="group" id="0">
-			<animation effect="fade" time="200">WindowOpen</animation>
-			<animation effect="fade" time="200">WindowClose</animation>
-			<control type="grouplist" id="0">
-				<left>30</left>
-				<width>100%</width>
-				<height>300</height>
-				<itemgap>10</itemgap>
-				<control type="label" id="10">
-					<description>row 1 label</description>
-					<width>1770</width>
-					<height>90</height>
-					<font>font14</font>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>shadow</shadowcolor>
-					<label />
-				</control>
-				<control type="label" id="11">
-					<description>row 2 label</description>
-					<width>1770</width>
-					<height>90</height>
-					<font>font14</font>
-					<label />
-					<textcolor>grey2</textcolor>
-					<shadowcolor>shadow</shadowcolor>
-				</control>
-				<control type="label" id="12">
-					<description>row 3 label</description>
-					<width>1770</width>
-					<height>90</height>
-					<font>font14</font>
-					<label />
-					<textcolor>grey2</textcolor>
-					<shadowcolor>shadow</shadowcolor>
+		<!-- Covers the video until autozoom.py has applied the zoom / alignment shift, so the picture doesn't
+		     visibly jump into place. Outside the alignment group so it always covers the whole screen.
+		     Safety net: fades out after 3s even if the script never reports back. -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>black.png</texture>
+			<visible>String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Positioned)) + [!String.IsEmpty(Skin.String(ProjectorAlign)) | Skin.HasSetting(enableAutoZoom)]</visible>
+			<animation effect="fade" start="100" end="0" delay="3000" time="300">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250">Hidden</animation>
+		</control>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
+		<control type="group">
+			<include>ProjectorAlignShift</include>
+			<!-- codec info -->
+			<control type="group" id="0">
+				<animation effect="fade" time="200">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+				<control type="grouplist" id="0">
+					<left>30</left>
+					<width>100%</width>
+					<height>300</height>
+					<itemgap>10</itemgap>
+					<control type="label" id="10">
+						<description>row 1 label</description>
+						<width>1770</width>
+						<height>90</height>
+						<font>font14</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<label />
+					</control>
+					<control type="label" id="11">
+						<description>row 2 label</description>
+						<width>1770</width>
+						<height>90</height>
+						<font>font14</font>
+						<label />
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+					</control>
+					<control type="label" id="12">
+						<description>row 3 label</description>
+						<width>1770</width>
+						<height>90</height>
+						<font>font14</font>
+						<label />
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+					</control>
 				</control>
 			</control>
-		</control>
-		<control type="label" id="1">
-			<description>seek label</description>
-			<width>100%</width>
-			<height>100%</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font_MainMenu</font>
-			<shadowcolor>shadow</shadowcolor>
-			<label>$INFO[Player.SeekNumeric]</label>
+			<control type="label" id="1">
+				<description>seek label</description>
+				<width>100%</width>
+				<height>100%</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font_MainMenu</font>
+				<shadowcolor>shadow</shadowcolor>
+				<label>$INFO[Player.SeekNumeric]</label>
+			</control>
 		</control>
 	</controls>
 </window>

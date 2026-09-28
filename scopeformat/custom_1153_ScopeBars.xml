@@ -4,20 +4,58 @@
 	<!-- Hidden during video calibration: the markers sit at the edges of the full 16:9 picture, under the bars -->
 	<visible>[!Skin.HasSetting(DebugInfo) + [[Skin.HasSetting(scopemask) + Window.IsVisible(FullScreenVideo)] | !Window.IsVisible(FullScreenVideo)] + !Window.IsVisible(screencalibration)] | System.ScreenSaverActive</visible>
     <controls>
-        <control type="image">
+		<!-- Centre alignment: bars above and below the scope frame -->
+		<control type="group">
+			<visible>String.IsEmpty(Skin.String(ProjectorAlign))</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<width>1920</width>
+				<height>140</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image" zorder="0">
+				<left>0</left>
+				<top>940</top>
+				<animation effect="slide" start="0,0" end="0,10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<width>1920</width>
+				<height>140</height>
+				<texture>black.png</texture>
+			</control>
+		</control>
+		<!-- Top alignment: scope frame at the top of the picture, one bar below it (Includes_ProjectorAlign.xml) -->
+		<control type="image">
+			<visible>$EXP[ProjectorAlignTop235]</visible>
 			<left>0</left>
-			<top>0</top>
-			<animation effect="slide" start="0,0" end="0,-10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<top>820</top>
 			<width>1920</width>
-			<height>140</height>
+			<height>260</height>
 			<texture>black.png</texture>
 		</control>
-		<control type="image" zorder="0">
+		<control type="image">
+			<visible>$EXP[ProjectorAlignTop240]</visible>
 			<left>0</left>
-			<top>940</top>
-			<animation effect="slide" start="0,0" end="0,10" time="700" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+			<top>800</top>
 			<width>1920</width>
-			<height>140</height>
+			<height>280</height>
+			<texture>black.png</texture>
+		</control>
+		<!-- Bottom alignment: scope frame at the bottom of the picture, one bar above it -->
+		<control type="image">
+			<visible>$EXP[ProjectorAlignBottom235]</visible>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>260</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="image">
+			<visible>$EXP[ProjectorAlignBottom240]</visible>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>280</height>
 			<texture>black.png</texture>
 		</control>
     </controls>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Projector alignment (Skin Settings -> Scope). The GUI normally sits in the middle band of the 1080 frame,
+	where letterboxed scope movies are (y 130-950 for 2.35, 140-940 for 2.40). Projectors whose zoom is anchored
+	at the top (or bottom) of the picture show the top (or bottom) of the frame instead, so the GUI is shifted
+	up (or down) by the letterbox height; scripts/autozoom.py shifts the video by the same amount.
+
+	Skin.String(ProjectorAlign): empty = centre, "top", "bottom".
+-->
+<includes>
+	<expression name="ProjectorAlignTop235">String.IsEqual(Skin.String(ProjectorAlign),top) + Skin.HasSetting(scopeFormat235)</expression>
+	<expression name="ProjectorAlignTop240">String.IsEqual(Skin.String(ProjectorAlign),top) + !Skin.HasSetting(scopeFormat235)</expression>
+	<expression name="ProjectorAlignBottom235">String.IsEqual(Skin.String(ProjectorAlign),bottom) + Skin.HasSetting(scopeFormat235)</expression>
+	<expression name="ProjectorAlignBottom240">String.IsEqual(Skin.String(ProjectorAlign),bottom) + !Skin.HasSetting(scopeFormat235)</expression>
+
+	<!-- Each window wraps its controls in a group with these slides (not window <origin>: origins stop working after ReloadSkin; window-level animations are ignored) -->
+	<include name="ProjectorAlignShift">
+		<animation effect="slide" start="0,0" end="0,-130" time="0" condition="$EXP[ProjectorAlignTop235]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,-140" time="0" condition="$EXP[ProjectorAlignTop240]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,130" time="0" condition="$EXP[ProjectorAlignBottom235]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,140" time="0" condition="$EXP[ProjectorAlignBottom240]">Conditional</animation>
+	</include>
+</includes>

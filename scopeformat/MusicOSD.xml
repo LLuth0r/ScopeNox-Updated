@@ -7,188 +7,192 @@
 		<top>130</top>
 	</coordinates>
 	<controls>
+		<!-- projector alignment: shifts the whole window (Includes_ProjectorAlign.xml) -->
 		<control type="group">
-			<animation effect="slide" end="0,-238" time="240" tween="quadratic" condition="Window.IsVisible(selectdialog) | Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
-			<animation effect="slide" start="0,-238" end="0,0" time="240" tween="quadratic">WindowOpen</animation>
-			<animation effect="slide" end="0,-238" start="0,0" time="240" tween="quadratic">WindowClose</animation>
-			<control type="image">
-				<top>0</top>
-				<width>100%</width>
-				<height>137</height>
-				<texture border="1,0,1,40">topbar.png</texture>
-			</control>
-			<control type="grouplist" id="202">
-				<height>144</height>
-				<width>100%</width>
-				<align>center</align>
-				<scrolltime tween="sine">200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onup>706</onup>
-				<ondown>802</ondown>
-				<onleft>202</onleft>
-				<onright>202</onright>
-				<control type="button" id="802">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdchannelupfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdchannelupnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>SetRating</onclick>
+			<include>ProjectorAlignShift</include>
+			<control type="group">
+				<animation effect="slide" end="0,-238" time="240" tween="quadratic" condition="Window.IsVisible(selectdialog) | Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
+				<animation effect="slide" start="0,-238" end="0,0" time="240" tween="quadratic">WindowOpen</animation>
+				<animation effect="slide" end="0,-238" start="0,0" time="240" tween="quadratic">WindowClose</animation>
+				<control type="image">
+					<top>0</top>
+					<width>100%</width>
+					<height>137</height>
+					<texture border="1,0,1,40">topbar.png</texture>
 				</control>
-				<control type="button" id="700">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdplaylistfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdplaylistnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>Close</onclick>
-					<onclick>ActivateWindow(MusicPlaylist)</onclick>
-				</control>
-				<control type="button" id="500">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdvizfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdviznf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-				</control>
-				<control type="button" id="702">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdsettingsfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdsettingsnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
-					<visible>Visualisation.Enabled</visible>
-				</control>
-				<control type="button" id="705">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
-					<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
-					<visible>Visualisation.HasPresets</visible>
-				</control>
-				<control type="button" id="600">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdprevtrackfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdprevtracknf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>PlayerControl(Previous)</onclick>
-				</control>
-				<control type="button" id="601">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>PlayerControl(Rewind)</onclick>
-				</control>
-				<control type="togglebutton" id="602">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
-					<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
-					<label />
-					<altlabel>208</altlabel>
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<onclick>PlayerControl(Play)</onclick>
-				</control>
-				<control type="button" id="603">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>PlayerControl(Stop)</onclick>
-				</control>
-				<control type="button" id="604">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>PlayerControl(Forward)</onclick>
-				</control>
-				<control type="button" id="605">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdnexttrackfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdnexttracknf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>PlayerControl(Next)</onclick>
-				</control>
-				<control type="button" id="703">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdlyricsfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdlyricsnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>Close</onclick>
-					<onclick>RunScript(script.cu.lrclyrics)</onclick>
-				</control>
-				<control type="togglebutton" id="704">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdrandomofffo.png</texturefocus>
-					<texturenofocus>osd/modern/osdrandomoffnf.png</texturenofocus>
-					<alttexturefocus colordiffuse="themecolor">osd/modern/osdrandomonfo.png</alttexturefocus>
-					<alttexturenofocus>osd/modern/osdrandomonnf.png</alttexturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<usealttexture>Playlist.IsRandom</usealttexture>
-					<onclick>PlayerControl(Random)</onclick>
-				</control>
-				<control type="button" id="707">
-					<width>0.1</width>
-					<height>0.1</height>
-					<texturefocus />
-					<texturenofocus />
-					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-					<font />
-					<onclick>PlayerControl(Repeat)</onclick>
-				</control>
-				<!-- repeat state image for button 707; the focused version is tinted with the theme colour -->
-				<control type="group" id="708">
-					<width>100</width>
-					<height>100</height>
-					<control type="image">
-						<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+				<control type="grouplist" id="202">
+					<height>144</height>
+					<width>100%</width>
+					<align>center</align>
+					<scrolltime tween="sine">200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onup>706</onup>
+					<ondown>802</ondown>
+					<onleft>202</onleft>
+					<onright>202</onright>
+					<control type="button" id="802">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdchannelupfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdchannelupnf.png</texturenofocus>
+						<label />
 						<width>100</width>
 						<height>100</height>
-						<visible>!Control.HasFocus(707)</visible>
+						<font />
+						<onclick>SetRating</onclick>
 					</control>
-					<control type="image">
-						<texture colordiffuse="themecolor">$VAR[MusicOSDRepeatButtonVar]</texture>
+					<control type="button" id="700">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdplaylistfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdplaylistnf.png</texturenofocus>
+						<label />
 						<width>100</width>
 						<height>100</height>
-						<visible>Control.HasFocus(707)</visible>
+						<font />
+						<onclick>Close</onclick>
+						<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					</control>
-				</control>
-				<control type="button" id="706">
-					<texturefocus colordiffuse="themecolor">osd/modern/osdskinfo.png</texturefocus>
-					<texturenofocus>osd/modern/osdskinnf.png</texturenofocus>
-					<label />
-					<width>100</width>
-					<height>100</height>
-					<font />
-					<onclick>Dialog.Close(musicosd)</onclick>
-					<onclick>ActivateWindow(1120)</onclick>
-					<onclick>SetProperty(MusicOSD.Settings,True,home)</onclick>
+					<control type="button" id="500">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdvizfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdviznf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+					</control>
+					<control type="button" id="702">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdsettingsfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdsettingsnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+						<visible>Visualisation.Enabled</visible>
+					</control>
+					<control type="button" id="705">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdvideofo.png</texturefocus>
+						<texturenofocus>osd/modern/osdvideonf.png</texturenofocus>
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>ActivateWindow(visualisationpresetlist)</onclick>
+						<visible>Visualisation.HasPresets</visible>
+					</control>
+					<control type="button" id="600">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdprevtrackfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdprevtracknf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>PlayerControl(Previous)</onclick>
+					</control>
+					<control type="button" id="601">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdrewindfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdrewindnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>PlayerControl(Rewind)</onclick>
+					</control>
+					<control type="togglebutton" id="602">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdpausefo.png</texturefocus>
+						<texturenofocus>osd/modern/osdpausenf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/osdplaynf.png</alttexturenofocus>
+						<label />
+						<altlabel>208</altlabel>
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<onclick>PlayerControl(Play)</onclick>
+					</control>
+					<control type="button" id="603">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					<control type="button" id="604">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdforwardfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdforwardnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>PlayerControl(Forward)</onclick>
+					</control>
+					<control type="button" id="605">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdnexttrackfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdnexttracknf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>PlayerControl(Next)</onclick>
+					</control>
+					<control type="button" id="703">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdlyricsfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdlyricsnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>Close</onclick>
+						<onclick>RunScript(script.cu.lrclyrics)</onclick>
+					</control>
+					<control type="togglebutton" id="704">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdrandomofffo.png</texturefocus>
+						<texturenofocus>osd/modern/osdrandomoffnf.png</texturenofocus>
+						<alttexturefocus colordiffuse="themecolor">osd/modern/osdrandomonfo.png</alttexturefocus>
+						<alttexturenofocus>osd/modern/osdrandomonnf.png</alttexturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<usealttexture>Playlist.IsRandom</usealttexture>
+						<onclick>PlayerControl(Random)</onclick>
+					</control>
+					<control type="button" id="707">
+						<width>0.1</width>
+						<height>0.1</height>
+						<texturefocus />
+						<texturenofocus />
+						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+						<font />
+						<onclick>PlayerControl(Repeat)</onclick>
+					</control>
+					<!-- repeat state image for button 707; the focused version is tinted with the theme colour -->
+					<control type="group" id="708">
+						<width>100</width>
+						<height>100</height>
+						<control type="image">
+							<texture>$VAR[MusicOSDRepeatButtonVar]</texture>
+							<width>100</width>
+							<height>100</height>
+							<visible>!Control.HasFocus(707)</visible>
+						</control>
+						<control type="image">
+							<texture colordiffuse="themecolor">$VAR[MusicOSDRepeatButtonVar]</texture>
+							<width>100</width>
+							<height>100</height>
+							<visible>Control.HasFocus(707)</visible>
+						</control>
+					</control>
+					<control type="button" id="706">
+						<texturefocus colordiffuse="themecolor">osd/modern/osdskinfo.png</texturefocus>
+						<texturenofocus>osd/modern/osdskinnf.png</texturenofocus>
+						<label />
+						<width>100</width>
+						<height>100</height>
+						<font />
+						<onclick>Dialog.Close(musicosd)</onclick>
+						<onclick>ActivateWindow(1120)</onclick>
+						<onclick>SetProperty(MusicOSD.Settings,True,home)</onclick>
+					</control>
 				</control>
 			</control>
 		</control>
