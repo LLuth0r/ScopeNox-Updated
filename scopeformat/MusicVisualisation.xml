@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<include>ProjectorAlignCoordinates</include>
 	<allowoverlay>false</allowoverlay>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>

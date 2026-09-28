@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="142">
+	<include>ProjectorAlignCoordinates</include>
 	<controls>
 		<control type="group">
 			<!-- keep inside the CIH safe area (GUI band ~130-950) -->

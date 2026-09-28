@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<include>ProjectorAlignCoordinates</include>
 	<onload condition="System.AddonIsEnabled(script.embuary.helper)">RunScript(script.embuary.helper,action=blurimg,file='"$VAR[PosterVar]"',prop=MyProp,radius=10)</onload>
 	<onload condition="!System.AddonIsEnabled(script.embuary.helper) + System.AddonIsEnabled(plugin.video.themoviedb.helper)">RunScript(plugin.video.themoviedb.helper,blur_image='"$VAR[PosterVar]"')</onload>
 	<onload>SetFocus(90003)</onload>

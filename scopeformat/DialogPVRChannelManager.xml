@@ -6,6 +6,11 @@
 		<system>1</system>
 		<left>159</left>
 		<top>100</top>
+		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
+		<origin x="159" y="-30">$EXP[ProjectorAlignTop235]</origin>
+		<origin x="159" y="-40">$EXP[ProjectorAlignTop240]</origin>
+		<origin x="159" y="230">$EXP[ProjectorAlignBottom235]</origin>
+		<origin x="159" y="240">$EXP[ProjectorAlignBottom240]</origin>
 	</coordinates>
 	<include>DialogOpenCloseAnimation</include>
 	<controls>

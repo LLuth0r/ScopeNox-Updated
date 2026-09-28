@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1151" type="dialog">
+	<include>ProjectorAlignCoordinates</include>
 <!--     <defaultcontrol always="false">100</defaultcontrol> -->
 	<visible>Skin.HasSetting(DebugInfo)</visible>
     <controls>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1135" type="dialog">
+	<include>ProjectorAlignCoordinates</include>
 	<onload>SetFocus(90100)</onload>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(ActorID)) + !String.IsEmpty(Window(movieinformation).Property(DoAction))">SetFocus(50,$INFO[Window(movieinformation).Property(ActorID)])</onunload>
 	<onunload condition="!String.IsEmpty(Window(movieinformation).Property(ActorID)) + !String.IsEmpty(Window(movieinformation).Property(DoAction))">Action(select)</onunload>

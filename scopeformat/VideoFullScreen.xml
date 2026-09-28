@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol>-</defaultcontrol>
 	<onload>Skin.Reset(osd169)</onload>
 	<onload condition="!Skin.HasSetting(rememberScopeMaskSetting)">Skin.Reset(scopemask)</onload>

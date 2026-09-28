@@ -13,6 +13,11 @@
 		<system>1</system>
 		<left>925</left>
 		<top>458</top>
+		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
+		<origin x="925" y="328">$EXP[ProjectorAlignTop235]</origin>
+		<origin x="925" y="318">$EXP[ProjectorAlignTop240]</origin>
+		<origin x="925" y="588">$EXP[ProjectorAlignBottom235]</origin>
+		<origin x="925" y="598">$EXP[ProjectorAlignBottom240]</origin>
 	</coordinates>
 	<controls>
 		<!-- assume the context menu contains 1 button. code the size/position of all controls based on that -->

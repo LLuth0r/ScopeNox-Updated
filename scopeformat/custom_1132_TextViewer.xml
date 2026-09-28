@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1132" type="dialog">
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol always="true">62</defaultcontrol>
 	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
 	<onunload>ClearProperty(TextViewerContent,Home)</onunload>

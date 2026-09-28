@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1119" type="dialog">
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol always="true">90200</defaultcontrol>
 	<include>DialogOpenCloseAnimation</include>
 	<onunload>ClearProperty(Info.DBID,movieinformation)</onunload>

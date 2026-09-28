@@ -6,6 +6,15 @@
 		<system>1</system>
 		<left>502</left>
 		<top>293</top>
+		<!-- projector alignment (Includes_ProjectorAlign.xml): first matching origin wins -->
+		<origin x="822" y="163">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop235]</origin>
+		<origin x="822" y="153">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignTop240]</origin>
+		<origin x="822" y="423">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom235]</origin>
+		<origin x="822" y="433">String.IsEqual(Skin.AspectRatio,21:9) + $EXP[ProjectorAlignBottom240]</origin>
+		<origin x="502" y="163">$EXP[ProjectorAlignTop235]</origin>
+		<origin x="502" y="153">$EXP[ProjectorAlignTop240]</origin>
+		<origin x="502" y="423">$EXP[ProjectorAlignBottom235]</origin>
+		<origin x="502" y="433">$EXP[ProjectorAlignBottom240]</origin>
 		<origin x="822" y="293">String.IsEqual(Skin.AspectRatio,21:9)</origin>
 	</coordinates>
 	<include>DialogOpenCloseAnimation</include>

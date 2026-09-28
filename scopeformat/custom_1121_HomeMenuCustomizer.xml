@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="1121" type="dialog">
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol always="true">90000</defaultcontrol>
 	<controls>
 		<control type="group">

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<include>ProjectorAlignCoordinates</include>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>[Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(MusicOSD) + VideoPlayer.IsFullscreen + !Window.IsVisible(1134)</visible>
 	<controls>
