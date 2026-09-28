@@ -265,7 +265,7 @@
 					<texturenofocus>osd/modern/zoominnf.png</texturenofocus>
 					<alttexturefocus colordiffuse="themecolor">osd/modern/zoominonfo.png</alttexturefocus>
 					<alttexturenofocus>osd/modern/zoominonnf.png</alttexturenofocus>
-					<usealttexture>!String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Saved))</usealttexture>
+					<usealttexture>String.IsEqual(Window(Home).Property(ScopeNox.AutoZoom.Saved),1.00)</usealttexture>
 					<label />
 					<altlabel />
 					<width>100</width>
@@ -284,6 +284,22 @@
 					<font />
 					<!-- fit to the scope frame, forgets any saved zoom for this movie -->
 					<onclick>RunScript(special://skin/scripts/autozoom.py,zoomout)</onclick>
+					<visible>Skin.HasSetting(showZoomButtons)</visible>
+				</control>
+				<!-- remember the current zoom (e.g. set with Kodi's zoom slider) for this movie; "on" bar while one is saved -->
+				<control type="togglebutton" id="718">
+					<texturefocus colordiffuse="themecolor">osd/modern/savezoomfo.png</texturefocus>
+					<texturenofocus>osd/modern/savezoomnf.png</texturenofocus>
+					<alttexturefocus colordiffuse="themecolor">osd/modern/savezoomonfo.png</alttexturefocus>
+					<alttexturenofocus>osd/modern/savezoomonnf.png</alttexturenofocus>
+					<usealttexture>!String.IsEmpty(Window(Home).Property(ScopeNox.AutoZoom.Saved))</usealttexture>
+					<label />
+					<altlabel />
+					<width>100</width>
+					<height>100</height>
+					<font />
+					<onclick>RunScript(special://skin/scripts/autozoom.py,save)</onclick>
+					<altclick>RunScript(special://skin/scripts/autozoom.py,save)</altclick>
 					<visible>Skin.HasSetting(showZoomButtons)</visible>
 				</control>
 				

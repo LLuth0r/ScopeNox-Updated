@@ -8,6 +8,8 @@ Run by the skin with RunScript(special://skin/scripts/autozoom.py,<action>):
   zoomin   OSD zoom-in button. Set 1.00 and remember it for this movie
            (e.g. scope movies with the black bars encoded in a 16:9 frame).
   zoomout  OSD zoom-out button. Fit to the scope frame and forget any saved zoom.
+  save     OSD save-zoom button. Remember the current zoom for this movie
+           (e.g. 0.81 set with Kodi's zoom slider to crop thin baked-in bars).
   clear    Skin Settings. Forget all saved zooms.
 
 Saved zooms are keyed by the movie's IMDb/TMDb/TVDB id, not the file path: with
@@ -26,7 +28,9 @@ LOG_PREFIX = '[ScopeNox AutoZoom] '
 STORE_DIR = 'special://profile/addon_data/skin.scope.nox.omega/'
 STORE_FILE = STORE_DIR + 'autozoom.json'
 APPLIED_PROP = 'ScopeNox.AutoZoom.Applied'  # playing file AutoZoom already handled
-SAVED_PROP = 'ScopeNox.AutoZoom.Saved'  # set while the playing movie has a saved zoom (OSD zoom-in "on" bar)
+# saved zoom of the playing movie, e.g. "0.81"; empty when none. Drives the OSD "on" bars:
+# save-zoom button for any saved zoom, zoom-in button when it is "1.00"
+SAVED_PROP = 'ScopeNox.AutoZoom.Saved'
 HOME = xbmcgui.Window(10000)
 
 # Visible scope frame height on the 1920x1080 panel for each skin scope format
@@ -161,11 +165,16 @@ def set_zoom(zoom):
     return True
 
 
-def set_indicator(saved):
-    if saved:
-        HOME.setProperty(SAVED_PROP, 'true')
-    else:
+def current_zoom():
+    zoom = jsonrpc('Player.GetViewMode').get('result', {}).get('zoom')
+    return None if zoom is None else round(float(zoom), 2)
+
+
+def set_indicator(zoom):
+    if zoom is None:
         HOME.clearProperty(SAVED_PROP)
+    else:
+        HOME.setProperty(SAVED_PROP, '%.2f' % zoom)
 
 
 def notify(message):
@@ -177,7 +186,7 @@ def notify(message):
 def action_apply():
     key, label = item_key()
     saved = load_store()['items'].get(key) if key else None
-    set_indicator(saved)  # refreshed every time fullscreen opens, even if AutoZoom is off
+    set_indicator(saved['zoom'] if saved else None)  # refreshed every time fullscreen opens, even if AutoZoom is off
 
     if not xbmc.getCondVisibility('Skin.HasSetting(enableAutoZoom)'):
         return
@@ -196,24 +205,43 @@ def action_apply():
         set_zoom(zoom)
 
 
-def action_zoomin():
-    set_zoom(1.0)
+def remember(zoom):
+    """Save zoom for the playing movie. Returns its label, or None if it can't be identified."""
     key, label = item_key()
     if not key:
-        return
+        return None
     data = load_store()
-    data['items'][key] = {'zoom': 1.0, 'title': label}
+    data['items'][key] = {'zoom': zoom, 'title': label}
     save_store(data)
-    set_indicator(True)
-    log('saved zoom 1.00 for %s (%s)' % (label, key))
-    notify('Remembering full size for %s' % label)
+    set_indicator(zoom)
+    log('saved zoom %.2f for %s (%s)' % (zoom, label, key))
+    return label
+
+
+def action_zoomin():
+    set_zoom(1.0)
+    label = remember(1.0)
+    if label:
+        notify('Remembering full size for %s' % label)
+
+
+def action_save():
+    zoom = current_zoom()
+    if zoom is None:
+        log('save: could not read the current zoom', xbmc.LOGWARNING)
+        return
+    label = remember(zoom)
+    if label:
+        notify('Remembering zoom %.2f for %s' % (zoom, label))
+    else:
+        notify("Can't identify this video to remember its zoom")
 
 
 def action_zoomout():
     zoom = fit_zoom(stream_dar(timeout=2.0) or 16.0 / 9.0)
     if zoom is not None:
         set_zoom(zoom)
-    set_indicator(False)
+    set_indicator(None)
     key, label = item_key()
     data = load_store()
     if key and data['items'].pop(key, None):
@@ -231,7 +259,7 @@ def action_clear():
     if xbmcgui.Dialog().yesno('AutoZoom', 'Forget the saved zoom for %d title(s)?' % count):
         data['items'] = {}
         save_store(data)
-        set_indicator(False)
+        set_indicator(None)
         log('cleared %d saved zooms' % count)
 
 
@@ -239,6 +267,7 @@ ACTIONS = {
     'apply': action_apply,
     'zoomin': action_zoomin,
     'zoomout': action_zoomout,
+    'save': action_save,
     'clear': action_clear,
 }
 

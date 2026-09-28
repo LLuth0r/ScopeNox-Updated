@@ -42,6 +42,9 @@ Turn on System -> Appearance -> Skin -> Settings -> Scope -> Show Zoom/Subtitle 
 
 - Zoom out: fits the picture inside the scope frame (0.74 for 16:9 at 2.40, 0.76 at 2.35) and forgets any remembered zoom for the movie
 - Zoom in: back to full size (1.00), remembered for the movie
+- Save zoom: remembers whatever zoom is set right now for the movie. Use it when a movie needs something in between,
+  e.g. a 1.90 IMAX release stored in a 16:9 frame: set about 0.81 with Kodi's own zoom (Video settings -> Zoom amount)
+  to crop the thin bars, then press Save zoom. The button shows a bar while the movie has a remembered zoom.
 - Subtitles up / down: moves subtitles into or out of the scope frame
 
 These used to need the ScopeNox-Tools add-on; they are now built into the skin.
