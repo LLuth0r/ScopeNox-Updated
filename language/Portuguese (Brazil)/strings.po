@@ -657,15 +657,15 @@ msgid "Map & Alerts"
 msgstr "Mapa & Alertas"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Configure o Menun Principal da Aeon Nox"
+msgid "Setup the ScopeNox main menu"
+msgstr "Configure o Menun Principal da ScopeNox"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Personalizar o menu principal com widgets, imagens de fundo e estatísticas. Adicione os seus próprios itens de menu personalizados."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
+msgid "ScopeNox main menu horizontal position"
 msgstr "Posição horizontal do Menu Principal da Aeon-Nox"
 
 msgctxt "#31914"
@@ -677,8 +677,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "Estilo de navegação para listas horizontais"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "Alterre o modo de rolagem das listas horizontais em Aeon Nox. Padrão é rolagem continua.. \"Fixa\" são listas com início e fim."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "Alterre o modo de rolagem das listas horizontais em ScopeNox. Padrão é rolagem continua.. \"Fixa\" são listas com início e fim."
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -725,7 +725,7 @@ msgid "Resets all above values to their defaults."
 msgstr "Redefinir todosa os valores acima para padrões."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
+msgid "ScopeNox main menu layout"
 msgstr "Layout do Menu Principal da Aeon-Nox"
 
 msgctxt "#31929"

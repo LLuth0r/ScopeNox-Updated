@@ -665,16 +665,16 @@ msgid "Map & Alerts"
 msgstr "지도와 경보"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Aeon Nox 메인 메뉴 설정"
+msgid "Setup the ScopeNox main menu"
+msgstr "ScopeNox 메인 메뉴 설정"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "위젯을 포함한 메인 메뉴, 배경화면, 통계표시를 사용자 설정합니다. 사용자 메인 메뉴 항목을 추가합니다."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Aeon Nox 메인 메뉴 위치"
+msgid "ScopeNox main menu horizontal position"
+msgstr "ScopeNox 메인 메뉴 위치"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -685,7 +685,7 @@ msgid "Navigation style for horizontal lists"
 msgstr "수평 리스트 탐색 방식"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
 msgstr "수평 목록의 스크롤 방식을 변경합니다. 기본값은 항목을 반복하여 스크롤입니다. \"고정\"은 첫 항목과 끝 항목이 구분됩니다."
 
 msgctxt "#31917"
@@ -733,8 +733,8 @@ msgid "Resets all above values to their defaults."
 msgstr "위 설정을 모두 초기화 합니다."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Aeon Nox 메인 메뉴 레이아웃"
+msgid "ScopeNox main menu layout"
+msgstr "ScopeNox 메인 메뉴 레이아웃"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

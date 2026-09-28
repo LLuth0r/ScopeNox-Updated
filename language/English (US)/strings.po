@@ -685,16 +685,16 @@ msgid "Map & Alerts"
 msgstr "Map & Alerts"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Setup the Aeon Nox main menu"
+msgid "Setup the ScopeNox main menu"
+msgstr "Setup the ScopeNox main menu"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Aeon Nox main menu horizontal position"
+msgid "ScopeNox main menu horizontal position"
+msgstr "ScopeNox main menu horizontal position"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -705,8 +705,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "Navigation style for horizontal lists"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -753,8 +753,8 @@ msgid "Resets all above values to their defaults."
 msgstr "Resets all above values to their defaults."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Aeon Nox main menu layout"
+msgid "ScopeNox main menu layout"
+msgstr "ScopeNox main menu layout"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

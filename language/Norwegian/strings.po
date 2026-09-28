@@ -685,16 +685,16 @@ msgid "Map & Alerts"
 msgstr "Kart og varsler"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Konfigurer Aeon Nox hovedmeny"
+msgid "Setup the ScopeNox main menu"
+msgstr "Konfigurer ScopeNox hovedmeny"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Tilpass hovedmenyen med programmer, bakgrunner og statistikker. Legg til dine egne elementer på hovedmenyen."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Horisontal posisjon for Aeon Nox hovedmeny"
+msgid "ScopeNox main menu horizontal position"
+msgstr "Horisontal posisjon for ScopeNox hovedmeny"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -705,8 +705,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "Navigasjons utseende for horisontale lister"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "Endre måten horisontale lister ruller i Aeon Nox . Standard vil lister rulles i syklus . \" Fast \" er lister med en begynnelse og slutt."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "Endre måten horisontale lister ruller i ScopeNox . Standard vil lister rulles i syklus . \" Fast \" er lister med en begynnelse og slutt."
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -753,8 +753,8 @@ msgid "Resets all above values to their defaults."
 msgstr "Tilbakestiller alle verdier over tilbake til standard."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Aeon Nox hovedmeny oppsett"
+msgid "ScopeNox main menu layout"
+msgstr "ScopeNox hovedmeny oppsett"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

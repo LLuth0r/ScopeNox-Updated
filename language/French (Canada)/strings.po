@@ -685,16 +685,16 @@ msgid "Map & Alerts"
 msgstr "Carte & alertes"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Configurer le menu principal d'Aeon Nox"
+msgid "Setup the ScopeNox main menu"
+msgstr "Configurer le menu principal d'ScopeNox"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Personnalisez le menu principal avec des widgets, des arrière-plans et des statistiques. Ajoutez vos propres éléments de menu personnalisés."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Position horizontale du menu principal d'Aeon Nox"
+msgid "ScopeNox main menu horizontal position"
+msgstr "Position horizontale du menu principal d'ScopeNox"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -705,8 +705,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "Style de la navigation pour les listes horizontales"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "Changer la façon dont les listes horizontales défilent dans Aeon Nox. Par défaut, elles défileront de façon circulaire. « Fixe » sont des listes ayant un début et une fin."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "Changer la façon dont les listes horizontales défilent dans ScopeNox. Par défaut, elles défileront de façon circulaire. « Fixe » sont des listes ayant un début et une fin."
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -753,8 +753,8 @@ msgid "Resets all above values to their defaults."
 msgstr "Réinitialiser toutes les valeurs ci-dessus à leur valeur par défaut."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Agencement du menu principal d'Aeon Nox"
+msgid "ScopeNox main menu layout"
+msgstr "Agencement du menu principal d'ScopeNox"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

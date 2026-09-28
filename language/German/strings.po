@@ -677,16 +677,16 @@ msgid "Map & Alerts"
 msgstr "Karte & Alarme"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Aeon Nox Hauptmenü konfigurieren"
+msgid "Setup the ScopeNox main menu"
+msgstr "ScopeNox Hauptmenü konfigurieren"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Anpassen des Hauptmenüs mit Widgets, Hintergründen und Statistiken. Füge deine eigenen benutzerdefinierten Hauptmenü Elemente hinzu."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Horizontale Position des Aeon Nox-Hauptmenüs"
+msgid "ScopeNox main menu horizontal position"
+msgstr "Horizontale Position des ScopeNox-Hauptmenüs"
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -697,7 +697,7 @@ msgid "Navigation style for horizontal lists"
 msgstr "Steuerungsstil für horizontale Listen"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
 msgstr "Ändert das Scroll-Verhalten horizontaler Listen. \"Standard\" lässt horizontale Listen bei erreichen des Endes zum Anfang zurückspringen. \"Feststehende\" Liste haben einen festen Anfang und ein festes Ende."
 
 msgctxt "#31917"
@@ -745,8 +745,8 @@ msgid "Resets all above values to their defaults."
 msgstr "Setzt alle obigen Werte auf ihre Standardeinstellungen zurück."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Aeon Nox Hauptmenü Layout"
+msgid "ScopeNox main menu layout"
+msgstr "ScopeNox Hauptmenü Layout"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."

@@ -685,16 +685,16 @@ msgid "Map & Alerts"
 msgstr "Kartta ja Hälytykset"
 
 msgctxt "#31911"
-msgid "Setup the Aeon Nox main menu"
-msgstr "Määrittele Aeon Nox päävalikko"
+msgid "Setup the ScopeNox main menu"
+msgstr "Määrittele ScopeNox päävalikko"
 
 msgctxt "#31912"
 msgid "Customize the main menu with widgets, backgrounds and statistics. Add your own custom main menu items."
 msgstr "Muokkaa päävalikkoa widgeteillä, taustakuvilla ja tilastoilla. Lisää omia päävalikon nimikkeitä."
 
 msgctxt "#31913"
-msgid "Aeon Nox main menu horizontal position"
-msgstr "Aeon Nox päävalikon horisontaalinen sijainti "
+msgid "ScopeNox main menu horizontal position"
+msgstr "ScopeNox päävalikon horisontaalinen sijainti "
 
 msgctxt "#31914"
 msgid "Change the horizontal position of the main menu. Default is centered on screen."
@@ -705,8 +705,8 @@ msgid "Navigation style for horizontal lists"
 msgstr "Navigointitapa horisontallisilla listoilla"
 
 msgctxt "#31916"
-msgid "Change the way horizontal lists scroll in Aeon Nox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
-msgstr "Vaihda tapaa jolla horisontaalisia listoja vieritetään Aeon Nox:ssa. Oletuksena vieritys pyörii ympräri. \"Kiinteä\" tarkoittaa että listalla on alku ja loppu."
+msgid "Change the way horizontal lists scroll in ScopeNox. Default will scroll lists in a cycle. \"Fixed\" are lists with a beginning and end."
+msgstr "Vaihda tapaa jolla horisontaalisia listoja vieritetään ScopeNox:ssa. Oletuksena vieritys pyörii ympräri. \"Kiinteä\" tarkoittaa että listalla on alku ja loppu."
 
 msgctxt "#31917"
 msgid "When enabled text scrolls automatically. When disabled manual scrolling is required. Note that not every textbox has a manual button."
@@ -753,8 +753,8 @@ msgid "Resets all above values to their defaults."
 msgstr "Palauta oletusarvot."
 
 msgctxt "#31928"
-msgid "Aeon Nox main menu layout"
-msgstr "Aeon Nox päävalikon rakenne"
+msgid "ScopeNox main menu layout"
+msgstr "ScopeNox päävalikon rakenne"
 
 msgctxt "#31929"
 msgid "This setting defines how much items will be visible on the main menu. Options are 3 items or 5 items."
