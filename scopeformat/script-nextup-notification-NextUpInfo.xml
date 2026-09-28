@@ -59,8 +59,8 @@
 					<height>100</height>
 					<onleft>3013</onleft>
 					<onright>3013</onright>
-					<texturefocus>osd/buttons/OSDPlayFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPlayNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdplayfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdplaynf.png</texturenofocus>
 				</control>
 				<control type="button" id="3013">
 					<description>Cancel</description>
@@ -70,8 +70,8 @@
 					<height>100</height>
 					<onleft>3012</onleft>
 					<onright>3012</onright>
-					<texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDStopNF.png</texturenofocus>
+					<texturefocus colordiffuse="themecolor">osd/modern/osdstopfo.png</texturefocus>
+					<texturenofocus>osd/modern/osdstopnf.png</texturenofocus>
 				</control>
 			</control>
 		</control>
