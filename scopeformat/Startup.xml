@@ -9,6 +9,8 @@
 	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),2)">SetProperty(Overlay.Path,overlays/showcase/2/,home)</onload>
 	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),3)">SetProperty(Overlay.Path,overlays/showcase/3/,home)</onload>
 	<onload condition="Skin.HasSetting(Disable.Resumable)">SetProperty(Overlay.Resumable,True,home)</onload>
+	<!-- re-create the voice search keymap if it went missing (e.g. settings restored on a new device) -->
+	<onload condition="Skin.HasSetting(VoiceSearchKey)">RunScript(special://skin/scripts/voicesearch.py,keymap_on)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls />
 </window>
