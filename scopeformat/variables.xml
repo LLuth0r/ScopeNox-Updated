@@ -536,6 +536,11 @@
 		<value condition="Skin.HasSetting(rememberScopeMaskSetting)">Yes</value>
 		<value>No</value>
 	</variable>
+	<variable name="InfoWallPosterSizeVar">
+		<value condition="String.IsEqual(Skin.String(InfoWallPosterSize),small)">$LOCALIZE[31978]</value>
+		<value condition="String.IsEqual(Skin.String(InfoWallPosterSize),large)">$LOCALIZE[31980]</value>
+		<value>$LOCALIZE[31979]</value>
+	</variable>
 	<variable name="HorizontalListNavVar">
 		<value condition="Skin.HasSetting(HorizontalListNav)">$LOCALIZE[31005]</value>
 		<value>$LOCALIZE[571]</value>

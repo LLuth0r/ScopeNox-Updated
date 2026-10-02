@@ -1195,3 +1195,19 @@ msgstr ""
 msgctxt "#31546"
 msgid "Known for"
 msgstr ""
+
+msgctxt "#31977"
+msgid "InfoWall poster size"
+msgstr ""
+
+msgctxt "#31978"
+msgid "Small (4 rows)"
+msgstr ""
+
+msgctxt "#31979"
+msgid "Medium (3 rows)"
+msgstr ""
+
+msgctxt "#31980"
+msgid "Large (2 rows)"
+msgstr ""

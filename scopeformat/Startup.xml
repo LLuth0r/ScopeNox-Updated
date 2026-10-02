@@ -9,6 +9,9 @@
 	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),2)">SetProperty(Overlay.Path,overlays/showcase/2/,home)</onload>
 	<onload condition="String.IsEqual(Skin.String(Overlay.Toggle),3)">SetProperty(Overlay.Path,overlays/showcase/3/,home)</onload>
 	<onload condition="Skin.HasSetting(Disable.Resumable)">SetProperty(Overlay.Resumable,True,home)</onload>
+	<!-- the old Large Posters toggle became the InfoWall poster size setting -->
+	<onload condition="Skin.HasSetting(Enable.LargePosters)">Skin.SetString(InfoWallPosterSize,large)</onload>
+	<onload condition="Skin.HasSetting(Enable.LargePosters)">Skin.Reset(Enable.LargePosters)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls />
 </window>

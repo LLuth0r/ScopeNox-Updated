@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Video InfoWall -->
+	<!-- InfoWall poster, sized by Skin.String(InfoWallPosterSize) (Skin Settings > Advanced) -->
+	<include name="InfoWallPoster">
+		<definition>
+			<control type="image">
+				<width>$PARAM[w]</width>
+				<height>$PARAM[h]</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[PosterThumb]</texture>
+				<fadetime>400</fadetime>
+				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+				<bordersize>2</bordersize>
+				<colordiffuse>BAffffff</colordiffuse>
+			</control>
+			<control type="image">
+				<left>$PARAM[overlay_left]</left>
+				<top>0</top>
+				<width>$PARAM[overlay_size]</width>
+				<height>$PARAM[overlay_size]</height>
+				<texture>$VAR[OverlayVar]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordersize>1</bordersize>
+			</control>
+			<control type="group">
+				<left>$PARAM[icon_offset]</left>
+				<top>$PARAM[icon_offset]</top>
+				<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+			</control>
+			<control type="image">
+				<width>$PARAM[w]</width>
+				<height>$PARAM[h]</height>
+				<texture>black.png</texture>
+				<bordersize>2</bordersize>
+				<colordiffuse>44ffffff</colordiffuse>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoWallPosterFocused">
+		<definition>
+			<control type="image">
+				<width>$PARAM[w]</width>
+				<height>$PARAM[h]</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$VAR[PosterThumb]</texture>
+				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+				<bordersize>2</bordersize>
+			</control>
+			<control type="image">
+				<left>$PARAM[overlay_left]</left>
+				<top>0</top>
+				<width>$PARAM[overlay_size]</width>
+				<height>$PARAM[overlay_size]</height>
+				<texture>$VAR[OverlayVar]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordersize>2</bordersize>
+			</control>
+			<control type="group">
+				<left>$PARAM[icon_offset]</left>
+				<top>$PARAM[icon_offset]</top>
+				<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+			</control>
+			<control type="image">
+				<width>$PARAM[w]</width>
+				<height>$PARAM[h]</height>
+				<texture>black.png</texture>
+				<bordersize>2</bordersize>
+				<colordiffuse>44ffffff</colordiffuse>
+				<include>FocusFadeOutAnimation</include>
+			</control>
+			<control type="image">
+				<width>$PARAM[w]</width>
+				<height>$PARAM[h]</height>
+				<texture border="10">thumbs/thumbnail_focused.png</texture>
+				<include>FocusFadeInAnimation</include>
+			</control>
+		</definition>
+	</include>
 	<include name="VideoInfoWall">
 		<control type="group">
 			<visible>Control.IsVisible(51) + !Window.IsActive(addoninformation)</visible>
@@ -40,154 +116,62 @@
 				<viewtype label="InfoWall">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
-				<!-- Standard Posters -->
-        <itemlayout height="234" width="156" condition="!Skin.HasSetting(Enable.LargePosters)">
-					<control type="image">
-						<width>156</width>
-						<height>234</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$VAR[PosterThumb]</texture>
-						<fadetime>400</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>2</bordersize>
-						<colordiffuse>BAffffff</colordiffuse>
-					</control>
-          <!-- Resumable (Star Overlay) Unfocused -->
-					<control type="image">
-						<left>100</left>
-						<top>0</top>
-						<width>62</width>
-						<height>62</height>
-						<texture>$VAR[OverlayVar]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<bordersize>1</bordersize>
-					</control>
-					<control type="group">
-						<left>15</left>
-						<top>15</top>
-						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
-					</control>
-					<control type="image">
-						<width>156</width>
-						<height>234</height>
-						<texture>black.png</texture>
-						<bordersize>2</bordersize>
-						<colordiffuse>44ffffff</colordiffuse>
-					</control>
+				<!-- Small posters: 4 rows, 10 columns (122 wide so an 11th column doesn't run under the info panel) (Skin.String(InfoWallPosterSize)) -->
+				<itemlayout height="175" width="122" condition="String.IsEqual(Skin.String(InfoWallPosterSize),small)">
+					<include content="InfoWallPoster">
+						<param name="w" value="122" />
+						<param name="h" value="175" />
+						<param name="overlay_left" value="79" />
+						<param name="overlay_size" value="47" />
+						<param name="icon_offset" value="11" />
+					</include>
 				</itemlayout>
-        <!-- Large Posters -->
-        <itemlayout height="351" width="234" condition="Skin.HasSetting(Enable.LargePosters)">
-					<control type="image">
-						<width>234</width>
-						<height>351</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$VAR[PosterThumb]</texture>
-						<fadetime>400</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>2</bordersize>
-						<colordiffuse>BAffffff</colordiffuse>
-					</control>
-          <!-- Resumable (Star Overlay) Unfocused -->
-					<control type="image">
-						<left>150</left>
-						<top>0</top>
-						<width>93</width>
-						<height>93</height>
-						<texture>$VAR[OverlayVar]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<bordersize>1</bordersize>
-					</control>
-					<control type="group">
-						<left>30</left>
-						<top>30</top>
-						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
-					</control>
-					<control type="image">
-						<width>234</width>
-						<height>351</height>
-						<texture>black.png</texture>
-						<bordersize>2</bordersize>
-						<colordiffuse>44ffffff</colordiffuse>
-					</control>
-				</itemlayout>
-				<focusedlayout height="234" width="156" condition="!Skin.HasSetting(Enable.LargePosters)">
-					<control type="image">
-						<width>156</width>
-						<height>234</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$VAR[PosterThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>2</bordersize>
-					</control>
-          <!-- Resumable (Star Overlay) Focused -->
-					<control type="image">
-						<left>100</left>
-						<top>0</top>
-						<width>62</width>
-						<height>62</height>
-						<texture>$VAR[OverlayVar]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<bordersize>2</bordersize>
-					</control>
-					<control type="group">
-						<left>15</left>
-						<top>15</top>
-						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
-					</control>
-					<control type="image">
-						<width>156</width>
-						<height>234</height>
-						<texture>black.png</texture>
-						<bordersize>2</bordersize>
-						<colordiffuse>44ffffff</colordiffuse>
-						<include>FocusFadeOutAnimation</include>
-					</control>
-					<control type="image">
-						<width>156</width>
-						<height>234</height>
-						<texture border="10">thumbs/thumbnail_focused.png</texture>
-						<include>FocusFadeInAnimation</include>
-					</control>
+				<focusedlayout height="175" width="122" condition="String.IsEqual(Skin.String(InfoWallPosterSize),small)">
+					<include content="InfoWallPosterFocused">
+						<param name="w" value="122" />
+						<param name="h" value="175" />
+						<param name="overlay_left" value="79" />
+						<param name="overlay_size" value="47" />
+						<param name="icon_offset" value="11" />
+					</include>
 				</focusedlayout>
-        <!-- Large Posters -->
-				<focusedlayout height="351" width="234" condition="Skin.HasSetting(Enable.LargePosters)">
-					<control type="image">
-						<width>234</width>
-						<height>351</height>
-						<aspectratio>scale</aspectratio>
-						<texture background="true">$VAR[PosterThumb]</texture>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
-						<bordersize>2</bordersize>
-					</control>
-          <!-- Resumable (Star Overlay) Focused -->
-					<control type="image">
-						<left>150</left>
-						<top>0</top>
-						<width>93</width>
-						<height>93</height>
-						<texture>$VAR[OverlayVar]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<bordersize>2</bordersize>
-					</control>
-					<control type="group">
-						<left>30</left>
-						<top>30</top>
-						<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
-					</control>
-					<control type="image">
-						<width>234</width>
-						<height>351</height>
-						<texture>black.png</texture>
-						<bordersize>2</bordersize>
-						<colordiffuse>44ffffff</colordiffuse>
-						<include>FocusFadeOutAnimation</include>
-					</control>
-					<control type="image">
-						<width>234</width>
-						<height>351</height>
-						<texture border="10">thumbs/thumbnail_focused.png</texture>
-						<include>FocusFadeInAnimation</include>
-					</control>
+				<!-- Medium posters: 3 rows, default (Skin.String(InfoWallPosterSize) empty) -->
+				<itemlayout height="234" width="156" condition="!String.IsEqual(Skin.String(InfoWallPosterSize),small) + !String.IsEqual(Skin.String(InfoWallPosterSize),large)">
+					<include content="InfoWallPoster">
+						<param name="w" value="156" />
+						<param name="h" value="234" />
+						<param name="overlay_left" value="100" />
+						<param name="overlay_size" value="62" />
+						<param name="icon_offset" value="15" />
+					</include>
+				</itemlayout>
+				<focusedlayout height="234" width="156" condition="!String.IsEqual(Skin.String(InfoWallPosterSize),small) + !String.IsEqual(Skin.String(InfoWallPosterSize),large)">
+					<include content="InfoWallPosterFocused">
+						<param name="w" value="156" />
+						<param name="h" value="234" />
+						<param name="overlay_left" value="100" />
+						<param name="overlay_size" value="62" />
+						<param name="icon_offset" value="15" />
+					</include>
+				</focusedlayout>
+				<!-- Large posters: 2 rows (Skin.String(InfoWallPosterSize)) -->
+				<itemlayout height="351" width="234" condition="String.IsEqual(Skin.String(InfoWallPosterSize),large)">
+					<include content="InfoWallPoster">
+						<param name="w" value="234" />
+						<param name="h" value="351" />
+						<param name="overlay_left" value="150" />
+						<param name="overlay_size" value="93" />
+						<param name="icon_offset" value="30" />
+					</include>
+				</itemlayout>
+				<focusedlayout height="351" width="234" condition="String.IsEqual(Skin.String(InfoWallPosterSize),large)">
+					<include content="InfoWallPosterFocused">
+						<param name="w" value="234" />
+						<param name="h" value="351" />
+						<param name="overlay_left" value="150" />
+						<param name="overlay_size" value="93" />
+						<param name="icon_offset" value="30" />
+					</include>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
