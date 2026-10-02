@@ -104,10 +104,10 @@
 		<value condition="Window.IsActive(games)">SetProperty(Nox.Temp,Games.Fallback,home)</value>
 	</variable>
   <!-- Watched status ribbon: empty ring = unwatched, half ring = in progress, check = watched (art: tools/genoverlays.ps1) -->
-	<!-- Overlay.Toggle: empty = unwatched only, 1 = both, 2 = watched only, 3 = neither -->
+	<!-- Overlay.Toggle: empty (default) or 1 = both, 2 = watched only, 3 = neither, 4 = unwatched only -->
 	<expression name="OverlayShowResumable">!Skin.HasSetting(Disable.Resumable)</expression>
-	<expression name="OverlayShowWatched">[String.IsEqual(Skin.String(Overlay.Toggle),1) | String.IsEqual(Skin.String(Overlay.Toggle),2)]</expression>
-	<expression name="OverlayShowUnwatched">[String.IsEmpty(Skin.String(Overlay.Toggle)) | String.IsEqual(Skin.String(Overlay.Toggle),1)]</expression>
+	<expression name="OverlayShowWatched">[!String.IsEqual(Skin.String(Overlay.Toggle),3) + !String.IsEqual(Skin.String(Overlay.Toggle),4)]</expression>
+	<expression name="OverlayShowUnwatched">[!String.IsEqual(Skin.String(Overlay.Toggle),2) + !String.IsEqual(Skin.String(Overlay.Toggle),3)]</expression>
 	<variable name="OverlayVar">
 		<value condition="$EXP[OverlayShowResumable] + [ListItem.IsResumable | [Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
 		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
