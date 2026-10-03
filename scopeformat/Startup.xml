@@ -4,6 +4,9 @@
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="!System.HasAddon(script.tv.show.next.aired)">Skin.SetBool(Disable.NextAired)</onload>
 	<onload condition="System.HasAddon(script.toolbox)">RunScript(script.toolbox,daemon=True,radius=5)</onload>
+	<!-- the old Large Posters toggle became the InfoWall poster size setting -->
+	<onload condition="Skin.HasSetting(Enable.LargePosters)">Skin.SetString(InfoWallPosterSize,large)</onload>
+	<onload condition="Skin.HasSetting(Enable.LargePosters)">Skin.Reset(Enable.LargePosters)</onload>
 	<!-- re-create the voice search keymap if it went missing (e.g. settings restored on a new device) -->
 	<onload condition="Skin.HasSetting(VoiceSearchKey)">RunScript(special://skin/scripts/voicesearch.py,keymap_on)</onload>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
