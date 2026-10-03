@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- "Dock" home menu style (Skin Settings > Home window > Home menu style): a glass pill at the bottom of
+<!-- "Dock" home menu style (Skin Settings > Home window > Home menu style): a square-cornered glass bar on the bottom edge of
      the frame with an icon and a label per home item. Textures: tools/gendock.ps1 -> media/dock/.
      Skin.String(HomeMenuStyle): empty = classic bar, dock = dark glass, docklight = light glass. -->
 <includes>
@@ -19,6 +19,10 @@
 	<variable name="DockLabelColorVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">CC1c1c1e</value>
 		<value>D9ffffff</value>
+	</variable>
+	<variable name="DockFocusedIconColorVar">
+		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">FF1c1c1e</value>
+		<value>themecolor</value>
 	</variable>
 	<variable name="DockFocusedLabelColorVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">FF1c1c1e</value>
@@ -44,12 +48,12 @@
 	<include name="HomeDock">
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="slide" start="0,160" end="0,0" time="360" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="slide" start="0,100" end="0,0" time="320" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="260" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0,0" end="0,160" time="240" tween="cubic" easing="in" />
-				<effect type="fade" start="100" end="0" time="240" />
+				<effect type="slide" start="0,0" end="0,100" time="220" tween="cubic" easing="in" />
+				<effect type="fade" start="100" end="0" time="220" />
 			</animation>
 			<!-- clock, top right of the frame -->
 			<control type="label">
@@ -63,173 +67,186 @@
 				<shadowcolor>shadow</shadowcolor>
 				<label>$INFO[System.Time]</label>
 			</control>
-			<!-- the glass pill, sized for the number of items (9-slice, round ends) -->
-			<control type="image">
-				<left>843</left>
-				<top>770</top>
-				<width>234</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
-			</control>
-			<control type="image">
-				<left>768</left>
-				<top>770</top>
-				<width>384</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,2)</visible>
-			</control>
-			<control type="image">
-				<left>693</left>
-				<top>770</top>
-				<width>534</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,3)</visible>
-			</control>
-			<control type="image">
-				<left>618</left>
-				<top>770</top>
-				<width>684</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,4)</visible>
-			</control>
-			<control type="image">
-				<left>543</left>
-				<top>770</top>
-				<width>834</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,5)</visible>
-			</control>
-			<control type="image">
-				<left>468</left>
-				<top>770</top>
-				<width>984</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,6)</visible>
-			</control>
-			<control type="image">
-				<left>393</left>
-				<top>770</top>
-				<width>1134</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,7)</visible>
-			</control>
-			<control type="image">
-				<left>318</left>
-				<top>770</top>
-				<width>1284</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,8)</visible>
-			</control>
-			<control type="image">
-				<left>243</left>
-				<top>770</top>
-				<width>1434</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,9)</visible>
-			</control>
-			<control type="image">
-				<left>168</left>
-				<top>770</top>
-				<width>1584</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,10)</visible>
-			</control>
-			<control type="image">
-				<left>93</left>
-				<top>770</top>
-				<width>1734</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,11)</visible>
-			</control>
-			<control type="image">
-				<left>18</left>
-				<top>770</top>
-				<width>1884</width>
-				<height>166</height>
-				<texture border="83">$VAR[DockTextureVar]bar.png</texture>
-				<visible>Integer.IsEqual(Container(9000).NumItems,12)</visible>
-			</control>
-			<control type="list" id="9000">
-				<left>60</left>
-				<top>794</top>
-				<width>1800</width>
-				<height>118</height>
-				<orientation>horizontal</orientation>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
-				<!-- centre the items: the list is 12 items wide -->
-				<animation effect="slide" end="825,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
-				<animation effect="slide" end="750,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
-				<animation effect="slide" end="675,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
-				<animation effect="slide" end="600,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
-				<animation effect="slide" end="525,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
-				<animation effect="slide" end="450,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
-				<animation effect="slide" end="375,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
-				<animation effect="slide" end="300,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
-				<animation effect="slide" end="225,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
-				<animation effect="slide" end="150,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
-				<animation effect="slide" end="75,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
-				<itemlayout width="150" height="118">
-					<control type="image">
-						<left>49</left>
-						<top>16</top>
-						<width>52</width>
-						<height>52</height>
-						<texture>$VAR[DockIconVar]</texture>
-						<colordiffuse>$VAR[DockIconColorVar]</colordiffuse>
-					</control>
-					<control type="label">
-						<top>72</top>
-						<width>150</width>
-						<height>32</height>
-						<font>font14</font>
-						<align>center</align>
-						<textcolor>$VAR[DockLabelColorVar]</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout width="150" height="118">
-					<control type="image">
-						<left>-2</left>
-						<top>0</top>
-						<width>154</width>
-						<height>118</height>
-						<texture border="59">$VAR[DockTextureVar]lens.png</texture>
-						<visible>Control.HasFocus(9000)</visible>
-						<animation type="Focus">
-							<effect type="zoom" start="85" end="100" center="auto" time="220" tween="back" easing="out" />
-							<effect type="fade" start="0" end="100" time="160" />
-						</animation>
-					</control>
-					<control type="image">
-						<left>49</left>
-						<top>16</top>
-						<width>52</width>
-						<height>52</height>
-						<texture>$VAR[DockIconVar]</texture>
-						<colordiffuse>themecolor</colordiffuse>
-					</control>
-					<control type="label">
-						<top>72</top>
-						<width>150</width>
-						<height>32</height>
-						<font>font14</font>
-						<align>center</align>
-						<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
-				<include>FallbackMenu</include>
+			<!-- the dock sits flush on the bottom edge of the frame: y 940 for 2.40, 950 for 2.35 -->
+			<control type="group">
+				<animation effect="slide" end="0,10" time="0" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<!-- glass bar sized for the number of items (9-slice; shadow left/top/right only) -->
+				<control type="image">
+					<left>868</left>
+					<top>840</top>
+					<width>184</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
+				</control>
+				<control type="image">
+					<left>808</left>
+					<top>840</top>
+					<width>304</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,2)</visible>
+				</control>
+				<control type="image">
+					<left>748</left>
+					<top>840</top>
+					<width>424</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,3)</visible>
+				</control>
+				<control type="image">
+					<left>688</left>
+					<top>840</top>
+					<width>544</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,4)</visible>
+				</control>
+				<control type="image">
+					<left>628</left>
+					<top>840</top>
+					<width>664</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,5)</visible>
+				</control>
+				<control type="image">
+					<left>568</left>
+					<top>840</top>
+					<width>784</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,6)</visible>
+				</control>
+				<control type="image">
+					<left>508</left>
+					<top>840</top>
+					<width>904</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,7)</visible>
+				</control>
+				<control type="image">
+					<left>448</left>
+					<top>840</top>
+					<width>1024</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,8)</visible>
+				</control>
+				<control type="image">
+					<left>388</left>
+					<top>840</top>
+					<width>1144</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,9)</visible>
+				</control>
+				<control type="image">
+					<left>328</left>
+					<top>840</top>
+					<width>1264</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,10)</visible>
+				</control>
+				<control type="image">
+					<left>268</left>
+					<top>840</top>
+					<width>1384</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,11)</visible>
+				</control>
+				<control type="image">
+					<left>208</left>
+					<top>840</top>
+					<width>1504</width>
+					<height>100</height>
+					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
+					<visible>Integer.IsEqual(Container(9000).NumItems,12)</visible>
+				</control>
+				<control type="list" id="9000">
+					<left>240</left>
+					<top>860</top>
+					<width>1440</width>
+					<height>80</height>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<!-- centre the items: the list is 12 items wide -->
+					<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+					<animation effect="slide" end="600,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+					<animation effect="slide" end="540,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+					<animation effect="slide" end="480,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
+					<animation effect="slide" end="420,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
+					<animation effect="slide" end="360,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
+					<animation effect="slide" end="300,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
+					<animation effect="slide" end="240,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
+					<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
+					<animation effect="slide" end="120,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
+					<animation effect="slide" end="60,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
+					<itemlayout width="120" height="80">
+						<control type="image">
+							<left>43</left>
+							<top>10</top>
+							<width>34</width>
+							<height>34</height>
+							<texture>$VAR[DockIconVar]</texture>
+							<colordiffuse>$VAR[DockIconColorVar]</colordiffuse>
+						</control>
+						<control type="label">
+							<top>45</top>
+							<width>120</width>
+							<height>26</height>
+							<font>font14</font>
+							<align>center</align>
+							<textcolor>$VAR[DockLabelColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="120" height="80">
+						<control type="group">
+							<visible>Control.HasFocus(9000)</visible>
+							<animation type="Focus">
+								<effect type="fade" start="0" end="100" time="160" />
+							</animation>
+							<control type="image">
+								<left>2</left>
+								<top>4</top>
+								<width>116</width>
+								<height>74</height>
+								<texture border="4">$VAR[DockTextureVar]lens.png</texture>
+							</control>
+							<control type="image">
+								<left>36</left>
+								<top>4</top>
+								<width>48</width>
+								<height>3</height>
+								<texture>dock/accent.png</texture>
+								<colordiffuse>themecolor</colordiffuse>
+							</control>
+						</control>
+						<control type="image">
+							<left>43</left>
+							<top>10</top>
+							<width>34</width>
+							<height>34</height>
+							<texture>$VAR[DockIconVar]</texture>
+							<colordiffuse>$VAR[DockFocusedIconColorVar]</colordiffuse>
+						</control>
+						<control type="label">
+							<top>45</top>
+							<width>120</width>
+							<height>26</height>
+							<font>font14</font>
+							<align>center</align>
+							<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<include>FallbackMenu</include>
+				</control>
 			</control>
 		</control>
 	</include>
