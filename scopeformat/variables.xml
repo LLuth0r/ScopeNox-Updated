@@ -103,13 +103,15 @@
 		<value condition="Window.IsActive(pictures)">SetProperty(Nox.Temp,Pictures.Fallback,home)</value>
 		<value condition="Window.IsActive(games)">SetProperty(Nox.Temp,Games.Fallback,home)</value>
 	</variable>
-  <!-- Watched/Unwatched/Resumable (Star Overlay) -->
+  <!-- Watched status ribbon: empty ring = unwatched, half ring = in progress, check = watched (art: tools/genoverlays.ps1) -->
+	<!-- Overlay.Toggle: empty (default) or 1 = both, 2 = watched only, 3 = neither, 4 = unwatched only -->
+	<expression name="OverlayShowResumable">!Skin.HasSetting(Disable.Resumable)</expression>
+	<expression name="OverlayShowWatched">[!String.IsEqual(Skin.String(Overlay.Toggle),3) + !String.IsEqual(Skin.String(Overlay.Toggle),4)]</expression>
+	<expression name="OverlayShowUnwatched">[!String.IsEqual(Skin.String(Overlay.Toggle),2) + !String.IsEqual(Skin.String(Overlay.Toggle),3)]</expression>
 	<variable name="OverlayVar">
-		<value condition="Container.ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/3/)">$INFO[ListItem.Overlay,overlays/showcase/3/]</value>
-		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/2/)">$INFO[ListItem.Overlay,overlays/showcase/2/]</value>
-		<value condition="String.IsEqual(Window(Home).Property(Overlay.Path),overlays/showcase/1/)">$INFO[ListItem.Overlay,overlays/showcase/1/]</value>
-		<value>$INFO[ListItem.Overlay,overlays/showcase/]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem.IsResumable | [Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="ListItem.Overlay">
 		<value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
