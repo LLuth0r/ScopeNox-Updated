@@ -76,22 +76,29 @@
 			<!-- the dock sits flush on the bottom edge of the frame: y 940 for 2.40, 950 for 2.35 -->
 			<control type="group">
 				<animation effect="slide" end="0,10" time="0" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
-				<!-- submenu of the focused dock item, starting at the dock's left edge: always shown with Skin Settings >
-				     Home window > Submenu always visible, otherwise only while it has focus (Up from the dock, Down back).
-				     Each entry draws its own piece of glass (tile.png), so the bar is exactly as long as the submenu and an
-				     item without a submenu shows nothing (Container(9010).NumItems doesn't follow the entries' visibility). -->
+				<!-- submenu of the focused dock item: a full-width glass footer on the bottom edge of the frame, entries
+				     starting under the dock's left edge. Always shown with Skin Settings > Home window > Submenu always
+				     visible (the dock then sits above it); otherwise Down from the dock slides the dock up and shows it, Up
+				     goes back. Entries are filtered on the focused dock item, so Container(9010).NumItems is useless here. -->
 				<control type="group">
 					<!-- hidden with an animation, not <visible>: Kodi doesn't process hidden lists, so the entries
 					     (filtered on the focused dock item) would never update -->
 					<animation effect="fade" start="100" end="0" time="160" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,24" time="200" tween="cubic" easing="inout" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
+					<control type="image">
+						<left>0</left>
+						<top>872</top>
+						<width>1920</width>
+						<height>68</height>
+						<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
+					</control>
 					<control type="list" id="9010">
 						<left>240</left>
-						<top>806</top>
+						<top>892</top>
 						<width>1600</width>
 						<height>48</height>
 						<orientation>horizontal</orientation>
-						<ondown>9000</ondown>
+						<onup>9000</onup>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
 						<!-- line up with the dock, which is centred for its number of items -->
 						<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
@@ -106,13 +113,6 @@
 						<animation effect="slide" end="120,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
 						<animation effect="slide" end="60,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
 						<itemlayout width="180" height="48">
-							<control type="image">
-								<left>-12</left>
-								<top>-20</top>
-								<width>204</width>
-								<height>68</height>
-								<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
-							</control>
 							<control type="label">
 								<width>180</width>
 								<height>48</height>
@@ -124,13 +124,6 @@
 							</control>
 						</itemlayout>
 						<focusedlayout width="180" height="48">
-							<control type="image">
-								<left>-12</left>
-								<top>-20</top>
-								<width>204</width>
-								<height>68</height>
-								<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
-							</control>
 							<control type="group">
 								<visible>Control.HasFocus(9010)</visible>
 								<animation type="Focus">
@@ -178,6 +171,9 @@
 						<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
 					</control>
 				</control>
+				<!-- the dock: above the submenu footer while it shows -->
+				<control type="group">
+					<animation effect="slide" start="0,0" end="0,-48" time="220" tween="cubic" easing="inout" condition="[Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
 				<!-- glass bar sized for the number of items (9-slice; shadow left/top/right only) -->
 				<control type="image">
 					<left>868</left>
@@ -281,7 +277,7 @@
 					<width>1440</width>
 					<height>80</height>
 					<orientation>horizontal</orientation>
-					<onup>9010</onup>
+					<ondown>9010</ondown>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<!-- centre the items: the list is 12 items wide -->
 					<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
@@ -356,6 +352,7 @@
 						</control>
 					</focusedlayout>
 					<include>FallbackMenu</include>
+				</control>
 				</control>
 			</control>
 		</control>
