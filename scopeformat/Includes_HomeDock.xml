@@ -76,6 +76,108 @@
 			<!-- the dock sits flush on the bottom edge of the frame: y 940 for 2.40, 950 for 2.35 -->
 			<control type="group">
 				<animation effect="slide" end="0,10" time="0" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
+				<!-- submenu of the focused dock item, starting at the dock's left edge: always shown with Skin Settings >
+				     Home window > Submenu always visible, otherwise only while it has focus (Up from the dock, Down back).
+				     Each entry draws its own piece of glass (tile.png), so the bar is exactly as long as the submenu and an
+				     item without a submenu shows nothing (Container(9010).NumItems doesn't follow the entries' visibility). -->
+				<control type="group">
+					<!-- hidden with an animation, not <visible>: Kodi doesn't process hidden lists, so the entries
+					     (filtered on the focused dock item) would never update -->
+					<animation effect="fade" start="100" end="0" time="160" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,24" time="200" tween="cubic" easing="inout" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
+					<control type="list" id="9010">
+						<left>240</left>
+						<top>806</top>
+						<width>1600</width>
+						<height>48</height>
+						<orientation>horizontal</orientation>
+						<ondown>9000</ondown>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<!-- line up with the dock, which is centred for its number of items -->
+						<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+						<animation effect="slide" end="600,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+						<animation effect="slide" end="540,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+						<animation effect="slide" end="480,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
+						<animation effect="slide" end="420,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
+						<animation effect="slide" end="360,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
+						<animation effect="slide" end="300,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
+						<animation effect="slide" end="240,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
+						<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
+						<animation effect="slide" end="120,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
+						<animation effect="slide" end="60,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
+						<itemlayout width="180" height="48">
+							<control type="image">
+								<left>-12</left>
+								<top>-20</top>
+								<width>204</width>
+								<height>68</height>
+								<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
+							</control>
+							<control type="label">
+								<width>180</width>
+								<height>48</height>
+								<font>font14</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[DockLabelColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout width="180" height="48">
+							<control type="image">
+								<left>-12</left>
+								<top>-20</top>
+								<width>204</width>
+								<height>68</height>
+								<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
+							</control>
+							<control type="group">
+								<visible>Control.HasFocus(9010)</visible>
+								<animation type="Focus">
+									<effect type="fade" start="0" end="100" time="160" />
+								</animation>
+								<control type="image">
+									<left>2</left>
+									<top>4</top>
+									<width>176</width>
+									<height>42</height>
+									<texture border="4">$VAR[DockTextureVar]lens.png</texture>
+								</control>
+								<control type="image">
+									<left>66</left>
+									<top>4</top>
+									<width>48</width>
+									<height>3</height>
+									<texture>dock/accent.png</texture>
+									<colordiffuse>themecolor</colordiffuse>
+								</control>
+							</control>
+							<control type="label">
+								<width>180</width>
+								<height>48</height>
+								<font>font14</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[DockLabelColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Control.HasFocus(9010)</visible>
+							</control>
+							<control type="label">
+								<width>180</width>
+								<height>48</height>
+								<font>font14</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<scroll>true</scroll>
+								<visible>Control.HasFocus(9010)</visible>
+							</control>
+						</focusedlayout>
+						<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
+						<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
+					</control>
+				</control>
 				<!-- glass bar sized for the number of items (9-slice; shadow left/top/right only) -->
 				<control type="image">
 					<left>868</left>
@@ -179,6 +281,7 @@
 					<width>1440</width>
 					<height>80</height>
 					<orientation>horizontal</orientation>
+					<onup>9010</onup>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<!-- centre the items: the list is 12 items wide -->
 					<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>

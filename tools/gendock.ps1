@@ -9,6 +9,8 @@
   dark/bar.png       the dock: smoked glass rectangle with square corners, a bright top rim and a
                      shadow cast upwards (it sits flush on the bottom edge of the frame).
   light/bar.png      the same in frosted white glass.
+  dark/tile.png      one submenu entry's piece of the submenu bar: like bar.png without the sides, so the
+                     entries join into a bar exactly as long as the submenu.
   dark/lens.png      the glass tile behind the focused item.
   light/lens.png
   accent.png         small white square, tinted themecolor in the skin for the focus line.
@@ -130,6 +132,13 @@ function New-Glass($rel, $w, $h, $pad, $shadowAlpha, $body, $sheen, $topRim, $si
 New-Glass 'dark\bar.png' 120 80 $Shadow 110 `
   @((C 150 28 30 38), (C 175 10 11 15)) @((C 34 255 255 255), (C 0 255 255 255)) `
   (C 120 255 255 255) @((C 60 255 255 255), (C 8 255 255 255))
+# submenu entries: a strip of the bar without side rims or side shadow (only the top shadow)
+function New-Tile($rel, $bar) {
+  $src = [System.Drawing.Bitmap]::FromFile((Join-Path $OutDir $bar)); $t = New-Bitmap 40 $src.Height
+  $t[1].DrawImage($src, (New-Object System.Drawing.Rectangle 0, 0, 40, $src.Height), ($Shadow + 40), 0, 40, $src.Height, 'Pixel')
+  $t[1].Dispose(); $src.Dispose(); Save $t[0] $rel
+}
+New-Tile 'dark\tile.png' 'dark\bar.png'
 New-Glass 'dark\lens.png' 40 40 0 0 `
   @((C 46 255 255 255), (C 20 255 255 255)) @((C 40 255 255 255), (C 0 255 255 255)) `
   (C 110 255 255 255) @((C 50 255 255 255), (C 10 255 255 255))
@@ -137,6 +146,7 @@ New-Glass 'dark\lens.png' 40 40 0 0 `
 New-Glass 'light\bar.png' 120 80 $Shadow 80 `
   @((C 225 248 248 250), (C 212 236 237 242)) @((C 110 255 255 255), (C 0 255 255 255)) `
   (C 255 255 255 255) @((C 140 255 255 255), (C 60 255 255 255))
+New-Tile 'light\tile.png' 'light\bar.png'
 New-Glass 'light\lens.png' 40 40 0 0 `
   @((C 235 255 255 255), (C 220 250 250 252)) @((C 120 255 255 255), (C 0 255 255 255)) `
   (C 255 255 255 255) @((C 30 0 0 0), (C 30 0 0 0))
