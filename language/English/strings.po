@@ -1227,3 +1227,7 @@ msgstr ""
 msgctxt "#31986"
 msgid "Dock (light glass)"
 msgstr ""
+
+msgctxt "#31987"
+msgid "Dock icon"
+msgstr ""

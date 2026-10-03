@@ -128,6 +128,8 @@
 			<property name="InfoLine">$INFO[Skin.String(PicturesHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x4">$INFO[Skin.String(PicturesHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(PicturesHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(PicturesHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(PicturesHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="MusicMainMenu">
@@ -145,6 +147,8 @@
 			<property name="InfoLine">$INFO[Skin.String(MusicHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x3">$INFO[Skin.String(MusicHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(MusicHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(MusicHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(MusicHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="MoviesMainMenu">
@@ -162,6 +166,8 @@
 			<property name="InfoLine">$INFO[Skin.String(MovieHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x10">$INFO[Skin.String(MovieHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(MovieHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(MovieHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(MovieHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="TVShowsMainMenu">
@@ -179,6 +185,8 @@
 			<property name="InfoLine">$INFO[Skin.String(TVShowHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x11">$INFO[Skin.String(TVShowHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(TVShowHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(TVShowHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(TVShowHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="TVMainMenu">
@@ -196,6 +204,8 @@
 			<property name="InfoLine">$INFO[Skin.String(LiveTVHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x12">$INFO[Skin.String(LiveTVHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(LiveTVHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(LiveTVHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(LiveTVHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="VideosMainMenu">
@@ -213,6 +223,8 @@
 			<property name="InfoLine">$INFO[Skin.String(VideosHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x2">$INFO[Skin.String(VideosHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(VideosHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(VideosHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(VideosHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="ProgramsMainMenu">
@@ -230,6 +242,8 @@
 			<property name="InfoLine">$INFO[Skin.String(ProgramsHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x1">$INFO[Skin.String(ProgramsHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(ProgramsHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(ProgramsHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(ProgramsHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="GamesMainMenu">
@@ -247,6 +261,8 @@
 			<property name="InfoLine">$INFO[Skin.String(GamesHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x14">$INFO[Skin.String(GamesHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(GamesHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(GamesHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(GamesHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="SettingsMainMenu">
@@ -264,6 +280,8 @@
 			<property name="InfoLine">$INFO[Skin.String(SettingsHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x5">$INFO[Skin.String(SettingsHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(SettingsHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(SettingsHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(SettingsHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="ShutdownMainMenu">
@@ -281,6 +299,8 @@
 			<property name="InfoLine">$INFO[Skin.String(ShutdownHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x6">$INFO[Skin.String(ShutdownHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(ShutdownHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(ShutdownHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(ShutdownHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="FavoritesMainMenu">
@@ -298,6 +318,8 @@
 			<property name="InfoLine">$INFO[Skin.String(FavoritesHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x8">$INFO[Skin.String(FavoritesHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(FavoritesHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(FavoritesHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(FavoritesHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="WeatherMainMenu">
@@ -315,6 +337,8 @@
 			<property name="InfoLine">$INFO[Skin.String(WeatherHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x7">$INFO[Skin.String(WeatherHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(WeatherHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(WeatherHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(WeatherHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="MusicVideosMainMenu">
@@ -332,6 +356,8 @@
 			<property name="InfoLine">$INFO[Skin.String(MusicVideoHomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x13">$INFO[Skin.String(MusicVideoHomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(MusicVideoHomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(MusicVideoHomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(MusicVideoHomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem1">
@@ -349,6 +375,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom1HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x101">$INFO[Skin.String(Custom1HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom1HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom1HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom1HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem2">
@@ -366,6 +394,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom2HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x202">$INFO[Skin.String(Custom2HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom2HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom2HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom2HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem3">
@@ -383,6 +413,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom3HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x303">$INFO[Skin.String(Custom3HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom3HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom3HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom3HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem4">
@@ -400,6 +432,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom4HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x404">$INFO[Skin.String(Custom4HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom4HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom4HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom4HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem5">
@@ -417,6 +451,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom5HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x505">$INFO[Skin.String(Custom5HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom5HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom5HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom5HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="CustomMainMenuItem6">
@@ -434,6 +470,8 @@
 			<property name="InfoLine">$INFO[Skin.String(Custom6HomeItem.InfoLine)]</property>
 			<property name="submenuVisibility" fallback="x606">$INFO[Skin.String(Custom6HomeItem.SubMenu)]</property>
 			<property name="Disable">$INFO[Skin.String(Custom6HomeItem.Disable)]</property>
+			<property name="DockIcon">$INFO[Skin.String(Custom6HomeItem.DockIcon)]</property>
+			<property name="DockIconLabel">$INFO[Skin.String(Custom6HomeItem.DockIconLabel)]</property>
 		</item>
 	</include>
 	<include name="FallbackMenu">

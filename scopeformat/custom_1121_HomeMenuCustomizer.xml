@@ -223,6 +223,19 @@
 						<onclick>Skin.SetFile($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Icon],.png|.jpg|.bmp,special://skin/extras/icons/)</onclick>
 						<visible>Skin.HasSetting(mainmenuicons)</visible>
 					</control>
+					<!-- icon for the Dock home menu style (scripts/dockicon.py stores <Item>HomeItem.DockIcon) -->
+					<control type="button" id="90019">
+						<description>Dock icon button</description>
+						<width>1316</width>
+						<height>60</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>$LOCALIZE[31987]</label>
+						<label2>[COLOR themecolor]$VAR[DockIconChoiceVar][/COLOR]</label2>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+						<onclick>RunScript(special://skin/scripts/dockicon.py,$INFO[Container(90000).ListItem.Property(Item)])</onclick>
+						<visible>String.StartsWith(Skin.String(HomeMenuStyle),dock)</visible>
+					</control>
 					<control type="button" id="90016">
 						<description>Infoline Button</description>
 						<width>1316</width>

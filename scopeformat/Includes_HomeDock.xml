@@ -8,6 +8,11 @@
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">$LOCALIZE[31986]</value>
 		<value>$LOCALIZE[31984]</value>
 	</variable>
+	<!-- Home Menu Customizer: the dock icon picked for the selected item -->
+	<variable name="DockIconChoiceVar">
+		<value condition="!String.IsEmpty(Container(90000).ListItem.Property(DockIcon))">$INFO[Container(90000).ListItem.Property(DockIconLabel)]</value>
+		<value>$LOCALIZE[571]</value>
+	</variable>
 	<variable name="DockTextureVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">dock/light/</value>
 		<value>dock/dark/</value>
@@ -28,8 +33,9 @@
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">FF1c1c1e</value>
 		<value>FFffffff</value>
 	</variable>
-	<!-- home item type (ListItem.Property(Item)) -> icon -->
+	<!-- icon picked in the Home Menu Customizer (scripts/dockicon.py), else by home item type (ListItem.Property(Item)) -->
 	<variable name="DockIconVar">
+		<value condition="!String.IsEmpty(ListItem.Property(DockIcon))">$INFO[ListItem.Property(DockIcon)]</value>
 		<value condition="String.IsEqual(ListItem.Property(Item),Movie)">dock/icons/movie.png</value>
 		<value condition="String.IsEqual(ListItem.Property(Item),TVShow)">dock/icons/tvshow.png</value>
 		<value condition="String.IsEqual(ListItem.Property(Item),LiveTV)">dock/icons/livetv.png</value>
@@ -242,6 +248,7 @@
 							<font>font14</font>
 							<align>center</align>
 							<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
+							<scroll>true</scroll>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</focusedlayout>
