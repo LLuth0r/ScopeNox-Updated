@@ -1014,48 +1014,59 @@
 		<value>$INFO[ListItem(9).Icon]</value>
 	</variable>
 	<variable name="IconOverlay-1Var">
-		<value condition="ListItem(-1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(-1).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(-1).IsResumable | [Integer.IsGreater(ListItem(-1).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(-1).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(-1).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(-1).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay0Var">
-		<value condition="ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem.Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem.IsResumable | [Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay1Var">
-		<value condition="ListItem(1).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(1).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(1).IsResumable | [Integer.IsGreater(ListItem(1).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(1).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(1).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(1).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay2Var">
-		<value condition="ListItem(2).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(2).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(2).IsResumable | [Integer.IsGreater(ListItem(2).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(2).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(2).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(2).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay3Var">
-		<value condition="ListItem(3).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(3).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(3).IsResumable | [Integer.IsGreater(ListItem(3).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(3).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(3).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(3).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay4Var">
-		<value condition="ListItem(4).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(4).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(4).IsResumable | [Integer.IsGreater(ListItem(4).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(4).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(4).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(4).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay5Var">
-		<value condition="ListItem(5).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(5).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(5).IsResumable | [Integer.IsGreater(ListItem(5).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(5).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(5).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(5).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay6Var">
-		<value condition="ListItem(6).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(6).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(6).IsResumable | [Integer.IsGreater(ListItem(6).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(6).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(6).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(6).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay7Var">
-		<value condition="ListItem(7).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(7).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(7).IsResumable | [Integer.IsGreater(ListItem(7).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(7).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(7).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(7).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay8Var">
-		<value condition="ListItem(8).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(8).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(8).IsResumable | [Integer.IsGreater(ListItem(8).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(8).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(8).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(8).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<variable name="IconOverlay9Var">
-		<value condition="ListItem(9).IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>
-		<value>$INFO[Window(Home).Property(Overlay.Path)]$INFO[ListItem(9).Overlay]</value>
+		<value condition="$EXP[OverlayShowResumable] + [ListItem(9).IsResumable | [Integer.IsGreater(ListItem(9).Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem(9).Property(UnWatchedEpisodes),0)]]">overlays/status/inprogress.png</value>
+		<value condition="$EXP[OverlayShowWatched] + String.IsEqual(ListItem(9).Overlay,OverlayWatched.png)">overlays/status/watched.png</value>
+		<value condition="$EXP[OverlayShowUnwatched] + String.IsEqual(ListItem(9).Overlay,OverlayUnwatched.png)">overlays/status/unwatched.png</value>
 	</variable>
 	<include name="UnwatchedIconCircle">
 		<control type="image">
