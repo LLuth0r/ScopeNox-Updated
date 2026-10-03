@@ -180,6 +180,28 @@
 							<onclick>ReloadSkin()</onclick>
 							<texturenofocus border="1">separator5.png</texturenofocus>
 						</control>
+						<control type="radiobutton" id="120">
+							<width>1316</width>
+							<height>60</height>
+							<textoffsetx>30</textoffsetx>
+							<font>font15</font>
+							<label>31988</label>
+							<onclick>Skin.ToggleSetting(Dock.HideDate)</onclick>
+							<selected>!Skin.HasSetting(Dock.HideDate)</selected>
+							<visible>String.StartsWith(Skin.String(HomeMenuStyle),dock)</visible>
+							<texturenofocus border="1">separator5.png</texturenofocus>
+						</control>
+						<control type="radiobutton" id="121">
+							<width>1316</width>
+							<height>60</height>
+							<textoffsetx>30</textoffsetx>
+							<font>font15</font>
+							<label>31989</label>
+							<onclick>Skin.ToggleSetting(Dock.HideTime)</onclick>
+							<selected>!Skin.HasSetting(Dock.HideTime)</selected>
+							<visible>String.StartsWith(Skin.String(HomeMenuStyle),dock)</visible>
+							<texturenofocus border="1">separator5.png</texturenofocus>
+						</control>
 						<control type="button" id="101">
 							<width>1316</width>
 							<height>60</height>

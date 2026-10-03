@@ -13,6 +13,11 @@
 		<value condition="!String.IsEmpty(Container(90000).ListItem.Property(DockIcon))">$INFO[Container(90000).ListItem.Property(DockIconLabel)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
+	<variable name="DockClockVar">
+		<value condition="!Skin.HasSetting(Dock.HideDate) + !Skin.HasSetting(Dock.HideTime)">$INFO[System.Date,[COLOR CCffffff],[/COLOR][COLOR 99ffffff]  |  [/COLOR]]$INFO[System.Time]</value>
+		<value condition="!Skin.HasSetting(Dock.HideDate)">$INFO[System.Date]</value>
+		<value>$INFO[System.Time]</value>
+	</variable>
 	<variable name="DockTextureVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">dock/light/</value>
 		<value>dock/dark/</value>
@@ -61,17 +66,18 @@
 				<effect type="slide" start="0,0" end="0,100" time="220" tween="cubic" easing="in" />
 				<effect type="fade" start="100" end="0" time="220" />
 			</animation>
-			<!-- clock, top right of the frame -->
+			<!-- date and time, top right of the frame (Skin Settings > Home window > Show date / Show time) -->
 			<control type="label">
 				<right>60</right>
 				<top>160</top>
-				<width>600</width>
+				<width>900</width>
 				<height>40</height>
 				<align>right</align>
 				<font>font12_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>shadow</shadowcolor>
-				<label>$INFO[System.Time]</label>
+				<label>$VAR[DockClockVar]</label>
+				<visible>!Skin.HasSetting(Dock.HideDate) | !Skin.HasSetting(Dock.HideTime)</visible>
 			</control>
 			<!-- the dock sits flush on the bottom edge of the frame: y 940 for 2.40, 950 for 2.35 -->
 			<control type="group">
