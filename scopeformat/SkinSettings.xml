@@ -166,6 +166,20 @@
 							<onclick>ActivateWindow(1121)</onclick>
 							<texturenofocus border="1">separator5.png</texturenofocus>
 						</control>
+						<!-- Classic -> Dock (dark glass) -> Dock (light glass); Home is kept in memory, so reload the skin -->
+						<control type="button" id="119">
+							<width>1316</width>
+							<height>60</height>
+							<textoffsetx>30</textoffsetx>
+							<font>font15</font>
+							<label>31983</label>
+							<label2>[COLOR themecolor]$VAR[HomeMenuStyleVar][/COLOR]</label2>
+							<onclick condition="String.IsEmpty(Skin.String(HomeMenuStyle))">Skin.SetString(HomeMenuStyle,dock)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(HomeMenuStyle),dock)">Skin.SetString(HomeMenuStyle,docklight)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">Skin.Reset(HomeMenuStyle)</onclick>
+							<onclick>ReloadSkin()</onclick>
+							<texturenofocus border="1">separator5.png</texturenofocus>
+						</control>
 						<control type="button" id="101">
 							<width>1316</width>
 							<height>60</height>

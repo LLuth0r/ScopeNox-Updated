@@ -6,6 +6,7 @@
 	<include file="Includes_DialogInfo.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Home.xml" />
+	<include file="Includes_HomeDock.xml" />
 	<include file="Includes_LiveBG.xml" />
 	<include file="Includes_LiveTV.xml" />
 	<include file="Includes_LiveTV_Views.xml" />
