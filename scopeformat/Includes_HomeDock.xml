@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- "Dock" home menu style (Skin Settings > Home window > Home menu style): a square-cornered glass bar on the bottom edge of
-     the frame with an icon and a label per home item. Textures: tools/gendock.ps1 -> media/dock/.
-     Skin.String(HomeMenuStyle): empty = classic bar, dock = dark glass, docklight = light glass. -->
+<!-- "Dock" home menu style (Skin Settings > Home window > Home menu style): no bars or panels; a row of outline
+     icons floats on the artwork at the bottom of the frame (name and accent line under the focused one), the
+     submenu is a line of text under it, and the date and time sit centred at the top with the day name spaced
+     out. Textures: tools/gendock.ps1 -> media/dock/.
+     Skin.String(HomeMenuStyle): empty = classic bar, dock = white text, docklight = dark text (bright artwork). -->
 <includes>
 	<variable name="HomeMenuStyleVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),dock)">$LOCALIZE[31985]</value>
@@ -13,30 +15,33 @@
 		<value condition="!String.IsEmpty(Container(90000).ListItem.Property(DockIcon))">$INFO[Container(90000).ListItem.Property(DockIconLabel)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
-	<variable name="DockClockVar">
-		<value condition="!Skin.HasSetting(Dock.HideDate) + !Skin.HasSetting(Dock.HideTime)">$INFO[System.Date,[COLOR CCffffff],[/COLOR][COLOR 99ffffff]  |  [/COLOR]]$INFO[System.Time]</value>
-		<value condition="!Skin.HasSetting(Dock.HideDate)">$INFO[System.Date]</value>
-		<value>$INFO[System.Time]</value>
+	<!-- the day name spaced out (Kodi labels have no letter spacing); other languages get the plain name. Matched on the
+	     long date: conditions are lower-cased, so System.Date(DDDD) would turn into the short name. -->
+	<variable name="DockDayVar">
+		<value condition="String.StartsWith(System.Date,Monday)">M  O  N  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Tuesday)">T  U  E  S  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Wednesday)">W  E  D  N  E  S  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Thursday)">T  H  U  R  S  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Friday)">F  R  I  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Saturday)">S  A  T  U  R  D  A  Y</value>
+		<value condition="String.StartsWith(System.Date,Sunday)">S  U  N  D  A  Y</value>
+		<value>[UPPERCASE]$INFO[System.Date(DDDD)][/UPPERCASE]</value>
 	</variable>
-	<variable name="DockTextureVar">
-		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">dock/light/</value>
-		<value>dock/dark/</value>
-	</variable>
-	<variable name="DockIconColorVar">
-		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">D91c1c1e</value>
-		<value>F2ffffff</value>
-	</variable>
-	<variable name="DockLabelColorVar">
-		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">CC1c1c1e</value>
-		<value>D9ffffff</value>
-	</variable>
-	<variable name="DockFocusedIconColorVar">
-		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">FF1c1c1e</value>
-		<value>themecolor</value>
-	</variable>
-	<variable name="DockFocusedLabelColorVar">
+	<variable name="DockInkVar">
 		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">FF1c1c1e</value>
 		<value>FFffffff</value>
+	</variable>
+	<variable name="DockInkDimVar">
+		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">991c1c1e</value>
+		<value>99ffffff</value>
+	</variable>
+	<variable name="DockScrimVar">
+		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">B3ffffff</value>
+		<value>FF000000</value>
+	</variable>
+	<variable name="DockShadowVar">
+		<value condition="String.IsEqual(Skin.String(HomeMenuStyle),docklight)">00000000</value>
+		<value>shadow</value>
 	</variable>
 	<!-- icon picked in the Home Menu Customizer (scripts/dockicon.py), else by home item type (ListItem.Property(Item)) -->
 	<variable name="DockIconVar">
@@ -59,306 +64,209 @@
 	<include name="HomeDock">
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="slide" start="0,100" end="0,0" time="320" tween="cubic" easing="out" />
-				<effect type="fade" start="0" end="100" time="260" />
+				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0,0" end="0,100" time="220" tween="cubic" easing="in" />
-				<effect type="fade" start="100" end="0" time="220" />
+				<effect type="fade" start="100" end="0" time="200" />
 			</animation>
-			<!-- date and time, top right of the frame (Skin Settings > Home window > Show date / Show time) -->
-			<control type="label">
-				<right>60</right>
-				<top>160</top>
-				<width>900</width>
-				<height>40</height>
-				<align>right</align>
-				<font>font12_title</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>shadow</shadowcolor>
-				<label>$VAR[DockClockVar]</label>
-				<visible>!Skin.HasSetting(Dock.HideDate) | !Skin.HasSetting(Dock.HideTime)</visible>
+			<!-- date and time, centred at the top of the frame (Skin Settings > Home window > Show date / Show time) -->
+			<control type="grouplist">
+				<left>0</left>
+				<top>150</top>
+				<width>1920</width>
+				<height>260</height>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="label">
+					<width>1920</width>
+					<height>104</height>
+					<font>DockDay</font>
+					<align>center</align>
+					<textcolor>$VAR[DockInkVar]</textcolor>
+					<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
+					<label>$VAR[DockDayVar]</label>
+					<visible>!Skin.HasSetting(Dock.HideDate)</visible>
+				</control>
+				<control type="label">
+					<width>1920</width>
+					<height>50</height>
+					<font>DockDate</font>
+					<align>center</align>
+					<textcolor>$VAR[DockInkVar]</textcolor>
+					<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
+					<label>[UPPERCASE]$INFO[System.Date(d MMMM yyyy)][/UPPERCASE]</label>
+					<visible>!Skin.HasSetting(Dock.HideDate)</visible>
+				</control>
+				<control type="label">
+					<width>1920</width>
+					<height>56</height>
+					<font>DockTime</font>
+					<align>center</align>
+					<textcolor>$VAR[DockInkVar]</textcolor>
+					<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
+					<label>-  $INFO[System.Time]  -</label>
+					<visible>!Skin.HasSetting(Dock.HideTime)</visible>
+				</control>
 			</control>
-			<!-- the dock sits flush on the bottom edge of the frame: y 940 for 2.40, 950 for 2.35 -->
+			<!-- bottom of the frame: y 940 for 2.40, 950 for 2.35 -->
 			<control type="group">
 				<animation effect="slide" end="0,10" time="0" condition="Skin.HasSetting(scopeFormat235)">Conditional</animation>
-				<!-- submenu of the focused dock item: a full-width glass footer on the bottom edge of the frame, entries
-				     starting under the dock's left edge. Always shown with Skin Settings > Home window > Submenu always
-				     visible (the dock then sits above it); otherwise Down from the dock slides the dock up and shows it, Up
-				     goes back. Entries are filtered on the focused dock item, so Container(9010).NumItems is useless here. -->
+				<!-- soft shade so the icons stay readable on bright artwork; not a bar -->
+				<control type="image">
+					<left>0</left>
+					<top>640</top>
+					<width>1920</width>
+					<height>300</height>
+					<texture>dock/scrim.png</texture>
+					<colordiffuse>$VAR[DockScrimVar]</colordiffuse>
+				</control>
+				<!-- submenu of the focused dock item: a line of text under the dock, starting under its first icon. Always shown with Skin Settings > Home window > Submenu always visible (the dock then sits
+				     above it); otherwise Down from the dock slides the dock up and shows it, Up goes back. Hidden with
+				     animations, not <visible>: Kodi doesn't process hidden lists, and these entries are filtered on
+				     the focused dock item (so Container(9010).NumItems is useless here). -->
 				<control type="group">
-					<!-- hidden with an animation, not <visible>: Kodi doesn't process hidden lists, so the entries
-					     (filtered on the focused dock item) would never update -->
 					<animation effect="fade" start="100" end="0" time="160" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,24" time="200" tween="cubic" easing="inout" condition="![Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
-					<control type="image">
-						<left>0</left>
-						<top>872</top>
-						<width>1920</width>
-						<height>68</height>
-						<texture border="0,24,0,4">$VAR[DockTextureVar]tile.png</texture>
-					</control>
 					<control type="list" id="9010">
-						<left>240</left>
-						<top>892</top>
-						<width>1600</width>
+						<left>202</left>
+						<top>888</top>
+						<width>1678</width>
 						<height>48</height>
 						<orientation>horizontal</orientation>
+						<!-- start under the dock's first icon (the dock is centred for its number of items) -->
+						<animation effect="slide" end="715,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+						<animation effect="slide" end="650,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+						<animation effect="slide" end="585,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+						<animation effect="slide" end="520,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
+						<animation effect="slide" end="455,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
+						<animation effect="slide" end="390,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
+						<animation effect="slide" end="325,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
+						<animation effect="slide" end="260,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
+						<animation effect="slide" end="195,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
+						<animation effect="slide" end="130,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
+						<animation effect="slide" end="65,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
 						<onup>9000</onup>
-						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<!-- line up with the dock, which is centred for its number of items -->
-						<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
-						<animation effect="slide" end="600,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
-						<animation effect="slide" end="540,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
-						<animation effect="slide" end="480,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
-						<animation effect="slide" end="420,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
-						<animation effect="slide" end="360,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
-						<animation effect="slide" end="300,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
-						<animation effect="slide" end="240,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
-						<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
-						<animation effect="slide" end="120,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
-						<animation effect="slide" end="60,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
-						<itemlayout width="180" height="48">
+						<scrolltime tween="quadratic" easing="out">220</scrolltime>
+						<itemlayout width="200" height="48">
 							<control type="label">
-								<width>180</width>
-								<height>48</height>
+								<width>200</width>
+								<height>40</height>
 								<font>font14</font>
-								<align>center</align>
+								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>$VAR[DockLabelColorVar]</textcolor>
+								<textcolor>$VAR[DockInkDimVar]</textcolor>
+								<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</itemlayout>
-						<focusedlayout width="180" height="48">
+						<focusedlayout width="200" height="48">
+							<control type="label">
+								<width>200</width>
+								<height>40</height>
+								<font>font14</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[DockInkDimVar]</textcolor>
+								<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Control.HasFocus(9010)</visible>
+							</control>
 							<control type="group">
 								<visible>Control.HasFocus(9010)</visible>
-								<animation type="Focus">
-									<effect type="fade" start="0" end="100" time="160" />
-								</animation>
-								<control type="image">
-									<left>2</left>
-									<top>4</top>
-									<width>176</width>
-									<height>42</height>
-									<texture border="4">$VAR[DockTextureVar]lens.png</texture>
+								<control type="label">
+									<width>200</width>
+									<height>40</height>
+									<font>font14</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[DockInkVar]</textcolor>
+									<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
+									<label>$INFO[ListItem.Label]</label>
+									<scroll>true</scroll>
 								</control>
 								<control type="image">
-									<left>66</left>
-									<top>4</top>
-									<width>48</width>
+									<left>0</left>
+									<top>40</top>
+									<width>32</width>
 									<height>3</height>
 									<texture>dock/accent.png</texture>
 									<colordiffuse>themecolor</colordiffuse>
 								</control>
-							</control>
-							<control type="label">
-								<width>180</width>
-								<height>48</height>
-								<font>font14</font>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[DockLabelColorVar]</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!Control.HasFocus(9010)</visible>
-							</control>
-							<control type="label">
-								<width>180</width>
-								<height>48</height>
-								<font>font14</font>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<scroll>true</scroll>
-								<visible>Control.HasFocus(9010)</visible>
 							</control>
 						</focusedlayout>
 						<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
 						<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
 					</control>
 				</control>
-				<!-- the dock: above the submenu footer while it shows -->
-				<control type="group">
-					<animation effect="slide" start="0,0" end="0,-48" time="220" tween="cubic" easing="inout" condition="[Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
-				<!-- glass bar sized for the number of items (9-slice; shadow left/top/right only) -->
-				<control type="image">
-					<left>868</left>
-					<top>840</top>
-					<width>184</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,1)</visible>
-				</control>
-				<control type="image">
-					<left>808</left>
-					<top>840</top>
-					<width>304</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,2)</visible>
-				</control>
-				<control type="image">
-					<left>748</left>
-					<top>840</top>
-					<width>424</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,3)</visible>
-				</control>
-				<control type="image">
-					<left>688</left>
-					<top>840</top>
-					<width>544</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,4)</visible>
-				</control>
-				<control type="image">
-					<left>628</left>
-					<top>840</top>
-					<width>664</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,5)</visible>
-				</control>
-				<control type="image">
-					<left>568</left>
-					<top>840</top>
-					<width>784</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,6)</visible>
-				</control>
-				<control type="image">
-					<left>508</left>
-					<top>840</top>
-					<width>904</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,7)</visible>
-				</control>
-				<control type="image">
-					<left>448</left>
-					<top>840</top>
-					<width>1024</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,8)</visible>
-				</control>
-				<control type="image">
-					<left>388</left>
-					<top>840</top>
-					<width>1144</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,9)</visible>
-				</control>
-				<control type="image">
-					<left>328</left>
-					<top>840</top>
-					<width>1264</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,10)</visible>
-				</control>
-				<control type="image">
-					<left>268</left>
-					<top>840</top>
-					<width>1384</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,11)</visible>
-				</control>
-				<control type="image">
-					<left>208</left>
-					<top>840</top>
-					<width>1504</width>
-					<height>100</height>
-					<texture border="24,24,24,4">$VAR[DockTextureVar]bar.png</texture>
-					<visible>Integer.IsEqual(Container(9000).NumItems,12)</visible>
-				</control>
+				<!-- the dock: outline icons; the focused one is bright with its name and an accent line. It moves up
+				     above the submenu while that shows. -->
 				<control type="list" id="9000">
-					<left>240</left>
-					<top>860</top>
-					<width>1440</width>
-					<height>80</height>
+					<left>180</left>
+					<top>822</top>
+					<width>1560</width>
+					<height>118</height>
 					<orientation>horizontal</orientation>
 					<ondown>9010</ondown>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<animation effect="slide" start="0,0" end="0,-50" time="220" tween="cubic" easing="inout" condition="[Skin.HasSetting(Enable.VisibleSubmenu) | Control.HasFocus(9010)]">Conditional</animation>
 					<!-- centre the items: the list is 12 items wide -->
-					<animation effect="slide" end="660,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
-					<animation effect="slide" end="600,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
-					<animation effect="slide" end="540,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
-					<animation effect="slide" end="480,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
-					<animation effect="slide" end="420,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
-					<animation effect="slide" end="360,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
-					<animation effect="slide" end="300,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
-					<animation effect="slide" end="240,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
-					<animation effect="slide" end="180,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
-					<animation effect="slide" end="120,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
-					<animation effect="slide" end="60,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
-					<itemlayout width="120" height="80">
+						<animation effect="slide" end="715,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+						<animation effect="slide" end="650,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+						<animation effect="slide" end="585,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+						<animation effect="slide" end="520,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,4)">Conditional</animation>
+						<animation effect="slide" end="455,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
+						<animation effect="slide" end="390,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,6)">Conditional</animation>
+						<animation effect="slide" end="325,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
+						<animation effect="slide" end="260,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,8)">Conditional</animation>
+						<animation effect="slide" end="195,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,9)">Conditional</animation>
+						<animation effect="slide" end="130,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,10)">Conditional</animation>
+						<animation effect="slide" end="65,0" time="0" condition="Integer.IsEqual(Container(9000).NumItems,11)">Conditional</animation>
+					<itemlayout width="130" height="118">
 						<control type="image">
-							<left>43</left>
-							<top>10</top>
-							<width>34</width>
-							<height>34</height>
+							<left>42</left>
+							<top>14</top>
+							<width>46</width>
+							<height>46</height>
 							<texture>$VAR[DockIconVar]</texture>
-							<colordiffuse>$VAR[DockIconColorVar]</colordiffuse>
-						</control>
-						<control type="label">
-							<top>45</top>
-							<width>120</width>
-							<height>26</height>
-							<font>font14</font>
-							<align>center</align>
-							<textcolor>$VAR[DockLabelColorVar]</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<colordiffuse>$VAR[DockInkDimVar]</colordiffuse>
 						</control>
 					</itemlayout>
-					<focusedlayout width="120" height="80">
-						<control type="group">
-							<visible>Control.HasFocus(9000)</visible>
-							<animation type="Focus">
-								<effect type="fade" start="0" end="100" time="160" />
-							</animation>
-							<control type="image">
-								<left>2</left>
-								<top>4</top>
-								<width>116</width>
-								<height>74</height>
-								<texture border="4">$VAR[DockTextureVar]lens.png</texture>
-							</control>
-							<control type="image">
-								<left>36</left>
-								<top>4</top>
-								<width>48</width>
-								<height>3</height>
-								<texture>dock/accent.png</texture>
-								<colordiffuse>themecolor</colordiffuse>
-							</control>
-						</control>
+					<focusedlayout width="130" height="118">
 						<control type="image">
-							<left>43</left>
-							<top>10</top>
-							<width>34</width>
-							<height>34</height>
+							<left>36</left>
+							<top>8</top>
+							<width>58</width>
+							<height>58</height>
 							<texture>$VAR[DockIconVar]</texture>
-							<colordiffuse>$VAR[DockFocusedIconColorVar]</colordiffuse>
+							<colordiffuse>$VAR[DockInkVar]</colordiffuse>
+							<animation type="Focus">
+								<effect type="zoom" start="80" end="100" center="auto" time="200" tween="back" easing="out" />
+							</animation>
 						</control>
 						<control type="label">
-							<top>45</top>
-							<width>120</width>
-							<height>26</height>
+							<left>-20</left>
+							<top>68</top>
+							<width>170</width>
+							<height>30</height>
 							<font>font14</font>
 							<align>center</align>
-							<textcolor>$VAR[DockFocusedLabelColorVar]</textcolor>
-							<scroll>true</scroll>
+							<textcolor>$VAR[DockInkVar]</textcolor>
+							<shadowcolor>$VAR[DockShadowVar]</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="image">
+							<left>49</left>
+							<top>102</top>
+							<width>32</width>
+							<height>3</height>
+							<texture>dock/accent.png</texture>
+							<colordiffuse>themecolor</colordiffuse>
+							<visible>Control.HasFocus(9000)</visible>
 						</control>
 					</focusedlayout>
 					<include>FallbackMenu</include>
-				</control>
 				</control>
 			</control>
 		</control>

@@ -470,6 +470,22 @@
 			<filename>webhostinghub-glyphs.ttf</filename>
 			<size>20</size>
 		</font>
+		<!-- Dock home menu style: date and time (Includes_HomeDock.xml) -->
+		<font>
+			<name>DockDay</name>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
+			<size>80</size>
+		</font>
+		<font>
+			<name>DockDate</name>
+			<filename>TitilliumWeb-Regular.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>DockTime</name>
+			<filename>TitilliumWeb-Regular.ttf</filename>
+			<size>32</size>
+		</font>
 	</fontset>
 
   <!-- Font set #2 -->
@@ -940,6 +956,22 @@
 			<filename>webhostinghub-glyphs.ttf</filename>
 			<size>20</size>
 		</font>
+		<!-- Dock home menu style: date and time (Includes_HomeDock.xml) -->
+		<font>
+			<name>DockDay</name>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
+			<size>80</size>
+		</font>
+		<font>
+			<name>DockDate</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>DockTime</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>32</size>
+		</font>
 	</fontset>
 
     <!-- Font set #3 -->
@@ -1409,6 +1441,22 @@
 			<name>CloseButton</name>
 			<filename>webhostinghub-glyphs.ttf</filename>
 			<size>20</size>
+		</font>
+		<!-- Dock home menu style: date and time (Includes_HomeDock.xml) -->
+		<font>
+			<name>DockDay</name>
+			<filename>Orbitron-VariableFont_wght.ttf</filename>
+			<size>80</size>
+		</font>
+		<font>
+			<name>DockDate</name>
+			<filename>Inter-Regular.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>DockTime</name>
+			<filename>Inter-Regular.ttf</filename>
+			<size>32</size>
 		</font>
 	</fontset>
 	
