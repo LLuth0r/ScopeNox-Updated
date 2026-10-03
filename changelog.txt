@@ -1,5 +1,16 @@
 Below is the changelog for ScopeNox by LLuth0r
 
+1.4.0 - New home menu style: Dock (Skin Settings -> Home window -> Home menu style). The day name, date and time sit centred
+        at the top, and the home menu is a row of outline icons floating at the bottom of the frame, with the submenu
+        as a line of text under it. "Dock (dark text)" suits bright artwork. Show date, Show time and Submenu always
+        visible can be switched in the same place. Pick a dock icon for any menu item, e.g. custom ones, in Configure home
+        menu -> Dock icon.
+        New watched status ribbons on posters: empty ring = unwatched, half-filled ring = in progress (also TV shows with
+        some episodes watched), ring with a check = watched. They replace the stars, which looked like ratings.
+        The watched ribbon now shows by default. Wall views mark each poster's own in-progress state (they followed the
+        selected item), and the 21:9 ShowCase shows the status again.
+        New InfoWall poster size setting (Skin Settings -> Advanced): Medium (3 rows), Large (2 rows) or Small (4 rows).
+        Replaces the old Large Posters toggle; anyone who had it on gets Large.
 1.3.0 - New Projector alignment setting (Skin Settings -> Scope): Centre / Top / Bottom. For projectors whose zoom is anchored
         at the top or bottom edge of the picture, Top/Bottom move the whole skin AND every movie to that edge of the frame,
         so only small adjustments are needed in Video calibration. Centre (default) works as before.
